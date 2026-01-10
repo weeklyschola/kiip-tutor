@@ -19,6 +19,7 @@ const supabase = supabaseUrl && supabaseAnonKey
 const localUsers: Map<string, {
     id: string;
     user_id: string;
+    email: string;
     password_hash: string;
     nickname: string;
     birth_date: string;
@@ -39,10 +40,10 @@ async function hashPassword(password: string): Promise<string> {
 export async function POST(request: NextRequest) {
     try {
         const body = await request.json();
-        const { user_id, password, nickname, birth_date, gender, nationality } = body;
+        const { user_id, email: userEmail, password, nickname, birth_date, gender, nationality } = body;
 
         // 필수 필드 검증
-        if (!user_id || !password || !nickname || !birth_date || !gender || !nationality) {
+        if (!user_id || !userEmail || !password || !nickname || !birth_date || !gender || !nationality) {
             return NextResponse.json(
                 { success: false, error: "모든 필드를 입력해주세요." },
                 { status: 400 }
@@ -68,13 +69,14 @@ export async function POST(request: NextRequest) {
         // Supabase Admin 사용 가능한 경우
         if (supabaseAdmin && supabase) {
             // 이메일 형식으로 변환 (Supabase Auth는 이메일 필요)
-            const email = `${user_id}@kiip-tutor.local`;
+            const authEmail = `${user_id}@kiip-tutor.local`;
 
             // 1. Supabase Auth로 사용자 생성
             const { data: authData, error: authError } = await supabaseAdmin.auth.admin.createUser({
-                email,
+                email: authEmail,
                 password,
                 email_confirm: true, // 이메일 확인 없이 바로 활성화
+                user_metadata: { real_email: userEmail } // 실제 이메일 저장
             });
 
             if (authError) {
@@ -97,6 +99,7 @@ export async function POST(request: NextRequest) {
                 .insert({
                     id: authData.user.id,
                     user_id,
+                    email: userEmail, // 실제 이메일 저장
                     nickname,
                     birth_date,
                     gender,
@@ -139,6 +142,7 @@ export async function POST(request: NextRequest) {
         const newUser = {
             id: crypto.randomUUID(),
             user_id,
+            email: userEmail,
             password_hash,
             nickname,
             birth_date,

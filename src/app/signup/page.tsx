@@ -25,6 +25,7 @@ export default function SignupPage() {
 
     const [formData, setFormData] = useState({
         user_id: "",
+        email: "",
         password: "",
         password_confirm: "",
         nickname: "",
@@ -53,6 +54,12 @@ export default function SignupPage() {
         // ID 검증
         if (!/^[a-zA-Z0-9]{4,20}$/.test(formData.user_id)) {
             setError("아이디는 영문/숫자 4~20자로 입력해주세요.");
+            return false;
+        }
+
+        // 이메일 검증
+        if (!formData.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+            setError("유효한 이메일 주소를 입력해주세요.");
             return false;
         }
 
@@ -112,6 +119,7 @@ export default function SignupPage() {
 
         const result = await signup({
             user_id: formData.user_id,
+            email: formData.email,
             password: formData.password,
             nickname: formData.nickname,
             birth_date,
@@ -155,6 +163,21 @@ export default function SignupPage() {
                             value={formData.user_id}
                             onChange={handleChange}
                             placeholder="영문/숫자 4~20자"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        />
+                    </div>
+
+                    {/* 이메일 */}
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                            이메일 (연락처) <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            placeholder="example@email.com"
                             className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
                     </div>

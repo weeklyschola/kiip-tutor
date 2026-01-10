@@ -25,6 +25,7 @@ export interface SignupData {
     user_id: string;
     password: string;
     nickname: string;
+    email: string; // 이메일 추가
     birth_date: string;
     gender: string;
     nationality: string;
