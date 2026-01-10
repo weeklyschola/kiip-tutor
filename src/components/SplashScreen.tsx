@@ -13,7 +13,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
     const slides = [
         {
             emoji: "📖",
-            title: "사회통합프로그램 아카데미",
+            title: "KIIP 튜터",
             subtitle: "KIIP 완벽 대비",
             description: "한국 생활 적응과 영주권, 귀화를 위한\n체계적인 학습 도우미",
             bg: "from-blue-500 to-blue-600",

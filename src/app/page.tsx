@@ -52,7 +52,7 @@ export default function Home() {
                 <div className="max-w-lg mx-auto px-4 py-3 flex items-center justify-between">
                     <div className="flex items-center gap-2">
                         <span className="text-xl">📖</span>
-                        <span className="font-bold text-gray-800">사회통합프로그램 아카데미</span>
+                        <span className="font-bold text-gray-800">KIIP 튜터</span>
                     </div>
                     <div className="flex items-center gap-2">
                         {isAuthenticated ? (
