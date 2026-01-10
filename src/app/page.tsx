@@ -103,20 +103,32 @@ export default function Home() {
                     </div>
                 </section>
 
-                {/* 학습 진행률 카드 */}
-                <section className="bg-white rounded-2xl p-5 shadow-sm">
-                    <div className="flex items-center justify-between mb-3">
-                        <h2 className="font-semibold text-gray-800">
-                            {currentLevel}단계 학습 현황
-                        </h2>
-                        <span className="text-blue-600 font-bold">{levelProgress}%</span>
-                    </div>
-                    <ProgressBar value={levelProgress} size="md" />
-                    <div className="flex justify-between mt-3 text-xs text-gray-500">
-                        <span>18개 유닛 중 12개 완료</span>
-                        <span>다음 목표: 13과</span>
-                    </div>
-                </section>
+                {/* 학습 진행률 카드 (로그인 시에만 표시) */}
+                {isAuthenticated ? (
+                    <section className="bg-white rounded-2xl p-5 shadow-sm">
+                        <div className="flex items-center justify-between mb-3">
+                            <h2 className="font-semibold text-gray-800">
+                                {currentLevel}단계 학습 현황
+                            </h2>
+                            <span className="text-blue-600 font-bold">{levelProgress}%</span>
+                        </div>
+                        <ProgressBar value={levelProgress} size="md" />
+                        <div className="flex justify-between mt-3 text-xs text-gray-500">
+                            <span>18개 유닛 중 12개 완료</span>
+                            <span>다음 목표: 13과</span>
+                        </div>
+                    </section>
+                ) : (
+                    <section className="bg-blue-50 rounded-2xl p-5 border border-blue-100">
+                        <div className="text-center py-2">
+                            <h3 className="font-bold text-gray-800 mb-2">나만의 학습 진도를 관리하세요</h3>
+                            <p className="text-sm text-gray-500 mb-4">로그인하면 학습 기록이 자동으로 저장됩니다.</p>
+                            <Link href="/login" className="inline-block bg-blue-600 text-white px-6 py-2 rounded-xl font-bold hover:bg-blue-700 transition-colors">
+                                3초 만에 시작하기
+                            </Link>
+                        </div>
+                    </section>
+                )}
 
                 {/* AI 튜터 CTA */}
                 <section className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-5 text-white">
@@ -132,34 +144,36 @@ export default function Home() {
                     </Link>
                 </section>
 
-                {/* 나의 학습 경로 */}
-                <section>
-                    <h2 className="font-bold text-gray-800 mb-4">나의 학습 경로</h2>
-                    <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                        {/* 이미지 영역 */}
-                        <div className="h-40 bg-gradient-to-br from-blue-100 to-green-100 flex items-center justify-center relative">
-                            <div className="text-center">
-                                <span className="text-5xl">👨‍👩‍👧‍👦</span>
-                                <p className="text-sm text-gray-600 mt-2">가족과 문화</p>
+                {/* 나의 학습 경로 (로그인 시에만 표시) */}
+                {isAuthenticated && (
+                    <section>
+                        <h2 className="font-bold text-gray-800 mb-4">나의 학습 경로</h2>
+                        <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+                            {/* 이미지 영역 */}
+                            <div className="h-40 bg-gradient-to-br from-blue-100 to-green-100 flex items-center justify-center relative">
+                                <div className="text-center">
+                                    <span className="text-5xl">👨‍👩‍👧‍👦</span>
+                                    <p className="text-sm text-gray-600 mt-2">가족과 문화</p>
+                                </div>
+                            </div>
+                            <div className="p-4">
+                                <span className="text-xs text-blue-600 font-medium">현재 유닛</span>
+                                <h3 className="font-bold text-gray-800 mt-1">4과: 가족과 문화</h3>
+                                <div className="flex items-center justify-between mt-3">
+                                    <span className="text-xs text-gray-500">
+                                        마지막 학습 위치 (45p)
+                                    </span>
+                                    <Link
+                                        href="/study/3"
+                                        className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors"
+                                    >
+                                        이어서 학습
+                                    </Link>
+                                </div>
                             </div>
                         </div>
-                        <div className="p-4">
-                            <span className="text-xs text-blue-600 font-medium">현재 유닛</span>
-                            <h3 className="font-bold text-gray-800 mt-1">4과: 가족과 문화</h3>
-                            <div className="flex items-center justify-between mt-3">
-                                <span className="text-xs text-gray-500">
-                                    마지막 학습 위치 (45p)
-                                </span>
-                                <Link
-                                    href="/study/3"
-                                    className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors"
-                                >
-                                    이어서 학습
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                    </section>
+                )}
 
                 {/* 빠른 접근 카드 */}
                 <section className="grid grid-cols-2 gap-4">
