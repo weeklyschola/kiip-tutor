@@ -61,12 +61,12 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
     };
 
     const handleComplete = () => {
-        localStorage.setItem("kiip_onboarding_complete", "true");
+        // localStorage.setItem("kiip_onboarding_complete", "true"); // 항상 표시를 위해 제거
         onComplete();
     };
 
     const handleSkip = () => {
-        handleComplete();
+        onComplete();
     };
 
     return (
@@ -117,8 +117,8 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                                 }
                             }}
                             className={`h-2 rounded-full transition-all duration-300 ${index === currentSlide
-                                    ? "w-8 bg-white"
-                                    : "w-2 bg-white/40 hover:bg-white/60"
+                                ? "w-8 bg-white"
+                                : "w-2 bg-white/40 hover:bg-white/60"
                                 }`}
                         />
                     ))}

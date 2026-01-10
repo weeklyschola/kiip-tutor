@@ -11,11 +11,14 @@ import { useAuth } from "@/contexts/AuthContext";
 
 export default function Home() {
     const router = useRouter();
-    const [showSplash, setShowSplash] = useState(false);
-    const [isLoading, setIsLoading] = useState(true);
+    // 항상 스플래시 화면을 보여주기 위해 초기값을 true로 설정
+    const [showSplash, setShowSplash] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     const { stats, getOverallAccuracy } = useStudyHistory();
     const { user, isAuthenticated } = useAuth();
 
+    // 로컬 스토리지 확인 로직 제거됨
+    /*
     useEffect(() => {
         // 클라이언트 사이드에서만 실행
         const hasSeenSplash = localStorage.getItem("kiip_onboarding_complete");
@@ -24,6 +27,7 @@ export default function Home() {
         }
         setIsLoading(false);
     }, []);
+    */
 
     if (isLoading) return null;
 
@@ -34,8 +38,7 @@ export default function Home() {
 
     const handleSplashComplete = () => {
         setShowSplash(false);
-        // 스플래시 종료 후 로그인되지 않았다면 로그인 페이지로 이동 (옵션)
-        // if (!isAuthenticated) router.push("/login");
+        // 스플래시 종료 로그 기록 등을 할 수 있습니다.
     };
 
     if (showSplash) {
