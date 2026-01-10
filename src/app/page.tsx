@@ -8,11 +8,12 @@ import ProgressBar from "@/components/ProgressBar";
 import SplashScreen from "@/components/SplashScreen";
 import { useStudyHistory } from "@/hooks/useStudyHistory";
 import { useAuth } from "@/contexts/AuthContext";
+import { useSplash } from "@/contexts/SplashContext";
 
 export default function Home() {
     const router = useRouter();
-    // 항상 스플래시 화면을 보여주기 위해 초기값을 true로 설정
-    const [showSplash, setShowSplash] = useState(true);
+    // 전역 스플래시 상태 사용
+    const { hasSeenSplash, setHasSeenSplash } = useSplash();
     const [isLoading, setIsLoading] = useState(false);
     const { stats, getOverallAccuracy } = useStudyHistory();
     const { user, isAuthenticated } = useAuth();
@@ -37,11 +38,11 @@ export default function Home() {
     const streakDays = 12;
 
     const handleSplashComplete = () => {
-        setShowSplash(false);
+        setHasSeenSplash(true);
         // 스플래시 종료 로그 기록 등을 할 수 있습니다.
     };
 
-    if (showSplash) {
+    if (!hasSeenSplash) {
         return <SplashScreen onComplete={handleSplashComplete} />;
     }
 
