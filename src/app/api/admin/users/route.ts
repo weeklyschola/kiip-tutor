@@ -59,13 +59,38 @@ export async function PATCH(request: NextRequest) {
 
     try {
         const body = await request.json();
-        const { userId, premiumUntil } = body;
+        const { userId, type, value } = body;
+        // type: 'subscription' | 'level'
+        // value: premiumUntil (string) | level (number)
 
-        // 2. 사용자 정보 업데이트 (프리미엄 기간 연장)
-        // profiles 테이블에 premium_until 컬럼이 있어야 함
+        const { data: profile } = await supabaseAdmin
+            .from("profiles")
+            .select("*")
+            .eq("id", userId)
+            .single();
+
+        let updateData = {};
+
+        if (type === 'subscription') {
+            updateData = { premium_until: value };
+        } else if (type === 'level') {
+            // 기존 레벨 목록 가져오기
+            // profiles 테이블에 purchased_levels (int array) 컬럼 가정
+            const currentLevels: number[] = profile?.purchased_levels || [];
+            const levelToAdd = Number(value);
+
+            if (!currentLevels.includes(levelToAdd)) {
+                updateData = {
+                    purchased_levels: [...currentLevels, levelToAdd].sort()
+                };
+            } else {
+                return NextResponse.json({ success: true, message: "Already unlocked" });
+            }
+        }
+
         const { error } = await supabaseAdmin
             .from("profiles")
-            .update({ premium_until: premiumUntil })
+            .update(updateData)
             .eq("id", userId);
 
         if (error) throw error;
