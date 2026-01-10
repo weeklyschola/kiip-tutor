@@ -9,6 +9,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { levelContents } from "@/data/levelContent";
 import ProgressBar from "@/components/ProgressBar";
 import BottomNav from "@/components/BottomNav";
+import SubscriptionModal from "@/components/SubscriptionModal";
 
 // JSON 파일에서 단어 데이터 import
 import level0Data from "@/data/vocabulary/level0.json";
@@ -72,6 +73,9 @@ export default function VocabularyPage() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
     const [bookmarked, setBookmarked] = useState<Set<number>>(new Set());
+
+    // 유료 기능 안내 모달 상태
+    const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
     // 레벨 선택 시 단어 가져오기
     useEffect(() => {
@@ -180,7 +184,7 @@ export default function VocabularyPage() {
                                 key={level}
                                 onClick={() => {
                                     if (isLocked) {
-                                        alert("2단계부터는 AI Tutor 구독(유료) 회원만 이용 가능합니다.");
+                                        setShowUpgradeModal(true);
                                         return;
                                     }
                                     handleLevelSelect(level);
@@ -206,6 +210,10 @@ export default function VocabularyPage() {
                 </div>
 
                 <BottomNav />
+                <SubscriptionModal
+                    isOpen={showUpgradeModal}
+                    onClose={() => setShowUpgradeModal(false)}
+                />
             </main>
         );
     }

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useTTS } from "@/hooks/useTTS";
 import { useAuth } from "@/contexts/AuthContext";
 import { useProgress } from "@/contexts/ProgressContext";
+import SubscriptionModal from "@/components/SubscriptionModal";
 
 // JSON 파일에서 단어 데이터 import
 import level0Data from "@/data/vocabulary/level0.json";
@@ -271,6 +272,9 @@ export default function VocabularyPracticePage() {
     const [hearts, setHearts] = useState(5);
     const [xp, setXp] = useState(0);
     const [streak, setStreak] = useState(0);
+
+    // 유료 기능 안내 모달
+    const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
     // 문제 상태
     const [questions, setQuestions] = useState<Question[]>([]);
@@ -651,7 +655,7 @@ export default function VocabularyPracticePage() {
                                     key={level}
                                     onClick={() => {
                                         if (isLocked) {
-                                            alert("2단계 이상은 AI Tutor 구독(유료) 회원만 이용 가능합니다.");
+                                            setShowUpgradeModal(true);
                                             return;
                                         }
                                         startPractice(level);
@@ -680,6 +684,11 @@ export default function VocabularyPracticePage() {
                         })}
                     </div>
                 </div>
+
+                <SubscriptionModal
+                    isOpen={showUpgradeModal}
+                    onClose={() => setShowUpgradeModal(false)}
+                />
             </main>
         );
     }
