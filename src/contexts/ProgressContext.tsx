@@ -79,7 +79,13 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
                 } catch {
                     setProgress(defaultProgress);
                 }
+            } else {
+                // 저장된 데이터가 없으면 초기화 (새로운 사용자 등)
+                setProgress(defaultProgress);
             }
+        } else {
+            // 로그아웃 시 초기화
+            setProgress(defaultProgress);
         }
         setIsLoading(false);
     }, [isAuthenticated, user]);

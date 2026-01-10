@@ -4,6 +4,7 @@ import "./globals.css";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { ProgressProvider } from "@/contexts/ProgressContext";
 import { SplashProvider } from "@/contexts/SplashContext";
+import BottomNav from "@/components/BottomNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +24,10 @@ export default function RootLayout({
             <body className={inter.className}>
                 <SplashProvider>
                     <AuthProvider>
-                        <ProgressProvider>{children}</ProgressProvider>
+                        <ProgressProvider>
+                            {children}
+                            <BottomNav />
+                        </ProgressProvider>
                     </AuthProvider>
                 </SplashProvider>
             </body>

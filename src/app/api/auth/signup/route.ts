@@ -1,19 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
+import { getSupabaseAdmin, getSupabase } from "@/lib/supabase";
 
 // Service role 클라이언트 (서버 전용 - 사용자 생성용)
-const supabaseAdmin = supabaseUrl && supabaseServiceKey
-    ? createClient(supabaseUrl, supabaseServiceKey)
-    : null;
+const supabaseAdmin = getSupabaseAdmin();
 
 // 일반 클라이언트 (profiles 테이블 접근용)
-const supabase = supabaseUrl && supabaseAnonKey
-    ? createClient(supabaseUrl, supabaseAnonKey)
-    : null;
+const supabase = getSupabase();
 
 // 임시 사용자 저장소 (Supabase 미설정 시 폴백)
 const localUsers: Map<string, {
@@ -40,7 +32,9 @@ async function hashPassword(password: string): Promise<string> {
 export async function POST(request: NextRequest) {
     try {
         const body = await request.json();
-        const { user_id, email: userEmail, password, nickname, birth_date, gender, nationality } = body;
+        let { user_id, email: userEmail, password, nickname, birth_date, gender, nationality } = body;
+
+        console.log(`[Signup Attempt] ID: ${user_id}, Email: ${userEmail}`);
 
         // 필수 필드 검증
         if (!user_id || !userEmail || !password || !nickname || !birth_date || !gender || !nationality) {
@@ -49,6 +43,9 @@ export async function POST(request: NextRequest) {
                 { status: 400 }
             );
         }
+
+        // 아이디 정규화 (소문자, 공백제거)
+        user_id = user_id.trim().toLowerCase();
 
         // 아이디 형식 검증
         if (!/^[a-zA-Z0-9]{4,20}$/.test(user_id)) {
@@ -66,8 +63,8 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        // Supabase Admin 사용 가능한 경우
-        if (supabaseAdmin && supabase) {
+        // Supabase Admin 사용 가능한 경우 (Service Role만 있어도 가입 처리는 가능)
+        if (supabaseAdmin) {
             // 이메일 형식으로 변환 (Supabase Auth는 이메일 필요)
             const authEmail = `${user_id}@kiip-tutor.local`;
 
@@ -78,6 +75,13 @@ export async function POST(request: NextRequest) {
                 email_confirm: true, // 이메일 확인 없이 바로 활성화
                 user_metadata: { real_email: userEmail } // 실제 이메일 저장
             });
+
+            // 이메일 확인 강제 처리 확실하게 (혹시 위 옵션이 동작 안 할 경우)
+            if (authData.user && !authData.user.email_confirmed_at) {
+                await supabaseAdmin.auth.admin.updateUserById(authData.user.id, {
+                    email_confirm: true
+                });
+            }
 
             if (authError) {
                 if (authError.message.includes("already")) {
@@ -104,6 +108,9 @@ export async function POST(request: NextRequest) {
                     birth_date,
                     gender,
                     nationality,
+                    created_at: new Date().toISOString(), // 생성일 명시
+                    purchased_levels: [], // 초기값
+                    premium_until: null // 초기값
                 });
 
             if (profileError) {

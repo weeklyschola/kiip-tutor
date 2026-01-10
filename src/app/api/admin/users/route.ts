@@ -1,13 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
+import { getSupabaseAdmin } from "@/lib/supabase";
 
 // 관리자 권한 클라이언트
-const supabaseAdmin = supabaseUrl && supabaseServiceKey
-    ? createClient(supabaseUrl, supabaseServiceKey)
-    : null;
+const supabaseAdmin = getSupabaseAdmin();
 
 export async function GET(request: NextRequest) {
     // 1. 관리자 키 검증
@@ -17,15 +12,7 @@ export async function GET(request: NextRequest) {
     }
 
     if (!supabaseAdmin) {
-        // Supabase 미설정 시 더미 데이터 반환 (테스트용)
-        if (!supabaseUrl) {
-            return NextResponse.json({
-                users: [
-                    { id: "1", user_id: "test_user1", nickname: "열공하는학생", created_at: new Date().toISOString(), premium_until: null },
-                    { id: "2", user_id: "test_user2", nickname: "합격가자", created_at: new Date().toISOString(), premium_until: "2026-12-31T23:59:59Z" }
-                ]
-            });
-        }
+        console.error("Supabase Admin client not initialized");
         return NextResponse.json({ error: "Supabase configuration missing" }, { status: 500 });
     }
 
@@ -73,19 +60,29 @@ export async function PATCH(request: NextRequest) {
 
         if (type === 'subscription') {
             updateData = { premium_until: value };
+        } else if (type === 'revoke_subscription') {
+            // 구독 취소: 만료일을 과거(또는 null)로 설정
+            updateData = { premium_until: null };
         } else if (type === 'level') {
-            // 기존 레벨 목록 가져오기
-            // profiles 테이블에 purchased_levels (int array) 컬럼 가정
+            // 레벨 추가
             const currentLevels: number[] = profile?.purchased_levels || [];
             const levelToAdd = Number(value);
 
             if (!currentLevels.includes(levelToAdd)) {
                 updateData = {
-                    purchased_levels: [...currentLevels, levelToAdd].sort()
+                    purchased_levels: [...currentLevels, levelToAdd].sort((a, b) => a - b)
                 };
             } else {
                 return NextResponse.json({ success: true, message: "Already unlocked" });
             }
+        } else if (type === 'revoke_level') {
+            // 레벨 회수
+            const currentLevels: number[] = profile?.purchased_levels || [];
+            const levelToRemove = Number(value);
+
+            updateData = {
+                purchased_levels: currentLevels.filter(l => l !== levelToRemove)
+            };
         }
 
         const { error } = await supabaseAdmin
@@ -98,6 +95,10 @@ export async function PATCH(request: NextRequest) {
         return NextResponse.json({ success: true });
     } catch (error) {
         console.error("Update user error:", error);
+        // 상세 에러 로깅
+        if (typeof error === 'object' && error !== null) {
+            console.error(JSON.stringify(error, null, 2));
+        }
         return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
     }
 }

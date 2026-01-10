@@ -18,6 +18,13 @@ export default function Home() {
     const { stats, getOverallAccuracy } = useStudyHistory();
     const { user, isAuthenticated } = useAuth();
 
+    // 로그인 된 사용자는 학습 대시보드(/study)로 리다이렉트
+    useEffect(() => {
+        if (!isLoading && isAuthenticated) {
+            router.replace("/study");
+        }
+    }, [isLoading, isAuthenticated, router]);
+
     // 로컬 스토리지 확인 로직 제거됨
     /*
     useEffect(() => {
@@ -266,7 +273,6 @@ export default function Home() {
                 )}
             </div>
 
-            <BottomNav />
         </main>
     );
 }

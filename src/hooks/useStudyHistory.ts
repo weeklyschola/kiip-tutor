@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import { useAuth } from "@/contexts/AuthContext";
 
 // 학습 세션 기록 타입
 export interface StudySession {
@@ -46,25 +47,33 @@ export interface CategoryStat {
 const STORAGE_KEY = "kiip_study_history";
 
 export function useStudyHistory() {
+    const { user } = useAuth();
     const [sessions, setSessions] = useState<StudySession[]>([]);
     const [stats, setStats] = useState<UserStats | null>(null);
     const [isLoaded, setIsLoaded] = useState(false);
 
     // 로컬 스토리지에서 데이터 로드
     useEffect(() => {
-        if (typeof window === "undefined") return;
+        if (typeof window === "undefined" || !user) {
+            setSessions([]);
+            return;
+        }
 
-        const stored = localStorage.getItem(STORAGE_KEY);
+        const key = `${STORAGE_KEY}_${user.id}`;
+        const stored = localStorage.getItem(key);
         if (stored) {
             try {
                 const parsed = JSON.parse(stored) as StudySession[];
                 setSessions(parsed);
             } catch (e) {
                 console.error("Failed to parse study history:", e);
+                setSessions([]);
             }
+        } else {
+            setSessions([]);
         }
         setIsLoaded(true);
-    }, []);
+    }, [user]);
 
     // 세션 변경 시 통계 재계산
     useEffect(() => {
@@ -117,6 +126,8 @@ export function useStudyHistory() {
 
     // 새 세션 저장
     const saveSession = useCallback((session: Omit<StudySession, "id" | "date">) => {
+        if (!user) return null;
+
         const newSession: StudySession = {
             ...session,
             id: crypto.randomUUID(),
@@ -125,12 +136,12 @@ export function useStudyHistory() {
 
         setSessions((prev) => {
             const updated = [...prev, newSession];
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
+            localStorage.setItem(`${STORAGE_KEY}_${user.id}`, JSON.stringify(updated));
             return updated;
         });
 
         return newSession;
-    }, []);
+    }, [user]);
 
     // 취약 카테고리 분석
     const getWeakCategories = useCallback((): { category: string; wrongRate: number }[] => {
@@ -153,9 +164,11 @@ export function useStudyHistory() {
 
     // 기록 초기화
     const clearHistory = useCallback(() => {
-        localStorage.removeItem(STORAGE_KEY);
-        setSessions([]);
-    }, []);
+        if (user) {
+            localStorage.removeItem(`${STORAGE_KEY}_${user.id}`);
+            setSessions([]);
+        }
+    }, [user]);
 
     return {
         sessions,

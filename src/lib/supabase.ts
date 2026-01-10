@@ -1,12 +1,33 @@
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+// Helper to get Supabase Client (Anon)
+export function getSupabase() {
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-// Only create client if URL is provided
-export const supabase: SupabaseClient | null = supabaseUrl
-    ? createClient(supabaseUrl, supabaseAnonKey)
-    : null;
+    if (!supabaseUrl || !supabaseAnonKey) {
+        console.error("Supabase URL or Anon Key is missing");
+        return null;
+    }
+
+    return createClient(supabaseUrl, supabaseAnonKey);
+}
+
+// Helper to get Supabase Admin Client (Service Role)
+export function getSupabaseAdmin() {
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+    if (!supabaseUrl || !supabaseServiceKey) {
+        console.error("Supabase URL or Service Role Key is missing");
+        return null;
+    }
+
+    return createClient(supabaseUrl, supabaseServiceKey);
+}
+
+// Default export for client-side usage (keep for backward compatibility if needed, but prefer getSupabase for consistency on server)
+export const supabase = getSupabase();
 
 // Types
 export interface Question {

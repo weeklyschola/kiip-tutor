@@ -74,7 +74,7 @@ interface Answer {
 
 export default function CbtPage() {
     const router = useRouter();
-    const { isAuthenticated, isLoading: authLoading } = useAuth();
+    const { isAuthenticated, isLoading: authLoading, user } = useAuth();
     const { hasCbtAccess, hasAiTutorAccess } = useProgress();
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -180,7 +180,9 @@ export default function CbtPage() {
                 wrongQuestions,
             });
 
-            const userId = getUserId();
+            // 로그인한 사용자면 user.id 사용, 아니면 익명 ID 사용
+            const userId = (isAuthenticated && user) ? user.id : getUserId();
+
             answers.forEach((answer) => {
                 saveAttempt({
                     user_id: userId,

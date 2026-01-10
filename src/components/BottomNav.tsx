@@ -13,6 +13,17 @@ const navItems = [
 export default function BottomNav() {
     const pathname = usePathname();
 
+    // 네비게이션 바를 숨길 경로들
+    const hiddenPaths = ["/login", "/signup", "/"];
+    // 1. 명시적 숨김 경로
+    if (hiddenPaths.includes(pathname)) {
+        return null;
+    }
+    // 2. 학습 상세 페이지(/study/1 등)에서는 몰입을 위해 하단 탭 숨김
+    if (pathname.startsWith("/study/")) {
+        return null;
+    }
+
     return (
         <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-100 z-50 pb-[env(safe-area-inset-bottom)]">
             <div className="max-w-lg mx-auto flex items-center justify-around h-16">
@@ -25,8 +36,8 @@ export default function BottomNav() {
                             key={item.href}
                             href={item.href}
                             className={`flex flex-col items-center justify-center w-16 h-full transition-colors ${isActive
-                                    ? "text-blue-600"
-                                    : "text-gray-400 hover:text-gray-600"
+                                ? "text-blue-600"
+                                : "text-gray-400 hover:text-gray-600"
                                 }`}
                         >
                             <span className="text-xl mb-0.5">{item.icon}</span>

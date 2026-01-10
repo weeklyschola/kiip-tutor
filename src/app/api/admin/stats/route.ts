@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 
 // 관리자 API - 전체 통계 조회
 export async function GET(req: NextRequest) {
@@ -10,6 +10,8 @@ export async function GET(req: NextRequest) {
     if (adminKey !== expectedKey) {
         return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
+
+    const supabase = getSupabase();
 
     if (!supabase) {
         // Supabase 없으면 샘플 데이터 반환

@@ -97,6 +97,28 @@ export default function UserManagementModal({ isOpen, onClose, adminKey }: UserM
         });
     };
 
+    // 이용권 회수 (구독 취소)
+    const revokeSubscription = async () => {
+        if (!selectedUser) return;
+        if (!confirm("정말로 구독을 취소하시겠습니까?")) return;
+        await callApi({
+            userId: selectedUser.id,
+            type: "revoke_subscription",
+            value: null
+        });
+    };
+
+    // 이용권 회수 (레벨 잠금)
+    const revokeLevel = async (level: number) => {
+        if (!selectedUser) return;
+        if (!confirm(`${level}단계 접근 권한을 취소하시겠습니까?`)) return;
+        await callApi({
+            userId: selectedUser.id,
+            type: "revoke_level",
+            value: level
+        });
+    };
+
     const callApi = async (body: any) => {
         try {
             const res = await fetch("/api/admin/users", {
@@ -106,14 +128,29 @@ export default function UserManagementModal({ isOpen, onClose, adminKey }: UserM
             });
 
             if (res.ok) {
-                alert("적용되었습니다.");
+                // 기간 계산 (단순화: 9999는 무제한, 그 외는 일수)
+                const days = body.value === null ? "" : (body.value.includes("9999") ? "무제한" :
+                    Math.ceil((new Date(body.value).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)) + "일");
+
+                if (body.type === "revoke_subscription") {
+                    alert("구독이 취소되었습니다.");
+                } else if (body.type === "revoke_level") {
+                    alert(`레벨 ${body.value} 접근 권한이 회수되었습니다.`);
+                } else {
+                    alert(body.type === "subscription"
+                        ? `${days} 구독권이 지급되었습니다.`
+                        : `레벨 ${body.value}가 해금되었습니다.`);
+                }
+
                 fetchUsers(); // 목록 갱신
                 // 모달 닫지 않음 (연속 지급 가능하게)
             } else {
-                alert("실패했습니다.");
+                const errorData = await res.json();
+                alert(`실패했습니다: ${errorData.error || "알 수 없는 오류"}`);
             }
         } catch (e) {
-            alert("오류가 발생했습니다.");
+            console.error(e);
+            alert("오류가 발생했습니다. (네트워크 또는 서버 응답 오류)");
         }
     };
 
@@ -213,7 +250,7 @@ export default function UserManagementModal({ isOpen, onClose, adminKey }: UserM
                                             <td className="p-4">
                                                 {isPremium ? (
                                                     <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                                        AI 구독중 (~{new Date(user.premium_until!).toLocaleDateString()})
+                                                        AI 구독중 (남은 기간: {Math.ceil((new Date(user.premium_until!).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))}일)
                                                     </span>
                                                 ) : (
                                                     <span className="text-gray-400 text-xs">-</span>
@@ -277,8 +314,8 @@ export default function UserManagementModal({ isOpen, onClose, adminKey }: UserM
                             <button
                                 onClick={() => setGrantType("subscription")}
                                 className={`flex-1 py-2 text-sm font-medium border-b-2 transition-colors ${grantType === "subscription"
-                                        ? "border-blue-500 text-blue-600"
-                                        : "border-transparent text-gray-500 hover:text-gray-700"
+                                    ? "border-blue-500 text-blue-600"
+                                    : "border-transparent text-gray-500 hover:text-gray-700"
                                     }`}
                             >
                                 📅 AI 구독 (기간)
@@ -286,8 +323,8 @@ export default function UserManagementModal({ isOpen, onClose, adminKey }: UserM
                             <button
                                 onClick={() => setGrantType("level")}
                                 className={`flex-1 py-2 text-sm font-medium border-b-2 transition-colors ${grantType === "level"
-                                        ? "border-blue-500 text-blue-600"
-                                        : "border-transparent text-gray-500 hover:text-gray-700"
+                                    ? "border-blue-500 text-blue-600"
+                                    : "border-transparent text-gray-500 hover:text-gray-700"
                                     }`}
                             >
                                 🔓 레벨 해금 (영구)
@@ -297,17 +334,29 @@ export default function UserManagementModal({ isOpen, onClose, adminKey }: UserM
                         {grantType === "subscription" ? (
                             <div className="space-y-2 max-h-60 overflow-y-auto">
                                 <button onClick={() => grantSubscription(30)} className="w-full p-3 text-left hover:bg-gray-50 rounded-xl border transition-colors flex justify-between group">
-                                    <span>1개월 (30일)</span>
-                                    <span className="text-gray-400 group-hover:text-blue-500">+추가</span>
+                                    <span className="font-bold text-gray-700">1개월 (30일)</span>
+                                    <span className="text-gray-400 group-hover:text-blue-500 text-sm font-medium">+추가</span>
                                 </button>
                                 <button onClick={() => grantSubscription(90)} className="w-full p-3 text-left hover:bg-gray-50 rounded-xl border transition-colors flex justify-between group">
-                                    <span>3개월 (90일)</span>
-                                    <span className="text-gray-400 group-hover:text-blue-500">+추가</span>
+                                    <span className="font-bold text-gray-700">3개월 (90일)</span>
+                                    <span className="text-gray-400 group-hover:text-blue-500 text-sm font-medium">+추가</span>
                                 </button>
                                 <button onClick={() => grantSubscription(365)} className="w-full p-3 text-left hover:bg-gray-50 rounded-xl border transition-colors flex justify-between group">
-                                    <span>1년 (365일)</span>
-                                    <span className="text-gray-400 group-hover:text-blue-500">+추가</span>
+                                    <span className="font-bold text-gray-700">1년 (365일)</span>
+                                    <span className="text-gray-400 group-hover:text-blue-500 text-sm font-medium">+추가</span>
                                 </button>
+
+                                {selectedUser.premium_until && new Date(selectedUser.premium_until) > new Date() && (
+                                    <div className="pt-2 mt-2 border-t">
+                                        <button
+                                            onClick={revokeSubscription}
+                                            className="w-full p-3 text-left hover:bg-red-50 rounded-xl border border-red-100 transition-colors flex justify-between group text-red-600"
+                                        >
+                                            <span className="font-bold">🚫 구독 전체 취소하기</span>
+                                            <span className="text-red-400 text-xs">즉시 만료</span>
+                                        </button>
+                                    </div>
+                                )}
                             </div>
                         ) : (
                             <div className="space-y-2">
@@ -320,8 +369,8 @@ export default function UserManagementModal({ isOpen, onClose, adminKey }: UserM
                                             onClick={() => !isOwned && grantLevel(level)}
                                             disabled={isOwned}
                                             className={`w-full p-3 text-left rounded-xl border transition-colors flex justify-between items-center ${isOwned
-                                                    ? "bg-gray-50 border-gray-200 opacity-60 cursor-not-allowed"
-                                                    : "hover:bg-blue-50 border-gray-200 hover:border-blue-300"
+                                                ? "bg-gray-50 border-gray-200 opacity-60 cursor-not-allowed"
+                                                : "hover:bg-blue-50 border-gray-200 hover:border-blue-300"
                                                 }`}
                                         >
                                             <div className="flex items-center gap-3">

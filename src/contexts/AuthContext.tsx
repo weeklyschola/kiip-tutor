@@ -1,6 +1,11 @@
 "use client";
 
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { useRouter } from "next/navigation"; // 라우터 추가
+import { getSupabase } from "@/lib/supabase"; // Supabase 클라이언트 추가
+
+// 일반 클라이언트 초기화
+const supabase = getSupabase();
 
 export interface User {
     id: string;
@@ -10,6 +15,8 @@ export interface User {
     gender: string;
     nationality: string;
     created_at: string;
+    premium_until: string | null;
+    purchased_levels: number[];
 }
 
 interface AuthContextType {
@@ -17,7 +24,7 @@ interface AuthContextType {
     isLoading: boolean;
     login: (userId: string, password: string) => Promise<{ success: boolean; error?: string }>;
     signup: (userData: SignupData) => Promise<{ success: boolean; error?: string }>;
-    logout: () => void;
+    logout: () => Promise<void>;
     isAuthenticated: boolean;
 }
 
@@ -94,9 +101,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         }
     };
 
-    const logout = () => {
-        setUser(null);
-        localStorage.removeItem("kiip_user");
+    const router = useRouter();
+
+    const logout = async () => {
+        try {
+            // Supabase 로그아웃 (서버 세션 종료)
+            await supabase?.auth.signOut();
+        } catch (error) {
+            console.error("Logout error:", error);
+        } finally {
+            // 로컬 상태 초기화 및 리다이렉트
+            setUser(null);
+            localStorage.removeItem("kiip_user");
+            // 강제 새로고침으로 이동하여 모든 상태 초기화
+            window.location.href = "/login";
+        }
     };
 
     return (

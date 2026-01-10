@@ -1,15 +1,12 @@
 import { NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
+import { getSupabaseAdmin } from "@/lib/supabase";
 
 export async function GET() {
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    const supabaseAdmin = getSupabaseAdmin();
 
-    if (!supabaseUrl || !supabaseServiceKey) {
+    if (!supabaseAdmin) {
         return NextResponse.json({ error: "Supabase 설정이 필요합니다 (.env)" }, { status: 500 });
     }
-
-    const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey);
 
     const dummies = [
         { id: "test_user1", nickname: "열공하는학생", email: "student1@example.com" },
