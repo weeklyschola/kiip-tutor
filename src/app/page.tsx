@@ -1,0 +1,207 @@
+"use client";
+
+import Link from "next/link";
+import BottomNav from "@/components/BottomNav";
+import ProgressBar from "@/components/ProgressBar";
+import { useStudyHistory } from "@/hooks/useStudyHistory";
+
+export default function Home() {
+    const { stats, getOverallAccuracy } = useStudyHistory();
+
+    // 현재 레벨 (추후 사용자 데이터에서 가져옴)
+    const currentLevel = 3;
+    const levelProgress = 65;
+    const userName = "학습자";
+    const streakDays = 12;
+
+    return (
+        <main className="min-h-screen bg-gray-50 pb-nav">
+            {/* 헤더 */}
+            <header className="bg-white sticky top-0 z-40 border-b border-gray-100">
+                <div className="max-w-lg mx-auto px-4 py-3 flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                        <span className="text-xl">📖</span>
+                        <span className="font-bold text-gray-800">사회통합프로그램 아카데미</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <button className="p-2 hover:bg-gray-100 rounded-full">
+                            <span className="text-xl">🔔</span>
+                        </button>
+                        <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                            <span className="text-sm">👤</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div className="max-w-lg mx-auto px-4 py-6 space-y-6">
+                {/* 환영 메시지 */}
+                <section className="flex items-center gap-4">
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center">
+                        <span className="text-2xl">👋</span>
+                    </div>
+                    <div>
+                        <h1 className="text-xl font-bold text-gray-800">
+                            안녕하세요, {userName}님!
+                        </h1>
+                        <p className="text-sm text-gray-500">
+                            사회통합프로그램 {currentLevel}단계 • 중급 1
+                        </p>
+                        <div className="flex items-center gap-1 mt-1">
+                            <span className="text-orange-500">🔥</span>
+                            <span className="text-xs text-orange-600 font-medium">
+                                {streakDays}일 연속 학습 중
+                            </span>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 학습 진행률 카드 */}
+                <section className="bg-white rounded-2xl p-5 shadow-sm">
+                    <div className="flex items-center justify-between mb-3">
+                        <h2 className="font-semibold text-gray-800">
+                            {currentLevel}단계 학습 현황
+                        </h2>
+                        <span className="text-blue-600 font-bold">{levelProgress}%</span>
+                    </div>
+                    <ProgressBar value={levelProgress} size="md" />
+                    <div className="flex justify-between mt-3 text-xs text-gray-500">
+                        <span>18개 유닛 중 12개 완료</span>
+                        <span>다음 목표: 13과</span>
+                    </div>
+                </section>
+
+                {/* AI 튜터 CTA */}
+                <section className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-5 text-white">
+                    <h3 className="font-bold mb-1">궁금한 점이 있나요?</h3>
+                    <p className="text-sm text-blue-100 mb-3">
+                        문법이나 문화에 대해 AI 튜터에게 물어보세요.
+                    </p>
+                    <Link
+                        href="/chat"
+                        className="inline-flex items-center gap-2 bg-white text-blue-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-50 transition-colors"
+                    >
+                        💬 지금 채팅하기
+                    </Link>
+                </section>
+
+                {/* 나의 학습 경로 */}
+                <section>
+                    <h2 className="font-bold text-gray-800 mb-4">나의 학습 경로</h2>
+                    <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+                        {/* 이미지 영역 */}
+                        <div className="h-40 bg-gradient-to-br from-blue-100 to-green-100 flex items-center justify-center relative">
+                            <div className="text-center">
+                                <span className="text-5xl">👨‍👩‍👧‍👦</span>
+                                <p className="text-sm text-gray-600 mt-2">가족과 문화</p>
+                            </div>
+                        </div>
+                        <div className="p-4">
+                            <span className="text-xs text-blue-600 font-medium">현재 유닛</span>
+                            <h3 className="font-bold text-gray-800 mt-1">4과: 가족과 문화</h3>
+                            <div className="flex items-center justify-between mt-3">
+                                <span className="text-xs text-gray-500">
+                                    마지막 학습 위치 (45p)
+                                </span>
+                                <Link
+                                    href="/study/3"
+                                    className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors"
+                                >
+                                    이어서 학습
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 빠른 접근 카드 */}
+                <section className="grid grid-cols-2 gap-4">
+                    {/* 단어 연습 */}
+                    <Link href="/vocabulary-practice" className="col-span-2 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-5 shadow-md hover:shadow-lg transition-all hover:scale-[1.02]">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <div className="flex items-center gap-2 mb-2">
+                                    <span className="text-2xl">🎯</span>
+                                    <h3 className="font-bold text-white text-lg">단어 연습</h3>
+                                </div>
+                                <p className="text-sm text-white/80">실전 대화로 한국어 연습하기</p>
+                                <div className="flex items-center gap-3 mt-3">
+                                    <span className="text-white/90 text-xs">❤️ 하트</span>
+                                    <span className="text-white/90 text-xs">⚡ XP</span>
+                                    <span className="text-white/90 text-xs">🔥 연속 정답</span>
+                                </div>
+                            </div>
+                            <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
+                                <span className="text-4xl">📚</span>
+                            </div>
+                        </div>
+                    </Link>
+
+                    <Link href="/vocabulary" className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
+                        <div className="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center mb-3">
+                            <span className="text-lg">文</span>
+                        </div>
+                        <h3 className="font-bold text-gray-800">단어장</h3>
+                        <p className="text-xs text-gray-500 mt-1">450개 단어 학습 완료</p>
+                        <button className="mt-3 text-xs text-red-600 font-medium border border-red-200 px-3 py-1.5 rounded-full hover:bg-red-50 transition-colors">
+                            전체 복습하기
+                        </button>
+                    </Link>
+
+                    <Link href="/cbt" className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
+                        <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mb-3">
+                            <span className="text-lg">📋</span>
+                        </div>
+                        <h3 className="font-bold text-gray-800">모의고사</h3>
+                        <p className="text-xs text-gray-500 mt-1">CBT 시험 완벽 대비</p>
+                        <button className="mt-3 text-xs text-blue-600 font-medium border border-blue-200 px-3 py-1.5 rounded-full hover:bg-blue-50 transition-colors">
+                            시험 시작하기
+                        </button>
+                    </Link>
+                </section>
+
+                {/* 오늘의 팁 */}
+                <section className="bg-white rounded-2xl p-5 shadow-sm">
+                    <h2 className="font-bold text-gray-800 mb-3">오늘의 팁</h2>
+                    <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span>💡</span>
+                        </div>
+                        <p className="text-sm text-gray-600 leading-relaxed">
+                            가게 점원이나 선생님께 말씀드릴 때는 존댓말을 사용하여 존중을 표현하세요.
+                        </p>
+                    </div>
+                </section>
+
+                {/* 학습 통계 요약 */}
+                {stats && stats.totalSessions > 0 && (
+                    <section className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl p-5 text-white">
+                        <h2 className="font-bold mb-4">📊 나의 학습 현황</h2>
+                        <div className="grid grid-cols-3 gap-4 text-center">
+                            <div>
+                                <div className="text-2xl font-bold">{stats.totalSessions}</div>
+                                <div className="text-xs text-indigo-200">학습 횟수</div>
+                            </div>
+                            <div>
+                                <div className="text-2xl font-bold">{getOverallAccuracy()}%</div>
+                                <div className="text-xs text-indigo-200">평균 정답률</div>
+                            </div>
+                            <div>
+                                <div className="text-2xl font-bold">{stats.totalQuestions}</div>
+                                <div className="text-xs text-indigo-200">푼 문제</div>
+                            </div>
+                        </div>
+                        <Link
+                            href="/analytics"
+                            className="block mt-4 text-center text-sm text-indigo-200 hover:text-white transition-colors"
+                        >
+                            상세 분석 보기 →
+                        </Link>
+                    </section>
+                )}
+            </div>
+
+            <BottomNav />
+        </main>
+    );
+}

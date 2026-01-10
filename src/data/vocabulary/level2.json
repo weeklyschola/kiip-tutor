@@ -1,0 +1,2997 @@
+{
+    "level": 2,
+    "title": "초급 2",
+    "description": "일상생활에서 자주 사용하는 표현을 배웁니다",
+    "vocabulary": [
+        {
+            "word": "결혼하다",
+            "meaning": "To get married",
+            "pronunciation": "gyeolhonhada",
+            "topic": "생활",
+            "examples": [
+                "내년에 결혼해요.",
+                "친구가 결혼했어요."
+            ]
+        },
+        {
+            "word": "이사하다",
+            "meaning": "To move (house)",
+            "pronunciation": "isahada",
+            "topic": "생활",
+            "examples": [
+                "새 집으로 이사해요.",
+                "다음 달에 이사해요."
+            ]
+        },
+        {
+            "word": "출근하다",
+            "meaning": "To go to work",
+            "pronunciation": "chulgeunhada",
+            "topic": "직장",
+            "examples": [
+                "아침에 출근해요.",
+                "버스로 출근해요."
+            ]
+        },
+        {
+            "word": "퇴근하다",
+            "meaning": "To leave work",
+            "pronunciation": "toegeunhada",
+            "topic": "직장",
+            "examples": [
+                "6시에 퇴근해요.",
+                "늦게 퇴근했어요."
+            ]
+        },
+        {
+            "word": "회의하다",
+            "meaning": "To have a meeting",
+            "pronunciation": "hoeuihada",
+            "topic": "직장",
+            "examples": [
+                "오후에 회의해요.",
+                "회의가 길었어요."
+            ]
+        },
+        {
+            "word": "출장가다",
+            "meaning": "To go on a business trip",
+            "pronunciation": "chuljanggada",
+            "topic": "직장",
+            "examples": [
+                "다음 주에 출장 가요.",
+                "부산으로 출장 갔어요."
+            ]
+        },
+        {
+            "word": "휴가",
+            "meaning": "Vacation",
+            "pronunciation": "hyuga",
+            "topic": "직장",
+            "examples": [
+                "휴가를 받았어요.",
+                "휴가 때 여행 가요."
+            ]
+        },
+        {
+            "word": "월급",
+            "meaning": "Salary",
+            "pronunciation": "wolgeup",
+            "topic": "직장",
+            "examples": [
+                "월급을 받았어요.",
+                "월급이 올랐어요."
+            ]
+        },
+        {
+            "word": "상사",
+            "meaning": "Boss/Superior",
+            "pronunciation": "sangsa",
+            "topic": "직장",
+            "examples": [
+                "상사한테 보고해요.",
+                "상사가 친절해요."
+            ]
+        },
+        {
+            "word": "동료",
+            "meaning": "Colleague",
+            "pronunciation": "dongryo",
+            "topic": "직장",
+            "examples": [
+                "동료와 점심 먹어요.",
+                "동료가 도와줬어요."
+            ]
+        },
+        {
+            "word": "계약",
+            "meaning": "Contract",
+            "pronunciation": "gyeyak",
+            "topic": "직장",
+            "examples": [
+                "계약을 했어요.",
+                "계약 기간이 1년이에요."
+            ]
+        },
+        {
+            "word": "면접",
+            "meaning": "Interview",
+            "pronunciation": "myeonjeop",
+            "topic": "직장",
+            "examples": [
+                "면접을 봤어요.",
+                "면접이 잘 됐어요."
+            ]
+        },
+        {
+            "word": "이력서",
+            "meaning": "Resume",
+            "pronunciation": "iryeokseo",
+            "topic": "직장",
+            "examples": [
+                "이력서를 써요.",
+                "이력서를 보냈어요."
+            ]
+        },
+        {
+            "word": "취업하다",
+            "meaning": "To get a job",
+            "pronunciation": "chwieopada",
+            "topic": "직장",
+            "examples": [
+                "취업했어요!",
+                "취업 준비해요."
+            ]
+        },
+        {
+            "word": "퇴직하다",
+            "meaning": "To retire",
+            "pronunciation": "toejikada",
+            "topic": "직장",
+            "examples": [
+                "내년에 퇴직해요.",
+                "아버지가 퇴직하셨어요."
+            ]
+        },
+        {
+            "word": "승진하다",
+            "meaning": "To get promoted",
+            "pronunciation": "seungjinhada",
+            "topic": "직장",
+            "examples": [
+                "승진했어요!",
+                "승진 축하해요."
+            ]
+        },
+        {
+            "word": "야근하다",
+            "meaning": "To work overtime",
+            "pronunciation": "yageunhada",
+            "topic": "직장",
+            "examples": [
+                "오늘 야근해요.",
+                "야근이 많아요."
+            ]
+        },
+        {
+            "word": "병가",
+            "meaning": "Sick leave",
+            "pronunciation": "byeongga",
+            "topic": "직장",
+            "examples": [
+                "병가를 냈어요.",
+                "병가 중이에요."
+            ]
+        },
+        {
+            "word": "급여명세서",
+            "meaning": "Pay stub",
+            "pronunciation": "geubyeomyeongseseo",
+            "topic": "직장",
+            "examples": [
+                "급여명세서 확인했어요.",
+                "급여명세서가 나왔어요."
+            ]
+        },
+        {
+            "word": "보험",
+            "meaning": "Insurance",
+            "pronunciation": "boheom",
+            "topic": "생활",
+            "examples": [
+                "보험에 가입했어요.",
+                "건강 보험이 있어요."
+            ]
+        },
+        {
+            "word": "계좌",
+            "meaning": "Bank account",
+            "pronunciation": "gyejwa",
+            "topic": "금융",
+            "examples": [
+                "계좌를 만들었어요.",
+                "계좌 번호 알려주세요."
+            ]
+        },
+        {
+            "word": "송금하다",
+            "meaning": "To transfer money",
+            "pronunciation": "songgeumhada",
+            "topic": "금융",
+            "examples": [
+                "돈을 송금했어요.",
+                "송금 수수료가 있어요."
+            ]
+        },
+        {
+            "word": "입금하다",
+            "meaning": "To deposit",
+            "pronunciation": "ipgeumhada",
+            "topic": "금융",
+            "examples": [
+                "돈을 입금했어요.",
+                "월급이 입금됐어요."
+            ]
+        },
+        {
+            "word": "출금하다",
+            "meaning": "To withdraw",
+            "pronunciation": "chulgeumhada",
+            "topic": "금융",
+            "examples": [
+                "ATM에서 출금했어요.",
+                "돈을 출금해야 해요."
+            ]
+        },
+        {
+            "word": "대출",
+            "meaning": "Loan",
+            "pronunciation": "daechul",
+            "topic": "금융",
+            "examples": [
+                "대출을 받았어요.",
+                "대출을 갚아요."
+            ]
+        },
+        {
+            "word": "이자",
+            "meaning": "Interest",
+            "pronunciation": "ija",
+            "topic": "금융",
+            "examples": [
+                "이자가 높아요.",
+                "이자를 내요."
+            ]
+        },
+        {
+            "word": "신용카드",
+            "meaning": "Credit card",
+            "pronunciation": "sinyongkadeu",
+            "topic": "금융",
+            "examples": [
+                "신용카드로 결제해요.",
+                "신용카드를 만들었어요."
+            ]
+        },
+        {
+            "word": "체크카드",
+            "meaning": "Debit card",
+            "pronunciation": "chekeukadeu",
+            "topic": "금융",
+            "examples": [
+                "체크카드 쓸게요.",
+                "체크카드가 편해요."
+            ]
+        },
+        {
+            "word": "현금",
+            "meaning": "Cash",
+            "pronunciation": "hyeongeum",
+            "topic": "금융",
+            "examples": [
+                "현금으로 낼게요.",
+                "현금이 없어요."
+            ]
+        },
+        {
+            "word": "영수증",
+            "meaning": "Receipt",
+            "pronunciation": "yeongsujeung",
+            "topic": "금융",
+            "examples": [
+                "영수증 주세요.",
+                "영수증을 버렸어요."
+            ]
+        },
+        {
+            "word": "할인",
+            "meaning": "Discount",
+            "pronunciation": "harin",
+            "topic": "쇼핑",
+            "examples": [
+                "할인 중이에요.",
+                "할인받았어요."
+            ]
+        },
+        {
+            "word": "환불",
+            "meaning": "Refund",
+            "pronunciation": "hwanbul",
+            "topic": "쇼핑",
+            "examples": [
+                "환불해 주세요.",
+                "환불 안 돼요."
+            ]
+        },
+        {
+            "word": "교환",
+            "meaning": "Exchange",
+            "pronunciation": "gyohwan",
+            "topic": "쇼핑",
+            "examples": [
+                "사이즈 교환해 주세요.",
+                "교환 가능해요?"
+            ]
+        },
+        {
+            "word": "배송",
+            "meaning": "Delivery",
+            "pronunciation": "baesong",
+            "topic": "쇼핑",
+            "examples": [
+                "배송이 빨라요.",
+                "배송비가 있어요."
+            ]
+        },
+        {
+            "word": "주문하다",
+            "meaning": "To order",
+            "pronunciation": "jumunhada",
+            "topic": "쇼핑",
+            "examples": [
+                "온라인으로 주문했어요.",
+                "주문할게요."
+            ]
+        },
+        {
+            "word": "포장하다",
+            "meaning": "To wrap/package",
+            "pronunciation": "pojanghada",
+            "topic": "쇼핑",
+            "examples": [
+                "포장해 주세요.",
+                "선물 포장이요."
+            ]
+        },
+        {
+            "word": "진료받다",
+            "meaning": "To receive treatment",
+            "pronunciation": "jinlyobatda",
+            "topic": "건강",
+            "examples": [
+                "진료 받았어요.",
+                "진료 예약했어요."
+            ]
+        },
+        {
+            "word": "처방전",
+            "meaning": "Prescription",
+            "pronunciation": "cheobanggeon",
+            "topic": "건강",
+            "examples": [
+                "처방전 받았어요.",
+                "처방전 가지고 가세요."
+            ]
+        },
+        {
+            "word": "약을 먹다",
+            "meaning": "To take medicine",
+            "pronunciation": "yageul meokda",
+            "topic": "건강",
+            "examples": [
+                "약 먹었어요?",
+                "하루에 세 번 약 먹어요."
+            ]
+        },
+        {
+            "word": "입원하다",
+            "meaning": "To be hospitalized",
+            "pronunciation": "ibwonhada",
+            "topic": "건강",
+            "examples": [
+                "할머니가 입원하셨어요.",
+                "일주일 입원했어요."
+            ]
+        },
+        {
+            "word": "퇴원하다",
+            "meaning": "To be discharged",
+            "pronunciation": "toewonhada",
+            "topic": "건강",
+            "examples": [
+                "내일 퇴원해요.",
+                "퇴원 축하해요."
+            ]
+        },
+        {
+            "word": "수술하다",
+            "meaning": "To have surgery",
+            "pronunciation": "susulhada",
+            "topic": "건강",
+            "examples": [
+                "수술받았어요.",
+                "수술이 잘 됐어요."
+            ]
+        },
+        {
+            "word": "건강검진",
+            "meaning": "Health checkup",
+            "pronunciation": "geonganggomjin",
+            "topic": "건강",
+            "examples": [
+                "건강검진 받았어요.",
+                "검진 결과가 좋아요."
+            ]
+        },
+        {
+            "word": "증상",
+            "meaning": "Symptom",
+            "pronunciation": "jeungsang",
+            "topic": "건강",
+            "examples": [
+                "어떤 증상이 있어요?",
+                "증상이 좋아졌어요."
+            ]
+        },
+        {
+            "word": "두통",
+            "meaning": "Headache",
+            "pronunciation": "dutong",
+            "topic": "건강",
+            "examples": [
+                "두통이 있어요.",
+                "두통약 주세요."
+            ]
+        },
+        {
+            "word": "복통",
+            "meaning": "Stomachache",
+            "pronunciation": "boktong",
+            "topic": "건강",
+            "examples": [
+                "복통이 심해요.",
+                "복통이 났어요."
+            ]
+        },
+        {
+            "word": "감기",
+            "meaning": "Cold",
+            "pronunciation": "gamgi",
+            "topic": "건강",
+            "examples": [
+                "감기에 걸렸어요.",
+                "감기약 먹어요."
+            ]
+        },
+        {
+            "word": "열",
+            "meaning": "Fever",
+            "pronunciation": "yeol",
+            "topic": "건강",
+            "examples": [
+                "열이 있어요.",
+                "열이 내렸어요."
+            ]
+        },
+        {
+            "word": "기침",
+            "meaning": "Cough",
+            "pronunciation": "gichim",
+            "topic": "건강",
+            "examples": [
+                "기침이 심해요.",
+                "기침이 안 멈춰요."
+            ]
+        },
+        {
+            "word": "콧물",
+            "meaning": "Runny nose",
+            "pronunciation": "konmul",
+            "topic": "건강",
+            "examples": [
+                "콧물이 나요.",
+                "콧물이 심해요."
+            ]
+        },
+        {
+            "word": "알레르기",
+            "meaning": "Allergy",
+            "pronunciation": "allereugi",
+            "topic": "건강",
+            "examples": [
+                "알레르기가 있어요.",
+                "꽃가루 알레르기예요."
+            ]
+        },
+        {
+            "word": "월세",
+            "meaning": "Monthly rent",
+            "pronunciation": "wolse",
+            "topic": "주거",
+            "examples": [
+                "월세가 50만원이에요.",
+                "월세를 냈어요."
+            ]
+        },
+        {
+            "word": "전세",
+            "meaning": "Jeonse (key money deposit)",
+            "pronunciation": "jeonse",
+            "topic": "주거",
+            "examples": [
+                "전세로 살아요.",
+                "전세 계약했어요."
+            ]
+        },
+        {
+            "word": "보증금",
+            "meaning": "Security deposit",
+            "pronunciation": "bojeunggeum",
+            "topic": "주거",
+            "examples": [
+                "보증금이 천만원이에요.",
+                "보증금을 돌려받았어요."
+            ]
+        },
+        {
+            "word": "부동산",
+            "meaning": "Real estate agency",
+            "pronunciation": "budongsan",
+            "topic": "주거",
+            "examples": [
+                "부동산에 갔어요.",
+                "부동산에서 집 찾아요."
+            ]
+        },
+        {
+            "word": "관리비",
+            "meaning": "Maintenance fee",
+            "pronunciation": "gwanlibi",
+            "topic": "주거",
+            "examples": [
+                "관리비가 10만원이에요.",
+                "관리비에 난방비 포함돼요."
+            ]
+        },
+        {
+            "word": "집주인",
+            "meaning": "Landlord",
+            "pronunciation": "jipjuin",
+            "topic": "주거",
+            "examples": [
+                "집주인이 친절해요.",
+                "집주인한테 연락했어요."
+            ]
+        },
+        {
+            "word": "세입자",
+            "meaning": "Tenant",
+            "pronunciation": "seipja",
+            "topic": "주거",
+            "examples": [
+                "세입자를 구해요.",
+                "새 세입자가 들어왔어요."
+            ]
+        },
+        {
+            "word": "원룸",
+            "meaning": "Studio apartment",
+            "pronunciation": "wonrum",
+            "topic": "주거",
+            "examples": [
+                "원룸에 살아요.",
+                "원룸이 깨끗해요."
+            ]
+        },
+        {
+            "word": "아파트",
+            "meaning": "Apartment",
+            "pronunciation": "apateu",
+            "topic": "주거",
+            "examples": [
+                "아파트에 살아요.",
+                "아파트가 편해요."
+            ]
+        },
+        {
+            "word": "오피스텔",
+            "meaning": "Officetel",
+            "pronunciation": "opiseutel",
+            "topic": "주거",
+            "examples": [
+                "오피스텔을 계약했어요.",
+                "오피스텔이 역 근처예요."
+            ]
+        },
+        {
+            "word": "입주하다",
+            "meaning": "To move in",
+            "pronunciation": "ipjuhada",
+            "topic": "주거",
+            "examples": [
+                "다음 달에 입주해요.",
+                "새 아파트에 입주했어요."
+            ]
+        },
+        {
+            "word": "퇴거하다",
+            "meaning": "To move out",
+            "pronunciation": "toegeohada",
+            "topic": "주거",
+            "examples": [
+                "이번 달 말에 퇴거해요.",
+                "퇴거 전에 청소해요."
+            ]
+        },
+        {
+            "word": "고장나다",
+            "meaning": "To break down",
+            "pronunciation": "gojangnada",
+            "topic": "주거",
+            "examples": [
+                "에어컨이 고장났어요.",
+                "세탁기가 고장났어요."
+            ]
+        },
+        {
+            "word": "수리하다",
+            "meaning": "To repair",
+            "pronunciation": "surihada",
+            "topic": "주거",
+            "examples": [
+                "수리 기사가 왔어요.",
+                "보일러 수리했어요."
+            ]
+        },
+        {
+            "word": "난방",
+            "meaning": "Heating",
+            "pronunciation": "nanbang",
+            "topic": "주거",
+            "examples": [
+                "난방을 켜요.",
+                "난방비가 비싸요."
+            ]
+        },
+        {
+            "word": "냉방",
+            "meaning": "Air conditioning",
+            "pronunciation": "naengbang",
+            "topic": "주거",
+            "examples": [
+                "냉방을 켜요.",
+                "냉방이 시원해요."
+            ]
+        },
+        {
+            "word": "지하철",
+            "meaning": "Subway",
+            "pronunciation": "jihacheol",
+            "topic": "교통",
+            "examples": [
+                "지하철로 출근해요.",
+                "지하철이 빨라요."
+            ]
+        },
+        {
+            "word": "환승하다",
+            "meaning": "To transfer",
+            "pronunciation": "hwanseunghada",
+            "topic": "교통",
+            "examples": [
+                "2호선으로 환승해요.",
+                "환승역이에요."
+            ]
+        },
+        {
+            "word": "교통카드",
+            "meaning": "Transit card",
+            "pronunciation": "gyotongkadeu",
+            "topic": "교통",
+            "examples": [
+                "교통카드 찍어요.",
+                "교통카드 충전했어요."
+            ]
+        },
+        {
+            "word": "충전하다",
+            "meaning": "To recharge",
+            "pronunciation": "chungjeonhada",
+            "topic": "교통",
+            "examples": [
+                "카드 충전해요.",
+                "핸드폰 충전해요."
+            ]
+        },
+        {
+            "word": "택시",
+            "meaning": "Taxi",
+            "pronunciation": "taeksi",
+            "topic": "교통",
+            "examples": [
+                "택시 타요.",
+                "택시 불렀어요."
+            ]
+        },
+        {
+            "word": "콜택시",
+            "meaning": "Call taxi",
+            "pronunciation": "koltaeksi",
+            "topic": "교통",
+            "examples": [
+                "콜택시 불렀어요.",
+                "콜택시가 더 비싸요."
+            ]
+        },
+        {
+            "word": "기차",
+            "meaning": "Train",
+            "pronunciation": "gicha",
+            "topic": "교통",
+            "examples": [
+                "기차로 부산 가요.",
+                "기차표 샀어요."
+            ]
+        },
+        {
+            "word": "KTX",
+            "meaning": "KTX (high-speed train)",
+            "pronunciation": "keitiegseu",
+            "topic": "교통",
+            "examples": [
+                "KTX로 가요.",
+                "KTX가 빨라요."
+            ]
+        },
+        {
+            "word": "비행기",
+            "meaning": "Airplane",
+            "pronunciation": "bihaenggi",
+            "topic": "교통",
+            "examples": [
+                "비행기로 제주도 가요.",
+                "비행기표 예매했어요."
+            ]
+        },
+        {
+            "word": "출발하다",
+            "meaning": "To depart",
+            "pronunciation": "chulbalhada",
+            "topic": "교통",
+            "examples": [
+                "몇 시에 출발해요?",
+                "지금 출발해요."
+            ]
+        },
+        {
+            "word": "도착하다",
+            "meaning": "To arrive",
+            "pronunciation": "dochakada",
+            "topic": "교통",
+            "examples": [
+                "몇 시에 도착해요?",
+                "방금 도착했어요."
+            ]
+        },
+        {
+            "word": "예매하다",
+            "meaning": "To book/reserve",
+            "pronunciation": "yemaehada",
+            "topic": "교통",
+            "examples": [
+                "표 예매했어요.",
+                "온라인으로 예매해요."
+            ]
+        },
+        {
+            "word": "취소하다",
+            "meaning": "To cancel",
+            "pronunciation": "chwisohada",
+            "topic": "생활",
+            "examples": [
+                "예약 취소했어요.",
+                "취소 수수료 있어요."
+            ]
+        },
+        {
+            "word": "변경하다",
+            "meaning": "To change",
+            "pronunciation": "byeongyeonghada",
+            "topic": "생활",
+            "examples": [
+                "날짜 변경했어요.",
+                "예약 변경해 주세요."
+            ]
+        },
+        {
+            "word": "핸드폰",
+            "meaning": "Cell phone",
+            "pronunciation": "haendeupon",
+            "topic": "통신",
+            "examples": [
+                "핸드폰 새로 샀어요.",
+                "핸드폰 번호 알려주세요."
+            ]
+        },
+        {
+            "word": "통화하다",
+            "meaning": "To make a call",
+            "pronunciation": "tonghwahada",
+            "topic": "통신",
+            "examples": [
+                "엄마랑 통화했어요.",
+                "통화 중이에요."
+            ]
+        },
+        {
+            "word": "문자",
+            "meaning": "Text message",
+            "pronunciation": "munja",
+            "topic": "통신",
+            "examples": [
+                "문자 보냈어요.",
+                "문자 왔어요."
+            ]
+        },
+        {
+            "word": "와이파이",
+            "meaning": "Wi-Fi",
+            "pronunciation": "waipai",
+            "topic": "통신",
+            "examples": [
+                "와이파이 비밀번호 뭐예요?",
+                "와이파이 연결했어요."
+            ]
+        },
+        {
+            "word": "데이터",
+            "meaning": "Data",
+            "pronunciation": "deiteo",
+            "topic": "통신",
+            "examples": [
+                "데이터 다 썼어요.",
+                "데이터 무제한이에요."
+            ]
+        },
+        {
+            "word": "요금제",
+            "meaning": "Phone plan",
+            "pronunciation": "yogeumje",
+            "topic": "통신",
+            "examples": [
+                "요금제 바꿨어요.",
+                "어떤 요금제 쓰세요?"
+            ]
+        },
+        {
+            "word": "개통하다",
+            "meaning": "To activate (phone)",
+            "pronunciation": "gaetonghada",
+            "topic": "통신",
+            "examples": [
+                "핸드폰 개통했어요.",
+                "개통하려면 신분증 필요해요."
+            ]
+        },
+        {
+            "word": "해지하다",
+            "meaning": "To cancel (service)",
+            "pronunciation": "haejihada",
+            "topic": "통신",
+            "examples": [
+                "계약 해지했어요.",
+                "해지하고 싶어요."
+            ]
+        },
+        {
+            "word": "인터넷",
+            "meaning": "Internet",
+            "pronunciation": "inteonet",
+            "topic": "통신",
+            "examples": [
+                "인터넷 설치했어요.",
+                "인터넷이 안 돼요."
+            ]
+        },
+        {
+            "word": "수업",
+            "meaning": "Class/Lesson",
+            "pronunciation": "sueop",
+            "topic": "교육",
+            "examples": [
+                "수업이 9시에 시작해요.",
+                "수업 들어요."
+            ]
+        },
+        {
+            "word": "학원",
+            "meaning": "Academy/Hagwon",
+            "pronunciation": "hakwon",
+            "topic": "교육",
+            "examples": [
+                "한국어 학원 다녀요.",
+                "학원비가 비싸요."
+            ]
+        },
+        {
+            "word": "등록하다",
+            "meaning": "To register",
+            "pronunciation": "deungrokhada",
+            "topic": "교육",
+            "examples": [
+                "수업 등록했어요.",
+                "등록하려면 서류 필요해요."
+            ]
+        },
+        {
+            "word": "졸업하다",
+            "meaning": "To graduate",
+            "pronunciation": "joreophada",
+            "topic": "교육",
+            "examples": [
+                "대학교 졸업했어요.",
+                "졸업 축하해요."
+            ]
+        },
+        {
+            "word": "입학하다",
+            "meaning": "To enroll",
+            "pronunciation": "iphakada",
+            "topic": "교육",
+            "examples": [
+                "대학교에 입학했어요.",
+                "입학 시험 봤어요."
+            ]
+        },
+        {
+            "word": "시험보다",
+            "meaning": "To take an exam",
+            "pronunciation": "siheomboda",
+            "topic": "교육",
+            "examples": [
+                "내일 시험 봐요.",
+                "시험 잘 봤어요."
+            ]
+        },
+        {
+            "word": "성적",
+            "meaning": "Grades",
+            "pronunciation": "seongjeok",
+            "topic": "교육",
+            "examples": [
+                "성적이 좋아요.",
+                "성적표 받았어요."
+            ]
+        },
+        {
+            "word": "장학금",
+            "meaning": "Scholarship",
+            "pronunciation": "janghakgeum",
+            "topic": "교육",
+            "examples": [
+                "장학금 받았어요.",
+                "장학금 신청했어요."
+            ]
+        },
+        {
+            "word": "유학",
+            "meaning": "Study abroad",
+            "pronunciation": "yuhak",
+            "topic": "교육",
+            "examples": [
+                "한국에 유학 왔어요.",
+                "유학 준비해요."
+            ]
+        },
+        {
+            "word": "반찬",
+            "meaning": "Side dish",
+            "pronunciation": "banchan",
+            "topic": "음식",
+            "examples": [
+                "반찬이 맛있어요.",
+                "반찬 더 주세요."
+            ]
+        },
+        {
+            "word": "국물",
+            "meaning": "Soup/broth",
+            "pronunciation": "gungmul",
+            "topic": "음식",
+            "examples": [
+                "국물이 맛있어요.",
+                "국물이 뜨거워요."
+            ]
+        },
+        {
+            "word": "볶음밥",
+            "meaning": "Fried rice",
+            "pronunciation": "bokkembap",
+            "topic": "음식",
+            "examples": [
+                "볶음밥 주문했어요.",
+                "김치볶음밥 좋아해요."
+            ]
+        },
+        {
+            "word": "찌개",
+            "meaning": "Stew",
+            "pronunciation": "jjigae",
+            "topic": "음식",
+            "examples": [
+                "김치찌개 먹어요.",
+                "찌개가 뜨거워요."
+            ]
+        },
+        {
+            "word": "비빔밥",
+            "meaning": "Bibimbap",
+            "pronunciation": "bibimbap",
+            "topic": "음식",
+            "examples": [
+                "비빔밥 드세요.",
+                "전주비빔밥 유명해요."
+            ]
+        },
+        {
+            "word": "삼겹살",
+            "meaning": "Pork belly",
+            "pronunciation": "samgyeopsal",
+            "topic": "음식",
+            "examples": [
+                "삼겹살 구워요.",
+                "삼겹살 맛있어요."
+            ]
+        },
+        {
+            "word": "치킨",
+            "meaning": "Fried chicken",
+            "pronunciation": "chikin",
+            "topic": "음식",
+            "examples": [
+                "치킨 배달시켰어요.",
+                "치킨 먹고 싶어요."
+            ]
+        },
+        {
+            "word": "배달",
+            "meaning": "Delivery",
+            "pronunciation": "baedal",
+            "topic": "음식",
+            "examples": [
+                "배달 시켰어요.",
+                "배달이 빨라요."
+            ]
+        },
+        {
+            "word": "예약",
+            "meaning": "Reservation",
+            "pronunciation": "yeyak",
+            "topic": "생활",
+            "examples": [
+                "예약했어요.",
+                "예약 필요해요."
+            ]
+        },
+        {
+            "word": "대기",
+            "meaning": "Waiting",
+            "pronunciation": "daegi",
+            "topic": "생활",
+            "examples": [
+                "대기 시간이 길어요.",
+                "대기 중이에요."
+            ]
+        },
+        {
+            "word": "기쁘다",
+            "meaning": "Happy/Glad",
+            "pronunciation": "gippeuda",
+            "topic": "감정",
+            "examples": [
+                "기뻐요.",
+                "소식 듣고 기뻤어요."
+            ]
+        },
+        {
+            "word": "슬프다",
+            "meaning": "Sad",
+            "pronunciation": "seulpeuda",
+            "topic": "감정",
+            "examples": [
+                "슬퍼요.",
+                "영화가 슬펐어요."
+            ]
+        },
+        {
+            "word": "화나다",
+            "meaning": "To get angry",
+            "pronunciation": "hwanada",
+            "topic": "감정",
+            "examples": [
+                "화났어요.",
+                "왜 화났어요?"
+            ]
+        },
+        {
+            "word": "걱정하다",
+            "meaning": "To worry",
+            "pronunciation": "geokjeonghada",
+            "topic": "감정",
+            "examples": [
+                "걱정하지 마세요.",
+                "많이 걱정했어요."
+            ]
+        },
+        {
+            "word": "무섭다",
+            "meaning": "Scary",
+            "pronunciation": "museopda",
+            "topic": "감정",
+            "examples": [
+                "영화가 무서워요.",
+                "무서워요!"
+            ]
+        },
+        {
+            "word": "부럽다",
+            "meaning": "Envious",
+            "pronunciation": "bureopda",
+            "topic": "감정",
+            "examples": [
+                "부러워요.",
+                "너무 부러워요."
+            ]
+        },
+        {
+            "word": "외롭다",
+            "meaning": "Lonely",
+            "pronunciation": "oeropda",
+            "topic": "감정",
+            "examples": [
+                "외로워요.",
+                "혼자 살면 외로워요."
+            ]
+        },
+        {
+            "word": "부끄럽다",
+            "meaning": "Embarrassed/Shy",
+            "pronunciation": "bukkeureopda",
+            "topic": "감정",
+            "examples": [
+                "부끄러워요.",
+                "한국어 하면 부끄러워요."
+            ]
+        },
+        {
+            "word": "설레다",
+            "meaning": "Excited/Flutter",
+            "pronunciation": "seolleda",
+            "topic": "감정",
+            "examples": [
+                "설레요.",
+                "여행 생각하면 설레요."
+            ]
+        },
+        {
+            "word": "답답하다",
+            "meaning": "Frustrated/Stuffy",
+            "pronunciation": "dapdapada",
+            "topic": "감정",
+            "examples": [
+                "답답해요.",
+                "한국어가 안 되면 답답해요."
+            ]
+        },
+        {
+            "word": "후회하다",
+            "meaning": "To regret",
+            "pronunciation": "huhoehada",
+            "topic": "감정",
+            "examples": [
+                "후회해요.",
+                "안 해서 후회해요."
+            ]
+        },
+        {
+            "word": "축하하다",
+            "meaning": "To congratulate",
+            "pronunciation": "chukahada",
+            "topic": "사회생활",
+            "examples": [
+                "축하해요!",
+                "생일 축하해요!"
+            ]
+        },
+        {
+            "word": "감사하다",
+            "meaning": "To thank",
+            "pronunciation": "gamsahada",
+            "topic": "사회생활",
+            "examples": [
+                "감사합니다.",
+                "정말 감사해요."
+            ]
+        },
+        {
+            "word": "사과하다",
+            "meaning": "To apologize",
+            "pronunciation": "sagwahada",
+            "topic": "사회생활",
+            "examples": [
+                "사과해요.",
+                "진심으로 사과해요."
+            ]
+        },
+        {
+            "word": "부탁하다",
+            "meaning": "To request",
+            "pronunciation": "butakhada",
+            "topic": "사회생활",
+            "examples": [
+                "부탁해요.",
+                "잘 부탁드려요."
+            ]
+        },
+        {
+            "word": "약속",
+            "meaning": "Promise/Appointment",
+            "pronunciation": "yaksok",
+            "topic": "사회생활",
+            "examples": [
+                "약속 있어요.",
+                "약속 지켜요."
+            ]
+        },
+        {
+            "word": "모임",
+            "meaning": "Gathering/Meeting",
+            "pronunciation": "moim",
+            "topic": "사회생활",
+            "examples": [
+                "모임에 가요.",
+                "동창 모임이에요."
+            ]
+        },
+        {
+            "word": "회식",
+            "meaning": "Company dinner",
+            "pronunciation": "hoesik",
+            "topic": "사회생활",
+            "examples": [
+                "오늘 회식이에요.",
+                "회식 갔다 왔어요."
+            ]
+        },
+        {
+            "word": "소개팅",
+            "meaning": "Blind date",
+            "pronunciation": "sogaeting",
+            "topic": "사회생활",
+            "examples": [
+                "소개팅 했어요.",
+                "소개팅 어땠어요?"
+            ]
+        },
+        {
+            "word": "결혼식",
+            "meaning": "Wedding",
+            "pronunciation": "gyeolhonsik",
+            "topic": "생활",
+            "examples": [
+                "결혼식에 가요.",
+                "결혼식 축하해요."
+            ]
+        },
+        {
+            "word": "장례식",
+            "meaning": "Funeral",
+            "pronunciation": "jangnyesik",
+            "topic": "생활",
+            "examples": [
+                "장례식에 갔어요.",
+                "조문 갔어요."
+            ]
+        },
+        {
+            "word": "돌잔치",
+            "meaning": "First birthday party",
+            "pronunciation": "doljanchi",
+            "topic": "생활",
+            "examples": [
+                "돌잔치에 초대받았어요.",
+                "아기 돌잔치예요."
+            ]
+        },
+        {
+            "word": "명절",
+            "meaning": "Holiday",
+            "pronunciation": "myeongjeol",
+            "topic": "문화",
+            "examples": [
+                "명절에 고향 가요.",
+                "추석은 명절이에요."
+            ]
+        },
+        {
+            "word": "설날",
+            "meaning": "Lunar New Year",
+            "pronunciation": "seollal",
+            "topic": "문화",
+            "examples": [
+                "설날에 떡국 먹어요.",
+                "설날 연휴예요."
+            ]
+        },
+        {
+            "word": "추석",
+            "meaning": "Chuseok",
+            "pronunciation": "chuseok",
+            "topic": "문화",
+            "examples": [
+                "추석에 송편 먹어요.",
+                "추석 잘 보내세요."
+            ]
+        },
+        {
+            "word": "세배",
+            "meaning": "New Year's bow",
+            "pronunciation": "sebae",
+            "topic": "문화",
+            "examples": [
+                "어른들께 세배해요.",
+                "세배하고 세뱃돈 받아요."
+            ]
+        },
+        {
+            "word": "세뱃돈",
+            "meaning": "New Year's money",
+            "pronunciation": "sebaetdon",
+            "topic": "문화",
+            "examples": [
+                "세뱃돈 받았어요.",
+                "세뱃돈 얼마 받았어요?"
+            ]
+        },
+        {
+            "word": "한복",
+            "meaning": "Traditional Korean clothes",
+            "pronunciation": "hanbok",
+            "topic": "문화",
+            "examples": [
+                "한복 입었어요.",
+                "한복이 예뻐요."
+            ]
+        },
+        {
+            "word": "전통",
+            "meaning": "Tradition",
+            "pronunciation": "jeontong",
+            "topic": "문화",
+            "examples": [
+                "한국 전통이에요.",
+                "전통 음식 좋아해요."
+            ]
+        },
+        {
+            "word": "존댓말",
+            "meaning": "Formal speech",
+            "pronunciation": "jondaenmal",
+            "topic": "문화",
+            "examples": [
+                "존댓말 쓰세요.",
+                "어른에게 존댓말 써요."
+            ]
+        },
+        {
+            "word": "반말",
+            "meaning": "Informal speech",
+            "pronunciation": "banmal",
+            "topic": "문화",
+            "examples": [
+                "반말 해도 돼요.",
+                "친구한테 반말해요."
+            ]
+        },
+        {
+            "word": "어른",
+            "meaning": "Adult/Elder",
+            "pronunciation": "eoreun",
+            "topic": "문화",
+            "examples": [
+                "어른을 존경해요.",
+                "어른 먼저 드세요."
+            ]
+        },
+        {
+            "word": "효도",
+            "meaning": "Filial piety",
+            "pronunciation": "hyodo",
+            "topic": "문화",
+            "examples": [
+                "부모님께 효도해요.",
+                "효도 여행 보내드렸어요."
+            ]
+        },
+        {
+            "word": "인사",
+            "meaning": "Greeting",
+            "pronunciation": "insa",
+            "topic": "문화",
+            "examples": [
+                "인사하세요.",
+                "인사가 중요해요."
+            ]
+        },
+        {
+            "word": "눈치",
+            "meaning": "Social awareness",
+            "pronunciation": "nunchi",
+            "topic": "문화",
+            "examples": [
+                "눈치가 빨라요.",
+                "눈치 봐요."
+            ]
+        },
+        {
+            "word": "정",
+            "meaning": "Affection/Bond",
+            "pronunciation": "jeong",
+            "topic": "문화",
+            "examples": [
+                "정이 들었어요.",
+                "정이 많아요."
+            ]
+        },
+        {
+            "word": "사투리",
+            "meaning": "Dialect",
+            "pronunciation": "saturi",
+            "topic": "문화",
+            "examples": [
+                "부산 사투리예요.",
+                "사투리 귀여워요."
+            ]
+        },
+        {
+            "word": "노래방",
+            "meaning": "Karaoke",
+            "pronunciation": "noraebang",
+            "topic": "여가",
+            "examples": [
+                "노래방 가요.",
+                "노래방에서 노래해요."
+            ]
+        },
+        {
+            "word": "찜질방",
+            "meaning": "Korean spa",
+            "pronunciation": "jjimjilbang",
+            "topic": "여가",
+            "examples": [
+                "찜질방 가요.",
+                "찜질방에서 자요."
+            ]
+        },
+        {
+            "word": "등산",
+            "meaning": "Hiking",
+            "pronunciation": "deungsan",
+            "topic": "여가",
+            "examples": [
+                "주말에 등산 가요.",
+                "등산 좋아해요."
+            ]
+        },
+        {
+            "word": "캠핑",
+            "meaning": "Camping",
+            "pronunciation": "kaemping",
+            "topic": "여가",
+            "examples": [
+                "캠핑 갔어요.",
+                "캠핑 좋아해요."
+            ]
+        },
+        {
+            "word": "낚시",
+            "meaning": "Fishing",
+            "pronunciation": "naksi",
+            "topic": "여가",
+            "examples": [
+                "낚시하러 가요.",
+                "물고기 많이 잡았어요."
+            ]
+        },
+        {
+            "word": "헬스장",
+            "meaning": "Gym",
+            "pronunciation": "helseujang",
+            "topic": "여가",
+            "examples": [
+                "헬스장 다녀요.",
+                "헬스장 등록했어요."
+            ]
+        },
+        {
+            "word": "수영장",
+            "meaning": "Swimming pool",
+            "pronunciation": "suyeongjang",
+            "topic": "여가",
+            "examples": [
+                "수영장 가요.",
+                "수영 배워요."
+            ]
+        },
+        {
+            "word": "볼링장",
+            "meaning": "Bowling alley",
+            "pronunciation": "bollingjang",
+            "topic": "여가",
+            "examples": [
+                "볼링장 가요.",
+                "볼링 쳤어요."
+            ]
+        },
+        {
+            "word": "PC방",
+            "meaning": "Internet cafe",
+            "pronunciation": "pissibang",
+            "topic": "여가",
+            "examples": [
+                "PC방 가요.",
+                "PC방에서 게임해요."
+            ]
+        },
+        {
+            "word": "여권",
+            "meaning": "Passport",
+            "pronunciation": "yeogwon",
+            "topic": "출입국",
+            "examples": [
+                "여권 만들었어요.",
+                "여권 만료됐어요."
+            ]
+        },
+        {
+            "word": "비자",
+            "meaning": "Visa",
+            "pronunciation": "bija",
+            "topic": "출입국",
+            "examples": [
+                "비자 받았어요.",
+                "비자 연장해요."
+            ]
+        },
+        {
+            "word": "외국인등록증",
+            "meaning": "Alien registration card",
+            "pronunciation": "oegugindeungrokjeung",
+            "topic": "출입국",
+            "examples": [
+                "외국인등록증 만들었어요.",
+                "등록증 들고 다녀요."
+            ]
+        },
+        {
+            "word": "체류기간",
+            "meaning": "Period of stay",
+            "pronunciation": "cheryugigan",
+            "topic": "출입국",
+            "examples": [
+                "체류기간이 1년이에요.",
+                "체류기간 연장했어요."
+            ]
+        },
+        {
+            "word": "연장하다",
+            "meaning": "To extend",
+            "pronunciation": "yeonjhanghada",
+            "topic": "출입국",
+            "examples": [
+                "비자 연장했어요.",
+                "체류기간 연장해야 해요."
+            ]
+        },
+        {
+            "word": "출입국관리사무소",
+            "meaning": "Immigration office",
+            "pronunciation": "churipgukgwanlisasmuso",
+            "topic": "출입국",
+            "examples": [
+                "출입국관리사무소 가요.",
+                "사무소에서 비자 받아요."
+            ]
+        },
+        {
+            "word": "영주권",
+            "meaning": "Permanent residency",
+            "pronunciation": "yeongjugwon",
+            "topic": "출입국",
+            "examples": [
+                "영주권 신청했어요.",
+                "영주권 받고 싶어요."
+            ]
+        },
+        {
+            "word": "귀화",
+            "meaning": "Naturalization",
+            "pronunciation": "gwihwa",
+            "topic": "출입국",
+            "examples": [
+                "귀화 신청했어요.",
+                "귀화 시험 봤어요."
+            ]
+        },
+        {
+            "word": "통역",
+            "meaning": "Interpretation",
+            "pronunciation": "tongyeok",
+            "topic": "출입국",
+            "examples": [
+                "통역이 필요해요.",
+                "통역 서비스 있어요."
+            ]
+        },
+        {
+            "word": "번역",
+            "meaning": "Translation",
+            "pronunciation": "beonyeok",
+            "topic": "출입국",
+            "examples": [
+                "번역 부탁해요.",
+                "서류 번역했어요."
+            ]
+        },
+        {
+            "word": "신분증",
+            "meaning": "ID card",
+            "pronunciation": "sinbunjeung",
+            "topic": "서류",
+            "examples": [
+                "신분증 보여주세요.",
+                "신분증 가지고 가세요."
+            ]
+        },
+        {
+            "word": "증명서",
+            "meaning": "Certificate",
+            "pronunciation": "jeungmyeongseo",
+            "topic": "서류",
+            "examples": [
+                "증명서 발급받았어요.",
+                "증명서가 필요해요."
+            ]
+        },
+        {
+            "word": "주민등록번호",
+            "meaning": "Resident registration number",
+            "pronunciation": "jumindeungrokbeonho",
+            "topic": "서류",
+            "examples": [
+                "주민등록번호 써주세요.",
+                "주민번호 외워요."
+            ]
+        },
+        {
+            "word": "서명",
+            "meaning": "Signature",
+            "pronunciation": "seomyeong",
+            "topic": "서류",
+            "examples": [
+                "여기 서명해 주세요.",
+                "서명했어요."
+            ]
+        },
+        {
+            "word": "도장",
+            "meaning": "Stamp/Seal",
+            "pronunciation": "dojang",
+            "topic": "서류",
+            "examples": [
+                "도장 찍어주세요.",
+                "도장 가지고 오세요."
+            ]
+        },
+        {
+            "word": "신청서",
+            "meaning": "Application form",
+            "pronunciation": "sincheongseo",
+            "topic": "서류",
+            "examples": [
+                "신청서 작성해요.",
+                "신청서 제출했어요."
+            ]
+        },
+        {
+            "word": "수수료",
+            "meaning": "Fee",
+            "pronunciation": "susulyo",
+            "topic": "서류",
+            "examples": [
+                "수수료가 있어요.",
+                "수수료 냈어요."
+            ]
+        },
+        {
+            "word": "제출하다",
+            "meaning": "To submit",
+            "pronunciation": "jechulhada",
+            "topic": "서류",
+            "examples": [
+                "서류 제출했어요.",
+                "언제까지 제출해요?"
+            ]
+        },
+        {
+            "word": "작성하다",
+            "meaning": "To fill out",
+            "pronunciation": "jakseonghada",
+            "topic": "서류",
+            "examples": [
+                "양식 작성해요.",
+                "서류 작성했어요."
+            ]
+        },
+        {
+            "word": "접수하다",
+            "meaning": "To receive/accept",
+            "pronunciation": "jeopsuhada",
+            "topic": "서류",
+            "examples": [
+                "접수했어요.",
+                "접수 기간이에요."
+            ]
+        },
+        {
+            "word": "발급하다",
+            "meaning": "To issue",
+            "pronunciation": "balgeupada",
+            "topic": "서류",
+            "examples": [
+                "증명서 발급받았어요.",
+                "밸급 시간이 걸려요."
+            ]
+        },
+        {
+            "word": "아마",
+            "meaning": "Maybe/Probably",
+            "pronunciation": "ama",
+            "topic": "부사",
+            "examples": [
+                "아마 올 거예요.",
+                "아마 맞을 거예요."
+            ]
+        },
+        {
+            "word": "혹시",
+            "meaning": "By any chance",
+            "pronunciation": "hoksi",
+            "topic": "부사",
+            "examples": [
+                "혹시 시간 있어요?",
+                "혹시 알아요?"
+            ]
+        },
+        {
+            "word": "특히",
+            "meaning": "Especially",
+            "pronunciation": "teukhi",
+            "topic": "부사",
+            "examples": [
+                "특히 이거 좋아요.",
+                "특히 주말에 바빠요."
+            ]
+        },
+        {
+            "word": "거의",
+            "meaning": "Almost",
+            "pronunciation": "geoui",
+            "topic": "부사",
+            "examples": [
+                "거의 다 했어요.",
+                "거의 매일 운동해요."
+            ]
+        },
+        {
+            "word": "전혀",
+            "meaning": "Not at all",
+            "pronunciation": "jeonhyeo",
+            "topic": "부사",
+            "examples": [
+                "전혀 몰라요.",
+                "전혀 안 매워요."
+            ]
+        },
+        {
+            "word": "보통",
+            "meaning": "Usually",
+            "pronunciation": "botong",
+            "topic": "부사",
+            "examples": [
+                "보통 몇 시에 일어나요?",
+                "보통 집에서 먹어요."
+            ]
+        },
+        {
+            "word": "항상",
+            "meaning": "Always",
+            "pronunciation": "hangsang",
+            "topic": "부사",
+            "examples": [
+                "항상 늦어요.",
+                "항상 감사해요."
+            ]
+        },
+        {
+            "word": "자주",
+            "meaning": "Often",
+            "pronunciation": "jaju",
+            "topic": "부사",
+            "examples": [
+                "자주 만나요.",
+                "자주 가요."
+            ]
+        },
+        {
+            "word": "가끔",
+            "meaning": "Sometimes",
+            "pronunciation": "gakkeum",
+            "topic": "부사",
+            "examples": [
+                "가끔 영화 봐요.",
+                "가끔 연락해요."
+            ]
+        },
+        {
+            "word": "별로",
+            "meaning": "Not really",
+            "pronunciation": "byeollo",
+            "topic": "부사",
+            "examples": [
+                "별로 안 좋아요.",
+                "별로예요."
+            ]
+        },
+        {
+            "word": "아직",
+            "meaning": "Still/Yet",
+            "pronunciation": "ajik",
+            "topic": "부사",
+            "examples": [
+                "아직 안 왔어요.",
+                "아직 못 했어요."
+            ]
+        },
+        {
+            "word": "벌써",
+            "meaning": "Already",
+            "pronunciation": "beolsseo",
+            "topic": "부사",
+            "examples": [
+                "벌써 끝났어요.",
+                "벌써 12시예요."
+            ]
+        },
+        {
+            "word": "갑자기",
+            "meaning": "Suddenly",
+            "pronunciation": "gapjagi",
+            "topic": "부사",
+            "examples": [
+                "갑자기 비가 와요.",
+                "갑자기 아팠어요."
+            ]
+        },
+        {
+            "word": "천천히",
+            "meaning": "Slowly",
+            "pronunciation": "cheoncheonhi",
+            "topic": "부사",
+            "examples": [
+                "천천히 말해 주세요.",
+                "천천히 가요."
+            ]
+        },
+        {
+            "word": "빨리",
+            "meaning": "Quickly",
+            "pronunciation": "ppalli",
+            "topic": "부사",
+            "examples": [
+                "빨리 오세요.",
+                "빨리 해요."
+            ]
+        },
+        {
+            "word": "드디어",
+            "meaning": "Finally",
+            "pronunciation": "deudieo",
+            "topic": "부사",
+            "examples": [
+                "드디어 왔어요!",
+                "드디어 끝났어요."
+            ]
+        },
+        {
+            "word": "다행히",
+            "meaning": "Fortunately",
+            "pronunciation": "dahaenghi",
+            "topic": "부사",
+            "examples": [
+                "다행히 괜찮아요.",
+                "다행이에요."
+            ]
+        },
+        {
+            "word": "원래",
+            "meaning": "Originally",
+            "pronunciation": "woallae",
+            "topic": "부사",
+            "examples": [
+                "원래 이래요.",
+                "원래 계획이었어요."
+            ]
+        },
+        {
+            "word": "계속",
+            "meaning": "Continuously",
+            "pronunciation": "gyesok",
+            "topic": "부사",
+            "examples": [
+                "계속하세요.",
+                "계속 공부해요."
+            ]
+        },
+        {
+            "word": "잠깐",
+            "meaning": "For a moment",
+            "pronunciation": "jamkkan",
+            "topic": "부사",
+            "examples": [
+                "잠깐만요.",
+                "잠깐 기다려요."
+            ]
+        },
+        {
+            "word": "물론",
+            "meaning": "Of course",
+            "pronunciation": "mullon",
+            "topic": "부사",
+            "examples": [
+                "물론이죠.",
+                "물론 알아요."
+            ]
+        },
+        {
+            "word": "그래서",
+            "meaning": "So/Therefore",
+            "pronunciation": "geuraeseo",
+            "topic": "접속사",
+            "examples": [
+                "그래서 안 갔어요.",
+                "그래서요?"
+            ]
+        },
+        {
+            "word": "그런데",
+            "meaning": "But/However",
+            "pronunciation": "geureonde",
+            "topic": "접속사",
+            "examples": [
+                "그런데 왜요?",
+                "그런데 시간이 없어요."
+            ]
+        },
+        {
+            "word": "그러면",
+            "meaning": "Then/If so",
+            "pronunciation": "geureomyeon",
+            "topic": "접속사",
+            "examples": [
+                "그러면 내일 만나요.",
+                "그러면 어떻게 해요?"
+            ]
+        },
+        {
+            "word": "그래도",
+            "meaning": "Even so",
+            "pronunciation": "geuraedo",
+            "topic": "접속사",
+            "examples": [
+                "그래도 좋아요.",
+                "그래도 가고 싶어요."
+            ]
+        },
+        {
+            "word": "그리고",
+            "meaning": "And",
+            "pronunciation": "geurigo",
+            "topic": "접속사",
+            "examples": [
+                "사과 그리고 바나나.",
+                "그리고 뭐 있어요?"
+            ]
+        },
+        {
+            "word": "또는",
+            "meaning": "Or",
+            "pronunciation": "ttoneun",
+            "topic": "접속사",
+            "examples": [
+                "커피 또는 차.",
+                "오늘 또는 내일."
+            ]
+        },
+        {
+            "word": "왜냐하면",
+            "meaning": "Because",
+            "pronunciation": "waenyahamyeon",
+            "topic": "접속사",
+            "examples": [
+                "왜냐하면 바빠서요.",
+                "왜냐하면 시간이 없어요."
+            ]
+        },
+        {
+            "word": "하지만",
+            "meaning": "But",
+            "pronunciation": "hajiman",
+            "topic": "접속사",
+            "examples": [
+                "하지만 어려워요.",
+                "하지만 좋아요."
+            ]
+        },
+        {
+            "word": "때문에",
+            "meaning": "Because of",
+            "pronunciation": "ttaemune",
+            "topic": "접속사",
+            "examples": [
+                "비 때문에 못 갔어요.",
+                "일 때문에 바빠요."
+            ]
+        },
+        {
+            "word": "실례합니다",
+            "meaning": "Excuse me",
+            "pronunciation": "sillyehamnida",
+            "topic": "표현",
+            "examples": [
+                "실례합니다.",
+                "실례지만 뭐예요?"
+            ]
+        },
+        {
+            "word": "죄송합니다",
+            "meaning": "I'm sorry",
+            "pronunciation": "joesonghamnida",
+            "topic": "표현",
+            "examples": [
+                "죄송합니다.",
+                "늦어서 죄송해요."
+            ]
+        },
+        {
+            "word": "괜찮아요",
+            "meaning": "It's okay",
+            "pronunciation": "gwaenchanhayo",
+            "topic": "표현",
+            "examples": [
+                "괜찮아요.",
+                "아니에요, 괜찮아요."
+            ]
+        },
+        {
+            "word": "별말씀을요",
+            "meaning": "Don't mention it",
+            "pronunciation": "byeolmalsseumeulyo",
+            "topic": "표현",
+            "examples": [
+                "별말씀을요.",
+                "아니에요, 별말씀을요."
+            ]
+        },
+        {
+            "word": "수고하세요",
+            "meaning": "Good work",
+            "pronunciation": "sugohaseyo",
+            "topic": "표현",
+            "examples": [
+                "수고하세요.",
+                "오늘도 수고하세요."
+            ]
+        },
+        {
+            "word": "수고하셨습니다",
+            "meaning": "Good job (past)",
+            "pronunciation": "sugohasyeosseumnida",
+            "topic": "표현",
+            "examples": [
+                "수고하셨습니다.",
+                "오늘 수고하셨어요."
+            ]
+        },
+        {
+            "word": "실수",
+            "meaning": "Mistake",
+            "pronunciation": "silsu",
+            "topic": "생활",
+            "examples": [
+                "실수했어요.",
+                "실수 죄송해요."
+            ]
+        },
+        {
+            "word": "연습",
+            "meaning": "Practice",
+            "pronunciation": "yeonseup",
+            "topic": "교육",
+            "examples": [
+                "연습해요.",
+                "많이 연습했어요."
+            ]
+        },
+        {
+            "word": "복습",
+            "meaning": "Review",
+            "pronunciation": "bokseup",
+            "topic": "교육",
+            "examples": [
+                "복습해요.",
+                "어제 배운 거 복습해요."
+            ]
+        },
+        {
+            "word": "예습",
+            "meaning": "Preview/Preparation",
+            "pronunciation": "yeseup",
+            "topic": "교육",
+            "examples": [
+                "예습했어요.",
+                "내일 수업 예습해요."
+            ]
+        },
+        {
+            "word": "숙제",
+            "meaning": "Homework",
+            "pronunciation": "sukje",
+            "topic": "교육",
+            "examples": [
+                "숙제 했어요?",
+                "숙제가 많아요."
+            ]
+        },
+        {
+            "word": "세금",
+            "meaning": "Tax",
+            "pronunciation": "segeum",
+            "topic": "금융",
+            "examples": [
+                "세금 냈어요.",
+                "세금이 비싸요."
+            ]
+        },
+        {
+            "word": "연말정산",
+            "meaning": "Year-end tax settlement",
+            "pronunciation": "yeonmaljjeongsan",
+            "topic": "금융",
+            "examples": [
+                "연말정산 했어요.",
+                "연말정산 환급받았어요."
+            ]
+        },
+        {
+            "word": "저축",
+            "meaning": "Savings",
+            "pronunciation": "jeochuk",
+            "topic": "금융",
+            "examples": [
+                "저축해요.",
+                "매달 저축해요."
+            ]
+        },
+        {
+            "word": "투자",
+            "meaning": "Investment",
+            "pronunciation": "tuja",
+            "topic": "금융",
+            "examples": [
+                "주식 투자해요.",
+                "투자 조심하세요."
+            ]
+        },
+        {
+            "word": "시어머니",
+            "meaning": "Mother-in-law (husband's)",
+            "pronunciation": "si-eomeoni",
+            "topic": "가족",
+            "examples": [
+                "시어머니가 친절해요.",
+                "시어머니 집에 갔어요."
+            ]
+        },
+        {
+            "word": "시아버지",
+            "meaning": "Father-in-law (husband's)",
+            "pronunciation": "si-abeoji",
+            "topic": "가족",
+            "examples": [
+                "시아버지께서 오셨어요.",
+                "시아버지 생신이에요."
+            ]
+        },
+        {
+            "word": "장인",
+            "meaning": "Father-in-law (wife's)",
+            "pronunciation": "jangin",
+            "topic": "가족",
+            "examples": [
+                "장인어른께 인사드렸어요.",
+                "장인 생신이에요."
+            ]
+        },
+        {
+            "word": "장모",
+            "meaning": "Mother-in-law (wife's)",
+            "pronunciation": "jangmo",
+            "topic": "가족",
+            "examples": [
+                "장모님이 요리해 주셨어요.",
+                "장모님 집에 갔어요."
+            ]
+        },
+        {
+            "word": "처남",
+            "meaning": "Brother-in-law (wife's brother)",
+            "pronunciation": "cheonam",
+            "topic": "가족",
+            "examples": [
+                "처남이 왔어요.",
+                "처남 결혼식이에요."
+            ]
+        },
+        {
+            "word": "형제",
+            "meaning": "Siblings",
+            "pronunciation": "hyeongje",
+            "topic": "가족",
+            "examples": [
+                "형제가 세 명이에요.",
+                "형제끼리 친해요."
+            ]
+        },
+        {
+            "word": "자매",
+            "meaning": "Sisters",
+            "pronunciation": "jamae",
+            "topic": "가족",
+            "examples": [
+                "자매가 둘이에요.",
+                "자매끼리 닮았어요."
+            ]
+        },
+        {
+            "word": "조카",
+            "meaning": "Nephew/Niece",
+            "pronunciation": "joka",
+            "topic": "가족",
+            "examples": [
+                "조카가 태어났어요.",
+                "조카가 귀여워요."
+            ]
+        },
+        {
+            "word": "사촌",
+            "meaning": "Cousin",
+            "pronunciation": "sachon",
+            "topic": "가족",
+            "examples": [
+                "사촌이 많아요.",
+                "사촌 동생이에요."
+            ]
+        },
+        {
+            "word": "맑다",
+            "meaning": "Clear (weather)",
+            "pronunciation": "malkda",
+            "topic": "날씨",
+            "examples": [
+                "오늘 날씨가 맑아요.",
+                "하늘이 맑아요."
+            ]
+        },
+        {
+            "word": "흐리다",
+            "meaning": "Cloudy",
+            "pronunciation": "heurida",
+            "topic": "날씨",
+            "examples": [
+                "오늘 흐려요.",
+                "하늘이 흐려요."
+            ]
+        },
+        {
+            "word": "비가 오다",
+            "meaning": "To rain",
+            "pronunciation": "biga oda",
+            "topic": "날씨",
+            "examples": [
+                "내일 비가 와요.",
+                "비가 많이 왔어요."
+            ]
+        },
+        {
+            "word": "눈이 오다",
+            "meaning": "To snow",
+            "pronunciation": "nuni oda",
+            "topic": "날씨",
+            "examples": [
+                "겨울에 눈이 와요.",
+                "눈이 많이 왔어요."
+            ]
+        },
+        {
+            "word": "바람",
+            "meaning": "Wind",
+            "pronunciation": "baram",
+            "topic": "날씨",
+            "examples": [
+                "바람이 불어요.",
+                "바람이 시원해요."
+            ]
+        },
+        {
+            "word": "습하다",
+            "meaning": "Humid",
+            "pronunciation": "seupada",
+            "topic": "날씨",
+            "examples": [
+                "오늘 습해요.",
+                "여름은 습해요."
+            ]
+        },
+        {
+            "word": "건조하다",
+            "meaning": "Dry",
+            "pronunciation": "geonjohada",
+            "topic": "날씨",
+            "examples": [
+                "겨울은 건조해요.",
+                "피부가 건조해요."
+            ]
+        },
+        {
+            "word": "장마",
+            "meaning": "Monsoon season",
+            "pronunciation": "jangma",
+            "topic": "날씨",
+            "examples": [
+                "장마철이에요.",
+                "장마 때 비가 많이 와요."
+            ]
+        },
+        {
+            "word": "태풍",
+            "meaning": "Typhoon",
+            "pronunciation": "taepung",
+            "topic": "날씨",
+            "examples": [
+                "태풍이 와요.",
+                "태풍 조심하세요."
+            ]
+        },
+        {
+            "word": "안개",
+            "meaning": "Fog",
+            "pronunciation": "angae",
+            "topic": "날씨",
+            "examples": [
+                "안개가 꼈어요.",
+                "안개가 심해요."
+            ]
+        },
+        {
+            "word": "산",
+            "meaning": "Mountain",
+            "pronunciation": "san",
+            "topic": "자연",
+            "examples": [
+                "산에 갔어요.",
+                "산이 높아요."
+            ]
+        },
+        {
+            "word": "바다",
+            "meaning": "Sea/Ocean",
+            "pronunciation": "bada",
+            "topic": "자연",
+            "examples": [
+                "바다에 갔어요.",
+                "바다가 예뻐요."
+            ]
+        },
+        {
+            "word": "강",
+            "meaning": "River",
+            "pronunciation": "gang",
+            "topic": "자연",
+            "examples": [
+                "한강에 갔어요.",
+                "강이 길어요."
+            ]
+        },
+        {
+            "word": "호수",
+            "meaning": "Lake",
+            "pronunciation": "hosu",
+            "topic": "자연",
+            "examples": [
+                "호수가 아름다워요.",
+                "호수에서 쉬었어요."
+            ]
+        },
+        {
+            "word": "섬",
+            "meaning": "Island",
+            "pronunciation": "seom",
+            "topic": "자연",
+            "examples": [
+                "제주도는 섬이에요.",
+                "섬에 가고 싶어요."
+            ]
+        },
+        {
+            "word": "숲",
+            "meaning": "Forest",
+            "pronunciation": "sup",
+            "topic": "자연",
+            "examples": [
+                "숲에서 산책해요.",
+                "숲이 시원해요."
+            ]
+        },
+        {
+            "word": "꽃",
+            "meaning": "Flower",
+            "pronunciation": "kkot",
+            "topic": "자연",
+            "examples": [
+                "꽃이 예뻐요.",
+                "꽃을 샀어요."
+            ]
+        },
+        {
+            "word": "나무",
+            "meaning": "Tree",
+            "pronunciation": "namu",
+            "topic": "자연",
+            "examples": [
+                "나무가 높아요.",
+                "나무 아래서 쉬어요."
+            ]
+        },
+        {
+            "word": "하늘",
+            "meaning": "Sky",
+            "pronunciation": "haneul",
+            "topic": "자연",
+            "examples": [
+                "하늘이 파래요.",
+                "하늘을 봐요."
+            ]
+        },
+        {
+            "word": "별",
+            "meaning": "Star",
+            "pronunciation": "byeol",
+            "topic": "자연",
+            "examples": [
+                "별이 많아요.",
+                "별이 반짝여요."
+            ]
+        },
+        {
+            "word": "달",
+            "meaning": "Moon",
+            "pronunciation": "dal",
+            "topic": "자연",
+            "examples": [
+                "달이 떴어요.",
+                "보름달이에요."
+            ]
+        },
+        {
+            "word": "머리",
+            "meaning": "Head/Hair",
+            "pronunciation": "meori",
+            "topic": "신체",
+            "examples": [
+                "머리가 아파요.",
+                "머리 잘랐어요."
+            ]
+        },
+        {
+            "word": "얼굴",
+            "meaning": "Face",
+            "pronunciation": "eolgul",
+            "topic": "신체",
+            "examples": [
+                "얼굴이 예뻐요.",
+                "얼굴을 씻어요."
+            ]
+        },
+        {
+            "word": "눈",
+            "meaning": "Eye",
+            "pronunciation": "nun",
+            "topic": "신체",
+            "examples": [
+                "눈이 커요.",
+                "눈이 아파요."
+            ]
+        },
+        {
+            "word": "코",
+            "meaning": "Nose",
+            "pronunciation": "ko",
+            "topic": "신체",
+            "examples": [
+                "코가 막혔어요.",
+                "코가 높아요."
+            ]
+        },
+        {
+            "word": "입",
+            "meaning": "Mouth",
+            "pronunciation": "ip",
+            "topic": "신체",
+            "examples": [
+                "입이 건조해요.",
+                "입을 크게 벌려요."
+            ]
+        },
+        {
+            "word": "귀",
+            "meaning": "Ear",
+            "pronunciation": "gwi",
+            "topic": "신체",
+            "examples": [
+                "귀가 아파요.",
+                "귀에 이어폰 꽂아요."
+            ]
+        },
+        {
+            "word": "목",
+            "meaning": "Neck/Throat",
+            "pronunciation": "mok",
+            "topic": "신체",
+            "examples": [
+                "목이 아파요.",
+                "목이 마르요."
+            ]
+        },
+        {
+            "word": "어깨",
+            "meaning": "Shoulder",
+            "pronunciation": "eokkae",
+            "topic": "신체",
+            "examples": [
+                "어깨가 아파요.",
+                "어깨가 뻐근해요."
+            ]
+        },
+        {
+            "word": "팔",
+            "meaning": "Arm",
+            "pronunciation": "pal",
+            "topic": "신체",
+            "examples": [
+                "팔이 아파요.",
+                "팔을 올려요."
+            ]
+        },
+        {
+            "word": "손",
+            "meaning": "Hand",
+            "pronunciation": "son",
+            "topic": "신체",
+            "examples": [
+                "손을 씻어요.",
+                "손이 차가워요."
+            ]
+        },
+        {
+            "word": "손가락",
+            "meaning": "Finger",
+            "pronunciation": "songarak",
+            "topic": "신체",
+            "examples": [
+                "손가락이 아파요.",
+                "손가락을 다쳤어요."
+            ]
+        },
+        {
+            "word": "배",
+            "meaning": "Stomach/Belly",
+            "pronunciation": "bae",
+            "topic": "신체",
+            "examples": [
+                "배가 아파요.",
+                "배가 부러요."
+            ]
+        },
+        {
+            "word": "허리",
+            "meaning": "Waist/Back",
+            "pronunciation": "heori",
+            "topic": "신체",
+            "examples": [
+                "허리가 아파요.",
+                "허리를 펴요."
+            ]
+        },
+        {
+            "word": "다리",
+            "meaning": "Leg",
+            "pronunciation": "dari",
+            "topic": "신체",
+            "examples": [
+                "다리가 아파요.",
+                "다리가 길어요."
+            ]
+        },
+        {
+            "word": "발",
+            "meaning": "Foot",
+            "pronunciation": "bal",
+            "topic": "신체",
+            "examples": [
+                "발이 아파요.",
+                "발이 차가워요."
+            ]
+        },
+        {
+            "word": "무릎",
+            "meaning": "Knee",
+            "pronunciation": "mureup",
+            "topic": "신체",
+            "examples": [
+                "무릎이 아파요.",
+                "무릎을 꿇어요."
+            ]
+        },
+        {
+            "word": "빌리다",
+            "meaning": "To borrow",
+            "pronunciation": "billida",
+            "topic": "동사",
+            "examples": [
+                "책을 빌렸어요.",
+                "돈 빌려주세요."
+            ]
+        },
+        {
+            "word": "돌려주다",
+            "meaning": "To return (give back)",
+            "pronunciation": "dollyeojuda",
+            "topic": "동사",
+            "examples": [
+                "책 돌려줬어요.",
+                "내일 돌려줄게요."
+            ]
+        },
+        {
+            "word": "가르치다",
+            "meaning": "To teach",
+            "pronunciation": "gareuchida",
+            "topic": "동사",
+            "examples": [
+                "한국어를 가르쳐요.",
+                "가르쳐 주세요."
+            ]
+        },
+        {
+            "word": "배우다",
+            "meaning": "To learn",
+            "pronunciation": "baeuda",
+            "topic": "동사",
+            "examples": [
+                "한국어를 배워요.",
+                "요리 배웠어요."
+            ]
+        },
+        {
+            "word": "기억하다",
+            "meaning": "To remember",
+            "pronunciation": "gieokhada",
+            "topic": "동사",
+            "examples": [
+                "기억해요.",
+                "이름 기억해요?"
+            ]
+        },
+        {
+            "word": "잊다",
+            "meaning": "To forget",
+            "pronunciation": "itda",
+            "topic": "동사",
+            "examples": [
+                "잊었어요.",
+                "비밀번호 잊었어요."
+            ]
+        },
+        {
+            "word": "찾다",
+            "meaning": "To find/look for",
+            "pronunciation": "chatda",
+            "topic": "동사",
+            "examples": [
+                "지갑 찾았어요.",
+                "뭐 찾아요?"
+            ]
+        },
+        {
+            "word": "잃어버리다",
+            "meaning": "To lose",
+            "pronunciation": "ireobeorida",
+            "topic": "동사",
+            "examples": [
+                "핸드폰 잃어버렸어요.",
+                "지갑 잃어버렸어요."
+            ]
+        },
+        {
+            "word": "돕다",
+            "meaning": "To help",
+            "pronunciation": "dopda",
+            "topic": "동사",
+            "examples": [
+                "도와주세요.",
+                "친구를 도왔어요."
+            ]
+        },
+        {
+            "word": "데려다주다",
+            "meaning": "To take someone",
+            "pronunciation": "deryeodajuda",
+            "topic": "동사",
+            "examples": [
+                "집까지 데려다줬어요.",
+                "데려다줄게요."
+            ]
+        },
+        {
+            "word": "데려오다",
+            "meaning": "To bring someone",
+            "pronunciation": "deryeooda",
+            "topic": "동사",
+            "examples": [
+                "친구 데려왔어요.",
+                "아이를 데려왔어요."
+            ]
+        },
+        {
+            "word": "보내다",
+            "meaning": "To send",
+            "pronunciation": "bonaeda",
+            "topic": "동사",
+            "examples": [
+                "사진 보냈어요.",
+                "메시지 보냈어요."
+            ]
+        },
+        {
+            "word": "받다",
+            "meaning": "To receive",
+            "pronunciation": "batda",
+            "topic": "동사",
+            "examples": [
+                "선물 받았어요.",
+                "메시지 받았어요."
+            ]
+        },
+        {
+            "word": "고르다",
+            "meaning": "To choose",
+            "pronunciation": "goreuda",
+            "topic": "동사",
+            "examples": [
+                "골라요.",
+                "하나 골라주세요."
+            ]
+        },
+        {
+            "word": "결정하다",
+            "meaning": "To decide",
+            "pronunciation": "gyeoljeonghada",
+            "topic": "동사",
+            "examples": [
+                "결정했어요.",
+                "아직 결정 못 했어요."
+            ]
+        },
+        {
+            "word": "준비하다",
+            "meaning": "To prepare",
+            "pronunciation": "junbihada",
+            "topic": "동사",
+            "examples": [
+                "준비했어요.",
+                "시험 준비해요."
+            ]
+        },
+        {
+            "word": "확인하다",
+            "meaning": "To check/confirm",
+            "pronunciation": "hwaginhada",
+            "topic": "동사",
+            "examples": [
+                "확인했어요.",
+                "이메일 확인해요."
+            ]
+        },
+        {
+            "word": "신청하다",
+            "meaning": "To apply",
+            "pronunciation": "sincheonghada",
+            "topic": "동사",
+            "examples": [
+                "신청했어요.",
+                "비자 신청해요."
+            ]
+        },
+        {
+            "word": "사용하다",
+            "meaning": "To use",
+            "pronunciation": "sayonghada",
+            "topic": "동사",
+            "examples": [
+                "사용해요.",
+                "어떻게 사용해요?"
+            ]
+        },
+        {
+            "word": "설명하다",
+            "meaning": "To explain",
+            "pronunciation": "seolmyeonghada",
+            "topic": "동사",
+            "examples": [
+                "설명해 주세요.",
+                "다시 설명해 드릴게요."
+            ]
+        },
+        {
+            "word": "이해하다",
+            "meaning": "To understand",
+            "pronunciation": "ihaehada",
+            "topic": "동사",
+            "examples": [
+                "이해했어요.",
+                "이해 안 돼요."
+            ]
+        },
+        {
+            "word": "알다",
+            "meaning": "To know",
+            "pronunciation": "alda",
+            "topic": "동사",
+            "examples": [
+                "알아요.",
+                "몰라요."
+            ]
+        },
+        {
+            "word": "모르다",
+            "meaning": "To not know",
+            "pronunciation": "moreuda",
+            "topic": "동사",
+            "examples": [
+                "몰라요.",
+                "길을 몰라요."
+            ]
+        },
+        {
+            "word": "생각하다",
+            "meaning": "To think",
+            "pronunciation": "saenggakhada",
+            "topic": "동사",
+            "examples": [
+                "생각해요.",
+                "잘 생각해 볼게요."
+            ]
+        },
+        {
+            "word": "계획",
+            "meaning": "Plan",
+            "pronunciation": "gyehoek",
+            "topic": "생활",
+            "examples": [
+                "계획 있어요?",
+                "계획대로 했어요."
+            ]
+        },
+        {
+            "word": "목표",
+            "meaning": "Goal",
+            "pronunciation": "mokpyo",
+            "topic": "생활",
+            "examples": [
+                "목표가 뭐예요?",
+                "목표를 세웠어요."
+            ]
+        },
+        {
+            "word": "경험",
+            "meaning": "Experience",
+            "pronunciation": "gyeongheom",
+            "topic": "생활",
+            "examples": [
+                "좋은 경험이에요.",
+                "경험이 많아요."
+            ]
+        },
+        {
+            "word": "기회",
+            "meaning": "Opportunity",
+            "pronunciation": "gihoe",
+            "topic": "생활",
+            "examples": [
+                "기회가 왔어요.",
+                "좋은 기회예요."
+            ]
+        },
+        {
+            "word": "문제",
+            "meaning": "Problem",
+            "pronunciation": "munje",
+            "topic": "생활",
+            "examples": [
+                "문제 있어요?",
+                "문제 없어요."
+            ]
+        },
+        {
+            "word": "방법",
+            "meaning": "Method/Way",
+            "pronunciation": "bangbeop",
+            "topic": "생활",
+            "examples": [
+                "다른 방법 있어요?",
+                "이 방법이 좋아요."
+            ]
+        },
+        {
+            "word": "이유",
+            "meaning": "Reason",
+            "pronunciation": "iyu",
+            "topic": "생활",
+            "examples": [
+                "이유가 뭐예요?",
+                "이유를 말해 주세요."
+            ]
+        },
+        {
+            "word": "정보",
+            "meaning": "Information",
+            "pronunciation": "jeongbo",
+            "topic": "생활",
+            "examples": [
+                "정보 주세요.",
+                "정보가 필요해요."
+            ]
+        }
+    ]
+}

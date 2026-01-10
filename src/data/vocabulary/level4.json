@@ -1,0 +1,2643 @@
+{
+    "vocabulary": [
+        {
+            "word": "사회",
+            "meaning": "society",
+            "pronunciation": "sa-hoe",
+            "topic": "사회생활",
+            "hanja": "社會",
+            "examples": [
+                "한국 사회는 빠르게 변화하고 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "경제",
+            "meaning": "economy",
+            "pronunciation": "gyeong-je",
+            "topic": "경제",
+            "hanja": "經濟",
+            "examples": [
+                "경제가 발전하면 생활이 좋아집니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "정치",
+            "meaning": "politics",
+            "pronunciation": "jeong-chi",
+            "topic": "정치",
+            "hanja": "政治",
+            "examples": [
+                "정치에 관심을 가지는 것이 중요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "문화",
+            "meaning": "culture",
+            "pronunciation": "mun-hwa",
+            "topic": "문화",
+            "hanja": "文化",
+            "examples": [
+                "한국 문화를 배우는 것이 재미있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "교육",
+            "meaning": "education",
+            "pronunciation": "gyo-yuk",
+            "topic": "교육",
+            "hanja": "敎育",
+            "examples": [
+                "교육은 미래를 위한 투자입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "환경",
+            "meaning": "environment",
+            "pronunciation": "hwan-gyeong",
+            "topic": "환경",
+            "hanja": "環境",
+            "examples": [
+                "환경을 보호하는 것이 중요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "복지",
+            "meaning": "welfare",
+            "pronunciation": "bok-ji",
+            "topic": "사회생활",
+            "hanja": "福祉",
+            "examples": [
+                "사회 복지 제도가 잘 갖춰져 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "민주주의",
+            "meaning": "democracy",
+            "pronunciation": "min-ju-ju-ui",
+            "topic": "정치",
+            "hanja": "民主主義",
+            "examples": [
+                "한국은 민주주의 국가입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "인권",
+            "meaning": "human rights",
+            "pronunciation": "in-gwon",
+            "topic": "사회생활",
+            "hanja": "人權",
+            "examples": [
+                "모든 사람은 인권을 가지고 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "법률",
+            "meaning": "law, legislation",
+            "pronunciation": "beom-nyul",
+            "topic": "법률",
+            "hanja": "法律",
+            "examples": [
+                "법률을 잘 지켜야 합니다."
+            ],
+            "synonyms": [
+                "법"
+            ]
+        },
+        {
+            "word": "권리",
+            "meaning": "right",
+            "pronunciation": "gwon-ri",
+            "topic": "법률",
+            "hanja": "權利",
+            "examples": [
+                "외국인도 기본적인 권리가 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "의무",
+            "meaning": "duty, obligation",
+            "pronunciation": "ui-mu",
+            "topic": "법률",
+            "hanja": "義務",
+            "examples": [
+                "세금을 내는 것은 시민의 의무입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "제도",
+            "meaning": "system",
+            "pronunciation": "je-do",
+            "topic": "사회생활",
+            "hanja": "制度",
+            "examples": [
+                "한국의 교육 제도를 알아봅시다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "정책",
+            "meaning": "policy",
+            "pronunciation": "jeong-chaek",
+            "topic": "정치",
+            "hanja": "政策",
+            "examples": [
+                "정부의 정책이 바뀌었습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "선거",
+            "meaning": "election",
+            "pronunciation": "seon-geo",
+            "topic": "정치",
+            "hanja": "選擧",
+            "examples": [
+                "다음 달에 선거가 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "투표",
+            "meaning": "vote",
+            "pronunciation": "tu-pyo",
+            "topic": "정치",
+            "hanja": "投票",
+            "examples": [
+                "선거일에 투표를 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "국회",
+            "meaning": "National Assembly",
+            "pronunciation": "guk-hoe",
+            "topic": "정치",
+            "hanja": "國會",
+            "examples": [
+                "국회에서 법률을 만듭니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "대통령",
+            "meaning": "president",
+            "pronunciation": "dae-tong-ryeong",
+            "topic": "정치",
+            "hanja": "大統領",
+            "examples": [
+                "대통령은 국가를 대표합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "정부",
+            "meaning": "government",
+            "pronunciation": "jeong-bu",
+            "topic": "정치",
+            "hanja": "政府",
+            "examples": [
+                "정부에서 새로운 정책을 발표했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "시민",
+            "meaning": "citizen",
+            "pronunciation": "si-min",
+            "topic": "사회생활",
+            "hanja": "市民",
+            "examples": [
+                "시민들이 광장에 모였습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "국민",
+            "meaning": "nation's people, citizen",
+            "pronunciation": "guk-min",
+            "topic": "사회생활",
+            "hanja": "國民",
+            "examples": [
+                "국민의 건강을 위한 정책입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "세금",
+            "meaning": "tax",
+            "pronunciation": "se-geum",
+            "topic": "경제",
+            "hanja": "稅金",
+            "examples": [
+                "세금을 정확하게 내야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "소득",
+            "meaning": "income",
+            "pronunciation": "so-deuk",
+            "topic": "경제",
+            "hanja": "所得",
+            "examples": [
+                "월 소득이 얼마입니까?"
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "물가",
+            "meaning": "prices, cost of living",
+            "pronunciation": "mul-ga",
+            "topic": "경제",
+            "hanja": "物價",
+            "examples": [
+                "요즘 물가가 많이 올랐습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "취업",
+            "meaning": "employment, getting a job",
+            "pronunciation": "chwi-eop",
+            "topic": "경제",
+            "hanja": "就業",
+            "examples": [
+                "취업 준비를 하고 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "실업",
+            "meaning": "unemployment",
+            "pronunciation": "sil-eop",
+            "topic": "경제",
+            "hanja": "失業",
+            "examples": [
+                "실업률이 높아지고 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "노동",
+            "meaning": "labor, work",
+            "pronunciation": "no-dong",
+            "topic": "경제",
+            "hanja": "勞動",
+            "examples": [
+                "노동자의 권리를 보호해야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "근로",
+            "meaning": "work, employment",
+            "pronunciation": "geun-ro",
+            "topic": "경제",
+            "hanja": "勤勞",
+            "examples": [
+                "근로 계약서를 작성했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "임금",
+            "meaning": "wages",
+            "pronunciation": "im-geum",
+            "topic": "경제",
+            "hanja": "賃金",
+            "examples": [
+                "최저 임금이 인상되었습니다."
+            ],
+            "synonyms": [
+                "급여",
+                "월급"
+            ]
+        },
+        {
+            "word": "보험",
+            "meaning": "insurance",
+            "pronunciation": "bo-heom",
+            "topic": "경제",
+            "hanja": "保險",
+            "examples": [
+                "건강 보험에 가입해야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "연금",
+            "meaning": "pension",
+            "pronunciation": "yeon-geum",
+            "topic": "경제",
+            "hanja": "年金",
+            "examples": [
+                "은퇴 후에 연금을 받습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "저축",
+            "meaning": "savings",
+            "pronunciation": "jeo-chuk",
+            "topic": "경제",
+            "hanja": "貯蓄",
+            "examples": [
+                "매달 저축을 하고 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "대출",
+            "meaning": "loan",
+            "pronunciation": "dae-chul",
+            "topic": "경제",
+            "hanja": "貸出",
+            "examples": [
+                "은행에서 대출을 받았습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "금리",
+            "meaning": "interest rate",
+            "pronunciation": "geum-ri",
+            "topic": "경제",
+            "hanja": "金利",
+            "examples": [
+                "금리가 인상되었습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "환율",
+            "meaning": "exchange rate",
+            "pronunciation": "hwan-yul",
+            "topic": "경제",
+            "hanja": "換率",
+            "examples": [
+                "오늘 환율이 어떻습니까?"
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "수출",
+            "meaning": "export",
+            "pronunciation": "su-chul",
+            "topic": "경제",
+            "hanja": "輸出",
+            "examples": [
+                "한국은 반도체를 많이 수출합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "수입",
+            "meaning": "import",
+            "pronunciation": "su-ip",
+            "topic": "경제",
+            "hanja": "輸入",
+            "examples": [
+                "석유를 수입합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "무역",
+            "meaning": "trade",
+            "pronunciation": "mu-yeok",
+            "topic": "경제",
+            "hanja": "貿易",
+            "examples": [
+                "무역이 활발해지고 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "투자",
+            "meaning": "investment",
+            "pronunciation": "tu-ja",
+            "topic": "경제",
+            "hanja": "投資",
+            "examples": [
+                "주식에 투자했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "기업",
+            "meaning": "company, enterprise",
+            "pronunciation": "gi-eop",
+            "topic": "경제",
+            "hanja": "企業",
+            "examples": [
+                "대기업에서 일하고 싶습니다."
+            ],
+            "synonyms": [
+                "회사"
+            ]
+        },
+        {
+            "word": "산업",
+            "meaning": "industry",
+            "pronunciation": "san-eop",
+            "topic": "경제",
+            "hanja": "産業",
+            "examples": [
+                "IT 산업이 발전하고 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "기술",
+            "meaning": "technology, skill",
+            "pronunciation": "gi-sul",
+            "topic": "경제",
+            "hanja": "技術",
+            "examples": [
+                "새로운 기술을 배우고 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "혁신",
+            "meaning": "innovation",
+            "pronunciation": "hyeok-sin",
+            "topic": "경제",
+            "hanja": "革新",
+            "examples": [
+                "기술 혁신이 필요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "발전",
+            "meaning": "development, progress",
+            "pronunciation": "bal-jeon",
+            "topic": "사회생활",
+            "hanja": "發展",
+            "examples": [
+                "한국은 빠르게 발전했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "성장",
+            "meaning": "growth",
+            "pronunciation": "seong-jang",
+            "topic": "경제",
+            "hanja": "成長",
+            "examples": [
+                "경제 성장률이 높습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "위기",
+            "meaning": "crisis",
+            "pronunciation": "wi-gi",
+            "topic": "사회생활",
+            "hanja": "危機",
+            "examples": [
+                "경제 위기를 극복했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "문제",
+            "meaning": "problem, issue",
+            "pronunciation": "mun-je",
+            "topic": "사회생활",
+            "hanja": "問題",
+            "examples": [
+                "환경 문제가 심각합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "해결",
+            "meaning": "solution, resolution",
+            "pronunciation": "hae-gyeol",
+            "topic": "사회생활",
+            "hanja": "解決",
+            "examples": [
+                "문제를 해결해야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "갈등",
+            "meaning": "conflict",
+            "pronunciation": "gal-deung",
+            "topic": "사회생활",
+            "hanja": "葛藤",
+            "examples": [
+                "세대 간 갈등이 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "협력",
+            "meaning": "cooperation",
+            "pronunciation": "hyeop-ryeok",
+            "topic": "사회생활",
+            "hanja": "協力",
+            "examples": [
+                "국제 협력이 중요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "소통",
+            "meaning": "communication",
+            "pronunciation": "so-tong",
+            "topic": "사회생활",
+            "hanja": "疏通",
+            "examples": [
+                "원활한 소통이 필요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "참여",
+            "meaning": "participation",
+            "pronunciation": "cham-yeo",
+            "topic": "사회생활",
+            "hanja": "參與",
+            "examples": [
+                "시민 참여가 중요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "봉사",
+            "meaning": "volunteer service",
+            "pronunciation": "bong-sa",
+            "topic": "사회생활",
+            "hanja": "奉仕",
+            "examples": [
+                "봉사 활동을 하고 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "기부",
+            "meaning": "donation",
+            "pronunciation": "gi-bu",
+            "topic": "사회생활",
+            "hanja": "寄附",
+            "examples": [
+                "어려운 이웃을 위해 기부했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "차별",
+            "meaning": "discrimination",
+            "pronunciation": "cha-byeol",
+            "topic": "사회생활",
+            "hanja": "差別",
+            "examples": [
+                "차별 없는 사회를 만들어야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "평등",
+            "meaning": "equality",
+            "pronunciation": "pyeong-deung",
+            "topic": "사회생활",
+            "hanja": "平等",
+            "examples": [
+                "남녀 평등이 중요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "존중",
+            "meaning": "respect",
+            "pronunciation": "jon-jung",
+            "topic": "사회생활",
+            "hanja": "尊重",
+            "examples": [
+                "서로를 존중해야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "다양성",
+            "meaning": "diversity",
+            "pronunciation": "da-yang-seong",
+            "topic": "사회생활",
+            "hanja": "多樣性",
+            "examples": [
+                "문화 다양성을 존중합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "공정",
+            "meaning": "fairness",
+            "pronunciation": "gong-jeong",
+            "topic": "사회생활",
+            "hanja": "公正",
+            "examples": [
+                "공정한 사회를 만들어야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "정의",
+            "meaning": "justice",
+            "pronunciation": "jeong-ui",
+            "topic": "사회생활",
+            "hanja": "正義",
+            "examples": [
+                "사회 정의를 실현해야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "자유",
+            "meaning": "freedom",
+            "pronunciation": "ja-yu",
+            "topic": "사회생활",
+            "hanja": "自由",
+            "examples": [
+                "표현의 자유가 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "안전",
+            "meaning": "safety, security",
+            "pronunciation": "an-jeon",
+            "topic": "사회생활",
+            "hanja": "安全",
+            "examples": [
+                "안전이 가장 중요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "범죄",
+            "meaning": "crime",
+            "pronunciation": "beom-joe",
+            "topic": "법률",
+            "hanja": "犯罪",
+            "examples": [
+                "범죄를 예방해야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "처벌",
+            "meaning": "punishment",
+            "pronunciation": "cheo-beol",
+            "topic": "법률",
+            "hanja": "處罰",
+            "examples": [
+                "법을 어기면 처벌을 받습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "재판",
+            "meaning": "trial",
+            "pronunciation": "jae-pan",
+            "topic": "법률",
+            "hanja": "裁判",
+            "examples": [
+                "재판을 받을 권리가 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "변호사",
+            "meaning": "lawyer",
+            "pronunciation": "byeon-ho-sa",
+            "topic": "법률",
+            "hanja": "辯護士",
+            "examples": [
+                "변호사에게 상담했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "계약",
+            "meaning": "contract",
+            "pronunciation": "gye-yak",
+            "topic": "법률",
+            "hanja": "契約",
+            "examples": [
+                "계약서를 잘 읽어봐야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "신고",
+            "meaning": "report, declaration",
+            "pronunciation": "sin-go",
+            "topic": "법률",
+            "hanja": "申告",
+            "examples": [
+                "경찰에 신고했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "허가",
+            "meaning": "permission, permit",
+            "pronunciation": "heo-ga",
+            "topic": "법률",
+            "hanja": "許可",
+            "examples": [
+                "허가를 받아야 영업할 수 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "등록",
+            "meaning": "registration",
+            "pronunciation": "deung-rok",
+            "topic": "법률",
+            "hanja": "登錄",
+            "examples": [
+                "외국인 등록을 해야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "비자",
+            "meaning": "visa",
+            "pronunciation": "bi-ja",
+            "topic": "출입국",
+            "examples": [
+                "비자를 연장해야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "체류",
+            "meaning": "stay, residence",
+            "pronunciation": "che-ryu",
+            "topic": "출입국",
+            "hanja": "滯留",
+            "examples": [
+                "체류 기간이 만료되었습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "영주권",
+            "meaning": "permanent residency",
+            "pronunciation": "yeong-ju-gwon",
+            "topic": "출입국",
+            "hanja": "永住權",
+            "examples": [
+                "영주권을 신청했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "귀화",
+            "meaning": "naturalization",
+            "pronunciation": "gwi-hwa",
+            "topic": "출입국",
+            "hanja": "歸化",
+            "examples": [
+                "귀화 시험에 합격했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "국적",
+            "meaning": "nationality",
+            "pronunciation": "guk-jeok",
+            "topic": "출입국",
+            "hanja": "國籍",
+            "examples": [
+                "국적이 어디입니까?"
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "이민",
+            "meaning": "immigration",
+            "pronunciation": "i-min",
+            "topic": "출입국",
+            "hanja": "移民",
+            "examples": [
+                "한국으로 이민 왔습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "다문화",
+            "meaning": "multiculture",
+            "pronunciation": "da-mun-hwa",
+            "topic": "사회생활",
+            "hanja": "多文化",
+            "examples": [
+                "다문화 가정이 늘어나고 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "적응",
+            "meaning": "adaptation",
+            "pronunciation": "jeok-eung",
+            "topic": "사회생활",
+            "hanja": "適應",
+            "examples": [
+                "한국 생활에 적응하고 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "통합",
+            "meaning": "integration",
+            "pronunciation": "tong-hap",
+            "topic": "사회생활",
+            "hanja": "統合",
+            "examples": [
+                "사회 통합이 중요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "언론",
+            "meaning": "press, media",
+            "pronunciation": "eon-ron",
+            "topic": "사회생활",
+            "hanja": "言論",
+            "examples": [
+                "언론의 자유가 있습니다."
+            ],
+            "synonyms": [
+                "미디어"
+            ]
+        },
+        {
+            "word": "뉴스",
+            "meaning": "news",
+            "pronunciation": "nyu-seu",
+            "topic": "사회생활",
+            "examples": [
+                "뉴스를 매일 봅니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "기사",
+            "meaning": "article (news)",
+            "pronunciation": "gi-sa",
+            "topic": "사회생활",
+            "hanja": "記事",
+            "examples": [
+                "신문 기사를 읽었습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "여론",
+            "meaning": "public opinion",
+            "pronunciation": "yeo-ron",
+            "topic": "사회생활",
+            "hanja": "輿論",
+            "examples": [
+                "여론 조사 결과입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "광고",
+            "meaning": "advertisement",
+            "pronunciation": "gwang-go",
+            "topic": "사회생활",
+            "hanja": "廣告",
+            "examples": [
+                "TV 광고를 봤습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "인터넷",
+            "meaning": "internet",
+            "pronunciation": "in-teo-net",
+            "topic": "기술",
+            "examples": [
+                "인터넷으로 정보를 찾습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "스마트폰",
+            "meaning": "smartphone",
+            "pronunciation": "seu-ma-teu-pon",
+            "topic": "기술",
+            "examples": [
+                "스마트폰으로 뉴스를 봅니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "소셜미디어",
+            "meaning": "social media",
+            "pronunciation": "so-syeol-mi-di-eo",
+            "topic": "기술",
+            "examples": [
+                "소셜미디어를 자주 씁니다."
+            ],
+            "synonyms": [
+                "SNS"
+            ]
+        },
+        {
+            "word": "정보",
+            "meaning": "information",
+            "pronunciation": "jeong-bo",
+            "topic": "기술",
+            "hanja": "情報",
+            "examples": [
+                "정보를 검색했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "데이터",
+            "meaning": "data",
+            "pronunciation": "de-i-teo",
+            "topic": "기술",
+            "examples": [
+                "데이터를 분석합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "프로그램",
+            "meaning": "program",
+            "pronunciation": "peu-ro-geu-raem",
+            "topic": "기술",
+            "examples": [
+                "컴퓨터 프로그램을 사용합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "앱",
+            "meaning": "app, application",
+            "pronunciation": "aep",
+            "topic": "기술",
+            "examples": [
+                "이 앱을 다운로드하세요."
+            ],
+            "synonyms": [
+                "애플리케이션"
+            ]
+        },
+        {
+            "word": "온라인",
+            "meaning": "online",
+            "pronunciation": "on-ra-in",
+            "topic": "기술",
+            "examples": [
+                "온라인으로 수업합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "오프라인",
+            "meaning": "offline",
+            "pronunciation": "o-peu-ra-in",
+            "topic": "기술",
+            "examples": [
+                "오프라인 매장에서 삽니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "디지털",
+            "meaning": "digital",
+            "pronunciation": "di-ji-teol",
+            "topic": "기술",
+            "examples": [
+                "디지털 시대입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "인공지능",
+            "meaning": "artificial intelligence",
+            "pronunciation": "in-gong-ji-neung",
+            "topic": "기술",
+            "hanja": "人工知能",
+            "examples": [
+                "인공지능 기술이 발전했습니다."
+            ],
+            "synonyms": [
+                "AI"
+            ]
+        },
+        {
+            "word": "로봇",
+            "meaning": "robot",
+            "pronunciation": "ro-bot",
+            "topic": "기술",
+            "examples": [
+                "로봇이 일을 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "자동화",
+            "meaning": "automation",
+            "pronunciation": "ja-dong-hwa",
+            "topic": "기술",
+            "hanja": "自動化",
+            "examples": [
+                "공장이 자동화되었습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "에너지",
+            "meaning": "energy",
+            "pronunciation": "e-neo-ji",
+            "topic": "환경",
+            "examples": [
+                "에너지를 절약합시다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "전기",
+            "meaning": "electricity",
+            "pronunciation": "jeon-gi",
+            "topic": "환경",
+            "hanja": "電氣",
+            "examples": [
+                "전기를 아껴 씁시다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "재생에너지",
+            "meaning": "renewable energy",
+            "pronunciation": "jae-saeng-e-neo-ji",
+            "topic": "환경",
+            "hanja": "再生에너지",
+            "examples": [
+                "재생에너지를 사용합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "오염",
+            "meaning": "pollution",
+            "pronunciation": "o-yeom",
+            "topic": "환경",
+            "hanja": "汚染",
+            "examples": [
+                "공기 오염이 심합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "쓰레기",
+            "meaning": "trash, garbage",
+            "pronunciation": "sseu-re-gi",
+            "topic": "환경",
+            "examples": [
+                "쓰레기를 분리수거합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "재활용",
+            "meaning": "recycling",
+            "pronunciation": "jae-hwal-yong",
+            "topic": "환경",
+            "hanja": "再活用",
+            "examples": [
+                "재활용을 합시다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "분리수거",
+            "meaning": "waste separation",
+            "pronunciation": "bun-ri-su-geo",
+            "topic": "환경",
+            "hanja": "分離收去",
+            "examples": [
+                "분리수거를 잘 해야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "일회용",
+            "meaning": "disposable",
+            "pronunciation": "il-hoe-yong",
+            "topic": "환경",
+            "hanja": "一回用",
+            "examples": [
+                "일회용품 사용을 줄입시다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "기후변화",
+            "meaning": "climate change",
+            "pronunciation": "gi-hu-byeon-hwa",
+            "topic": "환경",
+            "hanja": "氣候變化",
+            "examples": [
+                "기후변화가 심각합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "탄소",
+            "meaning": "carbon",
+            "pronunciation": "tan-so",
+            "topic": "환경",
+            "hanja": "炭素",
+            "examples": [
+                "탄소 배출을 줄여야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "의료",
+            "meaning": "medical care",
+            "pronunciation": "ui-ryo",
+            "topic": "의료",
+            "hanja": "醫療",
+            "examples": [
+                "의료 서비스가 좋습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "건강보험",
+            "meaning": "health insurance",
+            "pronunciation": "geon-gang-bo-heom",
+            "topic": "의료",
+            "hanja": "健康保險",
+            "examples": [
+                "건강보험에 가입했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "병원",
+            "meaning": "hospital",
+            "pronunciation": "byeong-won",
+            "topic": "의료",
+            "hanja": "病院",
+            "examples": [
+                "병원에 갔습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "진료",
+            "meaning": "medical treatment",
+            "pronunciation": "jin-ryo",
+            "topic": "의료",
+            "hanja": "診療",
+            "examples": [
+                "진료를 받았습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "처방",
+            "meaning": "prescription",
+            "pronunciation": "cheo-bang",
+            "topic": "의료",
+            "hanja": "處方",
+            "examples": [
+                "의사에게 처방을 받았습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "예방",
+            "meaning": "prevention",
+            "pronunciation": "ye-bang",
+            "topic": "의료",
+            "hanja": "豫防",
+            "examples": [
+                "질병 예방이 중요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "백신",
+            "meaning": "vaccine",
+            "pronunciation": "baek-sin",
+            "topic": "의료",
+            "examples": [
+                "백신을 맞았습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "접종",
+            "meaning": "vaccination",
+            "pronunciation": "jeop-jong",
+            "topic": "의료",
+            "hanja": "接種",
+            "examples": [
+                "예방 접종을 받았습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "심리",
+            "meaning": "psychology, mind",
+            "pronunciation": "sim-ri",
+            "topic": "의료",
+            "hanja": "心理",
+            "examples": [
+                "심리 상담을 받았습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "스트레스",
+            "meaning": "stress",
+            "pronunciation": "seu-teu-re-seu",
+            "topic": "의료",
+            "examples": [
+                "스트레스를 풀어야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "운동",
+            "meaning": "exercise, sports",
+            "pronunciation": "un-dong",
+            "topic": "건강",
+            "hanja": "運動",
+            "examples": [
+                "매일 운동합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "식단",
+            "meaning": "diet, menu",
+            "pronunciation": "sik-dan",
+            "topic": "건강",
+            "hanja": "食單",
+            "examples": [
+                "건강한 식단이 중요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "영양",
+            "meaning": "nutrition",
+            "pronunciation": "yeong-yang",
+            "topic": "건강",
+            "hanja": "營養",
+            "examples": [
+                "영양을 골고루 섭취합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "수면",
+            "meaning": "sleep",
+            "pronunciation": "su-myeon",
+            "topic": "건강",
+            "hanja": "睡眠",
+            "examples": [
+                "충분한 수면이 필요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "비만",
+            "meaning": "obesity",
+            "pronunciation": "bi-man",
+            "topic": "건강",
+            "hanja": "肥滿",
+            "examples": [
+                "비만을 예방해야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "금연",
+            "meaning": "no smoking, quitting smoking",
+            "pronunciation": "geum-yeon",
+            "topic": "건강",
+            "hanja": "禁煙",
+            "examples": [
+                "금연 구역입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "교통",
+            "meaning": "traffic, transportation",
+            "pronunciation": "gyo-tong",
+            "topic": "교통",
+            "hanja": "交通",
+            "examples": [
+                "교통이 편리합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "대중교통",
+            "meaning": "public transportation",
+            "pronunciation": "dae-jung-gyo-tong",
+            "topic": "교통",
+            "hanja": "大衆交通",
+            "examples": [
+                "대중교통을 이용합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "지하철",
+            "meaning": "subway",
+            "pronunciation": "ji-ha-cheol",
+            "topic": "교통",
+            "hanja": "地下鐵",
+            "examples": [
+                "지하철로 출근합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "버스",
+            "meaning": "bus",
+            "pronunciation": "beo-seu",
+            "topic": "교통",
+            "examples": [
+                "버스를 타고 갑니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "택시",
+            "meaning": "taxi",
+            "pronunciation": "taek-si",
+            "topic": "교통",
+            "examples": [
+                "택시를 불렀습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "고속도로",
+            "meaning": "expressway",
+            "pronunciation": "go-sok-do-ro",
+            "topic": "교통",
+            "hanja": "高速道路",
+            "examples": [
+                "고속도로로 여행합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "주차",
+            "meaning": "parking",
+            "pronunciation": "ju-cha",
+            "topic": "교통",
+            "hanja": "駐車",
+            "examples": [
+                "주차장이 어디예요?"
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "교통사고",
+            "meaning": "traffic accident",
+            "pronunciation": "gyo-tong-sa-go",
+            "topic": "교통",
+            "hanja": "交通事故",
+            "examples": [
+                "교통사고를 조심하세요."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "안전벨트",
+            "meaning": "seatbelt",
+            "pronunciation": "an-jeon-bel-teu",
+            "topic": "교통",
+            "examples": [
+                "안전벨트를 매세요."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "신호등",
+            "meaning": "traffic light",
+            "pronunciation": "sin-ho-deung",
+            "topic": "교통",
+            "hanja": "信號燈",
+            "examples": [
+                "신호등을 지키세요."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "횡단보도",
+            "meaning": "crosswalk",
+            "pronunciation": "hoeng-dan-bo-do",
+            "topic": "교통",
+            "hanja": "橫斷步道",
+            "examples": [
+                "횡단보도를 건너세요."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "주거",
+            "meaning": "residence, housing",
+            "pronunciation": "ju-geo",
+            "topic": "주거",
+            "hanja": "住居",
+            "examples": [
+                "주거 환경이 좋습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "임대",
+            "meaning": "lease, rental",
+            "pronunciation": "im-dae",
+            "topic": "주거",
+            "hanja": "賃貸",
+            "examples": [
+                "아파트를 임대했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "전세",
+            "meaning": "jeonse (deposit-based rental)",
+            "pronunciation": "jeon-se",
+            "topic": "주거",
+            "hanja": "傳貰",
+            "examples": [
+                "전세로 살고 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "월세",
+            "meaning": "monthly rent",
+            "pronunciation": "wol-se",
+            "topic": "주거",
+            "hanja": "月貰",
+            "examples": [
+                "월세가 얼마예요?"
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "보증금",
+            "meaning": "security deposit",
+            "pronunciation": "bo-jeung-geum",
+            "topic": "주거",
+            "hanja": "保證金",
+            "examples": [
+                "보증금을 냈습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "관리비",
+            "meaning": "maintenance fee",
+            "pronunciation": "gwan-ri-bi",
+            "topic": "주거",
+            "hanja": "管理費",
+            "examples": [
+                "관리비가 포함되어 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "부동산",
+            "meaning": "real estate",
+            "pronunciation": "bu-dong-san",
+            "topic": "주거",
+            "hanja": "不動産",
+            "examples": [
+                "부동산에서 집을 찾았습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "아파트",
+            "meaning": "apartment",
+            "pronunciation": "a-pa-teu",
+            "topic": "주거",
+            "examples": [
+                "아파트에 살고 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "빌라",
+            "meaning": "villa (small apartment)",
+            "pronunciation": "bil-la",
+            "topic": "주거",
+            "examples": [
+                "빌라가 조용합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "원룸",
+            "meaning": "studio apartment",
+            "pronunciation": "won-rum",
+            "topic": "주거",
+            "examples": [
+                "원룸을 구하고 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "이사",
+            "meaning": "moving (house)",
+            "pronunciation": "i-sa",
+            "topic": "주거",
+            "hanja": "移徙",
+            "examples": [
+                "다음 주에 이사합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "이웃",
+            "meaning": "neighbor",
+            "pronunciation": "i-ut",
+            "topic": "주거",
+            "examples": [
+                "이웃과 인사했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "아이",
+            "meaning": "child",
+            "pronunciation": "a-i",
+            "topic": "가족",
+            "examples": [
+                "아이가 학교에 갑니다."
+            ],
+            "synonyms": [
+                "어린이"
+            ]
+        },
+        {
+            "word": "자녀",
+            "meaning": "children (one's own)",
+            "pronunciation": "ja-nyeo",
+            "topic": "가족",
+            "hanja": "子女",
+            "examples": [
+                "자녀 교육이 중요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "양육",
+            "meaning": "child-rearing",
+            "pronunciation": "yang-yuk",
+            "topic": "가족",
+            "hanja": "養育",
+            "examples": [
+                "양육비가 필요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "육아",
+            "meaning": "childcare",
+            "pronunciation": "yuk-a",
+            "topic": "가족",
+            "hanja": "育兒",
+            "examples": [
+                "육아휴직을 사용했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "어린이집",
+            "meaning": "daycare center",
+            "pronunciation": "eo-rin-i-jip",
+            "topic": "가족",
+            "examples": [
+                "어린이집에 보냅니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "유치원",
+            "meaning": "kindergarten",
+            "pronunciation": "yu-chi-won",
+            "topic": "가족",
+            "hanja": "幼稚園",
+            "examples": [
+                "유치원에 다닙니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "초등학교",
+            "meaning": "elementary school",
+            "pronunciation": "cho-deung-hak-gyo",
+            "topic": "교육",
+            "hanja": "初等學校",
+            "examples": [
+                "초등학교에 입학했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "중학교",
+            "meaning": "middle school",
+            "pronunciation": "jung-hak-gyo",
+            "topic": "교육",
+            "hanja": "中學校",
+            "examples": [
+                "중학교는 의무교육입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "고등학교",
+            "meaning": "high school",
+            "pronunciation": "go-deung-hak-gyo",
+            "topic": "교육",
+            "hanja": "高等學校",
+            "examples": [
+                "고등학교를 졸업했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "대학교",
+            "meaning": "university",
+            "pronunciation": "dae-hak-gyo",
+            "topic": "교육",
+            "hanja": "大學校",
+            "examples": [
+                "대학교에 진학했습니다."
+            ],
+            "synonyms": [
+                "대학"
+            ]
+        },
+        {
+            "word": "학원",
+            "meaning": "private academy",
+            "pronunciation": "hak-won",
+            "topic": "교육",
+            "hanja": "學院",
+            "examples": [
+                "학원에서 한국어를 배웁니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "시험",
+            "meaning": "exam, test",
+            "pronunciation": "si-heom",
+            "topic": "교육",
+            "hanja": "試驗",
+            "examples": [
+                "시험을 잘 봤습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "성적",
+            "meaning": "grades, scores",
+            "pronunciation": "seong-jeok",
+            "topic": "교육",
+            "hanja": "成績",
+            "examples": [
+                "성적이 좋습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "졸업",
+            "meaning": "graduation",
+            "pronunciation": "jol-eop",
+            "topic": "교육",
+            "hanja": "卒業",
+            "examples": [
+                "다음 달에 졸업합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "입학",
+            "meaning": "entrance (to school)",
+            "pronunciation": "ip-hak",
+            "topic": "교육",
+            "hanja": "入學",
+            "examples": [
+                "입학 시험을 봤습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "장학금",
+            "meaning": "scholarship",
+            "pronunciation": "jang-hak-geum",
+            "topic": "교육",
+            "hanja": "獎學金",
+            "examples": [
+                "장학금을 받았습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "등록금",
+            "meaning": "tuition fee",
+            "pronunciation": "deung-rok-geum",
+            "topic": "교육",
+            "hanja": "登錄金",
+            "examples": [
+                "등록금이 비쌉니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "자격증",
+            "meaning": "certificate, license",
+            "pronunciation": "ja-gyeok-jeung",
+            "topic": "교육",
+            "hanja": "資格證",
+            "examples": [
+                "자격증을 땄습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "면접",
+            "meaning": "interview",
+            "pronunciation": "myeon-jeop",
+            "topic": "취업",
+            "hanja": "面接",
+            "examples": [
+                "면접을 봤습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "이력서",
+            "meaning": "resume, CV",
+            "pronunciation": "i-ryeok-seo",
+            "topic": "취업",
+            "hanja": "履歷書",
+            "examples": [
+                "이력서를 제출했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "자기소개서",
+            "meaning": "cover letter",
+            "pronunciation": "ja-gi-so-gae-seo",
+            "topic": "취업",
+            "hanja": "自己紹介書",
+            "examples": [
+                "자기소개서를 썼습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "채용",
+            "meaning": "hiring, recruitment",
+            "pronunciation": "chae-yong",
+            "topic": "취업",
+            "hanja": "採用",
+            "examples": [
+                "신입사원을 채용합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "퇴직",
+            "meaning": "retirement, resignation",
+            "pronunciation": "toe-jik",
+            "topic": "취업",
+            "hanja": "退職",
+            "examples": [
+                "퇴직 후 여행하고 싶습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "승진",
+            "meaning": "promotion",
+            "pronunciation": "seung-jin",
+            "topic": "취업",
+            "hanja": "昇進",
+            "examples": [
+                "올해 승진했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "근무",
+            "meaning": "work, duty",
+            "pronunciation": "geun-mu",
+            "topic": "취업",
+            "hanja": "勤務",
+            "examples": [
+                "9시부터 근무합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "야근",
+            "meaning": "overtime work",
+            "pronunciation": "ya-geun",
+            "topic": "취업",
+            "hanja": "夜勤",
+            "examples": [
+                "오늘 야근해야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "휴가",
+            "meaning": "vacation, leave",
+            "pronunciation": "hyu-ga",
+            "topic": "취업",
+            "hanja": "休暇",
+            "examples": [
+                "휴가를 신청했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "복리후생",
+            "meaning": "employee benefits",
+            "pronunciation": "bok-ri-hu-saeng",
+            "topic": "취업",
+            "hanja": "福利厚生",
+            "examples": [
+                "복리후생이 좋습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "직장",
+            "meaning": "workplace",
+            "pronunciation": "jik-jang",
+            "topic": "취업",
+            "hanja": "職場",
+            "examples": [
+                "직장이 집에서 가깝습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "동료",
+            "meaning": "colleague",
+            "pronunciation": "dong-ryo",
+            "topic": "취업",
+            "hanja": "同僚",
+            "examples": [
+                "동료들과 친합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "상사",
+            "meaning": "boss, superior",
+            "pronunciation": "sang-sa",
+            "topic": "취업",
+            "hanja": "上司",
+            "examples": [
+                "상사에게 보고했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "부하",
+            "meaning": "subordinate",
+            "pronunciation": "bu-ha",
+            "topic": "취업",
+            "hanja": "部下",
+            "examples": [
+                "부하 직원이 3명 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "회의",
+            "meaning": "meeting",
+            "pronunciation": "hoe-ui",
+            "topic": "취업",
+            "hanja": "會議",
+            "examples": [
+                "오후에 회의가 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "보고",
+            "meaning": "report",
+            "pronunciation": "bo-go",
+            "topic": "취업",
+            "hanja": "報告",
+            "examples": [
+                "보고서를 작성했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "프로젝트",
+            "meaning": "project",
+            "pronunciation": "peu-ro-jek-teu",
+            "topic": "취업",
+            "examples": [
+                "새 프로젝트를 시작했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "마감",
+            "meaning": "deadline",
+            "pronunciation": "ma-gam",
+            "topic": "취업",
+            "examples": [
+                "마감일이 다가옵니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "출장",
+            "meaning": "business trip",
+            "pronunciation": "chul-jang",
+            "topic": "취업",
+            "hanja": "出張",
+            "examples": [
+                "다음 주에 출장 갑니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "명함",
+            "meaning": "business card",
+            "pronunciation": "myeong-ham",
+            "topic": "취업",
+            "hanja": "名銜",
+            "examples": [
+                "명함을 교환했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "창업",
+            "meaning": "starting a business",
+            "pronunciation": "chang-eop",
+            "topic": "취업",
+            "hanja": "創業",
+            "examples": [
+                "창업을 준비하고 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "사업",
+            "meaning": "business, enterprise",
+            "pronunciation": "sa-eop",
+            "topic": "취업",
+            "hanja": "事業",
+            "examples": [
+                "사업이 잘 되고 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "전통",
+            "meaning": "tradition",
+            "pronunciation": "jeon-tong",
+            "topic": "문화",
+            "hanja": "傳統",
+            "examples": [
+                "전통 문화를 보존해야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "명절",
+            "meaning": "holiday, festival",
+            "pronunciation": "myeong-jeol",
+            "topic": "문화",
+            "hanja": "名節",
+            "examples": [
+                "명절에 가족이 모입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "설날",
+            "meaning": "Lunar New Year",
+            "pronunciation": "seol-nal",
+            "topic": "문화",
+            "examples": [
+                "설날에 세배를 드립니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "추석",
+            "meaning": "Chuseok (Korean Thanksgiving)",
+            "pronunciation": "chu-seok",
+            "topic": "문화",
+            "hanja": "秋夕",
+            "examples": [
+                "추석에 송편을 만듭니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "세배",
+            "meaning": "New Year's bow",
+            "pronunciation": "se-bae",
+            "topic": "문화",
+            "hanja": "歲拜",
+            "examples": [
+                "어른께 세배를 드렸습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "차례",
+            "meaning": "ancestral rites",
+            "pronunciation": "cha-rye",
+            "topic": "문화",
+            "hanja": "茶禮",
+            "examples": [
+                "차례를 지냈습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "한복",
+            "meaning": "Korean traditional clothes",
+            "pronunciation": "han-bok",
+            "topic": "문화",
+            "hanja": "韓服",
+            "examples": [
+                "명절에 한복을 입습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "전통음식",
+            "meaning": "traditional food",
+            "pronunciation": "jeon-tong-eum-sik",
+            "topic": "문화",
+            "hanja": "傳統飮食",
+            "examples": [
+                "전통음식을 먹었습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "문화유산",
+            "meaning": "cultural heritage",
+            "pronunciation": "mun-hwa-yu-san",
+            "topic": "문화",
+            "hanja": "文化遺産",
+            "examples": [
+                "문화유산을 보호합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "사찰",
+            "meaning": "Buddhist temple",
+            "pronunciation": "sa-chal",
+            "topic": "문화",
+            "hanja": "寺刹",
+            "examples": [
+                "사찰을 방문했습니다."
+            ],
+            "synonyms": [
+                "절"
+            ]
+        },
+        {
+            "word": "궁궐",
+            "meaning": "palace",
+            "pronunciation": "gung-gwol",
+            "topic": "문화",
+            "hanja": "宮闕",
+            "examples": [
+                "경복궁은 유명한 궁궐입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "한글",
+            "meaning": "Korean alphabet",
+            "pronunciation": "han-geul",
+            "topic": "문화",
+            "hanja": "韓글",
+            "examples": [
+                "한글은 과학적인 문자입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "예절",
+            "meaning": "etiquette, manners",
+            "pronunciation": "ye-jeol",
+            "topic": "문화",
+            "hanja": "禮節",
+            "examples": [
+                "한국의 예절을 배웁니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "효도",
+            "meaning": "filial piety",
+            "pronunciation": "hyo-do",
+            "topic": "문화",
+            "hanja": "孝道",
+            "examples": [
+                "부모님께 효도합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "존댓말",
+            "meaning": "honorific speech",
+            "pronunciation": "jon-daen-mal",
+            "topic": "언어",
+            "examples": [
+                "어른에게 존댓말을 씁니다."
+            ],
+            "synonyms": [
+                "경어"
+            ]
+        },
+        {
+            "word": "반말",
+            "meaning": "informal speech",
+            "pronunciation": "ban-mal",
+            "topic": "언어",
+            "examples": [
+                "친구에게 반말을 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "속담",
+            "meaning": "proverb",
+            "pronunciation": "sok-dam",
+            "topic": "언어",
+            "hanja": "俗談",
+            "examples": [
+                "한국 속담을 배웁니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "관용어",
+            "meaning": "idiom",
+            "pronunciation": "gwan-yong-eo",
+            "topic": "언어",
+            "hanja": "慣用語",
+            "examples": [
+                "관용어를 익혔습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "사자성어",
+            "meaning": "four-character idiom",
+            "pronunciation": "sa-ja-seong-eo",
+            "topic": "언어",
+            "hanja": "四字成語",
+            "examples": [
+                "사자성어를 공부합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "유행",
+            "meaning": "trend, fashion",
+            "pronunciation": "yu-haeng",
+            "topic": "문화",
+            "hanja": "流行",
+            "examples": [
+                "요즘 유행하는 노래입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "한류",
+            "meaning": "Korean Wave",
+            "pronunciation": "hal-lyu",
+            "topic": "문화",
+            "hanja": "韓流",
+            "examples": [
+                "한류가 세계적으로 인기입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "드라마",
+            "meaning": "drama, TV series",
+            "pronunciation": "deu-ra-ma",
+            "topic": "문화",
+            "examples": [
+                "한국 드라마를 봅니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "영화",
+            "meaning": "movie",
+            "pronunciation": "yeong-hwa",
+            "topic": "문화",
+            "hanja": "映畫",
+            "examples": [
+                "영화관에서 영화를 봤습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "음악",
+            "meaning": "music",
+            "pronunciation": "eum-ak",
+            "topic": "문화",
+            "hanja": "音樂",
+            "examples": [
+                "K-pop 음악을 좋아합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "공연",
+            "meaning": "performance",
+            "pronunciation": "gong-yeon",
+            "topic": "문화",
+            "hanja": "公演",
+            "examples": [
+                "공연을 보러 갔습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "전시회",
+            "meaning": "exhibition",
+            "pronunciation": "jeon-si-hoe",
+            "topic": "문화",
+            "hanja": "展示會",
+            "examples": [
+                "미술 전시회에 갔습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "박물관",
+            "meaning": "museum",
+            "pronunciation": "bak-mul-gwan",
+            "topic": "문화",
+            "hanja": "博物館",
+            "examples": [
+                "박물관을 관람했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "관광",
+            "meaning": "tourism",
+            "pronunciation": "gwan-gwang",
+            "topic": "문화",
+            "hanja": "觀光",
+            "examples": [
+                "관광객이 많습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "여행",
+            "meaning": "travel",
+            "pronunciation": "yeo-haeng",
+            "topic": "문화",
+            "hanja": "旅行",
+            "examples": [
+                "여행을 좋아합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "숙소",
+            "meaning": "accommodation",
+            "pronunciation": "suk-so",
+            "topic": "여행",
+            "hanja": "宿所",
+            "examples": [
+                "숙소를 예약했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "호텔",
+            "meaning": "hotel",
+            "pronunciation": "ho-tel",
+            "topic": "여행",
+            "examples": [
+                "호텔에서 묵었습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "민박",
+            "meaning": "homestay",
+            "pronunciation": "min-bak",
+            "topic": "여행",
+            "hanja": "民泊",
+            "examples": [
+                "민박을 체험했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "예약",
+            "meaning": "reservation",
+            "pronunciation": "ye-yak",
+            "topic": "여행",
+            "hanja": "豫約",
+            "examples": [
+                "식당을 예약했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "취소",
+            "meaning": "cancellation",
+            "pronunciation": "chwi-so",
+            "topic": "여행",
+            "hanja": "取消",
+            "examples": [
+                "예약을 취소했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "환불",
+            "meaning": "refund",
+            "pronunciation": "hwan-bul",
+            "topic": "소비",
+            "hanja": "還拂",
+            "examples": [
+                "환불을 받았습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "교환",
+            "meaning": "exchange",
+            "pronunciation": "gyo-hwan",
+            "topic": "소비",
+            "hanja": "交換",
+            "examples": [
+                "상품을 교환했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "영수증",
+            "meaning": "receipt",
+            "pronunciation": "yeong-su-jeung",
+            "topic": "소비",
+            "hanja": "領收證",
+            "examples": [
+                "영수증을 받았습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "할인",
+            "meaning": "discount",
+            "pronunciation": "hal-in",
+            "topic": "소비",
+            "hanja": "割引",
+            "examples": [
+                "할인 중입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "카드결제",
+            "meaning": "card payment",
+            "pronunciation": "ka-deu-gyeol-je",
+            "topic": "소비",
+            "examples": [
+                "카드결제가 가능합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "현금",
+            "meaning": "cash",
+            "pronunciation": "hyeon-geum",
+            "topic": "소비",
+            "hanja": "現金",
+            "examples": [
+                "현금으로 계산했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "배달",
+            "meaning": "delivery",
+            "pronunciation": "bae-dal",
+            "topic": "소비",
+            "hanja": "配達",
+            "examples": [
+                "음식 배달을 시켰습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "택배",
+            "meaning": "courier, package delivery",
+            "pronunciation": "taek-bae",
+            "topic": "소비",
+            "hanja": "宅配",
+            "examples": [
+                "택배가 왔습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "포장",
+            "meaning": "packaging, takeout",
+            "pronunciation": "po-jang",
+            "topic": "소비",
+            "hanja": "包裝",
+            "examples": [
+                "포장해 주세요."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "반품",
+            "meaning": "return (of goods)",
+            "pronunciation": "ban-pum",
+            "topic": "소비",
+            "hanja": "返品",
+            "examples": [
+                "반품 신청을 했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "적립",
+            "meaning": "accumulation (of points)",
+            "pronunciation": "jeok-rip",
+            "topic": "소비",
+            "hanja": "積立",
+            "examples": [
+                "포인트를 적립했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "쿠폰",
+            "meaning": "coupon",
+            "pronunciation": "ku-pon",
+            "topic": "소비",
+            "examples": [
+                "쿠폰을 사용했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "계좌",
+            "meaning": "bank account",
+            "pronunciation": "gye-jwa",
+            "topic": "금융",
+            "hanja": "計座",
+            "examples": [
+                "계좌를 개설했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "송금",
+            "meaning": "remittance, wire transfer",
+            "pronunciation": "song-geum",
+            "topic": "금융",
+            "hanja": "送金",
+            "examples": [
+                "해외로 송금했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "인출",
+            "meaning": "withdrawal",
+            "pronunciation": "in-chul",
+            "topic": "금융",
+            "hanja": "引出",
+            "examples": [
+                "ATM에서 인출했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "입금",
+            "meaning": "deposit",
+            "pronunciation": "ip-geum",
+            "topic": "금융",
+            "hanja": "入金",
+            "examples": [
+                "계좌에 입금했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "잔액",
+            "meaning": "balance (account)",
+            "pronunciation": "jan-aek",
+            "topic": "금융",
+            "hanja": "殘額",
+            "examples": [
+                "잔액을 확인했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "이체",
+            "meaning": "transfer",
+            "pronunciation": "i-che",
+            "topic": "금융",
+            "hanja": "移替",
+            "examples": [
+                "계좌이체를 했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "신용카드",
+            "meaning": "credit card",
+            "pronunciation": "sin-yong-ka-deu",
+            "topic": "금융",
+            "hanja": "信用카드",
+            "examples": [
+                "신용카드로 결제했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "체크카드",
+            "meaning": "debit card",
+            "pronunciation": "che-keu-ka-deu",
+            "topic": "금융",
+            "examples": [
+                "체크카드가 편합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "통장",
+            "meaning": "bankbook",
+            "pronunciation": "tong-jang",
+            "topic": "금융",
+            "hanja": "通帳",
+            "examples": [
+                "통장을 만들었습니다."
+            ],
+            "synonyms": []
+        }
+    ]
+}

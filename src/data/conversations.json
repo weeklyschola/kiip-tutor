@@ -1,0 +1,1148 @@
+{
+    "conversations": [
+        {
+            "id": 1,
+            "level": 0,
+            "title": "첫 만남 인사",
+            "category": "인사",
+            "icon": "👋",
+            "description": "처음 만난 사람과 인사하기",
+            "dialogue": [
+                {
+                    "speaker": "민수",
+                    "role": "other",
+                    "text": "안녕하세요? 저는 이민수예요.",
+                    "avatar": "👨",
+                    "translation": "Hello? I'm Lee Minsu."
+                },
+                {
+                    "speaker": "투이 (나)",
+                    "role": "user",
+                    "text": "안녕하세요. 만나서 반갑습니다. 저는 투이예요.",
+                    "avatar": "👤",
+                    "translation": "Hello. Nice to meet you. I'm Thuy."
+                },
+                {
+                    "speaker": "민수",
+                    "role": "other",
+                    "text": "어느 나라에서 왔어요?",
+                    "avatar": "👨",
+                    "translation": "Which country are you from?"
+                },
+                {
+                    "speaker": "투이 (나)",
+                    "role": "user",
+                    "text": "베트남에서 왔어요. 한국에 온 지 3개월 됐어요.",
+                    "avatar": "👤",
+                    "translation": "I'm from Vietnam. I've been in Korea for 3 months."
+                },
+                {
+                    "speaker": "민수",
+                    "role": "other",
+                    "text": "아, 그래요? 한국어 잘하시네요! 지금 한국어를 배우고 있어요?",
+                    "avatar": "👨",
+                    "translation": "Oh, really? You speak Korean well! Are you learning Korean now?"
+                },
+                {
+                    "speaker": "투이 (나)",
+                    "role": "user",
+                    "text": "네, 사회통합프로그램에서 공부하고 있어요. 선생님이 친절해서 좋아요.",
+                    "avatar": "👤",
+                    "translation": "Yes, I'm studying at KIIP. The teacher is kind, so I like it."
+                },
+                {
+                    "speaker": "민수",
+                    "role": "other",
+                    "text": "열심히 공부하세요. 다음에 또 봐요!",
+                    "avatar": "👨",
+                    "translation": "Study hard. See you next time!"
+                },
+                {
+                    "speaker": "투이 (나)",
+                    "role": "user",
+                    "text": "네, 감사합니다. 안녕히 가세요!",
+                    "avatar": "👤",
+                    "translation": "Yes, thank you. Goodbye!"
+                }
+            ],
+            "vocabulary": [
+                "안녕하세요",
+                "만나서 반갑습니다",
+                "감사합니다",
+                "안녕히 가세요",
+                "선생님",
+                "공부하다"
+            ],
+            "grammar": [
+                "저는 ~예요/이에요",
+                "~에서 왔어요",
+                "~고 있어요"
+            ],
+            "cultureTip": "한국에서는 처음 만났을 때 악수를 하며 인사합니다. 나이가 많은 사람에게는 고개를 숙여 인사합니다."
+        },
+        {
+            "id": 2,
+            "level": 0,
+            "title": "수업 시간",
+            "category": "학교",
+            "icon": "📚",
+            "description": "교실에서 선생님과 대화하기",
+            "dialogue": [
+                {
+                    "speaker": "선생님",
+                    "role": "other",
+                    "text": "자, 책을 펴세요. 오늘은 10쪽이에요.",
+                    "avatar": "👩‍🏫",
+                    "translation": "Now, open your books. Today is page 10."
+                },
+                {
+                    "speaker": "학생 (나)",
+                    "role": "user",
+                    "text": "선생님, 잠깐만요. 연필이 없어요.",
+                    "avatar": "👤",
+                    "translation": "Teacher, wait a moment. I don't have a pencil."
+                },
+                {
+                    "speaker": "선생님",
+                    "role": "other",
+                    "text": "괜찮아요. 여기 연필 있어요. 쓰세요.",
+                    "avatar": "👩‍🏫",
+                    "translation": "That's okay. Here's a pencil. Use it."
+                },
+                {
+                    "speaker": "학생 (나)",
+                    "role": "user",
+                    "text": "감사합니다, 선생님.",
+                    "avatar": "👤",
+                    "translation": "Thank you, teacher."
+                },
+                {
+                    "speaker": "선생님",
+                    "role": "other",
+                    "text": "잘 들어 보세요. 저를 따라 하세요. '안녕하세요'",
+                    "avatar": "👩‍🏫",
+                    "translation": "Listen carefully. Repeat after me. 'Hello'"
+                },
+                {
+                    "speaker": "학생 (나)",
+                    "role": "user",
+                    "text": "안녕하세요.",
+                    "avatar": "👤",
+                    "translation": "Hello."
+                },
+                {
+                    "speaker": "선생님",
+                    "role": "other",
+                    "text": "아주 좋아요! 발음이 좋네요. 다시 한번 해 볼까요?",
+                    "avatar": "👩‍🏫",
+                    "translation": "Very good! Your pronunciation is good. Shall we try again?"
+                },
+                {
+                    "speaker": "학생 (나)",
+                    "role": "user",
+                    "text": "네, 선생님. 질문 있어요. '반갑습니다'는 영어로 뭐예요?",
+                    "avatar": "👤",
+                    "translation": "Yes, teacher. I have a question. What is 'bangapseumnida' in English?"
+                },
+                {
+                    "speaker": "선생님",
+                    "role": "other",
+                    "text": "'Nice to meet you'예요. 공책에 써 보세요.",
+                    "avatar": "👩‍🏫",
+                    "translation": "It's 'Nice to meet you'. Write it in your notebook."
+                }
+            ],
+            "vocabulary": [
+                "책",
+                "연필",
+                "공책",
+                "선생님",
+                "칠판",
+                "따라 하세요",
+                "잘 들어 보세요",
+                "써 보세요"
+            ],
+            "grammar": [
+                "~이/가 없어요",
+                "~을/를 펴세요",
+                "~은/는 뭐예요?"
+            ],
+            "cultureTip": "한국 학교에서는 선생님에게 두 손으로 물건을 주고받습니다. 존댓말을 사용합니다."
+        },
+        {
+            "id": 3,
+            "level": 1,
+            "title": "마트에서 장보기",
+            "category": "쇼핑",
+            "icon": "🛒",
+            "description": "마트에서 필요한 물건 사기",
+            "dialogue": [
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "어서 오세요! 찾으시는 것 있으세요?",
+                    "avatar": "🧑‍💼",
+                    "translation": "Welcome! Are you looking for something?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "네, 라면이 어디에 있어요?",
+                    "avatar": "👤",
+                    "translation": "Yes, where is the ramen?"
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "라면은 3번 통로 왼쪽에 있어요. 카트 필요하세요?",
+                    "avatar": "🧑‍💼",
+                    "translation": "Ramen is on the left side of aisle 3. Do you need a cart?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "네, 카트 주세요. 그리고 우유는 어디에 있어요?",
+                    "avatar": "👤",
+                    "translation": "Yes, please give me a cart. And where is the milk?"
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "우유는 냉장 코너에 있어요. 저기 오른쪽이에요.",
+                    "avatar": "🧑‍💼",
+                    "translation": "Milk is in the refrigerated section. It's over there on the right."
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "감사합니다. 아, 봉투는 얼마예요?",
+                    "avatar": "👤",
+                    "translation": "Thank you. Oh, how much is a bag?"
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "봉투는 100원이에요. 장바구니는 무료예요.",
+                    "avatar": "🧑‍💼",
+                    "translation": "Bags are 100 won. Reusable bags are free."
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "장바구니 있어요. 계산대가 어디예요?",
+                    "avatar": "👤",
+                    "translation": "I have a reusable bag. Where is the checkout counter?"
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "계산대는 저기 앞쪽이에요. 카드결제도 가능해요.",
+                    "avatar": "🧑‍💼",
+                    "translation": "The checkout is over there in the front. Card payment is also available."
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "네, 감사합니다!",
+                    "avatar": "👤",
+                    "translation": "Yes, thank you!"
+                }
+            ],
+            "vocabulary": [
+                "마트",
+                "라면",
+                "우유",
+                "통로",
+                "카트",
+                "봉투",
+                "계산대",
+                "장바구니",
+                "카드결제"
+            ],
+            "grammar": [
+                "~이/가 어디에 있어요?",
+                "~은/는 얼마예요?",
+                "~도 되어요"
+            ],
+            "cultureTip": "한국에서는 비닐봉투가 유료입니다. 환경을 위해 장바구니를 가져가는 것이 좋습니다."
+        },
+        {
+            "id": 4,
+            "level": 1,
+            "title": "병원 예약하기",
+            "category": "의료",
+            "icon": "🏥",
+            "description": "전화로 병원 예약하고 진료받기",
+            "dialogue": [
+                {
+                    "speaker": "접수직원",
+                    "role": "other",
+                    "text": "안녕하세요, ○○병원입니다.",
+                    "avatar": "👩‍⚕️",
+                    "translation": "Hello, this is ○○ Hospital."
+                },
+                {
+                    "speaker": "환자 (나)",
+                    "role": "user",
+                    "text": "안녕하세요. 내일 진료 예약하고 싶은데요.",
+                    "avatar": "👤",
+                    "translation": "Hello. I'd like to make an appointment for tomorrow."
+                },
+                {
+                    "speaker": "접수직원",
+                    "role": "other",
+                    "text": "네, 어디가 불편하세요?",
+                    "avatar": "👩‍⚕️",
+                    "translation": "Yes, what's bothering you?"
+                },
+                {
+                    "speaker": "환자 (나)",
+                    "role": "user",
+                    "text": "3일 전부터 머리가 아프고 열이 있어요.",
+                    "avatar": "👤",
+                    "translation": "I've had a headache and fever since 3 days ago."
+                },
+                {
+                    "speaker": "접수직원",
+                    "role": "other",
+                    "text": "내과로 예약해 드릴게요. 내일 오전 10시 괜찮으세요?",
+                    "avatar": "👩‍⚕️",
+                    "translation": "I'll book you for internal medicine. Is 10 AM tomorrow okay?"
+                },
+                {
+                    "speaker": "환자 (나)",
+                    "role": "user",
+                    "text": "네, 괜찮아요. 건강보험증 가져가야 하나요?",
+                    "avatar": "👤",
+                    "translation": "Yes, that's fine. Should I bring my health insurance card?"
+                },
+                {
+                    "speaker": "접수직원",
+                    "role": "other",
+                    "text": "네, 건강보험증이랑 외국인등록증 가져오세요.",
+                    "avatar": "👩‍⚕️",
+                    "translation": "Yes, please bring your health insurance card and alien registration card."
+                },
+                {
+                    "speaker": "환자 (나)",
+                    "role": "user",
+                    "text": "알겠습니다. 감사합니다.",
+                    "avatar": "👤",
+                    "translation": "I understand. Thank you."
+                }
+            ],
+            "vocabulary": [
+                "병원",
+                "진료",
+                "예약",
+                "건강보험",
+                "외국인등록증",
+                "내과",
+                "열",
+                "두통"
+            ],
+            "grammar": [
+                "~고 싶은데요",
+                "~부터 ~아요/어요",
+                "~야 하나요?"
+            ],
+            "cultureTip": "한국에서는 건강보험이 있으면 병원비가 저렴합니다. 외국인도 건강보험에 가입할 수 있습니다."
+        },
+        {
+            "id": 5,
+            "level": 1,
+            "title": "약국에서",
+            "category": "의료",
+            "icon": "💊",
+            "description": "약국에서 약 사기",
+            "dialogue": [
+                {
+                    "speaker": "약사",
+                    "role": "other",
+                    "text": "안녕하세요. 처방전 있으세요?",
+                    "avatar": "👨‍⚕️",
+                    "translation": "Hello. Do you have a prescription?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "아니요, 처방전 없어요. 두통약 좀 주세요.",
+                    "avatar": "👤",
+                    "translation": "No, I don't have a prescription. Please give me some headache medicine."
+                },
+                {
+                    "speaker": "약사",
+                    "role": "other",
+                    "text": "어디가 아프세요? 머리만 아프세요?",
+                    "avatar": "👨‍⚕️",
+                    "translation": "What hurts? Does only your head hurt?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "머리가 아프고 열도 조금 있어요. 기침은 안 해요.",
+                    "avatar": "👤",
+                    "translation": "My head hurts and I have a slight fever. I don't cough."
+                },
+                {
+                    "speaker": "약사",
+                    "role": "other",
+                    "text": "두통약이랑 해열제 드릴게요. 하루에 세 번, 식후에 드세요.",
+                    "avatar": "👨‍⚕️",
+                    "translation": "I'll give you headache and fever medicine. Take it three times a day, after meals."
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "알레르기 있으면 안 되는 약 있어요?",
+                    "avatar": "👤",
+                    "translation": "Is there any medicine I shouldn't take if I have allergies?"
+                },
+                {
+                    "speaker": "약사",
+                    "role": "other",
+                    "text": "무슨 알레르기가 있으세요?",
+                    "avatar": "👨‍⚕️",
+                    "translation": "What allergies do you have?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "해산물 알레르기가 있어요.",
+                    "avatar": "👤",
+                    "translation": "I have a seafood allergy."
+                },
+                {
+                    "speaker": "약사",
+                    "role": "other",
+                    "text": "이 약은 괜찮아요. 물 많이 마시고 푹 쉬세요. 3일 후에도 안 나으면 병원 가세요.",
+                    "avatar": "👨‍⚕️",
+                    "translation": "This medicine is fine. Drink lots of water and rest well. If you don't get better in 3 days, go to the hospital."
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "네, 감사합니다. 얼마예요?",
+                    "avatar": "👤",
+                    "translation": "Yes, thank you. How much is it?"
+                },
+                {
+                    "speaker": "약사",
+                    "role": "other",
+                    "text": "4,500원이에요.",
+                    "avatar": "👨‍⚕️",
+                    "translation": "It's 4,500 won."
+                }
+            ],
+            "vocabulary": [
+                "약국",
+                "처방전",
+                "두통약",
+                "해열제",
+                "식후",
+                "알레르기",
+                "기침"
+            ],
+            "grammar": [
+                "~만 아프세요?",
+                "~도 있어요",
+                "~면 안 되다"
+            ],
+            "cultureTip": "한국 약국에서는 간단한 약은 처방전 없이 살 수 있습니다. 하지만 강한 약은 의사 처방이 필요합니다."
+        },
+        {
+            "id": 6,
+            "level": 2,
+            "title": "은행에서 계좌 개설하기",
+            "category": "금융",
+            "icon": "🏦",
+            "description": "은행에서 통장 만들고 송금하기",
+            "dialogue": [
+                {
+                    "speaker": "은행원",
+                    "role": "other",
+                    "text": "어서 오세요. 어떻게 도와드릴까요?",
+                    "avatar": "👩‍💼",
+                    "translation": "Welcome. How can I help you?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "통장을 만들고 싶어요.",
+                    "avatar": "👤",
+                    "translation": "I'd like to open a bank account."
+                },
+                {
+                    "speaker": "은행원",
+                    "role": "other",
+                    "text": "네, 신분증 좀 보여주세요. 외국인이시면 외국인등록증이요.",
+                    "avatar": "👩‍💼",
+                    "translation": "Yes, please show me your ID. If you're a foreigner, your alien registration card."
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "여기요. 그리고 체류기간이 6개월 이상이어야 하나요?",
+                    "avatar": "👤",
+                    "translation": "Here it is. And do I need to have a stay period of more than 6 months?"
+                },
+                {
+                    "speaker": "은행원",
+                    "role": "other",
+                    "text": "네, 맞아요. 체류자격도 확인해요. 도장 있으세요?",
+                    "avatar": "👩‍💼",
+                    "translation": "Yes, that's right. We also check your visa status. Do you have a seal?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "도장은 없어요. 서명으로 해도 돼요?",
+                    "avatar": "👤",
+                    "translation": "I don't have a seal. Can I use a signature?"
+                },
+                {
+                    "speaker": "은행원",
+                    "role": "other",
+                    "text": "네, 서명으로 가능해요. 모바일뱅킹도 신청하실래요?",
+                    "avatar": "👩‍💼",
+                    "translation": "Yes, signature is fine. Would you like to apply for mobile banking too?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "네, 신청할게요. 해외송금도 이 계좌로 받을 수 있어요?",
+                    "avatar": "👤",
+                    "translation": "Yes, I'll apply. Can I receive international transfers to this account?"
+                },
+                {
+                    "speaker": "은행원",
+                    "role": "other",
+                    "text": "네, 가능해요. 송금받으실 때 SWIFT 코드랑 계좌번호 알려주시면 돼요.",
+                    "avatar": "👩‍💼",
+                    "translation": "Yes, you can. When receiving transfers, just provide the SWIFT code and account number."
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "알겠어요. 감사합니다.",
+                    "avatar": "👤",
+                    "translation": "I understand. Thank you."
+                }
+            ],
+            "vocabulary": [
+                "통장",
+                "계좌",
+                "외국인등록증",
+                "도장",
+                "서명",
+                "체류자격",
+                "송금",
+                "모바일뱅킹"
+            ],
+            "grammar": [
+                "~고 싶어요",
+                "~(으)면 되다",
+                "~(으)ㄹ 수 있다"
+            ],
+            "cultureTip": "외국인도 체류기간이 6개월 이상이면 은행 계좌를 만들 수 있습니다. 대부분의 은행에서 외국어 서비스를 제공합니다."
+        },
+        {
+            "id": 7,
+            "level": 2,
+            "title": "부동산에서 집 구하기",
+            "category": "주거",
+            "icon": "🏠",
+            "description": "부동산에서 원룸 구하기",
+            "dialogue": [
+                {
+                    "speaker": "공인중개사",
+                    "role": "other",
+                    "text": "안녕하세요. 어떤 집을 찾으세요?",
+                    "avatar": "🧑‍💼",
+                    "translation": "Hello. What kind of place are you looking for?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "원룸을 찾고 있어요. 월세로요.",
+                    "avatar": "👤",
+                    "translation": "I'm looking for a studio apartment. Monthly rent."
+                },
+                {
+                    "speaker": "공인중개사",
+                    "role": "other",
+                    "text": "희망하는 보증금이랑 월세가 얼마예요?",
+                    "avatar": "🧑‍💼",
+                    "translation": "What deposit and monthly rent are you hoping for?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "보증금 500만원에 월세 50만원 정도요.",
+                    "avatar": "👤",
+                    "translation": "Deposit around 5 million won and rent around 500,000 won."
+                },
+                {
+                    "speaker": "공인중개사",
+                    "role": "other",
+                    "text": "지하철역에서 가까운 곳이 있어요. 관리비는 별도로 5만원이에요.",
+                    "avatar": "🧑‍💼",
+                    "translation": "There's a place near the subway station. Maintenance fee is 50,000 won separately."
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "관리비에 뭐가 포함돼요?",
+                    "avatar": "👤",
+                    "translation": "What's included in the maintenance fee?"
+                },
+                {
+                    "speaker": "공인중개사",
+                    "role": "other",
+                    "text": "수도세랑 인터넷이요. 전기세랑 가스비는 따로 내셔야 해요.",
+                    "avatar": "🧑‍💼",
+                    "translation": "Water and internet. You have to pay electricity and gas separately."
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "언제 볼 수 있어요?",
+                    "avatar": "👤",
+                    "translation": "When can I see it?"
+                },
+                {
+                    "speaker": "공인중개사",
+                    "role": "other",
+                    "text": "지금 바로 가능해요. 같이 가 볼까요?",
+                    "avatar": "🧑‍💼",
+                    "translation": "Right now is fine. Shall we go see it together?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "네, 좋아요. 계약할 때 뭐가 필요해요?",
+                    "avatar": "👤",
+                    "translation": "Yes, great. What do I need when signing the contract?"
+                },
+                {
+                    "speaker": "공인중개사",
+                    "role": "other",
+                    "text": "외국인등록증이랑 재직증명서 있으면 돼요.",
+                    "avatar": "🧑‍💼",
+                    "translation": "You just need your alien registration card and employment certificate."
+                }
+            ],
+            "vocabulary": [
+                "부동산",
+                "원룸",
+                "월세",
+                "보증금",
+                "관리비",
+                "전세",
+                "계약",
+                "재직증명서"
+            ],
+            "grammar": [
+                "~을/를 찾고 있어요",
+                "~에 포함되다",
+                "~(으)ㄹ 때"
+            ],
+            "cultureTip": "한국에는 전세와 월세 두 가지 임대 방식이 있습니다. 전세는 큰 보증금을 내고 월세를 내지 않는 것이고, 월세는 작은 보증금에 매달 임대료를 내는 것입니다."
+        },
+        {
+            "id": 8,
+            "level": 3,
+            "title": "출입국관리사무소 방문",
+            "category": "비자",
+            "icon": "🛂",
+            "description": "비자 연장 신청하기",
+            "dialogue": [
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "번호표 뽑으셨어요?",
+                    "avatar": "👩‍💼",
+                    "translation": "Did you take a number?"
+                },
+                {
+                    "speaker": "방문자 (나)",
+                    "role": "user",
+                    "text": "네, 여기요. 비자 연장 신청하러 왔어요.",
+                    "avatar": "👤",
+                    "translation": "Yes, here it is. I came to apply for a visa extension."
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "현재 체류자격이 뭐예요?",
+                    "avatar": "👩‍💼",
+                    "translation": "What is your current status of residence?"
+                },
+                {
+                    "speaker": "방문자 (나)",
+                    "role": "user",
+                    "text": "결혼이민(F-6) 비자예요. 다음 달에 만료돼요.",
+                    "avatar": "👤",
+                    "translation": "Marriage immigrant (F-6) visa. It expires next month."
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "서류 다 가져오셨어요? 통합신청서, 여권, 결혼증명서요.",
+                    "avatar": "👩‍💼",
+                    "translation": "Did you bring all the documents? Application form, passport, marriage certificate."
+                },
+                {
+                    "speaker": "방문자 (나)",
+                    "role": "user",
+                    "text": "네, 여기 있어요. 수수료는 얼마예요?",
+                    "avatar": "👤",
+                    "translation": "Yes, here they are. How much is the fee?"
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "연장 수수료는 6만원이에요. 처리 기간은 약 2주예요.",
+                    "avatar": "👩‍💼",
+                    "translation": "The extension fee is 60,000 won. Processing time is about 2 weeks."
+                },
+                {
+                    "speaker": "방문자 (나)",
+                    "role": "user",
+                    "text": "처리되면 연락 오나요?",
+                    "avatar": "👤",
+                    "translation": "Will you contact me when it's processed?"
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "네, 문자로 알려드려요. 그리고 사회통합프로그램 이수하셨어요?",
+                    "avatar": "👩‍💼",
+                    "translation": "Yes, we'll notify you by text. And have you completed KIIP?"
+                },
+                {
+                    "speaker": "방문자 (나)",
+                    "role": "user",
+                    "text": "네, 4단계까지 이수했어요.",
+                    "avatar": "👤",
+                    "translation": "Yes, I've completed up to level 4."
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "좋아요. 나중에 영주권 신청할 때 도움이 돼요.",
+                    "avatar": "👩‍💼",
+                    "translation": "Good. It will help when you apply for permanent residency later."
+                }
+            ],
+            "vocabulary": [
+                "출입국관리사무소",
+                "비자",
+                "체류자격",
+                "연장",
+                "영주권",
+                "사회통합프로그램",
+                "결혼이민자",
+                "수수료"
+            ],
+            "grammar": [
+                "~(으)러 왔어요",
+                "~(으)면 ~아요/어요?",
+                "~(으)ㄹ 때"
+            ],
+            "cultureTip": "비자 연장은 만료일 4개월 전부터 신청 가능합니다. 사회통합프로그램(KIIP)을 이수하면 비자 연장과 영주권 신청 시 혜택이 있습니다."
+        },
+        {
+            "id": 9,
+            "level": 3,
+            "title": "직장에서 회의하기",
+            "category": "직장",
+            "icon": "💼",
+            "description": "회사에서 업무 회의 참여하기",
+            "dialogue": [
+                {
+                    "speaker": "팀장",
+                    "role": "other",
+                    "text": "자, 회의 시작하겠습니다. 이번 프로젝트 진행 상황 보고해 주세요.",
+                    "avatar": "👨‍💼",
+                    "translation": "Okay, let's start the meeting. Please report on the project progress."
+                },
+                {
+                    "speaker": "직원 (나)",
+                    "role": "user",
+                    "text": "네, 현재 80% 완료됐습니다. 마감일은 다음 주 금요일입니다.",
+                    "avatar": "👤",
+                    "translation": "Yes, it's currently 80% complete. The deadline is next Friday."
+                },
+                {
+                    "speaker": "팀장",
+                    "role": "other",
+                    "text": "문제점 있어요?",
+                    "avatar": "👨‍💼",
+                    "translation": "Are there any problems?"
+                },
+                {
+                    "speaker": "직원 (나)",
+                    "role": "user",
+                    "text": "자료가 좀 부족해서 다른 팀 협력이 필요합니다.",
+                    "avatar": "👤",
+                    "translation": "We're a bit short on data, so we need cooperation from another team."
+                },
+                {
+                    "speaker": "동료",
+                    "role": "other",
+                    "text": "제가 도와드릴게요. 내일까지 자료 정리해서 드릴게요.",
+                    "avatar": "👩‍💼",
+                    "translation": "I'll help you. I'll organize the data and give it to you by tomorrow."
+                },
+                {
+                    "speaker": "직원 (나)",
+                    "role": "user",
+                    "text": "감사합니다. 그러면 마감에 맞출 수 있을 것 같습니다.",
+                    "avatar": "👤",
+                    "translation": "Thank you. Then I think we can meet the deadline."
+                },
+                {
+                    "speaker": "팀장",
+                    "role": "other",
+                    "text": "좋습니다. 야근 필요하면 미리 말해 주세요. 다른 안건 있어요?",
+                    "avatar": "👨‍💼",
+                    "translation": "Good. Let me know in advance if you need to work overtime. Any other agenda items?"
+                },
+                {
+                    "speaker": "직원 (나)",
+                    "role": "user",
+                    "text": "다음 주에 연차 휴가를 쓰고 싶은데 가능할까요?",
+                    "avatar": "👤",
+                    "translation": "I'd like to use annual leave next week. Is that possible?"
+                },
+                {
+                    "speaker": "팀장",
+                    "role": "other",
+                    "text": "프로젝트 마감 후에 신청해 주세요.",
+                    "avatar": "👨‍💼",
+                    "translation": "Please apply after the project deadline."
+                },
+                {
+                    "speaker": "직원 (나)",
+                    "role": "user",
+                    "text": "네, 알겠습니다.",
+                    "avatar": "👤",
+                    "translation": "Yes, I understand."
+                }
+            ],
+            "vocabulary": [
+                "회의",
+                "프로젝트",
+                "마감",
+                "보고",
+                "협력",
+                "야근",
+                "연차휴가",
+                "팀장",
+                "동료"
+            ],
+            "grammar": [
+                "~아/어서 ~가 필요하다",
+                "~(으)ㄹ 것 같다",
+                "~(으)면 ~아/어 주세요"
+            ],
+            "cultureTip": "한국 회사에서는 상사에게 존댓말을 사용합니다. 휴가는 미리 신청하고 팀장의 승인을 받아야 합니다."
+        },
+        {
+            "id": 10,
+            "level": 4,
+            "title": "다문화가족지원센터 이용하기",
+            "category": "복지",
+            "icon": "🤝",
+            "description": "다문화가족지원센터에서 서비스 신청하기",
+            "dialogue": [
+                {
+                    "speaker": "상담사",
+                    "role": "other",
+                    "text": "안녕하세요. 다문화가족지원센터입니다. 어떻게 도와드릴까요?",
+                    "avatar": "👩",
+                    "translation": "Hello. This is the Multicultural Family Support Center. How can I help you?"
+                },
+                {
+                    "speaker": "방문자 (나)",
+                    "role": "user",
+                    "text": "안녕하세요. 한국어 교육 프로그램 신청하러 왔어요.",
+                    "avatar": "👤",
+                    "translation": "Hello. I came to apply for the Korean language program."
+                },
+                {
+                    "speaker": "상담사",
+                    "role": "other",
+                    "text": "결혼이민자이시면 무료로 수업을 들을 수 있어요. 자녀도 있으세요?",
+                    "avatar": "👩",
+                    "translation": "If you're a marriage immigrant, you can take free classes. Do you have children too?"
+                },
+                {
+                    "speaker": "방문자 (나)",
+                    "role": "user",
+                    "text": "네, 5살 아이가 있어요.",
+                    "avatar": "👤",
+                    "translation": "Yes, I have a 5-year-old child."
+                },
+                {
+                    "speaker": "상담사",
+                    "role": "other",
+                    "text": "그러면 이중언어 교육도 신청하실 수 있어요. 아이에게 엄마 나라 언어도 가르쳐요.",
+                    "avatar": "👩",
+                    "translation": "Then you can also apply for bilingual education. It teaches children their mother's native language too."
+                },
+                {
+                    "speaker": "방문자 (나)",
+                    "role": "user",
+                    "text": "아, 좋네요. 취업 지원 프로그램도 있어요?",
+                    "avatar": "👤",
+                    "translation": "Oh, that's great. Is there also an employment support program?"
+                },
+                {
+                    "speaker": "상담사",
+                    "role": "other",
+                    "text": "네, 취업 상담이랑 자격증 교육도 있어요. 통역 봉사도 필요하시면 연결해 드려요.",
+                    "avatar": "👩",
+                    "translation": "Yes, there's employment counseling and certification training. If you need interpretation volunteering, we can connect you too."
+                },
+                {
+                    "speaker": "방문자 (나)",
+                    "role": "user",
+                    "text": "정말요? 취업 상담도 받고 싶어요.",
+                    "avatar": "👤",
+                    "translation": "Really? I'd like to receive employment counseling too."
+                },
+                {
+                    "speaker": "상담사",
+                    "role": "other",
+                    "text": "다음 주에 취업 박람회가 있어요. 참가하시겠어요?",
+                    "avatar": "👩",
+                    "translation": "There's a job fair next week. Would you like to participate?"
+                },
+                {
+                    "speaker": "방문자 (나)",
+                    "role": "user",
+                    "text": "네, 참가하고 싶어요. 신청서 어디서 받아요?",
+                    "avatar": "👤",
+                    "translation": "Yes, I'd like to participate. Where can I get the application form?"
+                }
+            ],
+            "vocabulary": [
+                "다문화가족지원센터",
+                "결혼이민자",
+                "이중언어",
+                "취업",
+                "상담",
+                "자격증",
+                "통역",
+                "봉사"
+            ],
+            "grammar": [
+                "~(으)시면 ~을 수 있다",
+                "~도 있어요?",
+                "~하고 싶어요"
+            ],
+            "cultureTip": "다문화가족지원센터에서는 한국어 교육, 취업 지원, 통역 서비스 등 다양한 무료 서비스를 제공합니다. 전국에 지역별로 센터가 있습니다."
+        },
+        {
+            "id": 11,
+            "level": 4,
+            "title": "자녀 학교 상담",
+            "category": "교육",
+            "icon": "🏫",
+            "description": "자녀 담임선생님과 상담하기",
+            "dialogue": [
+                {
+                    "speaker": "선생님",
+                    "role": "other",
+                    "text": "안녕하세요. 민수 어머니시죠? 오래 기다리셨어요.",
+                    "avatar": "👩‍🏫",
+                    "translation": "Hello. You're Minsu's mother, right? Sorry to keep you waiting."
+                },
+                {
+                    "speaker": "학부모 (나)",
+                    "role": "user",
+                    "text": "안녕하세요, 선생님. 민수가 학교 생활 잘하고 있나요?",
+                    "avatar": "👤",
+                    "translation": "Hello, teacher. Is Minsu doing well in school?"
+                },
+                {
+                    "speaker": "선생님",
+                    "role": "other",
+                    "text": "네, 수업 태도가 좋고 친구들과도 잘 지내요. 한국어도 많이 늘었어요.",
+                    "avatar": "👩‍🏫",
+                    "translation": "Yes, his class attitude is good and he gets along with friends. His Korean has improved a lot too."
+                },
+                {
+                    "speaker": "학부모 (나)",
+                    "role": "user",
+                    "text": "다행이에요. 혹시 학교에서 힘들어하는 건 없나요?",
+                    "avatar": "👤",
+                    "translation": "That's a relief. Is there anything he's struggling with at school?"
+                },
+                {
+                    "speaker": "선생님",
+                    "role": "other",
+                    "text": "수학 과목이 조금 어려워해요. 방과후 프로그램 신청하시겠어요?",
+                    "avatar": "👩‍🏫",
+                    "translation": "He finds math a bit difficult. Would you like to apply for the after-school program?"
+                },
+                {
+                    "speaker": "학부모 (나)",
+                    "role": "user",
+                    "text": "네, 신청하고 싶어요. 비용은 얼마예요?",
+                    "avatar": "👤",
+                    "translation": "Yes, I'd like to apply. How much does it cost?"
+                },
+                {
+                    "speaker": "선생님",
+                    "role": "other",
+                    "text": "다문화가정은 지원금이 있어서 무료예요.",
+                    "avatar": "👩‍🏫",
+                    "translation": "Multicultural families get support, so it's free."
+                },
+                {
+                    "speaker": "학부모 (나)",
+                    "role": "user",
+                    "text": "아, 정말요? 감사합니다. 급식비도 지원되나요?",
+                    "avatar": "👤",
+                    "translation": "Oh, really? Thank you. Is school meal support available too?"
+                },
+                {
+                    "speaker": "선생님",
+                    "role": "other",
+                    "text": "네, 교육비 지원 신청서 제출하시면 돼요. 제가 안내문 드릴게요.",
+                    "avatar": "👩‍🏫",
+                    "translation": "Yes, just submit the education expense support application. I'll give you the information letter."
+                },
+                {
+                    "speaker": "학부모 (나)",
+                    "role": "user",
+                    "text": "선생님, 정말 감사합니다. 앞으로도 잘 부탁드려요.",
+                    "avatar": "👤",
+                    "translation": "Thank you so much, teacher. Please take good care of him."
+                }
+            ],
+            "vocabulary": [
+                "담임선생님",
+                "학부모",
+                "방과후",
+                "다문화가정",
+                "지원금",
+                "급식비",
+                "교육비",
+                "수업"
+            ],
+            "grammar": [
+                "~고 있나요?",
+                "~하시겠어요?",
+                "~(으)면 되다"
+            ],
+            "cultureTip": "한국에서 다문화가정 자녀는 교육비, 급식비, 방과후 프로그램 등에서 지원을 받을 수 있습니다. 학교에 문의하면 자세한 안내를 받을 수 있습니다."
+        },
+        {
+            "id": 12,
+            "level": 5,
+            "title": "귀화 면접 준비",
+            "category": "시민권",
+            "icon": "🇰🇷",
+            "description": "귀화 면접에서 대화하기",
+            "dialogue": [
+                {
+                    "speaker": "면접관",
+                    "role": "other",
+                    "text": "안녕하세요. 귀화 면접을 시작하겠습니다. 먼저 자기소개 해 주세요.",
+                    "avatar": "👨‍💼",
+                    "translation": "Hello. We'll begin the naturalization interview. First, please introduce yourself."
+                },
+                {
+                    "speaker": "신청자 (나)",
+                    "role": "user",
+                    "text": "안녕하세요. 저는 응웬티투이입니다. 베트남에서 왔고 한국에서 7년째 살고 있습니다.",
+                    "avatar": "👤",
+                    "translation": "Hello. I am Nguyen Thi Thuy. I came from Vietnam and have been living in Korea for 7 years."
+                },
+                {
+                    "speaker": "면접관",
+                    "role": "other",
+                    "text": "왜 한국 국적을 취득하려고 합니까?",
+                    "avatar": "👨‍💼",
+                    "translation": "Why do you want to acquire Korean nationality?"
+                },
+                {
+                    "speaker": "신청자 (나)",
+                    "role": "user",
+                    "text": "한국인 남편과 결혼해서 가정을 이루었고, 이곳에서 계속 살고 싶습니다. 아이들도 한국에서 교육받고 있어서 한국 국민으로서 함께 살고 싶습니다.",
+                    "avatar": "👤",
+                    "translation": "I married a Korean husband and built a family here, and I want to continue living here. My children are also being educated in Korea, so I want to live together as a Korean citizen."
+                },
+                {
+                    "speaker": "면접관",
+                    "role": "other",
+                    "text": "대한민국의 국민의 의무는 무엇입니까?",
+                    "avatar": "👨‍💼",
+                    "translation": "What are the duties of citizens of the Republic of Korea?"
+                },
+                {
+                    "speaker": "신청자 (나)",
+                    "role": "user",
+                    "text": "국민의 의무는 납세의 의무, 국방의 의무, 교육의 의무, 근로의 의무입니다.",
+                    "avatar": "👤",
+                    "translation": "Citizens' duties are the duty to pay taxes, duty of national defense, duty of education, and duty to work."
+                },
+                {
+                    "speaker": "면접관",
+                    "role": "other",
+                    "text": "대한민국은 어떤 나라입니까?",
+                    "avatar": "👨‍💼",
+                    "translation": "What kind of country is the Republic of Korea?"
+                },
+                {
+                    "speaker": "신청자 (나)",
+                    "role": "user",
+                    "text": "대한민국은 민주공화국이고, 주권은 국민에게 있습니다. 삼권분립을 기반으로 하며, 헌법을 최고 법으로 합니다.",
+                    "avatar": "👤",
+                    "translation": "The Republic of Korea is a democratic republic, and sovereignty belongs to the people. It's based on the separation of powers and the constitution is the supreme law."
+                },
+                {
+                    "speaker": "면접관",
+                    "role": "other",
+                    "text": "태극기에 대해 설명해 주세요.",
+                    "avatar": "👨‍💼",
+                    "translation": "Please explain the Taegeukgi."
+                },
+                {
+                    "speaker": "신청자 (나)",
+                    "role": "user",
+                    "text": "태극기는 대한민국의 국기입니다. 흰 바탕에 가운데 태극 문양이 있고, 네 모서리에 건곤감리가 있습니다. 평화와 조화를 상징합니다.",
+                    "avatar": "👤",
+                    "translation": "The Taegeukgi is the national flag of Korea. It has the Taegeuk symbol in the center on a white background, with four trigrams in the corners. It symbolizes peace and harmony."
+                },
+                {
+                    "speaker": "면접관",
+                    "role": "other",
+                    "text": "좋습니다. 면접을 잘 보셨습니다.",
+                    "avatar": "👨‍💼",
+                    "translation": "Good. You did well in the interview."
+                }
+            ],
+            "vocabulary": [
+                "귀화",
+                "국적",
+                "국민의 의무",
+                "민주공화국",
+                "주권",
+                "삼권분립",
+                "헌법",
+                "태극기"
+            ],
+            "grammar": [
+                "~(으)려고 하다",
+                "~을/를 기반으로 하다",
+                "~에 대해 설명하다"
+            ],
+            "cultureTip": "귀화 면접에서는 한국의 역사, 정치 제도, 국가 상징, 국민의 권리와 의무 등에 대한 질문이 나옵니다. 사회통합프로그램 5단계를 이수하면 면접이 면제됩니다."
+        }
+    ]
+}
