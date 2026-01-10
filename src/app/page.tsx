@@ -2,15 +2,19 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import BottomNav from "@/components/BottomNav";
 import ProgressBar from "@/components/ProgressBar";
 import SplashScreen from "@/components/SplashScreen";
 import { useStudyHistory } from "@/hooks/useStudyHistory";
+import { useAuth } from "@/contexts/AuthContext";
 
 export default function Home() {
+    const router = useRouter();
     const [showSplash, setShowSplash] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
     const { stats, getOverallAccuracy } = useStudyHistory();
+    const { user, isAuthenticated } = useAuth();
 
     useEffect(() => {
         // 클라이언트 사이드에서만 실행
@@ -23,15 +27,20 @@ export default function Home() {
 
     if (isLoading) return null;
 
-    if (showSplash) {
-        return <SplashScreen onComplete={() => setShowSplash(false)} />;
-    }
-
-    // 현재 레벨 (추후 사용자 데이터에서 가져옴)
-    const currentLevel = 3;
+    const currentLevel = user ? 3 : 0; // 임시: 사용자 레벨 정보가 DB에 있다면 업데이트 필요
     const levelProgress = 65;
-    const userName = "학습자";
+    const userName = user?.nickname || "방문자";
     const streakDays = 12;
+
+    const handleSplashComplete = () => {
+        setShowSplash(false);
+        // 스플래시 종료 후 로그인되지 않았다면 로그인 페이지로 이동 (옵션)
+        // if (!isAuthenticated) router.push("/login");
+    };
+
+    if (showSplash) {
+        return <SplashScreen onComplete={handleSplashComplete} />;
+    }
 
     return (
         <main className="min-h-screen bg-gray-50 pb-nav">
@@ -43,12 +52,20 @@ export default function Home() {
                         <span className="font-bold text-gray-800">사회통합프로그램 아카데미</span>
                     </div>
                     <div className="flex items-center gap-2">
-                        <button className="p-2 hover:bg-gray-100 rounded-full">
-                            <span className="text-xl">🔔</span>
-                        </button>
-                        <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                            <span className="text-sm">👤</span>
-                        </div>
+                        {isAuthenticated ? (
+                            <div className="flex items-center gap-2">
+                                <button className="p-2 hover:bg-gray-100 rounded-full">
+                                    <span className="text-xl">🔔</span>
+                                </button>
+                                <Link href="/profile" className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <span className="text-sm font-bold text-blue-600">{userName[0]}</span>
+                                </Link>
+                            </div>
+                        ) : (
+                            <Link href="/login" className="text-sm font-bold text-blue-600 hover:bg-blue-50 px-3 py-1.5 rounded-full transition-colors">
+                                로그인
+                            </Link>
+                        )}
                     </div>
                 </div>
             </header>
@@ -61,17 +78,28 @@ export default function Home() {
                     </div>
                     <div>
                         <h1 className="text-xl font-bold text-gray-800">
-                            안녕하세요, {userName}님!
+                            {isAuthenticated ? `안녕하세요, ${userName}님!` : "안녕하세요, 방문자님!"}
                         </h1>
-                        <p className="text-sm text-gray-500">
-                            사회통합프로그램 {currentLevel}단계 • 중급 1
-                        </p>
-                        <div className="flex items-center gap-1 mt-1">
-                            <span className="text-orange-500">🔥</span>
-                            <span className="text-xs text-orange-600 font-medium">
-                                {streakDays}일 연속 학습 중
-                            </span>
-                        </div>
+                        {isAuthenticated ? (
+                            <>
+                                <p className="text-sm text-gray-500">
+                                    사회통합프로그램 {currentLevel}단계 • 중급 1
+                                </p>
+                                <div className="flex items-center gap-1 mt-1">
+                                    <span className="text-orange-500">🔥</span>
+                                    <span className="text-xs text-orange-600 font-medium">
+                                        {streakDays}일 연속 학습 중
+                                    </span>
+                                </div>
+                            </>
+                        ) : (
+                            <div className="mt-1">
+                                <p className="text-sm text-gray-500 mb-2">로그인하고 학습 기록을 저장하세요.</p>
+                                <Link href="/login" className="inline-block bg-blue-600 text-white text-xs px-3 py-1.5 rounded-lg font-bold hover:bg-blue-700 transition-colors">
+                                    로그인 / 회원가입
+                                </Link>
+                            </div>
+                        )}
                     </div>
                 </section>
 
