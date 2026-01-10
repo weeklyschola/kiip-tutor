@@ -38,6 +38,8 @@ interface AdminStats {
     isSampleData?: boolean;
 }
 
+import UserManagementModal from "@/components/admin/UserManagementModal";
+
 export default function AdminDashboard() {
     const [stats, setStats] = useState<AdminStats | null>(null);
     const [loading, setLoading] = useState(false);
@@ -45,6 +47,7 @@ export default function AdminDashboard() {
     const [adminKey, setAdminKey] = useState("");
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [initialized, setInitialized] = useState(false);
+    const [showUserModal, setShowUserModal] = useState(false);
 
     const fetchStats = async (key: string) => {
         if (!key) return;
@@ -195,11 +198,12 @@ export default function AdminDashboard() {
                         </div>
                     </div>
                     <div className="flex items-center gap-4">
-                        {stats.isSampleData && (
-                            <span className="px-3 py-1 bg-yellow-600 text-yellow-100 text-xs rounded-full">
-                                샘플 데이터
-                            </span>
-                        )}
+                        <button
+                            onClick={() => setShowUserModal(true)}
+                            className="px-4 py-2 bg-green-600 rounded-lg hover:bg-green-700 transition-colors text-sm font-medium flex items-center gap-2"
+                        >
+                            <span>👥</span> 회원 관리
+                        </button>
                         <button
                             onClick={handleRefresh}
                             className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors text-sm"
@@ -215,6 +219,13 @@ export default function AdminDashboard() {
                     </div>
                 </div>
             </header>
+
+            {/* 회원 관리 모달 */}
+            <UserManagementModal
+                isOpen={showUserModal}
+                onClose={() => setShowUserModal(false)}
+                adminKey={adminKey}
+            />
 
             <div className="max-w-7xl mx-auto px-4 py-8">
                 {/* 핵심 지표 (KPIs) */}
@@ -397,6 +408,6 @@ export default function AdminDashboard() {
                     KIIP 튜터 관리자 대시보드 v1.0
                 </footer>
             </div>
-        </main>
+        </main >
     );
 }
