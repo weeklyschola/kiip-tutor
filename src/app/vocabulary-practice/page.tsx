@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import Link from "next/link";
 import { useTTS } from "@/hooks/useTTS";
+import { useAuth } from "@/contexts/AuthContext";
 import { useProgress } from "@/contexts/ProgressContext";
 
 // JSON 파일에서 단어 데이터 import
@@ -260,7 +261,9 @@ type ViewMode = "select" | "practice" | "result";
 
 export default function VocabularyPracticePage() {
     const { hasAiTutorAccess } = useProgress();
+    const { isAuthenticated } = useAuth(); // 로그인 여부 확인
     const { speak } = useTTS({ isPremium: hasAiTutorAccess() });
+    const isPremium = hasAiTutorAccess(); // 프리미엄 여부
 
     // 게임 상태
     const [viewMode, setViewMode] = useState<ViewMode>("select");
@@ -610,37 +613,71 @@ export default function VocabularyPracticePage() {
                         </div>
                     </div>
 
+                    {/* 비로그인 상태 확인 (단어장과 동일하게 차단) */}
+                    {!isAuthenticated && (
+                        <div className="fixed inset-0 z-50 bg-gray-50 flex flex-col items-center justify-center p-6">
+                            <div className="bg-white rounded-3xl p-8 max-w-sm w-full shadow-xl text-center">
+                                <span className="text-5xl mb-4 block">🔒</span>
+                                <h2 className="text-xl font-bold text-gray-800 mb-2">로그인이 필요합니다</h2>
+                                <p className="text-gray-600 mb-6">
+                                    단어 연습은 회원 전용 기능입니다.<br />
+                                    로그인 후 이용해 주세요.
+                                </p>
+                                <Link
+                                    href="/login"
+                                    className="block w-full bg-blue-600 text-white font-bold py-3 rounded-xl hover:bg-blue-700 transition-colors"
+                                >
+                                    로그인하기
+                                </Link>
+                                <Link
+                                    href="/"
+                                    className="block mt-4 text-gray-400 text-sm hover:text-gray-600"
+                                >
+                                    홈으로 돌아가기
+                                </Link>
+                            </div>
+                        </div>
+                    )}
+
                     {/* 레벨 선택 */}
                     <h3 className="text-white font-bold mb-4">학습할 레벨 선택</h3>
                     <div className="grid grid-cols-2 gap-3">
-                        {levelWordCounts.map(({ level, count }) => (
-                            <button
-                                key={level}
-                                onClick={() => startPractice(level)}
-                                className="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 text-left"
-                            >
-                                <div className="flex items-center gap-3">
-                                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${level === 0 ? "bg-green-100" :
-                                        level === 1 ? "bg-blue-100" :
-                                            level === 2 ? "bg-purple-100" :
-                                                level === 3 ? "bg-orange-100" :
-                                                    level === 4 ? "bg-red-100" : "bg-yellow-100"
-                                        }`}>
-                                        <span className="text-xl font-bold text-gray-700">{level}</span>
+                        {levelWordCounts.map(({ level, count }) => {
+                            // 0, 1단계는 무료, 2단계부터는 프리미엄 필요
+                            const isLocked = level >= 2 && !isPremium;
+
+                            return (
+                                <button
+                                    key={level}
+                                    onClick={() => {
+                                        if (isLocked) {
+                                            alert("2단계 이상은 AI Tutor 구독(유료) 회원만 이용 가능합니다.");
+                                            return;
+                                        }
+                                        startPractice(level);
+                                    }}
+                                    className={`rounded-2xl p-4 shadow-lg transition-all text-left relative overflow-hidden ${isLocked ? "bg-gray-200 opacity-90 cursor-not-allowed" : "bg-white hover:shadow-xl hover:scale-105"}`}
+                                >
+                                    <div className="flex items-center gap-3">
+                                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${isLocked ? "bg-gray-300" : (level === 0 ? "bg-green-100" :
+                                            level === 1 ? "bg-blue-100" :
+                                                level === 2 ? "bg-purple-100" :
+                                                    level === 3 ? "bg-orange-100" :
+                                                        level === 4 ? "bg-red-100" : "bg-yellow-100")
+                                            }`}>
+                                            <span className="text-xl font-bold text-gray-700">{isLocked ? "🔒" : level}</span>
+                                        </div>
+                                        <div className="min-w-0">
+                                            <h4 className="font-bold text-gray-800 flex items-center gap-1">
+                                                {level}단계
+                                                {isLocked && <span className="text-[10px] text-red-500 border border-red-300 px-1 rounded bg-white">PRO</span>}
+                                            </h4>
+                                            <p className="text-xs text-gray-500">{count}개 단어</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h4 className="font-bold text-gray-800">{level}단계</h4>
-                                        <p className="text-xs text-gray-500">{count}개 단어</p>
-                                        {level >= 2 && (
-                                            <span className="text-xs text-purple-600">+문장 순서</span>
-                                        )}
-                                        {level >= 3 && (
-                                            <span className="text-xs text-orange-600 ml-1">+타이핑</span>
-                                        )}
-                                    </div>
-                                </div>
-                            </button>
-                        ))}
+                                </button>
+                            );
+                        })}
                     </div>
                 </div>
             </main>

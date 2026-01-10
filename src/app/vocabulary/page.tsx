@@ -5,6 +5,7 @@ import Link from "next/link";
 import { getVocabulary, getVocabularyTopics, VocabularyItem } from "@/lib/supabase";
 import { useTTS } from "@/hooks/useTTS";
 import { useProgress } from "@/contexts/ProgressContext";
+import { useAuth } from "@/contexts/AuthContext";
 import { levelContents } from "@/data/levelContent";
 import ProgressBar from "@/components/ProgressBar";
 import BottomNav from "@/components/BottomNav";
@@ -61,7 +62,10 @@ type ViewMode = "select" | "learn";
 
 export default function VocabularyPage() {
     const { hasAiTutorAccess } = useProgress();
+    const { isAuthenticated } = useAuth(); // 로그인 여부 확인
     const { speak } = useTTS({ isPremium: hasAiTutorAccess() });
+    const isPremium = hasAiTutorAccess(); // 프리미엄 여부
+
     const [vocabulary, setVocabulary] = useState<VocabularyItem[]>([]);
     const [selectedLevel, setSelectedLevel] = useState<number | null>(null);
     const [viewMode, setViewMode] = useState<ViewMode>("select");
@@ -139,25 +143,62 @@ export default function VocabularyPage() {
                 <div className="max-w-lg mx-auto px-4 py-6 space-y-4">
                     <h2 className="text-lg font-bold text-gray-800 mb-4">학습할 레벨을 선택하세요</h2>
 
+                    {/* 비로그인 상태일 경우 안내 메시지 표시 (사실상 아래 리다이렉트로 대체되지만 안전장치) */}
+                    {!isAuthenticated && (
+                        <div className="fixed inset-0 z-50 bg-gray-50 flex flex-col items-center justify-center p-6">
+                            <div className="bg-white rounded-3xl p-8 max-w-sm w-full shadow-xl text-center">
+                                <span className="text-5xl mb-4 block">🔒</span>
+                                <h2 className="text-xl font-bold text-gray-800 mb-2">로그인이 필요합니다</h2>
+                                <p className="text-gray-600 mb-6">
+                                    단어장은 회원 전용 기능입니다.<br />
+                                    로그인 후 이용해 주세요.
+                                </p>
+                                <Link
+                                    href="/login"
+                                    className="block w-full bg-blue-600 text-white font-bold py-3 rounded-xl hover:bg-blue-700 transition-colors"
+                                >
+                                    로그인하기
+                                </Link>
+                                <Link
+                                    href="/"
+                                    className="block mt-4 text-gray-400 text-sm hover:text-gray-600"
+                                >
+                                    홈으로 돌아가기
+                                </Link>
+                            </div>
+                        </div>
+                    )}
+
                     {[0, 1, 2, 3, 4, 5].map(level => {
                         const levelData = getFallbackVocabulary(level);
                         const wordCount = levelData.length;
+                        // 0, 1단계는 무료, 2단계부터는 프리미엄 필요
+                        const isLocked = level >= 2 && !isPremium;
 
                         return (
                             <button
                                 key={level}
-                                onClick={() => handleLevelSelect(level)}
-                                className="w-full bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-all text-left"
+                                onClick={() => {
+                                    if (isLocked) {
+                                        alert("2단계부터는 AI Tutor 구독(유료) 회원만 이용 가능합니다.");
+                                        return;
+                                    }
+                                    handleLevelSelect(level);
+                                }}
+                                className={`w-full bg-white rounded-2xl p-5 shadow-sm transition-all text-left relative overflow-hidden ${isLocked ? "opacity-75 bg-gray-100" : "hover:shadow-md"}`}
                             >
                                 <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                                        <span className="text-xl">📖</span>
+                                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${isLocked ? "bg-gray-200" : "bg-blue-100"}`}>
+                                        <span className="text-xl">{isLocked ? "🔒" : "📖"}</span>
                                     </div>
                                     <div className="flex-1">
-                                        <h3 className="font-bold text-gray-800">{level}단계 단어장</h3>
+                                        <h3 className="font-bold text-gray-800">
+                                            {level}단계 단어장
+                                            {isLocked && <span className="ml-2 text-xs text-red-500 font-normal border border-red-200 px-1.5 py-0.5 rounded-full">Premium</span>}
+                                        </h3>
                                         <p className="text-sm text-gray-500">{wordCount}개 단어</p>
                                     </div>
-                                    <span className="text-gray-400">→</span>
+                                    <span className={`text-gray-400 ${isLocked ? "opacity-0" : ""}`}>→</span>
                                 </div>
                             </button>
                         );
