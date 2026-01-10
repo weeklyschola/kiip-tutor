@@ -396,8 +396,8 @@ export default function SignupPage() {
 
                 {/* 홈으로 돌아가기 */}
                 <div className="text-center mt-6">
-                    <Link href="/" className="text-blue-200 hover:text-white text-sm">
-                        ← 홈으로 돌아가기
+                    <Link href="/study" className="text-blue-200 hover:text-white text-sm">
+                        ← 대시보드로 돌아가기
                     </Link>
                 </div>
             </div>
