@@ -1,12 +1,31 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import BottomNav from "@/components/BottomNav";
 import ProgressBar from "@/components/ProgressBar";
+import SplashScreen from "@/components/SplashScreen";
 import { useStudyHistory } from "@/hooks/useStudyHistory";
 
 export default function Home() {
+    const [showSplash, setShowSplash] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
     const { stats, getOverallAccuracy } = useStudyHistory();
+
+    useEffect(() => {
+        // 클라이언트 사이드에서만 실행
+        const hasSeenSplash = localStorage.getItem("kiip_onboarding_complete");
+        if (!hasSeenSplash) {
+            setShowSplash(true);
+        }
+        setIsLoading(false);
+    }, []);
+
+    if (isLoading) return null;
+
+    if (showSplash) {
+        return <SplashScreen onComplete={() => setShowSplash(false)} />;
+    }
 
     // 현재 레벨 (추후 사용자 데이터에서 가져옴)
     const currentLevel = 3;
