@@ -191,7 +191,10 @@ export default function AdminDashboard() {
                     <div className="flex items-center gap-3">
                         <span className="text-2xl">📊</span>
                         <div>
-                            <h1 className="text-xl font-bold">KIIP 튜터 관리자</h1>
+                            <div className="flex items-center gap-2">
+                                <h1 className="text-xl font-bold">KIIP 튜터 관리자</h1>
+                                <span className="bg-gray-700 text-gray-300 text-xs font-bold px-1.5 py-0.5 rounded">BETA</span>
+                            </div>
                             <p className="text-xs text-gray-400">
                                 마지막 업데이트: {new Date(stats.generatedAt).toLocaleString("ko-KR")}
                             </p>

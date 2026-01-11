@@ -146,7 +146,10 @@ export default function SignupPage() {
             <div className="max-w-md mx-auto">
                 {/* 헤더 */}
                 <div className="text-center mb-8">
-                    <h1 className="text-3xl font-bold text-white mb-2">🇰🇷 KIIP 튜터</h1>
+                    <div className="flex items-center justify-center gap-2 mb-2">
+                        <h1 className="text-3xl font-bold text-white">🇰🇷 KIIP 튜터</h1>
+                        <span className="bg-white/20 text-white text-xs font-bold px-2 py-0.5 rounded backdrop-blur-sm">BETA</span>
+                    </div>
                     <p className="text-blue-200">회원가입</p>
                 </div>
 

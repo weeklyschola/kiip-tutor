@@ -9,7 +9,7 @@ import BottomNav from "@/components/BottomNav";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "KIIP 튜터 - 사회통합프로그램 학습",
+    title: "KIIP 튜터 (Beta) - 사회통합프로그램 학습",
     description: "KIIP 사전평가 및 본평가 대비 CBT 연습과 1:1 AI 튜터 학습",
     keywords: ["KIIP", "사회통합프로그램", "한국어", "귀화시험", "CBT"],
     manifest: "/manifest.json",

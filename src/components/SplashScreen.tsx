@@ -90,9 +90,14 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                     </div>
 
                     {/* 텍스트 */}
-                    <h1 className="text-3xl font-bold text-white mb-2">
-                        {slides[currentSlide].title}
-                    </h1>
+                    <div className="flex items-center justify-center gap-2 mb-2">
+                        <h1 className="text-3xl font-bold text-white">
+                            {slides[currentSlide].title}
+                        </h1>
+                        {slides[currentSlide].title.includes("KIIP 튜터") && (
+                            <span className="bg-white/20 text-white text-xs font-bold px-1.5 py-0.5 rounded backdrop-blur-sm">BETA</span>
+                        )}
+                    </div>
                     <h2 className="text-lg font-medium text-white/80 mb-4">
                         {slides[currentSlide].subtitle}
                     </h2>

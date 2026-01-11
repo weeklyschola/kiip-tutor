@@ -22,7 +22,10 @@ export default function SubscriptionPage() {
                     <div className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg animate-bounce-slow">
                         <span className="text-4xl">👑</span>
                     </div>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-2">KIIP Tutor Premium</h2>
+                    <div className="flex items-center justify-center gap-2 mb-2">
+                        <h2 className="text-2xl font-bold text-gray-900">KIIP Tutor Premium</h2>
+                        <span className="bg-indigo-100 text-indigo-600 text-xs font-bold px-2 py-0.5 rounded">BETA</span>
+                    </div>
                     <p className="text-gray-600">합격을 위한 가장 확실한 방법</p>
                 </div>
 
