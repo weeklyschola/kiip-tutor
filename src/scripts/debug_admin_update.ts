@@ -60,7 +60,7 @@ async function runDebug() {
     // 2. Try Update: Grant Level 2
     console.log("\n--- Test 1: Grant Level 2 ---");
     const currentLevels = testUser.purchased_levels || [];
-    const newLevels = [...new Set([...currentLevels, 2])].sort((a, b) => a - b);
+    const newLevels = Array.from(new Set([...currentLevels, 2])).sort((a, b) => a - b);
 
     const { data: update1, error: error1 } = await supabaseAdmin
         .from("profiles")

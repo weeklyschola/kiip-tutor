@@ -1,0 +1,21 @@
+{
+    "name": "KIIP Tutor",
+    "short_name": "KIIP Tutor",
+    "description": "KIIP 사회통합프로그램 학습 도우미",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#3B82F6",
+    "icons": [
+        {
+            "src": "/icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
