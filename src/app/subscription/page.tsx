@@ -30,17 +30,17 @@ export default function SubscriptionPage() {
                 </div>
 
                 {/* 가격 정보 */}
-                <div className="bg-white rounded-3xl p-6 shadow-sm border border-indigo-100 text-center relative overflow-hidden">
-                    <div className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl">
-                        SPECIAL OFFER
+                <div className="bg-white rounded-3xl p-5 shadow-sm border border-indigo-100 text-center relative overflow-hidden">
+                    <div className="absolute top-0 right-0 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-bl-lg">
+                        SPECIAL
                     </div>
-                    <p className="text-sm text-gray-500 mb-2">월간 이용권</p>
-                    <div className="flex items-baseline justify-center gap-1 mb-4">
-                        <span className="text-4xl font-bold text-gray-900">4,900원</span>
-                        <span className="text-gray-500">/ 월</span>
+                    <p className="text-sm text-gray-800 font-bold mb-1">AI 튜터 + 모의고사 통합 패키지</p>
+                    <div className="flex items-baseline justify-center gap-1 mb-2">
+                        <span className="text-3xl font-bold text-gray-900">4,900원</span>
+                        <span className="text-sm text-gray-500">/ 월</span>
                     </div>
                     <p className="text-xs text-indigo-600 font-medium bg-indigo-50 px-3 py-1 rounded-full inline-block">
-                        하루 160원으로 모든 기능 이용 가능
+                        사회통합프로그램 합격을 위한 최적의 선택
                     </p>
                 </div>
 

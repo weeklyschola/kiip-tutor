@@ -94,7 +94,7 @@ export default function CbtPage() {
     // 인증 및 CBT 접근 확인
     useEffect(() => {
         if (!authLoading && !isAuthenticated) {
-            router.push("/signup");
+            router.push("/login");
             return;
         }
         if (!authLoading && isAuthenticated && !hasCbt) {

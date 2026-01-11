@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import BottomNav from "@/components/BottomNav";
 import ProgressBar from "@/components/ProgressBar";
 import SplashScreen from "@/components/SplashScreen";
+import PreparationModal from "@/components/PreparationModal";
 import { useStudyHistory } from "@/hooks/useStudyHistory";
 import { useAuth } from "@/contexts/AuthContext";
 import { useSplash } from "@/contexts/SplashContext";
@@ -59,6 +60,7 @@ export default function Home() {
     const { stats, getOverallAccuracy } = useStudyHistory();
     const { progress } = useProgress();
     const { user, isAuthenticated } = useAuth();
+    const [showPrepModal, setShowPrepModal] = useState(false);
 
     useEffect(() => {
         if (isAuthenticated) {
@@ -278,7 +280,11 @@ export default function Home() {
                         </button>
                     </Link>
 
-                    <Link href="/cbt" className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
+                    {/* CBT 모의고사 (준비중 모달 연결) */}
+                    <div
+                        onClick={() => setShowPrepModal(true)}
+                        className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+                    >
                         <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mb-3">
                             <span className="text-lg">📋</span>
                         </div>
@@ -287,8 +293,15 @@ export default function Home() {
                         <button className="mt-3 text-xs text-blue-600 font-medium border border-blue-200 px-3 py-1.5 rounded-full hover:bg-blue-50 transition-colors">
                             시험 시작하기
                         </button>
-                    </Link>
+                    </div>
                 </section>
+
+                <PreparationModal
+                    isOpen={showPrepModal}
+                    onClose={() => setShowPrepModal(false)}
+                    title="모의고사 서비스 준비 중"
+                    message={"현재 문제 데이터를 검수하고 있습니다.\n더 정확하고 유익한 문제로 찾아올게요!"}
+                />
 
                 {/* 오늘의 팁 */}
                 <section className="bg-white rounded-2xl p-5 shadow-sm">
