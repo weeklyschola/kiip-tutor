@@ -10,6 +10,11 @@ export function getSupabase() {
         return null;
     }
 
+    if (!supabaseUrl.startsWith("http")) {
+        console.error("Invalid Supabase URL: " + supabaseUrl);
+        return null;
+    }
+
     return createClient(supabaseUrl, supabaseAnonKey);
 }
 
@@ -20,6 +25,11 @@ export function getSupabaseAdmin() {
 
     if (!supabaseUrl || !supabaseServiceKey) {
         console.error("Supabase URL or Service Role Key is missing");
+        return null;
+    }
+
+    if (!supabaseUrl.startsWith("http")) {
+        console.error("Invalid Supabase URL: " + supabaseUrl);
         return null;
     }
 
