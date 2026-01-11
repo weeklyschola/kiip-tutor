@@ -123,8 +123,8 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
             },
         };
 
-        // 100% 달성 시 레벨 완료 처리
-        if (progressPercent >= 100 && !progress.completedLevels.includes(level)) {
+        // 70% 이상 달성 시 레벨 완료 처리
+        if (progressPercent >= 70 && !progress.completedLevels.includes(level)) {
             newProgress.completedLevels = [...progress.completedLevels, level];
             if (level >= progress.currentLevel) {
                 newProgress.currentLevel = level + 1;
