@@ -13,8 +13,8 @@ const navItems = [
 export default function BottomNav() {
     const pathname = usePathname();
 
-    // 네비게이션 바를 숨길 경로들
-    const hiddenPaths = ["/login", "/signup", "/"];
+    // 네비게이션 바를 숨길 경로들 (홈 "/" 제거하여 네비게이션 표시)
+    const hiddenPaths = ["/login", "/signup"];
     // 1. 명시적 숨김 경로
     if (hiddenPaths.includes(pathname)) {
         return null;

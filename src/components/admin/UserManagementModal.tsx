@@ -44,9 +44,15 @@ export default function UserManagementModal({ isOpen, onClose, adminKey }: UserM
                 }));
                 setUsers(sanitizedUsers);
             }
-        } catch (error) {
+        }
+        catch (error) {
             console.error(error);
-            alert("사용자 목록을 불러오지 못했습니다.");
+            // 에러 메시지 상세 표시를 위한 타입 가드
+            let errorMessage = "사용자 목록을 불러오지 못했습니다.";
+            if (error instanceof Error) {
+                errorMessage += ` (${error.message})`;
+            }
+            alert(errorMessage);
         } finally {
             setLoading(false);
         }

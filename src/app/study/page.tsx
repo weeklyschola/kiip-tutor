@@ -49,14 +49,16 @@ const levels = [
 
 export default function StudyPage() {
     const { progress, canAccessLevel } = useProgress();
-    const { logout } = useAuth();
-    const [showSettings, setShowSettings] = useState(false);
+    // const { logout } = useAuth(); // 로그아웃은 내 정보 페이지로 이동
+    // const [showSettings, setShowSettings] = useState(false);
 
+    /*
     const handleSettingsClick = () => {
         if (confirm("로그아웃 하시겠습니까?")) {
             logout();
         }
     };
+    */
 
     return (
         <main className="min-h-screen bg-gray-50 pb-24">
@@ -70,13 +72,7 @@ export default function StudyPage() {
                             <p className="text-xs text-gray-500">KIIP Tutor</p>
                         </div>
                     </div>
-                    <button
-                        onClick={handleSettingsClick}
-                        className="p-2 hover:bg-gray-100 rounded-full transition-colors"
-                        title="설정 및 로그아웃"
-                    >
-                        <span className="text-xl">⚙️</span>
-                    </button>
+                    {/* 설정 버튼 제거됨 (내 정보 탭에서 로그아웃 가능) */}
                 </div>
             </header>
 

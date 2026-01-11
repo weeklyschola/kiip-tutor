@@ -1,11 +1,13 @@
 "use client";
 
 import { useStudyHistory } from "@/hooks/useStudyHistory";
+import { useAuth } from "@/contexts/AuthContext";
 import Link from "next/link";
 import BottomNav from "@/components/BottomNav";
 
 export default function AnalyticsPage() {
     const { stats, isLoaded, getWeakCategories, getOverallAccuracy, clearHistory } = useStudyHistory();
+    const { logout } = useAuth();
 
     if (!isLoaded) {
         return (
@@ -247,8 +249,8 @@ export default function AnalyticsPage() {
                             </div>
                         </div>
 
-                        {/* 기록 초기화 */}
-                        <div className="text-center">
+                        {/* 기록 초기화 및 로그아웃 */}
+                        <div className="flex flex-col items-center gap-4 mt-8">
                             <button
                                 onClick={() => {
                                     if (confirm("모든 학습 기록을 삭제하시겠습니까?")) {
@@ -258,6 +260,16 @@ export default function AnalyticsPage() {
                                 className="text-sm text-gray-400 hover:text-red-500 transition-colors"
                             >
                                 학습 기록 초기화
+                            </button>
+                            <button
+                                onClick={() => {
+                                    if (confirm("로그아웃 하시겠습니까?")) {
+                                        logout();
+                                    }
+                                }}
+                                className="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 font-medium transition-colors"
+                            >
+                                로그아웃
                             </button>
                         </div>
                     </>
