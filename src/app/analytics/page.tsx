@@ -249,31 +249,35 @@ export default function AnalyticsPage() {
                             </div>
                         </div>
 
-                        {/* 기록 초기화 및 로그아웃 */}
-                        <div className="flex flex-col items-center gap-4 mt-8">
-                            <button
-                                onClick={() => {
-                                    if (confirm("모든 학습 기록을 삭제하시겠습니까?")) {
-                                        clearHistory();
-                                    }
-                                }}
-                                className="text-sm text-gray-400 hover:text-red-500 transition-colors"
-                            >
-                                학습 기록 초기화
-                            </button>
-                            <button
-                                onClick={() => {
-                                    if (confirm("로그아웃 하시겠습니까?")) {
-                                        logout();
-                                    }
-                                }}
-                                className="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 font-medium transition-colors"
-                            >
-                                로그아웃
-                            </button>
-                        </div>
                     </>
                 )}
+
+                {/* 기록 초기화 및 로그아웃 (항상 표시) */}
+                <div className="flex flex-col items-center gap-4 mt-8 pb-8">
+                    {stats && stats.totalSessions > 0 && (
+                        <button
+                            onClick={() => {
+                                if (confirm("모든 학습 기록을 삭제하시겠습니까?")) {
+                                    clearHistory();
+                                }
+                            }}
+                            className="text-sm text-gray-400 hover:text-red-500 transition-colors"
+                        >
+                            학습 기록 초기화
+                        </button>
+                    )}
+
+                    <button
+                        onClick={() => {
+                            if (confirm("로그아웃 하시겠습니까?")) {
+                                logout();
+                            }
+                        }}
+                        className="w-full max-w-sm px-6 py-3 bg-gray-200 text-gray-700 rounded-xl hover:bg-gray-300 font-medium transition-colors"
+                    >
+                        로그아웃
+                    </button>
+                </div>
             </div>
 
             <BottomNav />
