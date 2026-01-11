@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 import BottomNav from "@/components/BottomNav";
 import ProgressBar from "@/components/ProgressBar";
 import { useProgress } from "@/contexts/ProgressContext";
 import { useAuth } from "@/contexts/AuthContext";
-import { useState } from "react";
 
 // 레벨 데이터
 const levels = [
@@ -49,16 +50,24 @@ const levels = [
 
 export default function StudyPage() {
     const { progress, canAccessLevel } = useProgress();
-    // const { logout } = useAuth(); // 로그아웃은 내 정보 페이지로 이동
-    // const [showSettings, setShowSettings] = useState(false);
+    const { isAuthenticated, isLoading: authLoading } = useAuth();
+    const router = useRouter();
 
-    /*
-    const handleSettingsClick = () => {
-        if (confirm("로그아웃 하시겠습니까?")) {
-            logout();
+    // 비로그인 사용자는 로그인 페이지로 리다이렉트
+    useEffect(() => {
+        if (!authLoading && !isAuthenticated) {
+            router.push("/login");
         }
-    };
-    */
+    }, [authLoading, isAuthenticated, router]);
+
+    // 로그인 확인 중 or 비로그인 상태면 로딩 표시
+    if (authLoading || !isAuthenticated) {
+        return (
+            <main className="min-h-screen bg-gray-50 flex items-center justify-center">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+            </main>
+        );
+    }
 
     return (
         <main className="min-h-screen bg-gray-50 pb-24">
