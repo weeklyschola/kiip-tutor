@@ -115,9 +115,10 @@ export default function Home() {
             {/* 헤더 */}
             <header className="bg-white sticky top-0 z-40 border-b border-gray-100">
                 <div className="max-w-lg mx-auto px-4 py-3 flex items-center justify-between">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1.5">
                         <span className="text-xl">📖</span>
                         <span className="font-bold text-gray-800">KIIP 튜터</span>
+                        <span className="bg-blue-100 text-blue-600 text-[10px] font-bold px-1.5 py-0.5 rounded ml-1">BETA</span>
                     </div>
                     <div className="flex items-center gap-2">
                         {isAuthenticated ? (
