@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useTTS } from "@/hooks/useTTS";
 import { useProgress } from "@/contexts/ProgressContext";
+import { useAuth } from "@/contexts/AuthContext";
 import BottomNav from "@/components/BottomNav";
 
 // JSON 파일에서 대화 데이터 import
@@ -36,7 +38,10 @@ type ViewMode = "list" | "learn";
 
 export default function ConversationPage() {
     const { hasAiTutorAccess } = useProgress();
-    const { speak } = useTTS({ isPremium: hasAiTutorAccess() });
+    const { isAuthenticated, isLoading: authLoading } = useAuth();
+    const router = useRouter();
+    const hasAccess = hasAiTutorAccess();
+    const { speak } = useTTS({ isPremium: hasAccess });
     const [viewMode, setViewMode] = useState<ViewMode>("list");
     const [selectedConversation, setSelectedConversation] = useState<Conversation | null>(null);
     const [bookmarked, setBookmarked] = useState<Set<number>>(new Set());
@@ -44,6 +49,60 @@ export default function ConversationPage() {
     const [showTranslation, setShowTranslation] = useState<Set<number>>(new Set());
     const [showVocabulary, setShowVocabulary] = useState(false);
     const [showCultureTip, setShowCultureTip] = useState(false);
+
+    // 비로그인 사용자는 로그인 페이지로 리다이렉트
+    useEffect(() => {
+        if (!authLoading && !isAuthenticated) {
+            router.push("/login");
+        }
+    }, [authLoading, isAuthenticated, router]);
+
+    // 로그인 확인 중 or 비로그인 상태면 로딩 표시
+    if (authLoading || !isAuthenticated) {
+        return (
+            <main className="min-h-screen bg-gray-50 flex items-center justify-center">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+            </main>
+        );
+    }
+
+    // AI 튜터 구독이 없는 경우 구독 안내 페이지 표시
+    if (!hasAccess) {
+        return (
+            <main className="min-h-screen bg-gray-50 pb-nav">
+                <header className="bg-white sticky top-0 z-40 border-b border-gray-100">
+                    <div className="max-w-lg mx-auto px-4 py-4 flex items-center justify-between">
+                        <Link href="/" className="text-gray-600">
+                            <span className="text-xl">←</span>
+                        </Link>
+                        <h1 className="font-bold text-gray-800">AI 튜터</h1>
+                        <div className="w-6" />
+                    </div>
+                </header>
+
+                <div className="max-w-lg mx-auto px-4 py-12">
+                    <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
+                        <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span className="text-4xl">🤖</span>
+                        </div>
+                        <h2 className="text-xl font-bold text-gray-800 mb-2">AI 튜터 구독 필요</h2>
+                        <p className="text-gray-600 mb-6">
+                            AI 튜터 기능을 이용하려면 프리미엄 구독이 필요합니다.<br />
+                            실시간 대화와 TTS 발음 학습을 경험해보세요!
+                        </p>
+                        <Link
+                            href="/subscription"
+                            className="inline-block w-full py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-indigo-700 transition-all"
+                        >
+                            구독하고 AI 튜터 이용하기
+                        </Link>
+                    </div>
+                </div>
+
+                <BottomNav />
+            </main>
+        );
+    }
 
     // 레벨별 대화 필터링
     const filteredConversations = selectedLevel !== null
