@@ -160,13 +160,19 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
 
     // 레벨 접근 가능 여부 (구매 + 해금 상태)
     const canAccessLevel = (level: number): boolean => {
+        // 이미 완료했거나 현재 레벨보다 낮으면 접근 가능
+        if (level <= progress.currentLevel) return true;
+
+        // 0단계와 1단계는 기본적으로 열려있음 (단, 구매 여부 정책 따름 - 현재 무료)
+        if (level <= 1) return true;
+
         // 레벨 구매 여부 확인
         if (!hasLevelAccess(level)) {
             return false;
         }
 
         // 이전 레벨 완료 확인 (순차 해금)
-        if (level <= progress.currentLevel) return true;
+        // 2단계부터는 이전 단계 완료 필요
         if (progress.completedLevels.includes(level - 1)) return true;
 
         return false;

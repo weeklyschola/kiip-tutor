@@ -9,6 +9,47 @@ import SplashScreen from "@/components/SplashScreen";
 import { useStudyHistory } from "@/hooks/useStudyHistory";
 import { useAuth } from "@/contexts/AuthContext";
 import { useSplash } from "@/contexts/SplashContext";
+import { useProgress } from "@/contexts/ProgressContext";
+
+// 연속 학습일 계산 헬퍼 함수
+const calculateStreak = (sessions: any[]) => {
+    if (!sessions || sessions.length === 0) return 0;
+
+    // 날짜만 추출하고 중복 제거 후 내림차순 정렬
+    const uniqueDates = Array.from(new Set(
+        sessions.map(s => new Date(s.date).toISOString().split('T')[0])
+    )).sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
+
+    if (uniqueDates.length === 0) return 0;
+
+    const today = new Date().toISOString().split('T')[0];
+    const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
+
+    // 가장 최근 학습일이 오늘이나 어제가 아니면 스트릭 끊김
+    if (uniqueDates[0] !== today && uniqueDates[0] !== yesterday) {
+        return 0;
+    }
+
+    let streak = 0;
+    let currentDate = new Date(uniqueDates[0]);
+
+    for (let i = 0; i < uniqueDates.length; i++) {
+        const date = new Date(uniqueDates[i]);
+        // 날짜 차이 계산 (일 단위)
+        const diffTime = Math.abs(currentDate.getTime() - date.getTime());
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+        if (i === 0) {
+            streak = 1;
+        } else if (diffDays === 1) {
+            streak++;
+        } else {
+            break;
+        }
+        currentDate = date;
+    }
+    return streak;
+};
 
 export default function Home() {
     const router = useRouter();
@@ -16,7 +57,14 @@ export default function Home() {
     const { hasSeenSplash, setHasSeenSplash } = useSplash();
     const [isLoading, setIsLoading] = useState(false);
     const { stats, getOverallAccuracy } = useStudyHistory();
+    const { progress } = useProgress();
     const { user, isAuthenticated } = useAuth();
+
+    useEffect(() => {
+        if (isAuthenticated) {
+            setHasSeenSplash(true);
+        }
+    }, [isAuthenticated, setHasSeenSplash]);
 
     // 로그인 된 사용자는 학습 대시보드(/study)로 리다이렉트
     // 로그인 된 사용자는 학습 대시보드(/study)로 리다이렉트 -> 제거됨 (홈을 대시보드로 사용)
@@ -42,10 +90,16 @@ export default function Home() {
 
     if (isLoading) return null;
 
-    const currentLevel = user ? 3 : 0; // 임시: 사용자 레벨 정보가 DB에 있다면 업데이트 필요
-    const levelProgress = 65;
+    // 실제 데이터 연동
+    const currentLevel = user ? (progress.currentLevel === 0 ? "0 (기초)" : progress.currentLevel) : 0;
+    // 현재 레벨의 진행도 가져오기 (없으면 0)
+    const currentLevelNum = typeof currentLevel === 'string' ? 0 : currentLevel;
+    const levelProgress = user ? Math.round(progress.levelProgress[currentLevelNum] || 0) : 0;
+
     const userName = user?.nickname || "방문자";
-    const streakDays = 12;
+
+    // 스트릭 계산
+    const streakDays = stats ? calculateStreak(stats.recentSessions) : 0;
 
     const handleSplashComplete = () => {
         setHasSeenSplash(true);
@@ -97,7 +151,7 @@ export default function Home() {
                         {isAuthenticated ? (
                             <>
                                 <p className="text-sm text-gray-500">
-                                    사회통합프로그램 {currentLevel}단계 • 중급 1
+                                    사회통합프로그램 {currentLevel}단계 • {currentLevelNum >= 3 ? "중급" : "기초"}
                                 </p>
                                 <div className="flex items-center gap-1 mt-1">
                                     <span className="text-orange-500">🔥</span>
@@ -128,8 +182,8 @@ export default function Home() {
                         </div>
                         <ProgressBar value={levelProgress} size="md" />
                         <div className="flex justify-between mt-3 text-xs text-gray-500">
-                            <span>18개 유닛 중 12개 완료</span>
-                            <span>다음 목표: 13과</span>
+                            <span>진행도</span>
+                            <span>다음 레벨까지 {100 - levelProgress}%</span>
                         </div>
                     </section>
                 ) : (
