@@ -122,10 +122,10 @@ export default function Home() {
                     <div className="flex items-center gap-2">
                         {isAuthenticated ? (
                             <div className="flex items-center gap-2">
-                                <button className="p-2 hover:bg-gray-100 rounded-full">
+                                <button className="p-2 hover:bg-gray-100 rounded-full" onClick={() => alert("알림 기능은 준비 중입니다.")}>
                                     <span className="text-xl">🔔</span>
                                 </button>
-                                <Link href="/profile" className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                                <Link href="/analytics" className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
                                     <span className="text-sm font-bold text-blue-600">{userName[0]}</span>
                                 </Link>
                             </div>
