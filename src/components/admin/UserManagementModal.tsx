@@ -36,6 +36,11 @@ export default function UserManagementModal({ isOpen, onClose, adminKey }: UserM
                 headers: { "x-admin-key": adminKey }
             });
             const data = await res.json();
+
+            if (!res.ok) {
+                throw new Error(data.error || `서버 오류 (${res.status})`);
+            }
+
             if (data.users) {
                 // purchased_levels가 null일 경우 빈 배열로 처리
                 const sanitizedUsers = data.users.map((u: any) => ({
