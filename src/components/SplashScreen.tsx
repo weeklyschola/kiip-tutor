@@ -70,7 +70,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
     };
 
     return (
-        <div className={`fixed inset-0 z-50 bg-gradient-to-br ${slides[currentSlide].bg} transition-all duration-500`}>
+        <div className={`fixed inset-0 z-[100] bg-gradient-to-br ${slides[currentSlide].bg} transition-all duration-500`}>
             {/* Skip 버튼 */}
             <button
                 onClick={handleSkip}
