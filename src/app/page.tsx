@@ -52,7 +52,10 @@ const calculateStreak = (sessions: any[]) => {
     return streak;
 };
 
-export default function Home() {
+export const dynamic = 'force-dynamic';
+import { Suspense } from "react";
+
+function HomeContent() {
     const router = useRouter();
     // 전역 스플래시 상태 사용
     const { hasSeenSplash, setHasSeenSplash } = useSplash();
@@ -98,7 +101,7 @@ export default function Home() {
     const currentLevelNum = typeof currentLevel === 'string' ? 0 : currentLevel;
     const levelProgress = user ? Math.round(progress.levelProgress[currentLevelNum] || 0) : 0;
 
-    const userName = user?.nickname || "방문자";
+    const userName = user?.user_metadata?.nickname || user?.email?.split('@')[0] || "방문자";
 
     // 스트릭 계산
     const streakDays = stats ? calculateStreak(stats.recentSessions) : 0;
@@ -223,22 +226,40 @@ export default function Home() {
                             {/* 이미지 영역 */}
                             <div className="h-40 bg-gradient-to-br from-blue-100 to-green-100 flex items-center justify-center relative">
                                 <div className="text-center">
-                                    <span className="text-5xl">👨‍👩‍👧‍👦</span>
-                                    <p className="text-sm text-gray-600 mt-2">가족과 문화</p>
+                                    <span className="text-5xl">
+                                        {progress.lastStudied ? "📖" : "🚀"}
+                                    </span>
+                                    <p className="text-sm text-gray-600 mt-2">
+                                        {progress.lastStudied
+                                            ? `${progress.lastStudied.topic}`
+                                            : "학습을 시작해보세요!"}
+                                    </p>
                                 </div>
                             </div>
                             <div className="p-4">
-                                <span className="text-xs text-blue-600 font-medium">현재 유닛</span>
-                                <h3 className="font-bold text-gray-800 mt-1">4과: 가족과 문화</h3>
+                                <span className="text-xs text-blue-600 font-medium">
+                                    {progress.lastStudied
+                                        ? `현재 단계: ${progress.lastStudied.level}단계`
+                                        : "새로운 학습"}
+                                </span>
+                                <h3 className="font-bold text-gray-800 mt-1">
+                                    {progress.lastStudied
+                                        ? `${progress.lastStudied.level}단계: ${progress.lastStudied.topic}`
+                                        : "첫 걸음을 떼어볼까요?"}
+                                </h3>
                                 <div className="flex items-center justify-between mt-3">
                                     <span className="text-xs text-gray-500">
-                                        마지막 학습 위치 (45p)
+                                        {progress.lastStudied
+                                            ? "마지막 학습 토픽"
+                                            : "레벨 테스트부터 시작하세요"}
                                     </span>
                                     <Link
-                                        href="/study/3"
+                                        href={progress.lastStudied
+                                            ? `/study/${progress.lastStudied.level}?topic=${encodeURIComponent(progress.lastStudied.topic)}`
+                                            : `/study/${currentLevel}`}
                                         className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors"
                                     >
-                                        이어서 학습
+                                        {progress.lastStudied ? "이어서 학습" : "학습 시작"}
                                     </Link>
                                 </div>
                             </div>
@@ -345,5 +366,13 @@ export default function Home() {
             </div>
 
         </main>
+    );
+}
+
+export default function Home() {
+    return (
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-gray-50"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>}>
+            <HomeContent />
+        </Suspense>
     );
 }

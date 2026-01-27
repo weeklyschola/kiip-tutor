@@ -2638,6 +2638,435 @@
                 "통장을 만들었습니다."
             ],
             "synonyms": []
+        },
+        {
+            "word": "정치",
+            "meaning": "politics",
+            "pronunciation": "jeong-chi",
+            "topic": "사회",
+            "hanja": "政治",
+            "examples": [
+                "정치에 관심이 많습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "경제",
+            "meaning": "economy",
+            "pronunciation": "gyeong-je",
+            "topic": "사회",
+            "hanja": "經濟",
+            "examples": [
+                "경제가 발전하고 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "사회",
+            "meaning": "society",
+            "pronunciation": "sa-hoe",
+            "topic": "사회",
+            "hanja": "社會",
+            "examples": [
+                "사회가 변화하고 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "역사",
+            "meaning": "history",
+            "pronunciation": "yeok-sa",
+            "topic": "사회",
+            "hanja": "歷史",
+            "examples": [
+                "한국 역사를 배웁니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "법",
+            "meaning": "law",
+            "pronunciation": "beop",
+            "topic": "사회",
+            "hanja": "法",
+            "examples": [
+                "법을 지켜야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "대통령",
+            "meaning": "president",
+            "pronunciation": "dae-tong-ryeong",
+            "topic": "정치",
+            "hanja": "大統領",
+            "examples": [
+                "대통령 선거가 있습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "국회",
+            "meaning": "National Assembly",
+            "pronunciation": "guk-hoe",
+            "topic": "정치",
+            "hanja": "國會",
+            "examples": [
+                "국회의원을 뽑습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "선거",
+            "meaning": "election",
+            "pronunciation": "seon-geo",
+            "topic": "정치",
+            "hanja": "選擧",
+            "examples": [
+                "선거에 참여합시다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "투표",
+            "meaning": "vote",
+            "pronunciation": "tu-pyo",
+            "topic": "정치",
+            "hanja": "投票",
+            "examples": [
+                "투표하러 갑니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "민주주의",
+            "meaning": "democracy",
+            "pronunciation": "min-ju-ju-ui",
+            "topic": "정치",
+            "hanja": "民主主義",
+            "examples": [
+                "민주주의 사회입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "자유",
+            "meaning": "freedom",
+            "pronunciation": "ja-yu",
+            "topic": "사회",
+            "hanja": "自由",
+            "examples": [
+                "자유가 중요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "평등",
+            "meaning": "equality",
+            "pronunciation": "pyeong-deung",
+            "topic": "사회",
+            "hanja": "平等",
+            "examples": [
+                "모든 사람은 평등합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "권리",
+            "meaning": "right",
+            "pronunciation": "gwon-ri",
+            "topic": "사회",
+            "hanja": "權利",
+            "examples": [
+                "권리를 주장합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "의무",
+            "meaning": "duty/obligation",
+            "pronunciation": "ui-mu",
+            "topic": "사회",
+            "hanja": "義務",
+            "examples": [
+                "의무를 다해야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "책임",
+            "meaning": "responsibility",
+            "pronunciation": "chaek-im",
+            "topic": "사회",
+            "hanja": "責任",
+            "examples": [
+                "책임감을 가집시다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "범죄",
+            "meaning": "crime",
+            "pronunciation": "beom-joe",
+            "topic": "사회",
+            "hanja": "犯罪",
+            "examples": [
+                "범죄를 예방합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "처벌",
+            "meaning": "punishment",
+            "pronunciation": "cheo-beol",
+            "topic": "사회",
+            "hanja": "處罰",
+            "examples": [
+                "처벌을 받습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "재판",
+            "meaning": "trial",
+            "pronunciation": "jae-pan",
+            "topic": "법",
+            "hanja": "裁判",
+            "examples": [
+                "재판이 열립니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "변호사",
+            "meaning": "lawyer",
+            "pronunciation": "byeon-ho-sa",
+            "topic": "법",
+            "hanja": "辯護士",
+            "examples": [
+                "변호사와 상담합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "판사",
+            "meaning": "judge",
+            "pronunciation": "pan-sa",
+            "topic": "법",
+            "hanja": "判事",
+            "examples": [
+                "판사가 판결합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "검사",
+            "meaning": "prosecutor",
+            "pronunciation": "geom-sa",
+            "topic": "법",
+            "hanja": "檢事",
+            "examples": [
+                "검사가 조사합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "경찰",
+            "meaning": "police",
+            "pronunciation": "gyeong-chal",
+            "topic": "사회",
+            "hanja": "警察",
+            "examples": [
+                "경찰에 신고합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "소방관",
+            "meaning": "firefighter",
+            "pronunciation": "so-bang-gwan",
+            "topic": "사회",
+            "hanja": "消防官",
+            "examples": [
+                "소방관이 불을 끕니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "공무원",
+            "meaning": "public servant",
+            "pronunciation": "gong-mu-won",
+            "topic": "직업",
+            "hanja": "公務員",
+            "examples": [
+                "공무원이 되고 싶습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "세금",
+            "meaning": "tax",
+            "pronunciation": "se-geum",
+            "topic": "경제",
+            "hanja": "稅金",
+            "examples": [
+                "세금을 냅니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "물가",
+            "meaning": "prices (of commodities)",
+            "pronunciation": "mul-ga",
+            "topic": "경제",
+            "hanja": "物價",
+            "examples": [
+                "물가가 올랐습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "수출",
+            "meaning": "export",
+            "pronunciation": "su-chul",
+            "topic": "경제",
+            "hanja": "輸出",
+            "examples": [
+                "자동차가 수출됩니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "수입",
+            "meaning": "import",
+            "pronunciation": "su-ip",
+            "topic": "경제",
+            "hanja": "輸入",
+            "examples": [
+                "석유를 수입합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "무역",
+            "meaning": "trade",
+            "pronunciation": "mu-yeok",
+            "topic": "경제",
+            "hanja": "貿易",
+            "examples": [
+                "무역이 활발합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "환율",
+            "meaning": "exchange rate",
+            "pronunciation": "hwan-yul",
+            "topic": "경제",
+            "hanja": "換率",
+            "examples": [
+                "환율이 올랐습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "주식",
+            "meaning": "stock",
+            "pronunciation": "ju-sik",
+            "topic": "경제",
+            "hanja": "株式",
+            "examples": [
+                "주식 시장이 큽니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "부동산",
+            "meaning": "real estate",
+            "pronunciation": "bu-dong-san",
+            "topic": "경제",
+            "hanja": "不動產",
+            "examples": [
+                "부동산 가격이 비쌉니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "계약",
+            "meaning": "contract",
+            "pronunciation": "gye-yak",
+            "topic": "법",
+            "hanja": "契約",
+            "examples": [
+                "계약서에 서명합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "서명",
+            "meaning": "signature",
+            "pronunciation": "seo-myeong",
+            "topic": "생활",
+            "hanja": "署名",
+            "examples": [
+                "여기에 서명해 주세요."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "증명서",
+            "meaning": "certificate",
+            "pronunciation": "jeung-myeong-seo",
+            "topic": "생활",
+            "hanja": "證明書",
+            "examples": [
+                "졸업 증명서가 필요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "신청서",
+            "meaning": "application form",
+            "pronunciation": "sin-cheong-seo",
+            "topic": "생활",
+            "hanja": "申請書",
+            "examples": [
+                "신청서를 작성합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "이력서",
+            "meaning": "resume",
+            "pronunciation": "i-ryeok-seo",
+            "topic": "취업",
+            "hanja": "履歷書",
+            "examples": [
+                "이력서를 제출합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "자기소개서",
+            "meaning": "self-introduction letter",
+            "pronunciation": "ja-gi-so-gae-seo",
+            "topic": "취업",
+            "hanja": "自己紹介書",
+            "examples": [
+                "자기소개서를 씁니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "채용",
+            "meaning": "hiring/recruitment",
+            "pronunciation": "chae-yong",
+            "topic": "취업",
+            "hanja": "採用",
+            "examples": [
+                "신입 사원을 채용합니다."
+            ],
+            "synonyms": []
         }
     ]
 }

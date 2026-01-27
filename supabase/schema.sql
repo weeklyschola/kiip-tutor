@@ -1,8 +1,28 @@
 -- KIIP 튜터 데이터베이스 스키마
 -- Supabase SQL Editor에서 실행하세요
 
--- 1. 문제 테이블
-CREATE TABLE questions (
+-- =============================================
+-- 1. 테이블 정의 (Tables)
+-- =============================================
+
+-- 사용자 프로필 테이블 (Supabase Auth와 연동)
+CREATE TABLE public.profiles (
+  id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
+  user_id VARCHAR(50) UNIQUE, -- 검색용 공개 ID (이메일 앞부분 등)
+  email VARCHAR(255),
+  nickname VARCHAR(50),
+  birth_date DATE,
+  gender VARCHAR(10),
+  nationality VARCHAR(10),
+  is_premium BOOLEAN DEFAULT FALSE,
+  premium_until TIMESTAMPTZ,
+  purchased_levels INTEGER[] DEFAULT '{}',
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- 문제 테이블
+CREATE TABLE public.questions (
   id SERIAL PRIMARY KEY,
   level INTEGER NOT NULL CHECK (level >= 0 AND level <= 5),
   question_text TEXT NOT NULL,
@@ -10,51 +30,98 @@ CREATE TABLE questions (
   correct_answer INTEGER NOT NULL CHECK (correct_answer >= 0 AND correct_answer <= 3),
   explanation TEXT NOT NULL,
   category VARCHAR(100) NOT NULL,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+  created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
--- 2. CBT 응답 테이블 (익명화된 User_ID 사용)
-CREATE TABLE cbt_attempts (
+-- CBT 응답 테이블
+CREATE TABLE public.cbt_attempts (
   id SERIAL PRIMARY KEY,
-  user_id UUID NOT NULL, -- 익명화된 UUID (이름, 이메일 등 개인정보 없음)
+  user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE, -- 실제 Auth 유저 ID
   question_id INTEGER REFERENCES questions(id) ON DELETE CASCADE,
   selected_answer INTEGER NOT NULL,
   is_correct BOOLEAN NOT NULL,
   time_spent INTEGER NOT NULL, -- 초 단위
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+  created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
--- 3. 사용자 프리미엄 상태 테이블
-CREATE TABLE user_status (
-  user_id UUID PRIMARY KEY,
+-- 유저 상태 (기존 테이블 유지, 필요 시 profiles로 통합 고려)
+CREATE TABLE public.user_status (
+  user_id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
   is_premium BOOLEAN DEFAULT FALSE,
   daily_chat_count INTEGER DEFAULT 0,
   last_chat_date DATE,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+  created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
--- 인덱스 생성 (성능 최적화)
+
+-- =============================================
+-- 2. 인덱스 (Indexes)
+-- =============================================
+CREATE INDEX idx_profiles_userid ON profiles(user_id);
 CREATE INDEX idx_questions_level ON questions(level);
 CREATE INDEX idx_attempts_user ON cbt_attempts(user_id);
 CREATE INDEX idx_attempts_question ON cbt_attempts(question_id);
 CREATE INDEX idx_attempts_created ON cbt_attempts(created_at);
 
--- Row Level Security (RLS) 활성화
+
+-- =============================================
+-- 3. RLS 정책 (Row Level Security)
+-- =============================================
+ALTER TABLE profiles ENABLE ROW LEVEL SECURITY;
 ALTER TABLE questions ENABLE ROW LEVEL SECURITY;
 ALTER TABLE cbt_attempts ENABLE ROW LEVEL SECURITY;
 ALTER TABLE user_status ENABLE ROW LEVEL SECURITY;
 
--- 정책: 누구나 문제 읽기 가능
+-- [Profiles]
+-- 내 프로필은 내가 볼 수 있음
+CREATE POLICY "Users can view own profile" ON profiles
+  FOR SELECT USING (auth.uid() = id);
+-- 내 프로필은 내가 수정 가능
+CREATE POLICY "Users can update own profile" ON profiles
+  FOR UPDATE USING (auth.uid() = id);
+
+-- [Questions]
+-- 누구나 문제 읽기 가능 (로그인 불필요)
 CREATE POLICY "Anyone can read questions" ON questions
   FOR SELECT USING (true);
 
--- 정책: 누구나 자신의 응답 기록 가능
-CREATE POLICY "Anyone can insert attempts" ON cbt_attempts
-  FOR INSERT WITH CHECK (true);
+-- [CBT Attempts]
+-- 내 응답만 insert 가능
+CREATE POLICY "Users can insert own attempts" ON cbt_attempts
+  FOR INSERT WITH CHECK (auth.uid() = user_id);
+-- 내 응답만 select 가능
+CREATE POLICY "Users can view own attempts" ON cbt_attempts
+  FOR SELECT USING (auth.uid() = user_id);
 
--- 정책: 자신의 응답만 읽기 가능
-CREATE POLICY "Users can read own attempts" ON cbt_attempts
-  FOR SELECT USING (true);
+-- [User Status]
+-- 내 상태만 볼 수 있음
+CREATE POLICY "Users can view own status" ON user_status
+  FOR SELECT USING (auth.uid() = user_id);
+
+
+-- =============================================
+-- 4. 트리거 및 함수 (Triggers)
+-- =============================================
+
+-- 신규 유저 가입 시 프로필 자동 생성 함수
+CREATE OR REPLACE FUNCTION public.handle_new_user()
+RETURNS TRIGGER AS $$
+BEGIN
+  INSERT INTO public.profiles (id, email, nickname, user_id)
+  VALUES (
+    new.id,
+    new.email,
+    COALESCE(new.raw_user_meta_data->>'full_name', split_part(new.email, '@', 1)), -- 닉네임 없으면 이메일 아이디 사용
+    split_part(new.email, '@', 1) -- user_id (검색용) 초기값
+  );
+  return new;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+-- 트리거 등록
+CREATE OR REPLACE TRIGGER on_auth_user_created
+  AFTER INSERT ON auth.users
+  FOR EACH ROW EXECUTE PROCEDURE public.handle_new_user();
 
 -- 샘플 문제 데이터 삽입
 INSERT INTO questions (level, question_text, options, correct_answer, explanation, category) VALUES

@@ -48,7 +48,11 @@ const levels = [
     },
 ];
 
-export default function StudyPage() {
+import { Suspense } from "react";
+
+export const dynamic = 'force-dynamic';
+
+function StudyContent() {
     const { progress, canAccessLevel } = useProgress();
     const { isAuthenticated, isLoading: authLoading } = useAuth();
     const router = useRouter();
@@ -88,25 +92,15 @@ export default function StudyPage() {
             <div className="max-w-lg mx-auto px-4 py-6 space-y-4">
                 {levels.map((level, index) => {
                     // 실제 데이터 연동
-                    const hasAccess = canAccessLevel(level.level);
                     const isCompleted = progress.completedLevels.includes(level.level);
                     const levelProgressValue = progress.levelProgress[level.level] || 0;
-
-                    // 상태 결정
-                    const isLocked = !hasAccess;
-                    // 진행 중 여부: 잠금 해제됨 + 미완료 + (진행도가 있거나, 다음 단계가 아님)
-                    // (단순화를 위해: 잠금 해제되었고 완료되지 않았으면 진행 중으로 표시)
-                    const isInProgress = !isLocked && !isCompleted;
+                    const isInProgress = !isCompleted;
 
                     return (
                         <Link
                             key={level.level}
-                            href={isLocked ? "#" : `/study/${level.level}`}
-                            className={`block bg-white rounded-2xl p-5 shadow-sm transition-all ${isLocked
-                                ? "opacity-60 cursor-not-allowed"
-                                : "hover:shadow-md hover:-translate-y-0.5"
-                                } ${isInProgress && levelProgressValue > 0 ? "ring-2 ring-blue-500 ring-offset-2" : ""}`}
-                            onClick={(e) => isLocked && e.preventDefault()}
+                            href={`/study/${level.level}`}
+                            className={`block bg-white rounded-2xl p-5 shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5 ${isInProgress && levelProgressValue > 0 ? "ring-2 ring-blue-500 ring-offset-2" : ""}`}
                         >
                             <div className="flex items-start gap-4">
                                 {/* 아이콘 */}
@@ -114,17 +108,13 @@ export default function StudyPage() {
                                     isInProgress ? "bg-blue-100" :
                                         "bg-gray-100"
                                     }`}>
-                                    {isLocked ? (
-                                        <span className="text-xl text-gray-400">🔒</span>
-                                    ) : (
-                                        <span className="text-xl">{level.icon}</span>
-                                    )}
+                                    <span className="text-xl">{level.icon}</span>
                                 </div>
 
                                 {/* 내용 */}
                                 <div className="flex-1">
                                     <div className="flex items-center justify-between mb-1">
-                                        <h2 className={`font-bold ${isLocked ? "text-gray-400" : "text-gray-800"}`}>
+                                        <h2 className="font-bold text-gray-800">
                                             {level.level}단계: {level.title}
                                         </h2>
 
@@ -139,12 +129,7 @@ export default function StudyPage() {
                                                 학습 중 {levelProgressValue}%
                                             </span>
                                         )}
-                                        {isLocked && (
-                                            <span className="bg-gray-100 text-gray-500 text-xs px-2 py-1 rounded-full">
-                                                잠김
-                                            </span>
-                                        )}
-                                        {/* 시작 전 상태 (잠금 해제되었으나 진행도 0) */}
+                                        {/* 시작 전 상태 (진행도 0) */}
                                         {isInProgress && levelProgressValue === 0 && (
                                             <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full border border-gray-200">
                                                 학습 가능
@@ -152,18 +137,16 @@ export default function StudyPage() {
                                         )}
                                     </div>
 
-                                    <p className={`text-sm mb-3 ${isLocked ? "text-gray-400" : "text-gray-600"}`}>
+                                    <p className="text-sm mb-3 text-gray-600">
                                         {level.description}
                                     </p>
 
-                                    {/* 진행률 바 (잠금 해제된 경우에만) */}
-                                    {!isLocked && (
-                                        <ProgressBar
-                                            value={levelProgressValue}
-                                            size="sm"
-                                            color={isCompleted ? "success" : "primary"}
-                                        />
-                                    )}
+                                    {/* 진행률 바 */}
+                                    <ProgressBar
+                                        value={levelProgressValue}
+                                        size="sm"
+                                        color={isCompleted ? "success" : "primary"}
+                                    />
                                 </div>
                             </div>
                         </Link>
@@ -182,5 +165,13 @@ export default function StudyPage() {
             </div>
 
         </main>
+    );
+}
+
+export default function StudyPage() {
+    return (
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>}>
+            <StudyContent />
+        </Suspense>
     );
 }

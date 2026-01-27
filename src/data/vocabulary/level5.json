@@ -1927,6 +1927,983 @@
                 "재시험 기회가 있습니다."
             ],
             "synonyms": []
+        },
+        {
+            "word": "연구",
+            "meaning": "research",
+            "pronunciation": "yeon-gu",
+            "topic": "전문",
+            "hanja": "硏究",
+            "examples": [
+                "연구 결과를 발표했습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "개발",
+            "meaning": "development",
+            "pronunciation": "gae-bal",
+            "topic": "전문",
+            "hanja": "開發",
+            "examples": [
+                "신제품을 개발합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "실험",
+            "meaning": "experiment",
+            "pronunciation": "sil-heom",
+            "topic": "과학",
+            "hanja": "實驗",
+            "examples": [
+                "과학 실험을 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "분석",
+            "meaning": "analysis",
+            "pronunciation": "bun-seok",
+            "topic": "전문",
+            "hanja": "分析",
+            "examples": [
+                "자료를 분석합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "통계",
+            "meaning": "statistics",
+            "pronunciation": "tong-gye",
+            "topic": "수학",
+            "hanja": "統計",
+            "examples": [
+                "통계 자료를 봅니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "원인",
+            "meaning": "cause",
+            "pronunciation": "won-in",
+            "topic": "논리",
+            "hanja": "原因",
+            "examples": [
+                "사고의 원인을 찾습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "영향",
+            "meaning": "influence/effect",
+            "pronunciation": "yeong-hyang",
+            "topic": "논리",
+            "hanja": "影響",
+            "examples": [
+                "좋은 영향을 줍니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "혁신",
+            "meaning": "innovation",
+            "pronunciation": "hyeok-sin",
+            "topic": "경제",
+            "hanja": "革新",
+            "examples": [
+                "기술 혁신이 필요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "기술",
+            "meaning": "technology/skill",
+            "pronunciation": "gi-sul",
+            "topic": "과학",
+            "hanja": "技術",
+            "examples": [
+                "최신 기술을 사용합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "정보",
+            "meaning": "information",
+            "pronunciation": "jeong-bo",
+            "topic": "IT",
+            "hanja": "情報",
+            "examples": [
+                "정보를 검색합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "통신",
+            "meaning": "communication",
+            "pronunciation": "tong-sin",
+            "topic": "IT",
+            "hanja": "通信",
+            "examples": [
+                "통신 상태가 좋습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "우주",
+            "meaning": "universe/space",
+            "pronunciation": "u-ju",
+            "topic": "과학",
+            "hanja": "宇宙",
+            "examples": [
+                "우주 여행을 꿈꿉니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "환경",
+            "meaning": "environment",
+            "pronunciation": "hwan-gyeong",
+            "topic": "사회",
+            "hanja": "環境",
+            "examples": [
+                "환경을 보호해야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "오염",
+            "meaning": "pollution",
+            "pronunciation": "o-yeom",
+            "topic": "사회",
+            "hanja": "汚染",
+            "examples": [
+                "공기 오염이 심각합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "보호",
+            "meaning": "protection",
+            "pronunciation": "bo-ho",
+            "topic": "사회",
+            "hanja": "保護",
+            "examples": [
+                "자연 보호 활동을 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "에너지",
+            "meaning": "energy",
+            "pronunciation": "e-neo-ji",
+            "topic": "과학",
+            "examples": [
+                "에너지를 절약합시다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "자원",
+            "meaning": "resources",
+            "pronunciation": "ja-won",
+            "topic": "경제",
+            "hanja": "資源",
+            "examples": [
+                "자원이 풍부합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "재활용",
+            "meaning": "recycling",
+            "pronunciation": "jae-hwal-yong",
+            "topic": "사회",
+            "hanja": "再活用",
+            "examples": [
+                "쓰레기를 재활용합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "보도",
+            "meaning": "report/news coverage",
+            "pronunciation": "bo-do",
+            "topic": "언론",
+            "hanja": "報道",
+            "examples": [
+                "뉴스 보도를 봤습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "기사",
+            "meaning": "article",
+            "pronunciation": "gi-sa",
+            "topic": "언론",
+            "hanja": "記事",
+            "examples": [
+                "신문 기사를 읽었습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "언론",
+            "meaning": "press/media",
+            "pronunciation": "eon-ron",
+            "topic": "언론",
+            "hanja": "言論",
+            "examples": [
+                "언론의 자유가 중요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "방송",
+            "meaning": "broadcast",
+            "pronunciation": "bang-song",
+            "topic": "언론",
+            "hanja": "放送",
+            "examples": [
+                "생방송을 봅니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "시청자",
+            "meaning": "viewer",
+            "pronunciation": "si-cheong-ja",
+            "topic": "방송",
+            "hanja": "視聽者",
+            "examples": [
+                "시청자 의견을 듣습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "체험",
+            "meaning": "experience (hands-on)",
+            "pronunciation": "che-heom",
+            "topic": "생활",
+            "hanja": "體驗",
+            "examples": [
+                "문화 체험을 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "예방",
+            "meaning": "prevention",
+            "pronunciation": "ye-bang",
+            "topic": "건강",
+            "hanja": "預防",
+            "examples": [
+                "질병 예방이 중요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "대책",
+            "meaning": "countermeasure",
+            "pronunciation": "dae-chaek",
+            "topic": "사회",
+            "hanja": "對策",
+            "examples": [
+                "대책을 마련해야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "정책",
+            "meaning": "policy",
+            "pronunciation": "jeong-chaek",
+            "topic": "정치",
+            "hanja": "政策",
+            "examples": [
+                "정부 정책을 따릅니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "개선",
+            "meaning": "improvement",
+            "pronunciation": "gae-seon",
+            "topic": "사회",
+            "hanja": "改善",
+            "examples": [
+                "환경 개선이 필요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "발전",
+            "meaning": "development/progress",
+            "pronunciation": "bal-jeon",
+            "topic": "사회",
+            "hanja": "發展",
+            "examples": [
+                "경제 발전을 이뤘습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "협력",
+            "meaning": "cooperation",
+            "pronunciation": "hyeop-ryeok",
+            "topic": "사회",
+            "hanja": "協力",
+            "examples": [
+                "상호 협력이 필요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "교류",
+            "meaning": "exchange",
+            "pronunciation": "gyo-ryu",
+            "topic": "문화",
+            "hanja": "交流",
+            "examples": [
+                "문화 교류를 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "갈등",
+            "meaning": "conflict",
+            "pronunciation": "gal-deung",
+            "topic": "사회",
+            "hanja": "葛藤",
+            "examples": [
+                "갈등을 해결해야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "평화",
+            "meaning": "peace",
+            "pronunciation": "pyeong-hwa",
+            "topic": "사회",
+            "hanja": "平和",
+            "examples": [
+                "세계 평화를 기원합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "투자",
+            "meaning": "investment",
+            "pronunciation": "tu-ja",
+            "topic": "경제",
+            "hanja": "投資",
+            "examples": [
+                "부동산에 투자합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "이익",
+            "meaning": "profit/benefit",
+            "pronunciation": "i-ik",
+            "topic": "경제",
+            "hanja": "利益",
+            "examples": [
+                "이익을 얻었습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "손해",
+            "meaning": "loss/damage",
+            "pronunciation": "son-hae",
+            "topic": "경제",
+            "hanja": "損害",
+            "examples": [
+                "손해를 입었습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "경영",
+            "meaning": "management",
+            "pronunciation": "gyeong-yeong",
+            "topic": "경제",
+            "hanja": "經營",
+            "examples": [
+                "회사를 경영합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "마케팅",
+            "meaning": "marketing",
+            "pronunciation": "ma-ke-ting",
+            "topic": "경제",
+            "examples": [
+                "마케팅 전략을 세웁니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "홍보",
+            "meaning": "promotion/PR",
+            "pronunciation": "hong-bo",
+            "topic": "경제",
+            "hanja": "弘報",
+            "examples": [
+                "제품을 홍보합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "판매",
+            "meaning": "sales",
+            "pronunciation": "pan-mae",
+            "topic": "경제",
+            "hanja": "販賣",
+            "examples": [
+                "판매량이 늘었습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "소비",
+            "meaning": "consumption",
+            "pronunciation": "so-bi",
+            "topic": "경제",
+            "hanja": "消費",
+            "examples": [
+                "건전한 소비를 해야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "생산",
+            "meaning": "production",
+            "pronunciation": "saeng-san",
+            "topic": "경제",
+            "hanja": "生産",
+            "examples": [
+                "자동차를 생산합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "유통",
+            "meaning": "distribution",
+            "pronunciation": "yu-tong",
+            "topic": "경제",
+            "hanja": "流通",
+            "examples": [
+                "유통 과정이 복잡합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "경쟁",
+            "meaning": "competition",
+            "pronunciation": "gyeong-jaeng",
+            "topic": "사회",
+            "hanja": "競爭",
+            "examples": [
+                "경쟁이 치열합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "성장",
+            "meaning": "growth",
+            "pronunciation": "seong-jang",
+            "topic": "경제",
+            "hanja": "成長",
+            "examples": [
+                "경제가 성장합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "침체",
+            "meaning": "stagnation/recession",
+            "pronunciation": "chim-che",
+            "topic": "경제",
+            "hanja": "沈滯",
+            "examples": [
+                "경기가 침체되었습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "위기",
+            "meaning": "crisis",
+            "pronunciation": "wi-gi",
+            "topic": "사회",
+            "hanja": "危機",
+            "examples": [
+                "위기를 극복합시다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "기회",
+            "meaning": "opportunity",
+            "pronunciation": "gi-he",
+            "topic": "생활",
+            "hanja": "機會",
+            "examples": [
+                "좋은 기회를 잡았습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "도전",
+            "meaning": "challenge",
+            "pronunciation": "do-jeon",
+            "topic": "생활",
+            "hanja": "挑戰",
+            "examples": [
+                "새로운 일에 도전합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "전략",
+            "meaning": "strategy",
+            "pronunciation": "jeon-ryak",
+            "topic": "경영",
+            "hanja": "戰略",
+            "examples": [
+                "성공 전략을 세웁니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "예술",
+            "meaning": "art",
+            "pronunciation": "ye-sul",
+            "topic": "문화",
+            "hanja": "藝術",
+            "examples": [
+                "예술 작품을 감상합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "문학",
+            "meaning": "literature",
+            "pronunciation": "mun-hak",
+            "topic": "문화",
+            "hanja": "文學",
+            "examples": [
+                "한국 문학을 공부합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "작품",
+            "meaning": "work of art",
+            "pronunciation": "jak-pum",
+            "topic": "문화",
+            "hanja": "作品",
+            "examples": [
+                "유명한 작품입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "전시회",
+            "meaning": "exhibition",
+            "pronunciation": "jeon-si-hoe",
+            "topic": "문화",
+            "hanja": "展示會",
+            "examples": [
+                "전시회에 갑니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "공연",
+            "meaning": "performance",
+            "pronunciation": "gong-yeon",
+            "topic": "문화",
+            "hanja": "公演",
+            "examples": [
+                "공연을 봅니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "연기",
+            "meaning": "acting",
+            "pronunciation": "yeon-gi",
+            "topic": "문화",
+            "hanja": "演技",
+            "examples": [
+                "연기를 잘 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "감동",
+            "meaning": "emotion/touching",
+            "pronunciation": "gam-dong",
+            "topic": "감정",
+            "hanja": "感動",
+            "examples": [
+                "큰 감동을 받았습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "표현",
+            "meaning": "expression",
+            "pronunciation": "pyo-hyeon",
+            "topic": "소통",
+            "hanja": "表現",
+            "examples": [
+                "감정을 표현합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "창의력",
+            "meaning": "creativity",
+            "pronunciation": "chang-ui-ryeok",
+            "topic": "능력",
+            "hanja": "創意力",
+            "examples": [
+                "창의력이 필요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "전통",
+            "meaning": "tradition",
+            "pronunciation": "jeon-tong",
+            "topic": "문화",
+            "hanja": "傳統",
+            "examples": [
+                "전통을 지킵니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "현대",
+            "meaning": "modern times",
+            "pronunciation": "hyeon-dae",
+            "topic": "문화",
+            "hanja": "現代",
+            "examples": [
+                "현대 사회의 문제입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "보존",
+            "meaning": "preservation",
+            "pronunciation": "bo-jon",
+            "topic": "문화",
+            "hanja": "保存",
+            "examples": [
+                "문화유산을 보존합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "계승",
+            "meaning": "succession/inheritance",
+            "pronunciation": "gye-seung",
+            "topic": "문화",
+            "hanja": "繼承",
+            "examples": [
+                "정신을 계승합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "다양성",
+            "meaning": "diversity",
+            "pronunciation": "da-yang-seong",
+            "topic": "사회",
+            "hanja": "多樣性",
+            "examples": [
+                "문화적 다양성을 존중합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "존중",
+            "meaning": "respect",
+            "pronunciation": "jon-jung",
+            "topic": "태도",
+            "hanja": "尊重",
+            "examples": [
+                "타인을 존중합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "비평",
+            "meaning": "criticism/review",
+            "pronunciation": "bi-pyeong",
+            "topic": "문화",
+            "hanja": "批評",
+            "examples": [
+                "영화를 비평합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "감상",
+            "meaning": "appreciation",
+            "pronunciation": "gam-sang",
+            "topic": "취미",
+            "hanja": "鑑賞",
+            "examples": [
+                "음악을 감상합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "일석이조",
+            "meaning": "killing two birds with one stone",
+            "pronunciation": "il-seok-i-jo",
+            "topic": "사자성어",
+            "hanja": "一石二鳥",
+            "examples": [
+                "이것은 일석이조입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "금상첨화",
+            "meaning": "icing on the cake",
+            "pronunciation": "geum-sang-cheom-hwa",
+            "topic": "사자성어",
+            "hanja": "錦上添花",
+            "examples": [
+                "날씨까지 좋으니 금상첨화입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "설상가상",
+            "meaning": "misfortune on top of misfortune",
+            "pronunciation": "seol-sang-ga-sang",
+            "topic": "사자성어",
+            "hanja": "雪上加霜",
+            "examples": [
+                "설상가상으로 비가 왔습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "유비무환",
+            "meaning": "prevention is better than cure",
+            "pronunciation": "yu-bi-mu-hwan",
+            "topic": "사자성어",
+            "hanja": "有備無患",
+            "examples": [
+                "유비무환의 자세가 필요합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "대기만성",
+            "meaning": "great talents mature late",
+            "pronunciation": "dae-gi-man-seong",
+            "topic": "사자성어",
+            "hanja": "大器晩成",
+            "examples": [
+                "그는 대기만성형 인물입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "구체적",
+            "meaning": "specific/concrete",
+            "pronunciation": "gu-che-jeok",
+            "topic": "논리",
+            "hanja": "具體的",
+            "examples": [
+                "구체적인 계획을 세웁니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "추상적",
+            "meaning": "abstract",
+            "pronunciation": "chu-sang-jeok",
+            "topic": "논리",
+            "hanja": "抽象的",
+            "examples": [
+                "내용이 너무 추상적입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "객관적",
+            "meaning": "objective",
+            "pronunciation": "gaek-gwan-jeok",
+            "topic": "논리",
+            "hanja": "客觀的",
+            "examples": [
+                "객관적인 사실입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "주관적",
+            "meaning": "subjective",
+            "pronunciation": "ju-gwan-jeok",
+            "topic": "논리",
+            "hanja": "主觀的",
+            "examples": [
+                "주관적인 생각입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "긍정적",
+            "meaning": "positive",
+            "pronunciation": "geung-jeong-jeok",
+            "topic": "태도",
+            "hanja": "肯定的",
+            "examples": [
+                "긍정적으로 생각합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "부정적",
+            "meaning": "negative",
+            "pronunciation": "bu-jeong-jeok",
+            "topic": "태도",
+            "hanja": "否定的",
+            "examples": [
+                "부정적인 영향을 미칩니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "적극적",
+            "meaning": "active/aggressive",
+            "pronunciation": "jeok-geuk-jeok",
+            "topic": "태도",
+            "hanja": "積極的",
+            "examples": [
+                "적극적으로 참여합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "소극적",
+            "meaning": "passive",
+            "pronunciation": "so-geuk-jeok",
+            "topic": "태도",
+            "hanja": "消極的",
+            "examples": [
+                "소극적인 자세를 버려야 합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "효율적",
+            "meaning": "efficient",
+            "pronunciation": "hyo-yul-jeok",
+            "topic": "능력",
+            "hanja": "效率的",
+            "examples": [
+                "시간을 효율적으로 씁니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "효과적",
+            "meaning": "effective",
+            "pronunciation": "hyo-gwa-jeok",
+            "topic": "능력",
+            "hanja": "效果的",
+            "examples": [
+                "매우 효과적인 방법입니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "신중하다",
+            "meaning": "prudent/cautious",
+            "pronunciation": "sin-jung-ha-da",
+            "topic": "태도",
+            "hanja": "愼重",
+            "examples": [
+                "신중하게 결정합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "성실하다",
+            "meaning": "sincere/diligent",
+            "pronunciation": "seong-sil-ha-da",
+            "topic": "태도",
+            "hanja": "誠實",
+            "examples": [
+                "그는 매우 성실합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "정직하다",
+            "meaning": "honest",
+            "pronunciation": "jeong-jik-ha-da",
+            "topic": "태도",
+            "hanja": "正直",
+            "examples": [
+                "정직하게 말합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "개념",
+            "meaning": "concept",
+            "pronunciation": "gae-nyeom",
+            "topic": "논리",
+            "hanja": "槪念",
+            "examples": [
+                "기본 개념을 이해합니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "정의",
+            "meaning": "definition/justice",
+            "pronunciation": "jeong-ui",
+            "topic": "논리",
+            "hanja": "定義",
+            "examples": [
+                "단어의 정의를 찾습니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "이론",
+            "meaning": "theory",
+            "pronunciation": "i-ron",
+            "topic": "학문",
+            "hanja": "理論",
+            "examples": [
+                "이론과 실제는 다릅니다."
+            ],
+            "synonyms": []
+        },
+        {
+            "word": "실천",
+            "meaning": "practice/action",
+            "pronunciation": "sil-cheon",
+            "topic": "생활",
+            "hanja": "實踐",
+            "examples": [
+                "계획을 실천합니다."
+            ],
+            "synonyms": []
         }
     ]
 }

@@ -41,7 +41,7 @@ export const useTTS = (options: UseTTSOptions = {}) => {
     }, []);
 
     // 브라우저 기본 TTS (무료)
-    const speakWithWebSpeech = useCallback((text: string) => {
+    const speakWithWebSpeech = useCallback((text: string, onComplete?: () => void) => {
         if (typeof window === 'undefined' || !window.speechSynthesis) return;
 
         window.speechSynthesis.cancel();
@@ -50,8 +50,8 @@ export const useTTS = (options: UseTTSOptions = {}) => {
         utterance.lang = 'ko-KR';
         utterance.rate = 0.9;
 
-        utterance.onend = () => setIsPlaying(false);
-        utterance.onerror = () => setIsPlaying(false);
+        utterance.onend = () => { setIsPlaying(false); onComplete?.(); };
+        utterance.onerror = () => { setIsPlaying(false); onComplete?.(); };
 
         const voices = window.speechSynthesis.getVoices();
         const koreanVoice = voices.find(v => v.lang.includes('ko') || v.lang.includes('KR'));
@@ -65,7 +65,7 @@ export const useTTS = (options: UseTTSOptions = {}) => {
     }, []);
 
     // Gemini TTS (프리미엄)
-    const speakWithGemini = useCallback(async (text: string): Promise<boolean> => {
+    const speakWithGemini = useCallback(async (text: string, speaker?: string, onComplete?: () => void): Promise<boolean> => {
         try {
             abortControllerRef.current = new AbortController();
             const timeoutId = setTimeout(() => abortControllerRef.current?.abort(), 10000);
@@ -73,7 +73,7 @@ export const useTTS = (options: UseTTSOptions = {}) => {
             const response = await fetch('/api/tts', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ text, premium: true }),
+                body: JSON.stringify({ text, premium: true, speaker }), // speaker 정보 전달
                 signal: abortControllerRef.current.signal,
             });
 
@@ -84,8 +84,8 @@ export const useTTS = (options: UseTTSOptions = {}) => {
                 const audio = new Audio(URL.createObjectURL(blob));
                 audioRef.current = audio;
 
-                audio.onended = () => setIsPlaying(false);
-                audio.onerror = () => setIsPlaying(false);
+                audio.onended = () => { setIsPlaying(false); onComplete?.(); };
+                audio.onerror = () => { setIsPlaying(false); onComplete?.(); };
 
                 await audio.play();
                 return true;
@@ -99,19 +99,33 @@ export const useTTS = (options: UseTTSOptions = {}) => {
         }
     }, []);
 
-    const speak = useCallback(async (text: string) => {
+    // 말하기 실행 (토글 기능 추가)
+    const speak = useCallback(async (text: string, speaker?: string, onComplete?: () => void) => {
+        // 이미 재생 중이면 정지
+        if (isPlaying) {
+            stopPrevious();
+            setIsPlaying(false);
+            return;
+        }
+
         stopPrevious();
         setIsPlaying(true);
 
-        // 프리미엄 사용자: Gemini TTS 시도 후 실패시 브라우저 TTS
-        if (isPremium) {
-            const success = await speakWithGemini(text);
-            if (success) return;
-        }
+        // 상황에 따라 Gemini TTS 우선 시도 (화자 정보 전달)
+        const success = await speakWithGemini(text, speaker, onComplete);
+        if (success) return;
 
-        // 무료 사용자 또는 프리미엄 실패시: 브라우저 TTS
-        speakWithWebSpeech(text);
-    }, [isPremium, speakWithGemini, speakWithWebSpeech, stopPrevious]);
+        // 실패 시 브라우저 기본 TTS 사용 (Fallback)
+        speakWithWebSpeech(text, onComplete);
+    }, [isPlaying, speakWithGemini, speakWithWebSpeech, stopPrevious]);
+
+    // 컴포넌트 언마운트 시 정리
+    useEffect(() => {
+        return () => {
+            stopPrevious();
+            setIsPlaying(false);
+        };
+    }, [stopPrevious]);
 
     return { speak, voicesReady, isPlaying, isPremium };
 };

@@ -61,8 +61,12 @@ const getFallbackVocabulary = (level: number): VocabularyItem[] => {
 
 type ViewMode = "select" | "learn";
 
-export default function VocabularyPage() {
-    const { hasAiTutorAccess } = useProgress();
+export const dynamic = 'force-dynamic';
+
+import { Suspense } from "react";
+
+function VocabularyContent() {
+    const { hasAiTutorAccess, getCardProgress, updateCardProgress } = useProgress();
     const { isAuthenticated } = useAuth(); // 로그인 여부 확인
     const { speak } = useTTS({ isPremium: hasAiTutorAccess() });
     const isPremium = hasAiTutorAccess(); // 프리미엄 여부
@@ -73,9 +77,36 @@ export default function VocabularyPage() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
     const [bookmarked, setBookmarked] = useState<Set<number>>(new Set());
+    const [showCompletion, setShowCompletion] = useState(false);
 
     // 유료 기능 안내 모달 상태
+    // 유료 기능 안내 모달 상태
     const [showUpgradeModal, setShowUpgradeModal] = useState(false);
+
+    // 자동 진행 상태
+    const [autoPlay, setAutoPlay] = useState(false);
+
+    // 자동 진행 로직
+    useEffect(() => {
+        if (autoPlay && viewMode === "learn" && vocabulary.length > 0 && selectedLevel !== null) {
+            const word = vocabulary[currentIndex];
+            // 2초 후 다음 카드로 넘어가는 콜백
+            const handleAutoNext = () => {
+                if (autoPlay) { // 여전히 켜져있는지 확인
+                    setTimeout(() => {
+                        handleNext();
+                    }, 2000); // 발음 끝나고 2초 대기 후 이동
+                }
+            };
+
+            // 약간의 딜레이 후 발음 시작 (화면 전환 직후라 자연스럽게)
+            const timeoutId = setTimeout(() => {
+                speak(word.word, undefined, handleAutoNext);
+            }, 500);
+
+            return () => clearTimeout(timeoutId);
+        }
+    }, [currentIndex, autoPlay, viewMode, selectedLevel]); // vocabulary는 데이터 로딩시 한번만 바뀌므로 제외하거나 포함해도 됨
 
     // 레벨 선택 시 단어 가져오기
     useEffect(() => {
@@ -99,6 +130,18 @@ export default function VocabularyPage() {
         fetchData();
     }, [selectedLevel]);
 
+    // 저장된 진행 위치에서 시작
+    useEffect(() => {
+        if (selectedLevel === null || vocabulary.length === 0) return;
+
+        const progressKey = `vocab-${selectedLevel}`;
+        const saved = getCardProgress(progressKey);
+
+        if (saved && saved.currentIndex < vocabulary.length) {
+            setCurrentIndex(saved.currentIndex);
+        }
+    }, [selectedLevel, vocabulary, getCardProgress]);
+
     const handleLevelSelect = (level: number) => {
         setSelectedLevel(level);
         setViewMode("learn");
@@ -112,8 +155,30 @@ export default function VocabularyPage() {
 
     const handleNext = () => {
         if (currentIndex < vocabulary.length - 1) {
-            setCurrentIndex(prev => prev + 1);
+            const nextIndex = currentIndex + 1;
+            setCurrentIndex(nextIndex);
+
+            // 진행 위치 저장
+            if (selectedLevel !== null) {
+                const progressKey = `vocab-${selectedLevel}`;
+                updateCardProgress(progressKey, nextIndex, vocabulary.length);
+            }
+        } else {
+            // 마지막 단어에서 "완료" 클릭 시
+            setShowCompletion(true);
         }
+    };
+
+    const handleRestart = () => {
+        setCurrentIndex(0);
+        setShowCompletion(false);
+        if (selectedLevel !== null) {
+            updateCardProgress(`vocab-${selectedLevel}`, 0, vocabulary.length);
+        }
+    };
+
+    const handleAiTutorClick = () => {
+        alert("죄송합니다. AI 튜터 기능은 현재 준비 중입니다. 🙇‍♂️");
     };
 
     const toggleBookmark = (id: number) => {
@@ -129,6 +194,35 @@ export default function VocabularyPage() {
     };
 
     const currentWord = vocabulary[currentIndex];
+
+    // 학습 완료 축하 화면
+    if (showCompletion) {
+        return (
+            <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-6">
+                <div className="bg-white rounded-3xl p-10 shadow-xl max-w-sm w-full text-center border-2 border-white/50 backdrop-blur-sm">
+                    <div className="text-6xl mb-6 animate-bounce">🎉</div>
+                    <h2 className="text-3xl font-extrabold text-slate-800 mb-2">학습 완료!</h2>
+                    <p className="text-slate-500 mb-8">
+                        {selectedLevel}단계 단어장을 모두 공부하셨군요.<br />
+                        정말 대단해요!
+                    </p>
+
+                    <button
+                        onClick={handleRestart}
+                        className="w-full py-4 bg-blue-600 text-white rounded-2xl font-bold text-lg shadow-lg hover:bg-blue-700 hover:scale-[1.02] transition-all mb-3"
+                    >
+                        🔄 처음부터 다시 하기
+                    </button>
+                    <button
+                        onClick={() => setViewMode("select")}
+                        className="w-full py-4 bg-white text-slate-600 rounded-2xl font-bold text-lg border-2 border-slate-200 hover:bg-slate-50 transition-all"
+                    >
+                        📂 단어장 목록으로
+                    </button>
+                </div>
+            </main>
+        );
+    }
 
     // 레벨 선택 화면
     if (viewMode === "select") {
@@ -176,8 +270,8 @@ export default function VocabularyPage() {
                     {[0, 1, 2, 3, 4, 5].map(level => {
                         const levelData = getFallbackVocabulary(level);
                         const wordCount = levelData.length;
-                        // 0, 1단계는 무료, 2단계부터는 프리미엄 필요
-                        const isLocked = level >= 2 && !isPremium;
+                        // 모든 레벨 무료로 개방
+                        const isLocked = false;
 
                         return (
                             <button
@@ -248,7 +342,7 @@ export default function VocabularyPage() {
 
     // 단어 학습 화면
     return (
-        <main className="min-h-screen bg-gray-50 flex flex-col">
+        <main className="min-h-screen bg-gray-50 pb-24">
             {/* 헤더 */}
             <header className="bg-white sticky top-0 z-40 border-b border-gray-100">
                 <div className="max-w-lg mx-auto px-4 py-3 flex items-center justify-between">
@@ -256,12 +350,20 @@ export default function VocabularyPage() {
                         <span className="text-xl">←</span>
                     </button>
                     <h1 className="font-bold text-gray-800">단어 학습</h1>
-                    <button
-                        onClick={() => toggleBookmark(currentWord.id)}
-                        className="text-xl"
-                    >
-                        {bookmarked.has(currentWord.id) ? "🔖" : "📑"}
-                    </button>
+                    <div className="flex items-center gap-3">
+                        <button
+                            onClick={() => setAutoPlay(!autoPlay)}
+                            className={`px-3 py-1 rounded-full text-xs font-bold transition-all ${autoPlay ? "bg-green-500 text-white" : "bg-gray-200 text-gray-500"}`}
+                        >
+                            {autoPlay ? "자동 재생 ON" : "자동 재생 OFF"}
+                        </button>
+                        <button
+                            onClick={() => toggleBookmark(currentWord.id)}
+                            className="text-xl"
+                        >
+                            {bookmarked.has(currentWord.id) ? "🔖" : "📑"}
+                        </button>
+                    </div>
                 </div>
             </header>
 
@@ -278,8 +380,8 @@ export default function VocabularyPage() {
                 </div>
             </div>
 
-            {/* 단어 카드 */}
-            <div className="flex-1 max-w-lg mx-auto w-full px-4 py-6 flex flex-col">
+            {/* 단어 카드 (스크롤은 메인 페이지 스크롤 사용) */}
+            <div className="max-w-lg mx-auto w-full px-4 py-6">
                 <div className="flex-1 flex flex-col items-center justify-center text-center">
                     {/* 메인 단어 - 클릭하면 발음 듣기 */}
                     <button
@@ -346,6 +448,7 @@ export default function VocabularyPage() {
                 {/* AI 튜터 버튼 */}
                 <div className="mt-6 space-y-3">
                     <button
+                        onClick={handleAiTutorClick}
                         className="w-full py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-2xl font-semibold flex items-center justify-center gap-2 hover:from-blue-600 hover:to-blue-700 transition-all"
                     >
                         🤖 AI 튜터에게 이 문장 물어보기
@@ -367,18 +470,31 @@ export default function VocabularyPage() {
                     >
                         ← 이전
                     </button>
-                    <button
-                        onClick={handleNext}
-                        disabled={currentIndex === vocabulary.length - 1}
-                        className={`flex-1 py-4 rounded-2xl font-semibold flex items-center justify-center gap-2 ${currentIndex < vocabulary.length - 1
-                            ? "bg-blue-600 text-white hover:bg-blue-700"
-                            : "bg-gray-200 text-gray-400 cursor-not-allowed"
-                            }`}
-                    >
-                        다음 단어 학습 →
-                    </button>
+                    {currentIndex < vocabulary.length - 1 ? (
+                        <button
+                            onClick={handleNext}
+                            className="flex-1 py-4 rounded-2xl font-semibold flex items-center justify-center gap-2 bg-blue-600 text-white hover:bg-blue-700"
+                        >
+                            다음 단어 학습 →
+                        </button>
+                    ) : (
+                        <button
+                            onClick={handleNext}
+                            className="flex-1 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all"
+                        >
+                            🎉 학습 완료!
+                        </button>
+                    )}
                 </div>
             </div>
         </main>
+    );
+}
+
+export default function VocabularyPage() {
+    return (
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>}>
+            <VocabularyContent />
+        </Suspense>
     );
 }

@@ -1,66 +1,67 @@
-import { createClient, SupabaseClient } from '@supabase/supabase-js';
+import { createClient } from '@/lib/supabase/client';
 
-// Helper to get Supabase Client (Anon)
+// Use the new secure client helper
+export const supabase = createClient();
+
+// Re-export specific helpers if needed, but primarily usage should switch to importing from @/lib/supabase/client or server
 export function getSupabase() {
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-
-    if (!supabaseUrl || !supabaseAnonKey) {
-        console.error("Supabase URL or Anon Key is missing");
-        return null;
-    }
-
-    if (!supabaseUrl.startsWith("http")) {
-        console.error("Invalid Supabase URL: " + supabaseUrl);
-        return null;
-    }
-
-    return createClient(supabaseUrl, supabaseAnonKey);
+    return supabase;
 }
 
-// Helper to get Supabase Admin Client (Service Role)
+import { createClient as createSupabaseClient } from '@supabase/supabase-js';
+
+// Deprecated: Admin client should only be used in secure server contexts (e.g. API routes, Server Actions)
+// We will remove manual admin key usage here to prevent accidental client-side exposure.
+// If you need admin access, use createClient (server) with service role key in a Server Component/API.
 export function getSupabaseAdmin() {
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-
-    if (!supabaseUrl || !supabaseServiceKey) {
-        console.error("Supabase URL or Service Role Key is missing");
+    if (!process.env.SUPABASE_SERVICE_ROLE_KEY) {
+        console.error("SUPABASE_SERVICE_ROLE_KEY is missing");
         return null;
     }
-
-    if (!supabaseUrl.startsWith("http")) {
-        console.error("Invalid Supabase URL: " + supabaseUrl);
-        return null;
-    }
-
-    return createClient(supabaseUrl, supabaseServiceKey);
+    return createSupabaseClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.SUPABASE_SERVICE_ROLE_KEY,
+        {
+            auth: {
+                autoRefreshToken: false,
+                persistSession: false
+            }
+        }
+    );
 }
-
-// Default export for client-side usage (keep for backward compatibility if needed, but prefer getSupabase for consistency on server)
-export const supabase = getSupabase();
 
 // Types
 export interface Question {
     id: number;
-    level: number; // 0-5 단계
+    level: number;
     question_text: string;
     options: string[];
-    correct_answer: number; // 0-3 (보기 인덱스)
+    correct_answer: number;
     explanation: string;
     category: string;
 }
 
 export interface CbtAttempt {
     id?: number;
-    user_id: string; // UUID (익명)
+    user_id: string;
     question_id: number;
     selected_answer: number;
     is_correct: boolean;
-    time_spent: number; // 초
+    time_spent: number;
     created_at?: string;
 }
 
-// 사용자 UUID 생성/가져오기 (익명화)
+export interface VocabularyItem {
+    id: number;
+    level: number;
+    word: string;
+    meaning: string;
+    pronunciation?: string;
+    examples: string[];
+    topic: string;
+}
+
+// 사용자 UUID 생성/가져오기 (익명화 - 하위 호환성 유지)
 export function getUserId(): string {
     if (typeof window === 'undefined') return '';
 
@@ -133,17 +134,6 @@ export async function getWrongRates() {
     return rates;
 }
 
-// 단어장 타입
-export interface VocabularyItem {
-    id: number;
-    level: number;
-    word: string;
-    meaning: string;
-    pronunciation?: string;
-    examples: string[];
-    topic: string;
-}
-
 // 단어 가져오기
 export async function getVocabulary(level?: number, topic?: string): Promise<VocabularyItem[]> {
     if (!supabase) return [];
@@ -180,4 +170,6 @@ export async function getVocabularyTopics(level: number): Promise<string[]> {
     const topics = Array.from(new Set(data.map(item => item.topic)));
     return topics;
 }
+
+
 

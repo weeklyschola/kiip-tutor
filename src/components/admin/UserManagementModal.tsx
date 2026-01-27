@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 interface User {
     id: string;
@@ -29,7 +29,7 @@ export default function UserManagementModal({ isOpen, onClose, adminKey }: UserM
     const [showGrantModal, setShowGrantModal] = useState(false);
 
     // 사용자 목록 불러오기
-    const fetchUsers = async () => {
+    const fetchUsers = useCallback(async () => {
         setLoading(true);
         try {
             const res = await fetch("/api/admin/users", {
@@ -61,13 +61,13 @@ export default function UserManagementModal({ isOpen, onClose, adminKey }: UserM
         } finally {
             setLoading(false);
         }
-    };
+    }, [adminKey]);
 
     useEffect(() => {
         if (isOpen) {
             fetchUsers();
         }
-    }, [isOpen]);
+    }, [isOpen, fetchUsers]);
 
     // 이용권 지급 (구독 기간)
     const grantSubscription = async (days: number) => {

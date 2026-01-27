@@ -7,7 +7,11 @@ import { useEffect } from "react";
 import Link from "next/link";
 import BottomNav from "@/components/BottomNav";
 
-export default function AnalyticsPage() {
+import { Suspense } from "react";
+
+export const dynamic = 'force-dynamic';
+
+function AnalyticsContent() {
     const { stats, isLoaded, getWeakCategories, getOverallAccuracy, clearHistory } = useStudyHistory();
     const { logout, isAuthenticated, isLoading: authLoading } = useAuth();
     const router = useRouter();
@@ -301,5 +305,13 @@ export default function AnalyticsPage() {
 
             <BottomNav />
         </main>
+    );
+}
+
+export default function AnalyticsPage() {
+    return (
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>}>
+            <AnalyticsContent />
+        </Suspense>
     );
 }

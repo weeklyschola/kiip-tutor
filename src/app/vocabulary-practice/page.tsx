@@ -541,7 +541,7 @@ export default function VocabularyPracticePage() {
             const timer = setTimeout(() => playAudio(), 500);
             return () => clearTimeout(timer);
         }
-    }, [currentIndex, viewMode, questions]);
+    }, [currentIndex, viewMode, questions, playAudio]);
 
     const currentQuestion = questions[currentIndex];
 

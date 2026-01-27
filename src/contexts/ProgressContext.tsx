@@ -12,6 +12,15 @@ interface UserProgress {
     purchasedLevels: number[]; // 구매한 레벨 [2, 3, 4, 5]
     aiTutorExpiry: string | null; // ISO 날짜 또는 null
     cbtExpiry: string | null; // ISO 날짜 또는 null
+    problemStats: Record<string, { correct: number; incorrect: number; lastReviewed: number }>; // 문제별 학습 기록
+    lastStudied: { level: number; topic: string; timestamp: number } | null; // 마지막 학습 위치
+    // 카드 학습 진행 상황
+    cardProgress: Record<string, { // key: "level-topic" or "level-vocab"
+        currentIndex: number; // 현재 학습 중인 카드 인덱스
+        completedCards: number[]; // 완료한 카드 ID 목록
+        totalCards: number; // 전체 카드 수
+        lastStudied: number; // 마지막 학습 timestamp
+    }>;
 }
 
 interface ProgressContextType {
@@ -19,6 +28,7 @@ interface ProgressContextType {
     isLoading: boolean;
     completeVocabulary: (level: number, word: string) => void;
     updateLevelProgress: (level: number, progressPercent: number) => void;
+    updateProblemResult: (problemId: string, isCorrect: boolean) => void;
     completeLevel: (level: number) => void;
     canAccessLevel: (level: number) => boolean;
     isLevelLocked: (level: number) => boolean;
@@ -31,6 +41,12 @@ interface ProgressContextType {
     hasLevelAccess: (level: number) => boolean;
     getAiTutorDaysRemaining: () => number;
     getCbtDaysRemaining: () => number;
+    updateLastStudied: (level: number, topic: string) => void;
+    // 카드 학습 함수들
+    getCardProgress: (key: string) => { currentIndex: number; completedCards: number[]; totalCards: number; lastStudied: number } | null;
+    updateCardProgress: (key: string, currentIndex: number, totalCards: number) => void;
+    markCardCompleted: (key: string, cardId: number) => void;
+    resetCardProgress: (key: string) => void;
 }
 
 const defaultProgress: UserProgress = {
@@ -41,6 +57,9 @@ const defaultProgress: UserProgress = {
     purchasedLevels: [],
     aiTutorExpiry: null,
     cbtExpiry: null,
+    problemStats: {},
+    lastStudied: null,
+    cardProgress: {}, // 카드 진행 상황
 };
 
 const ProgressContext = createContext<ProgressContextType | undefined>(undefined);
@@ -75,6 +94,10 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
                     if (!parsed.purchasedLevels) parsed.purchasedLevels = [];
                     if (parsed.aiTutorExpiry === undefined) parsed.aiTutorExpiry = null;
                     if (parsed.cbtExpiry === undefined) parsed.cbtExpiry = null;
+                    if (parsed.cbtExpiry === undefined) parsed.cbtExpiry = null;
+                    if (!parsed.problemStats) parsed.problemStats = {};
+                    if (parsed.lastStudied === undefined) parsed.lastStudied = null;
+
                     setProgress(parsed);
                 } catch {
                     setProgress(defaultProgress);
@@ -111,6 +134,25 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
             };
             saveProgress(newProgress);
         }
+    };
+
+    // 문제 결과 업데이트 (SRS 로직)
+    const updateProblemResult = (problemId: string, isCorrect: boolean) => {
+        const currentStats = progress.problemStats?.[problemId] || { correct: 0, incorrect: 0, lastReviewed: 0 };
+        const newStats = {
+            correct: currentStats.correct + (isCorrect ? 1 : 0),
+            incorrect: currentStats.incorrect + (isCorrect ? 0 : 1),
+            lastReviewed: Date.now(),
+        };
+
+        const newProgress = {
+            ...progress,
+            problemStats: {
+                ...progress.problemStats,
+                [problemId]: newStats,
+            },
+        };
+        saveProgress(newProgress);
     };
 
     // 레벨 진행도 업데이트
@@ -152,76 +194,38 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
 
     // 레벨 구매 여부 확인
     const hasLevelAccess = (level: number): boolean => {
-        // 0, 1단계는 무료
-        if (level <= 1) return true;
-        // 2~5단계는 구매 필요
-        return progress.purchasedLevels.includes(level);
+        // 모든 레벨 무료 접근 가능
+        return true;
     };
 
-    // 레벨 접근 가능 여부 (구매 + 해금 상태)
+    // 레벨 접근 가능 여부
     const canAccessLevel = (level: number): boolean => {
-        // 이미 완료했거나 현재 레벨보다 낮으면 접근 가능
-        if (level <= progress.currentLevel) return true;
-
-        // 0단계와 1단계는 기본적으로 열려있음 (단, 구매 여부 정책 따름 - 현재 무료)
-        if (level <= 1) return true;
-
-        // 레벨 구매 여부 확인
-        if (!hasLevelAccess(level)) {
-            return false;
-        }
-
-        // 이전 레벨 완료 확인 (순차 해금)
-        // 2단계부터는 이전 단계 완료 필요
-        if (progress.completedLevels.includes(level - 1)) return true;
-
-        return false;
+        return true; // 모든 레벨 접근 허용
     };
 
     // 레벨 잠김 여부
     const isLevelLocked = (level: number): boolean => {
-        // 무료 레벨 (0, 1단계)는 항상 열림
-        if (level <= 1) {
-            return false;
-        }
-
-        // 유료 콘텐츠 미구매로 인한 잠김
-        if (!progress.purchasedLevels.includes(level)) {
-            return true;
-        }
-
-        // 이전 레벨 미완료로 인한 잠김
-        if (!progress.completedLevels.includes(level - 1) && level > progress.currentLevel) {
-            return true;
-        }
-
-        return false;
+        return false; // 잠금 없음
     };
 
     // AI 튜터 접근 가능 여부
     const hasAiTutorAccess = (): boolean => {
-        if (!progress.aiTutorExpiry) return false;
-        return new Date(progress.aiTutorExpiry) > new Date();
+        return false; // 준비 중
     };
 
     // CBT 접근 가능 여부
     const hasCbtAccess = (): boolean => {
-        if (!progress.cbtExpiry) return false;
-        return new Date(progress.cbtExpiry) > new Date();
+        return false; // 준비 중
     };
 
     // AI 튜터 남은 일수
     const getAiTutorDaysRemaining = (): number => {
-        if (!progress.aiTutorExpiry) return 0;
-        const diff = new Date(progress.aiTutorExpiry).getTime() - Date.now();
-        return Math.max(0, Math.ceil(diff / (24 * 60 * 60 * 1000)));
+        return 0;
     };
 
     // CBT 남은 일수
     const getCbtDaysRemaining = (): number => {
-        if (!progress.cbtExpiry) return 0;
-        const diff = new Date(progress.cbtExpiry).getTime() - Date.now();
-        return Math.max(0, Math.ceil(diff / (24 * 60 * 60 * 1000)));
+        return 0;
     };
 
     // 레벨 구매 (데모용 - 실제로는 결제 연동 필요)
@@ -267,6 +271,78 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
         saveProgress(newProgress);
     };
 
+    // 최근 학습 위치 업데이트
+    const updateLastStudied = (level: number, topic: string) => {
+        const newProgress = {
+            ...progress,
+            lastStudied: {
+                level,
+                topic,
+                timestamp: Date.now(),
+            },
+        };
+        saveProgress(newProgress);
+    };
+
+    // 카드 진행 상황 조회
+    const getCardProgress = (key: string) => {
+        return progress.cardProgress[key] || null;
+    };
+
+    // 카드 진행 상황 업데이트
+    const updateCardProgress = (key: string, currentIndex: number, totalCards: number) => {
+        const existing = progress.cardProgress[key] || { completedCards: [], lastStudied: Date.now() };
+        const newProgress = {
+            ...progress,
+            cardProgress: {
+                ...progress.cardProgress,
+                [key]: {
+                    ...existing,
+                    currentIndex,
+                    totalCards,
+                    lastStudied: Date.now(),
+                },
+            },
+        };
+        saveProgress(newProgress);
+    };
+
+    // 카드 완료 표시
+    const markCardCompleted = (key: string, cardId: number) => {
+        const existing = progress.cardProgress[key] || { currentIndex: 0, completedCards: [], totalCards: 0, lastStudied: Date.now() };
+        if (!existing.completedCards.includes(cardId)) {
+            const newProgress = {
+                ...progress,
+                cardProgress: {
+                    ...progress.cardProgress,
+                    [key]: {
+                        ...existing,
+                        completedCards: [...existing.completedCards, cardId],
+                        lastStudied: Date.now(),
+                    },
+                },
+            };
+            saveProgress(newProgress);
+        }
+    };
+
+    // 카드 진행 상황 초기화
+    const resetCardProgress = (key: string) => {
+        const newProgress = {
+            ...progress,
+            cardProgress: {
+                ...progress.cardProgress,
+                [key]: {
+                    currentIndex: 0,
+                    completedCards: [],
+                    totalCards: 0,
+                    lastStudied: Date.now(),
+                },
+            },
+        };
+        saveProgress(newProgress);
+    };
+
     return (
         <ProgressContext.Provider
             value={{
@@ -274,6 +350,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
                 isLoading,
                 completeVocabulary,
                 updateLevelProgress,
+                updateProblemResult,
                 completeLevel,
                 canAccessLevel,
                 isLevelLocked,
@@ -285,6 +362,11 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
                 hasLevelAccess,
                 getAiTutorDaysRemaining,
                 getCbtDaysRemaining,
+                updateLastStudied,
+                getCardProgress,
+                updateCardProgress,
+                markCardCompleted,
+                resetCardProgress,
             }}
         >
             {children}

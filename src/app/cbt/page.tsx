@@ -100,7 +100,7 @@ export default function CbtPage() {
         if (!authLoading && isAuthenticated && !hasCbt) {
             router.push("/premium");
         }
-    }, [authLoading, isAuthenticated, hasCbt, router]);
+    }, [authLoading, isAuthenticated, hasCbt, router, user]);
 
     const { saveSession } = useStudyHistory();
     const questions = sampleQuestions;

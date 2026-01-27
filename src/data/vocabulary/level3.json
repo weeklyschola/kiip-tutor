@@ -2722,6 +2722,206 @@
                 "빨리 회복하세요.",
                 "건강을 회복했어요."
             ]
+        },
+        {
+            "word": "면접",
+            "meaning": "Interview",
+            "pronunciation": "myeonjeop",
+            "topic": "사회생활",
+            "examples": [
+                "내일 면접이 있어요.",
+                "면접을 잘 봤어요."
+            ]
+        },
+        {
+            "word": "합격하다",
+            "meaning": "To pass",
+            "pronunciation": "hapgyeokhada",
+            "topic": "사회생활",
+            "examples": [
+                "시험에 합격했어요.",
+                "대학에 합격했어요."
+            ]
+        },
+        {
+            "word": "불합격하다",
+            "meaning": "To fail (exam)",
+            "pronunciation": "bulhapgyeokhada",
+            "topic": "사회생활",
+            "examples": [
+                "면접에서 불합격했어요.",
+                "시험에 불합격했어요."
+            ]
+        },
+        {
+            "word": "전공",
+            "meaning": "Major",
+            "pronunciation": "jeongong",
+            "topic": "교육",
+            "examples": [
+                "전공이 뭐예요?",
+                "한국학을 전공해요."
+            ]
+        },
+        {
+            "word": "경험",
+            "meaning": "Experience",
+            "pronunciation": "gyeongheom",
+            "topic": "생활",
+            "examples": [
+                "좋은 경험이었어요.",
+                "경험이 중요해요."
+            ]
+        },
+        {
+            "word": "봉사활동",
+            "meaning": "Volunteer activity",
+            "pronunciation": "bongsahwal-dong",
+            "topic": "생활",
+            "examples": [
+                "봉사활동을 해요.",
+                "주말에 봉사활동 가요."
+            ]
+        },
+        {
+            "word": "동아리",
+            "meaning": "Club",
+            "pronunciation": "dongari",
+            "topic": "교육",
+            "examples": [
+                "동아리에 가입했어요.",
+                "축구 동아리예요."
+            ]
+        },
+        {
+            "word": "축제",
+            "meaning": "Festival",
+            "pronunciation": "chukje",
+            "topic": "문화",
+            "examples": [
+                "학교 축제가 있어요.",
+                "축제가 재미있어요."
+            ]
+        },
+        {
+            "word": "참가하다",
+            "meaning": "To participate",
+            "pronunciation": "chamgahada",
+            "topic": "생활",
+            "examples": [
+                "대회에 참가했어요.",
+                "행사에 참가하세요."
+            ]
+        },
+        {
+            "word": "대회",
+            "meaning": "Competition",
+            "pronunciation": "daehoe",
+            "topic": "생활",
+            "examples": [
+                "말하기 대회가 있어요.",
+                "대회에서 1등 했어요."
+            ]
+        },
+        {
+            "word": "상",
+            "meaning": "Prize/Award",
+            "pronunciation": "sang",
+            "topic": "생활",
+            "examples": [
+                "상을 받았어요.",
+                "큰 상을 탔어요."
+            ]
+        },
+        {
+            "word": "응원하다",
+            "meaning": "To cheer",
+            "pronunciation": "eungwonhada",
+            "topic": "생활",
+            "examples": [
+                "친구를 응원해요.",
+                "열심히 응원했어요."
+            ]
+        },
+        {
+            "word": "긴장하다",
+            "meaning": "To be nervous",
+            "pronunciation": "ginjanghada",
+            "topic": "감정",
+            "examples": [
+                "너무 긴장했어요.",
+                "긴장하지 마세요."
+            ]
+        },
+        {
+            "word": "실수하다",
+            "meaning": "To make a mistake",
+            "pronunciation": "silsuhada",
+            "topic": "생활",
+            "examples": [
+                "말할 때 실수했어요.",
+                "실수해도 괜찮아요."
+            ]
+        },
+        {
+            "word": "해결하다",
+            "meaning": "To solve",
+            "pronunciation": "haegyeolhada",
+            "topic": "생활",
+            "examples": [
+                "문제를 해결했어요.",
+                "어떻게 해결해요?"
+            ]
+        },
+        {
+            "word": "포기하다",
+            "meaning": "To give up",
+            "pronunciation": "pogihada",
+            "topic": "생활",
+            "examples": [
+                "포기하지 마세요.",
+                "꿈을 포기했어요."
+            ]
+        },
+        {
+            "word": "성공하다",
+            "meaning": "To succeed",
+            "pronunciation": "seonggonghada",
+            "topic": "생활",
+            "examples": [
+                "사업에 성공했어요.",
+                "꼭 성공할 거예요."
+            ]
+        },
+        {
+            "word": "실패하다",
+            "meaning": "To fail",
+            "pronunciation": "silpaehada",
+            "topic": "생활",
+            "examples": [
+                "실패는 성공의 어머니예요.",
+                "여러 번 실패했어요."
+            ]
+        },
+        {
+            "word": "목표",
+            "meaning": "Goal",
+            "pronunciation": "mokpyo",
+            "topic": "생활",
+            "examples": [
+                "목표를 세웠어요.",
+                "목표를 달성했어요."
+            ]
+        },
+        {
+            "word": "꿈",
+            "meaning": "Dream",
+            "pronunciation": "kkum",
+            "topic": "생활",
+            "examples": [
+                "제 꿈은 의사예요.",
+                "꿈을 이뤘어요."
+            ]
         }
     ]
 }

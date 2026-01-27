@@ -17,7 +17,7 @@
             "word": "식당",
             "meaning": "Restaurant",
             "pronunciation": "sikdang",
-            "topic": "장소",
+            "topic": "식생활",
             "examples": [
                 "식당에서 밥을 먹어요.",
                 "이 식당이 맛있어요."
@@ -107,7 +107,7 @@
             "word": "카페",
             "meaning": "Cafe",
             "pronunciation": "kape",
-            "topic": "장소",
+            "topic": "식생활",
             "examples": [
                 "카페에서 커피 마셔요.",
                 "카페가 예뻐요."
@@ -227,7 +227,7 @@
             "word": "먹다",
             "meaning": "To eat",
             "pronunciation": "meokda",
-            "topic": "동사",
+            "topic": "식생활",
             "examples": [
                 "밥을 먹어요.",
                 "맛있게 먹었어요."
@@ -237,7 +237,7 @@
             "word": "마시다",
             "meaning": "To drink",
             "pronunciation": "masida",
-            "topic": "동사",
+            "topic": "식생활",
             "examples": [
                 "물을 마셔요.",
                 "커피 마셔요."
@@ -437,7 +437,7 @@
             "word": "요리하다",
             "meaning": "To cook",
             "pronunciation": "yorihada",
-            "topic": "동사",
+            "topic": "식생활",
             "examples": [
                 "요리해요.",
                 "집에서 요리해요."
@@ -667,7 +667,7 @@
             "word": "맛있다",
             "meaning": "Delicious",
             "pronunciation": "masitda",
-            "topic": "형용사",
+            "topic": "식생활",
             "examples": [
                 "불고기가 맛있어요.",
                 "정말 맛있어요."
@@ -677,7 +677,7 @@
             "word": "맛없다",
             "meaning": "Not delicious",
             "pronunciation": "maseopsda",
-            "topic": "형용사",
+            "topic": "식생활",
             "examples": [
                 "이 음식 맛없어요.",
                 "좀 맛없어요."

@@ -75,12 +75,6 @@ export function useStudyHistory() {
         setIsLoaded(true);
     }, [user]);
 
-    // 세션 변경 시 통계 재계산
-    useEffect(() => {
-        if (!isLoaded) return;
-        setStats(calculateStats(sessions));
-    }, [sessions, isLoaded]);
-
     // 통계 계산 함수
     const calculateStats = useCallback((sessions: StudySession[]): UserStats => {
         const levelStats: Record<number, LevelStat> = {};
@@ -123,6 +117,14 @@ export function useStudyHistory() {
             recentSessions: sessions.slice(-10).reverse(), // 최근 10개
         };
     }, []);
+
+    // 세션 변경 시 통계 재계산
+    useEffect(() => {
+        if (!isLoaded) return;
+        setStats(calculateStats(sessions));
+    }, [sessions, isLoaded, calculateStats]);
+
+
 
     // 새 세션 저장
     const saveSession = useCallback((session: Omit<StudySession, "id" | "date">) => {

@@ -1,92 +1,101 @@
 import { NextRequest, NextResponse } from "next/server";
-import { GoogleGenAI } from "@google/genai";
-
-// WAV 헤더 생성 함수
-function createWavHeader(dataLength: number, sampleRate = 24000, channels = 1, bitsPerSample = 16) {
-    const header = Buffer.alloc(44);
-    const byteRate = sampleRate * channels * (bitsPerSample / 8);
-    const blockAlign = channels * (bitsPerSample / 8);
-
-    header.write("RIFF", 0);
-    header.writeUInt32LE(36 + dataLength, 4);
-    header.write("WAVE", 8);
-    header.write("fmt ", 12);
-    header.writeUInt32LE(16, 16);
-    header.writeUInt16LE(1, 20);
-    header.writeUInt16LE(channels, 22);
-    header.writeUInt32LE(sampleRate, 24);
-    header.writeUInt32LE(byteRate, 28);
-    header.writeUInt16LE(blockAlign, 32);
-    header.writeUInt16LE(bitsPerSample, 34);
-    header.write("data", 36);
-    header.writeUInt32LE(dataLength, 40);
-
-    return header;
-}
+import { GoogleAuth } from "google-auth-library";
+import path from "path";
+import { getSpeakerVoice } from "@/lib/voiceMapping";
 
 export async function POST(req: NextRequest) {
     try {
-        const { text, premium = false, voice = "Kore" } = await req.json();
+        const { text, speaker } = await req.json();
 
         if (!text) {
             return NextResponse.json({ error: "Text is required" }, { status: 400 });
         }
 
-        // 프리미엄 사용자만 Gemini TTS 사용 가능
-        if (!premium) {
-            // 무료 사용자는 클라이언트에서 Web Speech API 사용하도록 안내
-            return NextResponse.json(
-                { error: "Premium feature", useBrowserTTS: true },
-                { status: 402 }
-            );
-        }
+        // 화자에 따른 음성 선택
+        const voice = speaker ? getSpeakerVoice(speaker) : "ko-KR-Neural2-A";
 
-        // 프리미엄: Gemini 2.5 Flash TTS
-        const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
+        console.log(`[TTS] Text: "${text.substring(0, 20)}...", Speaker: ${speaker}, Voice: ${voice}`);
 
-        if (!apiKey) {
+        // Service Account 인증
+        const keyFilePath = path.join(process.cwd(), "service-account.json");
+        const auth = new GoogleAuth({
+            keyFile: keyFilePath,
+            scopes: ["https://www.googleapis.com/auth/cloud-platform"],
+        });
+
+        const client = await auth.getClient();
+        const accessToken = await client.getAccessToken();
+
+        if (!accessToken.token) {
+            console.error("Failed to get access token");
             return NextResponse.json(
-                { error: "TTS API not configured", useBrowserTTS: true },
+                { error: "Authentication failed", useBrowserTTS: true },
                 { status: 500 }
             );
         }
 
-        const ai = new GoogleGenAI({ apiKey });
+        // Cloud Text-to-Speech API 호출
+        const url = "https://texttospeech.googleapis.com/v1/text:synthesize";
 
-        const response = await ai.models.generateContent({
-            model: "gemini-2.5-flash-preview-tts",
-            contents: [{ parts: [{ text }] }],
-            config: {
-                responseModalities: ["AUDIO"],
-                speechConfig: {
-                    voiceConfig: {
-                        prebuiltVoiceConfig: { voiceName: voice },
-                    },
-                },
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+                Authorization: `Bearer ${accessToken.token}`,
+                "Content-Type": "application/json",
             },
+            body: JSON.stringify({
+                input: { text },
+                voice: {
+                    languageCode: "ko-KR",
+                    name: voice,
+                },
+                audioConfig: {
+                    audioEncoding: "MP3",
+                    pitch: 0,
+                    speakingRate: 0.9,
+                },
+            }),
         });
 
-        const data = response.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.error("=== Cloud TTS Error ===");
+            console.error("Status:", response.status);
+            console.error("Response:", errorText);
+            console.error("======================");
+            return NextResponse.json(
+                { error: "TTS generation failed", useBrowserTTS: true },
+                { status: 500 }
+            );
+        }
 
-        if (!data) {
+        const data = await response.json();
+        const audioContent = data.audioContent;
+
+        if (!audioContent) {
+            console.error("No audio data in response");
             return NextResponse.json(
                 { error: "No audio data", useBrowserTTS: true },
                 { status: 500 }
             );
         }
 
-        const pcmBuffer = Buffer.from(data, "base64");
-        const wavHeader = createWavHeader(pcmBuffer.length);
-        const wavBuffer = Buffer.concat([wavHeader, pcmBuffer]);
+        // Base64 디코딩
+        const audioBuffer = Buffer.from(audioContent, "base64");
 
-        return new NextResponse(wavBuffer, {
+        // MP3 오디오 반환
+        return new NextResponse(audioBuffer, {
             headers: {
-                "Content-Type": "audio/wav",
-                "Content-Length": wavBuffer.length.toString(),
+                "Content-Type": "audio/mpeg",
+                "Content-Length": audioBuffer.length.toString(),
             },
         });
     } catch (error) {
-        console.error("TTS Server Error:", error);
+        console.error("=== TTS Exception ===");
+        console.error("Type:", error instanceof Error ? error.constructor.name : typeof error);
+        console.error("Message:", error instanceof Error ? error.message : String(error));
+        console.error("Stack:", error instanceof Error ? error.stack : "N/A");
+        console.error("====================");
         return NextResponse.json(
             { error: "TTS generation failed", useBrowserTTS: true },
             { status: 500 }

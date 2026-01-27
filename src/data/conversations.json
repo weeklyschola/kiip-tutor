@@ -1143,6 +1143,2423 @@
                 "~에 대해 설명하다"
             ],
             "cultureTip": "귀화 면접에서는 한국의 역사, 정치 제도, 국가 상징, 국민의 권리와 의무 등에 대한 질문이 나옵니다. 사회통합프로그램 5단계를 이수하면 면접이 면제됩니다."
+        },
+        {
+            "id": 10,
+            "level": 0,
+            "title": "편의점에서",
+            "category": "쇼핑",
+            "icon": "🏪",
+            "description": "편의점에서 물건 사기",
+            "dialogue": [
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "어서 오세요.",
+                    "avatar": "🧑‍🍳",
+                    "translation": "Welcome."
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "안녕하세요. 이 우유 얼마예요?",
+                    "avatar": "👤",
+                    "translation": "Hello. How much is this milk?"
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "1,500원이에요.",
+                    "avatar": "🧑‍🍳",
+                    "translation": "It's 1,500 won."
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "네, 이거 주세요. 봉투 있어요?",
+                    "avatar": "👤",
+                    "translation": "Okay, I'll take this. Do you have a bag?"
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "네, 20원이에요. 필요하세요?",
+                    "avatar": "🧑‍🍳",
+                    "translation": "Yes, it's 20 won. Do you need one?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "아니요, 괜찮아요. 여기 카드요.",
+                    "avatar": "👤",
+                    "translation": "No, that's okay. Here's my card."
+                }
+            ],
+            "vocabulary": [
+                "편의점",
+                "우유",
+                "얼마",
+                "봉투",
+                "카드"
+            ],
+            "grammar": [
+                "~이에요/예요",
+                "주세요",
+                "있어요/없어요"
+            ],
+            "cultureTip": "한국 편의점은 24시간 열려 있는 곳이 많습니다. 교통카드를 충전하거나 택배를 보낼 수도 있습니다."
+        },
+        {
+            "id": 11,
+            "level": 0,
+            "title": "길 묻기",
+            "category": "길찾기",
+            "icon": "🗺️",
+            "description": "지하철역 위치 물어보기",
+            "dialogue": [
+                {
+                    "speaker": "행인 (나)",
+                    "role": "user",
+                    "text": "저기요, 실례합니다.",
+                    "avatar": "👤",
+                    "translation": "Excuse me."
+                },
+                {
+                    "speaker": "행인",
+                    "role": "other",
+                    "text": "네?",
+                    "avatar": "👨",
+                    "translation": "Yes?"
+                },
+                {
+                    "speaker": "행인 (나)",
+                    "role": "user",
+                    "text": "지하철역이 어디에 있어요?",
+                    "avatar": "👤",
+                    "translation": "Where is the subway station?"
+                },
+                {
+                    "speaker": "행인",
+                    "role": "other",
+                    "text": "저기 편의점 보이죠? 거기 옆에 있어요.",
+                    "avatar": "👨",
+                    "translation": "Do you see that convenience store? It's next to it."
+                },
+                {
+                    "speaker": "행인 (나)",
+                    "role": "user",
+                    "text": "아, 네. 감사합니다.",
+                    "avatar": "👤",
+                    "translation": "Ah, yes. Thank you."
+                }
+            ],
+            "vocabulary": [
+                "저기요",
+                "실례합니다",
+                "지하철역",
+                "옆",
+                "어디"
+            ],
+            "grammar": [
+                "~이/가 어디에 있어요?",
+                "저기",
+                "거기"
+            ],
+            "cultureTip": "길을 물어볼 때는 '저기요, 실례합니다'라고 먼저 말하는 것이 예의입니다."
+        },
+        {
+            "id": 12,
+            "level": 0,
+            "title": "식당에서 주문하기",
+            "category": "식사",
+            "icon": "🍱",
+            "description": "음식 주문하고 계산하기",
+            "dialogue": [
+                {
+                    "speaker": "종업원",
+                    "role": "other",
+                    "text": "어서 오세요. 몇 분이세요?",
+                    "avatar": "👩‍🍳",
+                    "translation": "Welcome. How many people?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "두 명이에요.",
+                    "avatar": "👤",
+                    "translation": "Two people."
+                },
+                {
+                    "speaker": "종업원",
+                    "role": "other",
+                    "text": "이쪽으로 앉으세요. 뭐 드릴까요?",
+                    "avatar": "👩‍🍳",
+                    "translation": "Please sit here. What would you like?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "불고기 2인분 주세요.",
+                    "avatar": "👤",
+                    "translation": "Please give us 2 servings of Bulgogi."
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "그리고 물 좀 주세요.",
+                    "avatar": "👤",
+                    "translation": "And please give us some water."
+                },
+                {
+                    "speaker": "종업원",
+                    "role": "other",
+                    "text": "네, 알겠습니다.",
+                    "avatar": "👩‍🍳",
+                    "translation": "Yes, understood."
+                }
+            ],
+            "vocabulary": [
+                "몇 분",
+                "명",
+                "앉으세요",
+                "인분",
+                "물"
+            ],
+            "grammar": [
+                "(수량) + 명/개",
+                "~ 주세요",
+                "이쪽/저쪽"
+            ],
+            "cultureTip": "한국 식당에서는 물이 무료입니다. 반찬이 부족하면 더 달라고 할 수 있습니다."
+        },
+        {
+            "id": 13,
+            "level": 1,
+            "title": "택시 타기",
+            "category": "교통",
+            "icon": "🚕",
+            "description": "택시 기사님께 목적지 말하기",
+            "dialogue": [
+                {
+                    "speaker": "기사님",
+                    "role": "other",
+                    "text": "어서 오세요. 어디로 모실까요?",
+                    "avatar": "🚕",
+                    "translation": "Welcome. Where shall I take you?"
+                },
+                {
+                    "speaker": "승객 (나)",
+                    "role": "user",
+                    "text": "서울역으로 가 주세요.",
+                    "avatar": "👤",
+                    "translation": "Please go to Seoul Station."
+                },
+                {
+                    "speaker": "기사님",
+                    "role": "other",
+                    "text": "네, 알겠습니다. 급하신가요?",
+                    "avatar": "🚕",
+                    "translation": "Okay. Are you in a hurry?"
+                },
+                {
+                    "speaker": "승객 (나)",
+                    "role": "user",
+                    "text": "네, 조금 빨리 가 주세요.",
+                    "avatar": "👤",
+                    "translation": "Yes, please go a bit fast."
+                },
+                {
+                    "speaker": "기사님",
+                    "role": "other",
+                    "text": "네, 알겠습니다. 안전벨트 매 주세요.",
+                    "avatar": "🚕",
+                    "translation": "Okay. Please fasten your seatbelt."
+                },
+                {
+                    "speaker": "승객 (나)",
+                    "role": "user",
+                    "text": "여기서 내려 주세요. 얼마예요?",
+                    "avatar": "👤",
+                    "translation": "Please let me off here. How much is it?"
+                },
+                {
+                    "speaker": "기사님",
+                    "role": "other",
+                    "text": "8,000원입니다.",
+                    "avatar": "🚕",
+                    "translation": "It is 8,000 won."
+                }
+            ],
+            "vocabulary": [
+                "어디",
+                "서울역",
+                "빨리",
+                "안전벨트",
+                "여기서"
+            ],
+            "grammar": [
+                "~으로/로 가 주세요",
+                "~(으)세요",
+                "~어/아 주세요"
+            ],
+            "cultureTip": "한국 택시는 '빈차' 표시가 빨간색으로 켜져 있으면 탈 수 있습니다. 택시비는 카드로 계산할 수 있습니다."
+        },
+        {
+            "id": 14,
+            "level": 1,
+            "title": "날씨 묻기",
+            "category": "생활",
+            "icon": "☀️",
+            "description": "오늘 날씨에 대해 이야기하기",
+            "dialogue": [
+                {
+                    "speaker": "친구",
+                    "role": "other",
+                    "text": "오늘 날씨 어때요?",
+                    "avatar": "👩",
+                    "translation": "How's the weather today?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "오늘 정말 추워요. 눈이 올 것 같아요.",
+                    "avatar": "👤",
+                    "translation": "It's really cold today. I think it's going to snow."
+                },
+                {
+                    "speaker": "친구",
+                    "role": "other",
+                    "text": "그래요? 내일도 추울까요?",
+                    "avatar": "👩",
+                    "translation": "Really? Will it be cold tomorrow too?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "네, 내일은 더 춥대요. 따뜻하게 입으세요.",
+                    "avatar": "👤",
+                    "translation": "Yes, they say it will be colder tomorrow. Please dress warmly."
+                },
+                {
+                    "speaker": "친구",
+                    "role": "other",
+                    "text": "알겠어요. 감기 조심하세요.",
+                    "avatar": "👩",
+                    "translation": "Okay. Be careful not to catch a cold."
+                }
+            ],
+            "vocabulary": [
+                "날씨",
+                "춥다",
+                "눈",
+                "내일",
+                "따뜻하게",
+                "감기"
+            ],
+            "grammar": [
+                "~을 것 같아요",
+                "~ㄹ까요?",
+                "~대요"
+            ],
+            "cultureTip": "한국은 사계절이 뚜렷합니다. 겨울에는 춥고 눈이 오며, 여름에는 덥고 비가 많이 옵니다."
+        },
+        {
+            "id": 15,
+            "level": 1,
+            "title": "주말 계획",
+            "category": "생활",
+            "icon": "📅",
+            "description": "주말에 할 일 이야기하기",
+            "dialogue": [
+                {
+                    "speaker": "동료",
+                    "role": "other",
+                    "text": "주말에 뭐 할 거예요?",
+                    "avatar": "👨",
+                    "translation": "What are you going to do this weekend?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "저는 친구랑 영화를 보러 갈 거예요.",
+                    "avatar": "👤",
+                    "translation": "I'm going to see a movie with a friend."
+                },
+                {
+                    "speaker": "동료",
+                    "role": "other",
+                    "text": "오, 무슨 영화요?",
+                    "avatar": "👨",
+                    "translation": "Oh, what movie?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "요즘 인기 있는 액션 영화요. 철수 씨는요?",
+                    "avatar": "👤",
+                    "translation": "A popular action movie these days. How about you, Cheolsu?"
+                },
+                {
+                    "speaker": "동료",
+                    "role": "other",
+                    "text": "저는 집에서 쉴 거예요. 요즘 너무 피곤해요.",
+                    "avatar": "👨",
+                    "translation": "I'm going to rest at home. I'm too tired these days."
+                }
+            ],
+            "vocabulary": [
+                "주말",
+                "영화",
+                "인기",
+                "액션",
+                "쉬다",
+                "피곤하다"
+            ],
+            "grammar": [
+                "~(으)ㄹ 거예요",
+                "~(으)러 가다",
+                "무슨 ~"
+            ],
+            "cultureTip": "한국 사람들은 주말에 등산이나 영화 관람을 자주 합니다."
+        },
+        {
+            "id": 16,
+            "level": 1,
+            "title": "가족 소개",
+            "category": "가족",
+            "icon": "👨‍👩‍👧‍👦",
+            "description": "가족에 대해 묻고 답하기",
+            "dialogue": [
+                {
+                    "speaker": "친구",
+                    "role": "other",
+                    "text": "가족이 몇 명이에요?",
+                    "avatar": "👩",
+                    "translation": "How many people are in your family?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "모두 네 명이에요. 아버지, 어머니, 남동생, 저예요.",
+                    "avatar": "👤",
+                    "translation": "There are four in total. Father, mother, younger brother, and me."
+                },
+                {
+                    "speaker": "친구",
+                    "role": "other",
+                    "text": "부모님은 어디에 사세요?",
+                    "avatar": "👩",
+                    "translation": "Where do your parents live?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "고향에 사세요. 남동생은 대학생이에요.",
+                    "avatar": "👤",
+                    "translation": "They live in my hometown. My younger brother is a university student."
+                }
+            ],
+            "vocabulary": [
+                "가족",
+                "아버지",
+                "어머니",
+                "남동생",
+                "고향",
+                "살다"
+            ],
+            "grammar": [
+                "(수량) + 명",
+                "~(으)세요 (Honorific)",
+                "모두"
+            ],
+            "cultureTip": "한국에서는 가족 관계를 중요하게 생각합니다. 웃어른에게는 존댓말을 써야 합니다."
+        },
+        {
+            "id": 17,
+            "level": 1,
+            "title": "전화 통화",
+            "category": "통신",
+            "icon": "📞",
+            "description": "전화 걸고 받기",
+            "dialogue": [
+                {
+                    "speaker": "전화 (상대)",
+                    "role": "other",
+                    "text": "여보세요? 거기 김 선생님 댁이죠?",
+                    "avatar": "📱",
+                    "translation": "Hello? Is this Mr. Kim's house?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "아닌데요. 잘못 거셨습니다.",
+                    "avatar": "👤",
+                    "translation": "No. You have the wrong number."
+                },
+                {
+                    "speaker": "전화 (상대)",
+                    "role": "other",
+                    "text": "아, 죄송합니다.",
+                    "avatar": "📱",
+                    "translation": "Oh, I'm sorry."
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "네, 끊겠습니다.",
+                    "avatar": "👤",
+                    "translation": "Yes, I'm hanging up."
+                }
+            ],
+            "vocabulary": [
+                "여보세요",
+                "댁 (House honorific)",
+                "잘못",
+                "걸다",
+                "끊다"
+            ],
+            "grammar": [
+                "~지요?",
+                "~았/었습니다",
+                "~겠~ (Intention)"
+            ],
+            "cultureTip": "전화를 받을 때는 '여보세요'라고 말합니다. 잘못 걸려온 전화에는 정중하게 아니라고 말합니다."
+        },
+        {
+            "id": 18,
+            "level": 1,
+            "title": "시간 묻기",
+            "category": "생활",
+            "icon": "⏰",
+            "description": "지금 몇 시인지 묻기",
+            "dialogue": [
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "지금 몇 시예요?",
+                    "avatar": "👤",
+                    "translation": "What time is it now?"
+                },
+                {
+                    "speaker": "행인",
+                    "role": "other",
+                    "text": "3시 30분이에요.",
+                    "avatar": "👨",
+                    "translation": "It is 3:30."
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "아, 벌써 시간이 그렇게 됐어요? 수업이 몇 시에 시작해요?",
+                    "avatar": "👤",
+                    "translation": "Oh, is it already that time? What time does class start?"
+                },
+                {
+                    "speaker": "행인",
+                    "role": "other",
+                    "text": "4시에 시작해요. 30분 남았어요.",
+                    "avatar": "👨",
+                    "translation": "It starts at 4. There's 30 minutes left."
+                }
+            ],
+            "vocabulary": [
+                "지금",
+                "몇 시",
+                "분",
+                "벌써",
+                "시작하다",
+                "남다"
+            ],
+            "grammar": [
+                "(시간) + 에",
+                "(숫자) + 시/분",
+                "~게 되다"
+            ],
+            "cultureTip": "한국/고유어 숫자를 구분해서 씁니다. 시는 고유어(한, 두, 세...), 분은 한자어(일, 이, 삼...)를 씁니다."
+        },
+        {
+            "id": 19,
+            "level": 2,
+            "title": "우체국에서",
+            "category": "공공기관",
+            "icon": "📮",
+            "description": "소포 보내기",
+            "dialogue": [
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "어서 오세요. 우편물 보내시나요?",
+                    "avatar": "🧑‍💼",
+                    "translation": "Welcome. Are you sending mail?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "네, 이 소포를 베트남으로 보내고 싶어요.",
+                    "avatar": "👤",
+                    "translation": "Yes, I want to send this parcel to Vietnam."
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "안에 뭐가 들어 있어요?",
+                    "avatar": "🧑‍💼",
+                    "translation": "What's inside?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "옷이랑 화장품이에요. 음식은 없어요.",
+                    "avatar": "👤",
+                    "translation": "Clothes and cosmetics. No food."
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "배편으로 보내실래요, 항공편으로 보내실래요?",
+                    "avatar": "🧑‍💼",
+                    "translation": "Will you send it by ship or by air?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "항공편(EMS)은 며칠 걸려요?",
+                    "avatar": "👤",
+                    "translation": "How many days does EMS take?"
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "3일에서 5일 정도 걸려요.",
+                    "avatar": "🧑‍💼",
+                    "translation": "It takes about 3 to 5 days."
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "그럼 항공편으로 해 주세요.",
+                    "avatar": "👤",
+                    "translation": "Then please send it by air."
+                }
+            ],
+            "vocabulary": [
+                "우체국",
+                "소포",
+                "보내다",
+                "배편",
+                "항공편",
+                "걸리다"
+            ],
+            "grammar": [
+                "(기간) + 걸리다",
+                "~(으)로 보내다",
+                "~(으)ㄹ래요"
+            ],
+            "cultureTip": "우체국에서는 택배 상자를 크기별로 살 수 있습니다."
+        },
+        {
+            "id": 20,
+            "level": 2,
+            "title": "외국인 등록",
+            "category": "비자",
+            "icon": "🛂",
+            "description": "외국인등록증 만들기",
+            "dialogue": [
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "신청서 작성하셨어요?",
+                    "avatar": "👩‍💼",
+                    "translation": "Did you fill out the application form?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "네, 여기요. 사진도 가져왔어요.",
+                    "avatar": "👤",
+                    "translation": "Yes, here. I brought photos too."
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "여권이랑 수수료 3만원 주세요.",
+                    "avatar": "👩‍💼",
+                    "translation": "Please give me your passport and the 30,000 won fee."
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "여기 있습니다. 등록증은 언제 나와요?",
+                    "avatar": "👤",
+                    "translation": "Here it is. When will the registration card be ready?"
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "2주 후에 오세요. 우편으로 받으시겠어요?",
+                    "avatar": "👩‍💼",
+                    "translation": "Come back in 2 weeks. Would you like to receive it by mail?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "네, 우편으로 받을게요.",
+                    "avatar": "👤",
+                    "translation": "Yes, I'll receive it by mail."
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "그럼 등기 비용 3,000원 추가됩니다. 지문 등록해 주세요.",
+                    "avatar": "👩‍💼",
+                    "translation": "Then there's an additional 3,000 won for registered mail. Please register your fingerprints."
+                }
+            ],
+            "vocabulary": [
+                "신청서",
+                "작성하다",
+                "사진",
+                "수수료",
+                "우편",
+                "지문"
+            ],
+            "grammar": [
+                "~(으)시겠어요?",
+                "~(으)ㄹ게요",
+                "~(으)ㄴ 후에"
+            ],
+            "cultureTip": "한국에 90일 이상 체류하는 외국인은 반드시 외국인 등록을 해야 합니다."
+        },
+        {
+            "id": 21,
+            "level": 2,
+            "title": "미용실 가기",
+            "category": "생활",
+            "icon": "💇",
+            "description": "머리 자르기",
+            "dialogue": [
+                {
+                    "speaker": "미용사",
+                    "role": "other",
+                    "text": "어서 오세요. 예약하셨나요?",
+                    "avatar": "💇",
+                    "translation": "Welcome. Did you make a reservation?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "아니요. 지금 머리 자를 수 있어요?",
+                    "avatar": "👤",
+                    "translation": "No. Can I get a haircut now?"
+                },
+                {
+                    "speaker": "미용사",
+                    "role": "other",
+                    "text": "네, 잠시만 기다리세요. 이쪽으로 앉으세요.",
+                    "avatar": "💇",
+                    "translation": "Yes, please wait a moment. Sit over here."
+                },
+                {
+                    "speaker": "미용사",
+                    "role": "other",
+                    "text": "어떻게 해 드릴까요?",
+                    "avatar": "💇",
+                    "translation": "How should I do it?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "조금만 다듬어 주세요. 너무 짧지 않게 해 주세요.",
+                    "avatar": "👤",
+                    "translation": "Just trim it a little. Please don't make it too short."
+                },
+                {
+                    "speaker": "미용사",
+                    "role": "other",
+                    "text": "네, 앞머리는 자를까요?",
+                    "avatar": "💇",
+                    "translation": "Okay. Shall I cut your bangs?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "네, 조금만 잘라 주세요.",
+                    "avatar": "👤",
+                    "translation": "Yes, please cut them just a little."
+                }
+            ],
+            "vocabulary": [
+                "예약",
+                "자르다",
+                "다듬다",
+                "짧다",
+                "앞머리"
+            ],
+            "grammar": [
+                "~게 해 주세요",
+                "~지 않게",
+                "~(으)ㄹ까요?"
+            ],
+            "cultureTip": "한국 미용실에서는 머리를 자른 후에 샴푸를 해 주는 곳이 많습니다."
+        },
+        {
+            "id": 22,
+            "level": 2,
+            "title": "도서관 이용",
+            "category": "공공기관",
+            "icon": "📚",
+            "description": "책 빌리기",
+            "dialogue": [
+                {
+                    "speaker": "사서",
+                    "role": "other",
+                    "text": "무엇을 도와드릴까요?",
+                    "avatar": "🧑‍🏫",
+                    "translation": "How can I help you?"
+                },
+                {
+                    "speaker": "이용자 (나)",
+                    "role": "user",
+                    "text": "이 책을 빌리고 싶어요. 회원증 만들어야 해요?",
+                    "avatar": "👤",
+                    "translation": "I want to borrow this book. Do I need to make a membership card?"
+                },
+                {
+                    "speaker": "사서",
+                    "role": "other",
+                    "text": "네, 신분증 보여주세요. 주소가 어디세요?",
+                    "avatar": "🧑‍🏫",
+                    "translation": "Yes, please show me your ID. What is your address?"
+                },
+                {
+                    "speaker": "이용자 (나)",
+                    "role": "user",
+                    "text": "여기 근처에 살아요. 외국인등록증 여기 있어요.",
+                    "avatar": "👤",
+                    "translation": "I live nearby. Here is my alien registration card."
+                },
+                {
+                    "speaker": "사서",
+                    "role": "other",
+                    "text": "네, 되었습니다. 책은 2주 동안 빌릴 수 있어요.",
+                    "avatar": "🧑‍🏫",
+                    "translation": "Okay, done. You can borrow books for 2 weeks."
+                },
+                {
+                    "speaker": "이용자 (나)",
+                    "role": "user",
+                    "text": "연체하면 어떻게 돼요?",
+                    "avatar": "👤",
+                    "translation": "What happens if I'm overdue?"
+                },
+                {
+                    "speaker": "사서",
+                    "role": "other",
+                    "text": "연체료는 없지만, 연체한 날짜만큼 대출이 정지됩니다.",
+                    "avatar": "🧑‍🏫",
+                    "translation": "There is no late fee, but borrowing is suspended for as many days as you are late."
+                }
+            ],
+            "vocabulary": [
+                "빌리다",
+                "회원증",
+                "주소",
+                "근처",
+                "연체",
+                "정지"
+            ],
+            "grammar": [
+                "~야 하다",
+                "~(으)면 어떻게 되다",
+                "~동안"
+            ],
+            "cultureTip": "한국 도서관은 대부분 무료입니다. 열람실에서 공부할 수도 있습니다."
+        },
+        {
+            "id": 23,
+            "level": 2,
+            "title": "주민센터 방문",
+            "category": "공공기관",
+            "icon": "🏢",
+            "description": "등본 발급받기",
+            "dialogue": [
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "어떤 업무 때문에 오셨어요?",
+                    "avatar": "👩‍💼",
+                    "translation": "What business did you come for?"
+                },
+                {
+                    "speaker": "주민 (나)",
+                    "role": "user",
+                    "text": "주민등록등본을 떼러 왔어요.",
+                    "avatar": "👤",
+                    "translation": "I came to get a copy of my resident registration."
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "신분증 주세요. 본인이신가요?",
+                    "avatar": "👩‍💼",
+                    "translation": "Please give me your ID. Is it for yourself?"
+                },
+                {
+                    "speaker": "주민 (나)",
+                    "role": "user",
+                    "text": "네, 맞아요. 가족 모두 포함해 주세요.",
+                    "avatar": "👤",
+                    "translation": "Yes, that's right. Please include all family members."
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "주민등록번호 뒷자리 공개할까요?",
+                    "avatar": "👩‍💼",
+                    "translation": "Should I reveal the last digits of the resident registration number?"
+                },
+                {
+                    "speaker": "주민 (나)",
+                    "role": "user",
+                    "text": "네, 공개해 주세요. 은행에 제출할 거예요.",
+                    "avatar": "👤",
+                    "translation": "Yes, please reveal them. I'm going to submit it to the bank."
+                },
+                {
+                    "speaker": "직원",
+                    "role": "other",
+                    "text": "여기 있습니다. 400원입니다.",
+                    "avatar": "👩‍💼",
+                    "translation": "Here it is. It's 400 won."
+                }
+            ],
+            "vocabulary": [
+                "주민센터",
+                "등본",
+                "떼다",
+                "본인",
+                "공개",
+                "제출하다"
+            ],
+            "grammar": [
+                "~(으)러 오다/가다",
+                "~아/어/여 주세요",
+                "~(으)ㄹ 거예요"
+            ],
+            "cultureTip": "요즘은 인터넷(정부24)이나 무인민원발급기에서도 서류를 발급받을 수 있습니다."
+        },
+        {
+            "id": 24,
+            "level": 2,
+            "title": "인터넷 가입",
+            "category": "통신",
+            "icon": "🌐",
+            "description": "인터넷 설치 신청하기",
+            "dialogue": [
+                {
+                    "speaker": "상담원",
+                    "role": "other",
+                    "text": "고객님, 인터넷 가입 상담 원하세요?",
+                    "avatar": "🎧",
+                    "translation": "Customer, do you want a consultation for internet subscription?"
+                },
+                {
+                    "speaker": "고객 (나)",
+                    "role": "user",
+                    "text": "네, 집에 인터넷을 설치하고 싶어요.",
+                    "avatar": "👤",
+                    "translation": "Yes, I want to install internet at home."
+                },
+                {
+                    "speaker": "상담원",
+                    "role": "other",
+                    "text": "약정 기간은 3년인데 괜찮으세요? 요금이 더 저렴해요.",
+                    "avatar": "🎧",
+                    "translation": "The contract period is 3 years, is that okay? The rate is cheaper."
+                },
+                {
+                    "speaker": "고객 (나)",
+                    "role": "user",
+                    "text": "1년 약정은 없어요? 제가 한국에 얼마나 있을지 몰라요.",
+                    "avatar": "👤",
+                    "translation": "Is there no 1-year contract? I don't know how long I'll be in Korea."
+                },
+                {
+                    "speaker": "상담원",
+                    "role": "other",
+                    "text": "1년 약정도 가능하지만 요금이 조금 비쌉니다. 월 3만원이에요.",
+                    "avatar": "🎧",
+                    "translation": "A 1-year contract is possible, but the rate is a bit expensive. It's 30,000 won per month."
+                },
+                {
+                    "speaker": "고객 (나)",
+                    "role": "user",
+                    "text": "그걸로 할게요. 설치는 언제 돼요?",
+                    "avatar": "👤",
+                    "translation": "I'll take that. When can it be installed?"
+                },
+                {
+                    "speaker": "상담원",
+                    "role": "other",
+                    "text": "이번 주 금요일 오후에 방문 가능합니다.",
+                    "avatar": "🎧",
+                    "translation": "We can visit this Friday afternoon."
+                }
+            ],
+            "vocabulary": [
+                "가입",
+                "설치",
+                "약정",
+                "기간",
+                "요금",
+                "방문"
+            ],
+            "grammar": [
+                "~는데 괜찮으세요?",
+                "~(으)ㄹ지 모르다",
+                "~만"
+            ],
+            "cultureTip": "한국은 인터넷 속도가 매우 빠릅니다. 휴대폰과 결합하면 요금을 할인받을 수 있습니다."
+        },
+        {
+            "id": 25,
+            "level": 2,
+            "title": "A/S 센터",
+            "category": "생활",
+            "icon": "🔧",
+            "description": "고장 난 물건 수리하기",
+            "dialogue": [
+                {
+                    "speaker": "수리기사",
+                    "role": "other",
+                    "text": "어디가 고장 났습니까?",
+                    "avatar": "🔧",
+                    "translation": "Where is it broken?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "휴대폰 전원이 안 켜져요. 어젯밤에 떨어뜨렸어요.",
+                    "avatar": "👤",
+                    "translation": "My phone won't turn on. I dropped it last night."
+                },
+                {
+                    "speaker": "수리기사",
+                    "role": "other",
+                    "text": "액정이 깨졌네요. 안에 부품이 망가진 것 같습니다.",
+                    "avatar": "🔧",
+                    "translation": "The screen is cracked. It seems the parts inside are damaged."
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "수리비가 많이 나올까요?",
+                    "avatar": "👤",
+                    "translation": "Will the repair cost be high?"
+                },
+                {
+                    "speaker": "수리기사",
+                    "role": "other",
+                    "text": "검사해 봐야 알겠지만, 10만원 정도 예상됩니다.",
+                    "avatar": "🔧",
+                    "translation": "I have to check, but I expect about 100,000 won."
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "너무 비싸네요. 시간은 얼마나 걸려요?",
+                    "avatar": "👤",
+                    "translation": "That's too expensive. How long will it take?"
+                },
+                {
+                    "speaker": "수리기사",
+                    "role": "other",
+                    "text": "1시간 정도 기다리셔야 합니다.",
+                    "avatar": "🔧",
+                    "translation": "You have to wait about 1 hour."
+                }
+            ],
+            "vocabulary": [
+                "고장",
+                "전원",
+                "떨어뜨리다",
+                "액정",
+                "부품",
+                "수리비"
+            ],
+            "grammar": [
+                "~아/어/여지다 (Passive)",
+                "~(으)ㄴ 것 같다",
+                "~아야/어야 하다"
+            ],
+            "cultureTip": "대기업 제품은 서비스 센터가 많아 수리하기 편리합니다. 보증 기간(보통 1년) 내에는 무상 수리가 가능합니다."
+        },
+        {
+            "id": 26,
+            "level": 2,
+            "title": "쓰레기 버리기",
+            "category": "생활",
+            "icon": "♻️",
+            "description": "분리수거 방법 묻기",
+            "dialogue": [
+                {
+                    "speaker": "이웃",
+                    "role": "other",
+                    "text": "이 쓰레기는 여기에 버리면 안 돼요.",
+                    "avatar": "👵",
+                    "translation": "You shouldn't throw this trash here."
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "아, 그래요? 죄송합니다. 어디에 버려야 해요?",
+                    "avatar": "👤",
+                    "translation": "Oh, really? I'm sorry. Where should I throw it?"
+                },
+                {
+                    "speaker": "이웃",
+                    "role": "other",
+                    "text": "이건 종량제 봉투에 담아서 버려야 해요. 저 하얀 봉투요.",
+                    "avatar": "👵",
+                    "translation": "You have to put this in a volume-rate bag and throw it away. That white bag."
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "음식물 쓰레기는 어떻게 해요?",
+                    "avatar": "👤",
+                    "translation": "What do I do with food waste?"
+                },
+                {
+                    "speaker": "이웃",
+                    "role": "other",
+                    "text": "음식물은 노란색 봉투나 전용 통에 넣어야 해요. 물기를 짜고요.",
+                    "avatar": "👵",
+                    "translation": "Food waste goes in the yellow bag or designated bin. Squeeze out the water."
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "플라스틱이랑 캔은요?",
+                    "avatar": "👤",
+                    "translation": "What about plastic and cans?"
+                },
+                {
+                    "speaker": "이웃",
+                    "role": "other",
+                    "text": "그건 투명한 봉투에 넣어서 재활용하는 날에 내놓으세요.",
+                    "avatar": "👵",
+                    "translation": "Put them in a transparent bag and put them out on recycling day."
+                }
+            ],
+            "vocabulary": [
+                "쓰레기",
+                "버리다",
+                "종량제 봉투",
+                "음식물",
+                "재활용",
+                "분리수거"
+            ],
+            "grammar": [
+                "~(으)면 안 되다",
+                "~아/어/여야 하다",
+                "~는 날"
+            ],
+            "cultureTip": "한국은 쓰레기 분리배출 제도가 엄격합니다. 종량제 봉투는 마트나 편의점에서 살 수 있습니다."
+        },
+        {
+            "id": 27,
+            "level": 3,
+            "title": "면접 보기",
+            "category": "직장",
+            "icon": "👔",
+            "description": "회사 면접 보기",
+            "dialogue": [
+                {
+                    "speaker": "면접관",
+                    "role": "other",
+                    "text": "자기소개를 간단하게 해 보세요.",
+                    "avatar": "👨‍💼",
+                    "translation": "Please maximize introduce yourself briefly."
+                },
+                {
+                    "speaker": "지원자 (나)",
+                    "role": "user",
+                    "text": "안녕하십니까. 저는 베트남에서 온 투이입니다. 한국어를 열심히 공부했고, 꼼꼼한 성격입니다.",
+                    "avatar": "👤",
+                    "translation": "Hello. I am Thuy from Vietnam. I studied Korean hard and I have a meticulous personality."
+                },
+                {
+                    "speaker": "면접관",
+                    "role": "other",
+                    "text": "우리 회사에 지원한 이유가 무엇입니까?",
+                    "avatar": "👨‍💼",
+                    "translation": "What is the reason you applied to our company?"
+                },
+                {
+                    "speaker": "지원자 (나)",
+                    "role": "user",
+                    "text": "귀사의 제품을 평소에 좋아했고, 제 전공을 살리고 싶어서 지원했습니다.",
+                    "avatar": "👤",
+                    "translation": "I have always liked your company's products, and I applied because I wanted to use my major."
+                },
+                {
+                    "speaker": "면접관",
+                    "role": "other",
+                    "text": "야근이 많은데 괜찮습니까?",
+                    "avatar": "👨‍💼",
+                    "translation": "There is a lot of overtime, is that okay?"
+                },
+                {
+                    "speaker": "지원자 (나)",
+                    "role": "user",
+                    "text": "네, 배운다는 자세로 열심히 일하겠습니다.",
+                    "avatar": "👤",
+                    "translation": "Yes, I will work hard with an attitude of learning."
+                }
+            ],
+            "vocabulary": [
+                "면접",
+                "자기소개",
+                "꼼꼼하다",
+                "지원하다",
+                "전공",
+                "야근"
+            ],
+            "grammar": [
+                "~ㅂ/습니다 (Formal style)",
+                "~(으)ㄴ/는 편이다",
+                "~기 때문에"
+            ],
+            "cultureTip": "한국 면접에서는 단정한 정장을 입는 것이 좋습니다. 자세를 바르게 하고 자신감 있게 대답해야 합니다."
+        },
+        {
+            "id": 28,
+            "level": 3,
+            "title": "동료와 갈등 해결",
+            "category": "직장",
+            "icon": "🤝",
+            "description": "오해 풀고 화해하기",
+            "dialogue": [
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "김 대리님, 잠시 이야기 좀 할 수 있을까요?",
+                    "avatar": "👤",
+                    "translation": "Assistant Manager Kim, can we talk for a moment?"
+                },
+                {
+                    "speaker": "동료",
+                    "role": "other",
+                    "text": "네, 무슨 일이에요?",
+                    "avatar": "👨‍💼",
+                    "translation": "Yes, what is it?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "아까 회의 때 제 말투가 좀 강했던 것 같아서 사과드리고 싶어요.",
+                    "avatar": "👤",
+                    "translation": "I think my tone was a bit strong during the meeting earlier, so I want to apologize."
+                },
+                {
+                    "speaker": "동료",
+                    "role": "other",
+                    "text": "아, 사실 저도 좀 기분이 상했었는데, 먼저 말씀해 주셔서 고마워요.",
+                    "avatar": "👨‍💼",
+                    "translation": "Ah, actually I was a bit upset too, but thank you for bringing it up first."
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "일이 잘 안 풀려서 좀 예민했어요. 죄송합니다.",
+                    "avatar": "👤",
+                    "translation": "Things weren't going well so I was a bit sensitive. I'm sorry."
+                },
+                {
+                    "speaker": "동료",
+                    "role": "other",
+                    "text": "괜찮아요. 앞으로는 서로 더 배려해요.",
+                    "avatar": "👨‍💼",
+                    "translation": "It's okay. Let's be more considerate of each other from now on."
+                }
+            ],
+            "vocabulary": [
+                "갈등",
+                "오해",
+                "말투",
+                "사과하다",
+                "예민하다",
+                "배려하다"
+            ],
+            "grammar": [
+                "~(으)ㄴ 것 같다",
+                "~아/어/여서 죄송하다",
+                "~(으)ㄹ까요?"
+            ],
+            "cultureTip": "한국 직장에서는 동료와의 관계가 중요합니다. 갈등이 생기면 술자리나 티타임을 통해 푸는 경우가 많습니다."
+        },
+        {
+            "id": 29,
+            "level": 3,
+            "title": "집들이 초대",
+            "category": "생활",
+            "icon": "🎉",
+            "description": "한국인 친구 집에 초대받기",
+            "dialogue": [
+                {
+                    "speaker": "친구",
+                    "role": "other",
+                    "text": "이번 주 토요일에 우리 집에서 집들이를 할 건데, 올 수 있어요?",
+                    "avatar": "👩",
+                    "translation": "I'm having a housewarming party at my place this Saturday, can you come?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "네, 초대해 줘서 고마워요. 몇 시까지 가면 돼요?",
+                    "avatar": "👤",
+                    "translation": "Yes, thanks for inviting me. What time should I be there?"
+                },
+                {
+                    "speaker": "친구",
+                    "role": "other",
+                    "text": "저녁 6시까지 오면 돼요.",
+                    "avatar": "👩",
+                    "translation": "You can come by 6 PM."
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "빈손으로 갈 수는 없는데, 무슨 선물이 좋을까요?",
+                    "avatar": "👤",
+                    "translation": "I can't go empty-handed, what gift would be good?"
+                },
+                {
+                    "speaker": "친구",
+                    "role": "other",
+                    "text": "그냥 편하게 오세요. 굳이 사오실 필요 없어요.",
+                    "avatar": "👩",
+                    "translation": "Just come comfortably. You don't really need to buy anything."
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "그래도 휴지나 세제를 사 갈게요.",
+                    "avatar": "👤",
+                    "translation": "Still, I'll buy some toilet paper or detergent."
+                }
+            ],
+            "vocabulary": [
+                "집들이",
+                "초대",
+                "빈손",
+                "선물",
+                "휴지",
+                "세제"
+            ],
+            "grammar": [
+                "~(으)ㄹ 건데",
+                "~(으)ㄹ 수 있다/없다",
+                "~는 게 좋다"
+            ],
+            "cultureTip": "한국에서는 이사 후에 친구나 가족을 초대하는 집들이를 합니다. 선물로는 휴지(일이 잘 풀리라는 뜻)나 세제(부자가 되라는 뜻)가 인기 있습니다."
+        },
+        {
+            "id": 30,
+            "level": 3,
+            "title": "결혼식 참석",
+            "category": "문화",
+            "icon": "👰",
+            "description": "결혼식 축하해주기",
+            "dialogue": [
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "결혼 축하해요! 오늘 정말 아름다우세요.",
+                    "avatar": "👤",
+                    "translation": "Congratulations on your marriage! You look really beautiful today."
+                },
+                {
+                    "speaker": "신부",
+                    "role": "other",
+                    "text": "와 주셔서 감사합니다. 식사는 하셨어요?",
+                    "avatar": "👸",
+                    "translation": "Thank you for coming. Did you eat?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "아뇨, 이제 식당으로 가려고요. 신랑분도 아주 멋지네요.",
+                    "avatar": "👤",
+                    "translation": "No, I'm going to the cafeteria now. The groom is very handsome too."
+                },
+                {
+                    "speaker": "신부",
+                    "role": "other",
+                    "text": "감사합니다. 식권 챙기셨죠?",
+                    "avatar": "👸",
+                    "translation": "Thank you. You took a meal ticket, right?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "네, 축의금 낼 때 받았어요. 행복하게 사세요!",
+                    "avatar": "👤",
+                    "translation": "Yes, I got it when I gave the congratulatory money. Live happily!"
+                }
+            ],
+            "vocabulary": [
+                "결혼식",
+                "축하하다",
+                "신랑",
+                "신부",
+                "축의금",
+                "식권"
+            ],
+            "grammar": [
+                "~아/어/여 보이다",
+                "~(으)려고 하다",
+                "~게 살다"
+            ],
+            "cultureTip": "한국 결혼식에는 축의금(돈)을 봉투에 넣어 냅니다. 하객들은 보통 정장이나 깔끔한 옷을 입습니다."
+        },
+        {
+            "id": 31,
+            "level": 3,
+            "title": "명절 (추석)",
+            "category": "문화",
+            "icon": "🌕",
+            "description": "명절 계획 이야기하기",
+            "dialogue": [
+                {
+                    "speaker": "동료",
+                    "role": "other",
+                    "text": "곧 추석이네요. 고향에 내려가세요?",
+                    "avatar": "👨",
+                    "translation": "It's Chuseok soon. Are you going down to your hometown?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "아니요, 저는 이번에 안 가요. 비행기 표가 너무 비싸서요.",
+                    "avatar": "👤",
+                    "translation": "No, I'm not going this time. The plane tickets are too expensive."
+                },
+                {
+                    "speaker": "동료",
+                    "role": "other",
+                    "text": "그럼 연휴 동안 뭐 할 거예요?",
+                    "avatar": "👨",
+                    "translation": "Then what will you do during the holiday?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "한국 친구 집에 초대받았어요. 송편을 만들어 볼 거예요.",
+                    "avatar": "👤",
+                    "translation": "I was invited to a Korean friend's house. I'm going to try making Songpyeon."
+                },
+                {
+                    "speaker": "동료",
+                    "role": "other",
+                    "text": "와, 재미있겠네요. 즐거운 명절 보내세요.",
+                    "avatar": "👨",
+                    "translation": "Wow, that sounds fun. Have a happy holiday."
+                }
+            ],
+            "vocabulary": [
+                "추석",
+                "고향",
+                "연휴",
+                "송편",
+                "비행기 표",
+                "초대받다"
+            ],
+            "grammar": [
+                "~아/어도 되다",
+                "~라서/이라서",
+                "~겠~ (Guess)"
+            ],
+            "cultureTip": "추석은 한국의 큰 명절로, 가족들이 모여 조상에게 차례를 지내고 송편을 먹습니다."
+        },
+        {
+            "id": 32,
+            "level": 3,
+            "title": "동호회 가입",
+            "category": "취미",
+            "icon": "⚽",
+            "description": "취미 활동 같이 하기",
+            "dialogue": [
+                {
+                    "speaker": "회장",
+                    "role": "other",
+                    "text": "안녕하세요. 축구 동호회에 오신 것을 환영합니다.",
+                    "avatar": "👨",
+                    "translation": "Hello. Welcome to the soccer club."
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "반갑습니다. 축구를 좋아해서 가입하고 싶었어요.",
+                    "avatar": "👤",
+                    "translation": "Nice to meet you. I wanted to join because I like soccer."
+                },
+                {
+                    "speaker": "회장",
+                    "role": "other",
+                    "text": "축구를 해 본 적이 있어요?",
+                    "avatar": "👨",
+                    "translation": "Have you ever played soccer?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "네, 고등학교 때 학교 대표 팀이었어요.",
+                    "avatar": "👤",
+                    "translation": "Yes, I was on the school representative team in high school."
+                },
+                {
+                    "speaker": "회장",
+                    "role": "other",
+                    "text": "실력이 대단하겠네요. 이번 주 일요일에 경기가 있는데 나올 수 있어요?",
+                    "avatar": "👨",
+                    "translation": "Your skills must be amazing. There's a match this Sunday, can you come?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "네, 꼭 나가겠습니다.",
+                    "avatar": "👤",
+                    "translation": "Yes, I will definitely come."
+                }
+            ],
+            "vocabulary": [
+                "동호회",
+                "가입",
+                "환영하다",
+                "대표",
+                "실력",
+                "경기"
+            ],
+            "grammar": [
+                "~ㄴ/은 적이 있다",
+                "~고 싶다",
+                "~겠~ (Inference)"
+            ],
+            "cultureTip": "한국에는 등산, 축구, 배드민턴 등 다양한 동호회 활동이 활발합니다."
+        },
+        {
+            "id": 33,
+            "level": 3,
+            "title": "선생님과 상담",
+            "category": "교육",
+            "icon": "🏫",
+            "description": "자녀 학교 생활 상담하기",
+            "dialogue": [
+                {
+                    "speaker": "선생님",
+                    "role": "other",
+                    "text": "어머니, 민수가 요즘 학교생활을 아주 잘하고 있어요.",
+                    "avatar": "👩‍🏫",
+                    "translation": "Mother, Minsu is doing very well in school these days."
+                },
+                {
+                    "speaker": "학부모 (나)",
+                    "role": "user",
+                    "text": "다행이네요. 친구들하고는 잘 지내나요?",
+                    "avatar": "👤",
+                    "translation": "That's a relief. Does he get along well with his friends?"
+                },
+                {
+                    "speaker": "선생님",
+                    "role": "other",
+                    "text": "네, 친구들에게 인기가 많아요. 그런데 수학을 조금 어려워하는 것 같아요.",
+                    "avatar": "👩‍🏫",
+                    "translation": "Yes, he is popular with his friends. However, I think he finds math a bit difficult."
+                },
+                {
+                    "speaker": "학부모 (나)",
+                    "role": "user",
+                    "text": "네, 집에서도 걱정이에요. 어떻게 도와주면 좋을까요?",
+                    "avatar": "👤",
+                    "translation": "Yes, I'm worried at home too. How should I help him?"
+                },
+                {
+                    "speaker": "선생님",
+                    "role": "other",
+                    "text": "너무 걱정하지 마세요. 방과 후 수업을 신청해 보시는 건 어떠세요?",
+                    "avatar": "👩‍🏫",
+                    "translation": "Don't worry too much. How about applying for after-school classes?"
+                }
+            ],
+            "vocabulary": [
+                "상담",
+                "학부모",
+                "학교생활",
+                "다행이다",
+                "방과 후 수업"
+            ],
+            "grammar": [
+                "~는/은 것 같다",
+                "~(으)ㄴ가요/나요?",
+                "~는 건 어떠세요?"
+            ],
+            "cultureTip": "한국 학교에서는 정기적으로 학부모 상담을 합니다. 선생님에게는 존댓말을 씁니다."
+        },
+        {
+            "id": 34,
+            "level": 3,
+            "title": "분실물 신고",
+            "category": "생활",
+            "icon": "👮",
+            "description": "경찰서에 지갑 분실 신고하기",
+            "dialogue": [
+                {
+                    "speaker": "경찰",
+                    "role": "other",
+                    "text": "어떻게 오셨습니까?",
+                    "avatar": "👮",
+                    "translation": "What brings you here?"
+                },
+                {
+                    "speaker": "민원인 (나)",
+                    "role": "user",
+                    "text": "지갑을 잃어버려서 신고하러 왔어요.",
+                    "avatar": "👤",
+                    "translation": "I lost my wallet so I came to report it."
+                },
+                {
+                    "speaker": "경찰",
+                    "role": "other",
+                    "text": "언제, 어디서 잃어버리셨는지 기억나세요?",
+                    "avatar": "👮",
+                    "translation": "Do you remember when and where you lost it?"
+                },
+                {
+                    "speaker": "민원인 (나)",
+                    "role": "user",
+                    "text": "한 시간 전쯤에 버스 안에 두고 내린 것 같아요.",
+                    "avatar": "👤",
+                    "translation": "I think I left it on the bus about an hour ago."
+                },
+                {
+                    "speaker": "경찰",
+                    "role": "other",
+                    "text": "내용물은 뭐가 있었나요?",
+                    "avatar": "👮",
+                    "translation": "What was inside?"
+                },
+                {
+                    "speaker": "민원인 (나)",
+                    "role": "user",
+                    "text": "현금 5만원이랑 신용카드, 외국인등록증이 들어 있어요.",
+                    "avatar": "👤",
+                    "translation": "There was 50,000 won in cash, a credit card, and my alien registration card."
+                },
+                {
+                    "speaker": "경찰",
+                    "role": "other",
+                    "text": "알겠습니다. 접수해 드릴 테니 연락을 기다려 주세요.",
+                    "avatar": "👮",
+                    "translation": "Understood. I will file the report, so please wait for a call."
+                }
+            ],
+            "vocabulary": [
+                "분실물",
+                "신고",
+                "지갑",
+                "잃어버리다",
+                "내용물",
+                "접수"
+            ],
+            "grammar": [
+                "~는지 알다/모르다/기억나다",
+                "~(으)ㄴ 것 같다",
+                "~(으)ㄹ 테니"
+            ],
+            "cultureTip": "물건을 잃어버리면 '로스트112' (경찰청 유실물 통합포털) 사이트에서 찾아볼 수 있습니다."
+        },
+        {
+            "id": 35,
+            "level": 4,
+            "title": "뉴스 토론",
+            "category": "사회",
+            "icon": "📰",
+            "description": "최신 뉴스에 대해 이야기하기",
+            "dialogue": [
+                {
+                    "speaker": "친구",
+                    "role": "other",
+                    "text": "오늘 아침 뉴스 봤어요? 환경 오염 문제가 심각하대요.",
+                    "avatar": "👩",
+                    "translation": "Did you see the news this morning? They say the environmental pollution problem is serious."
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "네, 저도 봤어요. 일회용품 사용을 줄여야 한다고 하더라고요.",
+                    "avatar": "👤",
+                    "translation": "Yes, I saw it too. They said we need to reduce the use of disposable products."
+                },
+                {
+                    "speaker": "친구",
+                    "role": "other",
+                    "text": "맞아요. 저도 텀블러를 가지고 다니려고 노력하고 있어요.",
+                    "avatar": "👩",
+                    "translation": "That's right. I'm also trying to carry a tumbler."
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "좋은 생각이네요. 정부에서도 규제를 강화해야 할 것 같아요.",
+                    "avatar": "👤",
+                    "translation": "That's a good idea. I think the government should also strengthen regulations."
+                },
+                {
+                    "speaker": "친구",
+                    "role": "other",
+                    "text": "네, 시민들의 인식 변화도 중요하죠.",
+                    "avatar": "👩",
+                    "translation": "Yes, changes in citizens' awareness are also important."
+                }
+            ],
+            "vocabulary": [
+                "뉴스",
+                "환경 오염",
+                "일회용품",
+                "규제",
+                "강화하다",
+                "인식"
+            ],
+            "grammar": [
+                "~다고 하다 (Indirect quote)",
+                "~아야/어야 하다",
+                "~기 위해"
+            ],
+            "cultureTip": "한국에서는 카페 내에서 플라스틱 컵 사용이 금지되어 있습니다."
+        },
+        {
+            "id": 36,
+            "level": 4,
+            "title": "문화 차이",
+            "category": "문화",
+            "icon": "🌏",
+            "description": "한국 문화와 고향 문화 비교하기",
+            "dialogue": [
+                {
+                    "speaker": "한국인 친구",
+                    "role": "other",
+                    "text": "한국 생활하면서 가장 어려운 점이 뭐예요?",
+                    "avatar": "👨",
+                    "translation": "What is the most difficult thing about living in Korea?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "언어도 어렵지만, 문화 차이가 좀 있어요. 특히 존댓말이 복잡해요.",
+                    "avatar": "👤",
+                    "translation": "The language is hard, but there are some cultural differences. Especially honorifics are complex."
+                },
+                {
+                    "speaker": "한국인 친구",
+                    "role": "other",
+                    "text": "아, 그렇군요. 투이 씨 고향에서는 어때요?",
+                    "avatar": "👨",
+                    "translation": "Ah, I see. How is it in your hometown, Thuy?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "저희 고향은 한국보다 좀 더 자유러운 편이에요. 나이 차이가 있어도 친구처럼 지내요.",
+                    "avatar": "👤",
+                    "translation": "My hometown is a bit freer than Korea. Even with an age gap, we get along like friends."
+                },
+                {
+                    "speaker": "한국인 친구",
+                    "role": "other",
+                    "text": "신기하네요. 한국은 나이나 지위에 따라 예절이 중요하거든요.",
+                    "avatar": "👨",
+                    "translation": "That's fascinating. In Korea, etiquette based on age or status is important."
+                }
+            ],
+            "vocabulary": [
+                "문화 차이",
+                "존댓말",
+                "자유롭다",
+                "나이",
+                "지위",
+                "예절"
+            ],
+            "grammar": [
+                "~는 편이다",
+                "~거든요",
+                "~(으)면서"
+            ],
+            "cultureTip": "한국은 유교 문화의 영향으로 위계 질서와 예절을 중시합니다."
+        },
+        {
+            "id": 37,
+            "level": 4,
+            "title": "환경 문제 토론",
+            "category": "사회",
+            "icon": "🌱",
+            "description": "미세먼지와 대책 논의하기",
+            "dialogue": [
+                {
+                    "speaker": "동료",
+                    "role": "other",
+                    "text": "오늘 미세먼지가 너무 심하네요. 마스크 썼어요?",
+                    "avatar": "👩",
+                    "translation": "The fine dust is too severe today. Did you wear a mask?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "네, KF94 마스크를 썼어요. 목이 칼칼하네요.",
+                    "avatar": "👤",
+                    "translation": "Yes, I wore a KF94 mask. My throat feels scratchy."
+                },
+                {
+                    "speaker": "동료",
+                    "role": "other",
+                    "text": "대기 오염을 줄이기 위해 대중교통을 이용해야겠어요.",
+                    "avatar": "👩",
+                    "translation": "We should use public transportation to reduce air pollution."
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "맞아요. 그리고 나무를 많이 심는 것도 도움이 되겠죠.",
+                    "avatar": "👤",
+                    "translation": "That's right. And planting many trees would also be helpful."
+                }
+            ],
+            "vocabulary": [
+                "미세먼지",
+                "심하다",
+                "대기 오염",
+                "대중교통",
+                "심다"
+            ],
+            "grammar": [
+                "~아/어야겠다",
+                "~는 것",
+                "~기 때문에"
+            ],
+            "cultureTip": "봄철에는 황사와 미세먼지가 심해서 마스크를 착용하는 것이 좋습니다."
+        },
+        {
+            "id": 38,
+            "level": 4,
+            "title": "역사 이야기",
+            "category": "역사",
+            "icon": "📜",
+            "description": "세종대왕과 한글",
+            "dialogue": [
+                {
+                    "speaker": "선생님",
+                    "role": "other",
+                    "text": "여러분, 한글을 누가 만드셨는지 아세요?",
+                    "avatar": "👨‍🏫",
+                    "translation": "Everyone, do you know who created Hangul?"
+                },
+                {
+                    "speaker": "학생 (나)",
+                    "role": "user",
+                    "text": "네, 조선 시대 세종대왕이 만드셨습니다.",
+                    "avatar": "👤",
+                    "translation": "Yes, King Sejong of the Joseon Dynasty created it."
+                },
+                {
+                    "speaker": "선생님",
+                    "role": "other",
+                    "text": "맞습니다. 왜 만드셨을까요?",
+                    "avatar": "👨‍🏫",
+                    "translation": "Correct. Why do you think he created it?"
+                },
+                {
+                    "speaker": "학생 (나)",
+                    "role": "user",
+                    "text": "백성들이 글을 몰라 어려움을 겪는 것을 안타깝게 여기셨기 때문입니다.",
+                    "avatar": "👤",
+                    "translation": "Because he felt sorry that the people suffered from not knowing how to read/write."
+                },
+                {
+                    "speaker": "선생님",
+                    "role": "other",
+                    "text": "네, 1443년에 창제하고 1446년에 반포했습니다.",
+                    "avatar": "👨‍🏫",
+                    "translation": "Yes, he invented it in 1443 and promulgated it in 1446."
+                }
+            ],
+            "vocabulary": [
+                "세종대왕",
+                "조선 시대",
+                "백성",
+                "안타깝다",
+                "창제",
+                "반포"
+            ],
+            "grammar": [
+                "~시~ (Subject honorific)",
+                "~기 때문이다",
+                "~는지 알다"
+            ],
+            "cultureTip": "10월 9일은 한글날로, 한글의 우수성을 기리는 국경일입니다."
+        },
+        {
+            "id": 39,
+            "level": 4,
+            "title": "여행지 추천",
+            "category": "지리",
+            "icon": "✈️",
+            "description": "한국의 관광지 소개하기",
+            "dialogue": [
+                {
+                    "speaker": "외국인 친구",
+                    "role": "other",
+                    "text": "한국에서 여행하기 좋은 곳을 추천해 줄 수 있어요?",
+                    "avatar": "👱",
+                    "translation": "Can you recommend a good place to travel in Korea?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "제주도를 추천해요. 경치가 정말 아름답거든요.",
+                    "avatar": "👤",
+                    "translation": "I recommend Jeju Island. The scenery is really beautiful."
+                },
+                {
+                    "speaker": "외국인 친구",
+                    "role": "other",
+                    "text": "부산은 어때요?",
+                    "avatar": "👱",
+                    "translation": "How about Busan?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "부산도 좋아요. 바다도 볼 수 있고 맛있는 해산물도 많아요. 특히 해운대가 유명해요.",
+                    "avatar": "👤",
+                    "translation": "Busan is good too. You can see the sea and there is a lot of delicious seafood. Haeundae is especially famous."
+                },
+                {
+                    "speaker": "외국인 친구",
+                    "role": "other",
+                    "text": "그럼 이번 여름 휴가는 부산으로 가야겠네요.",
+                    "avatar": "👱",
+                    "translation": "Then I guess I should go to Busan for this summer vacation."
+                }
+            ],
+            "vocabulary": [
+                "추천하다",
+                "경치",
+                "해산물",
+                "유명하다",
+                "휴가"
+            ],
+            "grammar": [
+                "~는 게 어때요?",
+                "~거든요",
+                "~아야/어야겠다"
+            ],
+            "cultureTip": "제주도는 한국의 대표적인 휴양지로, 이국적인 풍경을 즐길 수 있습니다. KTX를 타면 서울에서 부산까지 2시간 반 정도 걸립니다."
+        },
+        {
+            "id": 40,
+            "level": 4,
+            "title": "소비자 권리",
+            "category": "사회",
+            "icon": "🛒",
+            "description": "환불 요청하기",
+            "dialogue": [
+                {
+                    "speaker": "점원",
+                    "role": "other",
+                    "text": "어서 오세요. 무엇을 도와드릴까요?",
+                    "avatar": "👩‍💼",
+                    "translation": "Welcome. How can I help you?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "어제 산 옷인데 사이즈가 안 맞아서 환불하고 싶어요.",
+                    "avatar": "👤",
+                    "translation": "I bought these clothes yesterday, but the size doesn't fit so I want a refund."
+                },
+                {
+                    "speaker": "점원",
+                    "role": "other",
+                    "text": "영수증 가지고 오셨나요?",
+                    "avatar": "👩‍💼",
+                    "translation": "Did you bring the receipt?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "네, 여기 있어요. 태그도 안 뗐어요.",
+                    "avatar": "👤",
+                    "translation": "Yes, here it is. I haven't removed the tag either."
+                },
+                {
+                    "speaker": "점원",
+                    "role": "other",
+                    "text": "확인해 보겠습니다. 결제하신 카드로 취소해 드릴게요.",
+                    "avatar": "👩‍💼",
+                    "translation": "I'll check. I will cancel it to the card you paid with."
+                }
+            ],
+            "vocabulary": [
+                "환불",
+                "사이즈",
+                "영수증",
+                "태그",
+                "결제",
+                "취소"
+            ],
+            "grammar": [
+                "~는데",
+                "~아/어/여도 되다",
+                "~(으)ㄹ게요"
+            ],
+            "cultureTip": "한국에서는 보통 구입 후 7일 이내에 영수증을 지참하면 교환이나 환불이 가능합니다."
+        },
+        {
+            "id": 41,
+            "level": 5,
+            "title": "한국 경제 토론",
+            "category": "경제",
+            "icon": "📈",
+            "description": "경제 성장과 과제 논의",
+            "dialogue": [
+                {
+                    "speaker": "토론자 A",
+                    "role": "other",
+                    "text": "한국 경제가 빠르게 성장한 비결이 무엇이라고 생각하십니까?",
+                    "avatar": "👨‍💼",
+                    "translation": "What do you think is the secret to Korea's rapid economic growth?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "높은 교육열과 풍부한 인적 자원이 큰 역할을 했다고 봅니다. '한강의 기적'이라고도 부르죠.",
+                    "avatar": "👤",
+                    "translation": "I believe high enthusiasm for education and abundant human resources played a big role. It's also called the 'Miracle on the Han River'."
+                },
+                {
+                    "speaker": "토론자 A",
+                    "role": "other",
+                    "text": "동의합니다. 하지만 저출산 고령화 문제로 인해 성장이 둔화될 우려도 있습니다.",
+                    "avatar": "👨‍💼",
+                    "translation": "I agree. However, there are concerns that growth will slow down due to low birth rates and an aging population."
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "맞습니다. 그래서 기술 혁신과 외국인 인재 유입 등 새로운 성장 동력을 찾아야 합니다.",
+                    "avatar": "👤",
+                    "translation": "That's right. So we need to find new growth engines such as technological innovation and the influx of foreign talent."
+                }
+            ],
+            "vocabulary": [
+                "경제 성장",
+                "교육열",
+                "인적 자원",
+                "한강의 기적",
+                "저출산",
+                "고령화",
+                "동력"
+            ],
+            "grammar": [
+                "~다고 보다/생각하다",
+                "~(으)로 인해",
+                "~아야/어야 하다"
+            ],
+            "cultureTip": "한국은 1960년대 이후 급속한 경제 성장을 이루었습니다. 현재는 반도체, 자동차, IT 산업이 발달해 있습니다."
+        },
+        {
+            "id": 42,
+            "level": 5,
+            "title": "노동법 상담",
+            "category": "법률",
+            "icon": "⚖️",
+            "description": "최저임금과 근로 시간 문의",
+            "dialogue": [
+                {
+                    "speaker": "상담사",
+                    "role": "other",
+                    "text": "무엇을 도와드릴까요?",
+                    "avatar": "👩‍⚖️",
+                    "translation": "How can I help you?"
+                },
+                {
+                    "speaker": "근로자 (나)",
+                    "role": "user",
+                    "text": "제가 받는 월급이 최저임금에 맞는지 확인하고 싶어서요.",
+                    "avatar": "👤",
+                    "translation": "I want to check if the monthly salary I receive meets the minimum wage."
+                },
+                {
+                    "speaker": "상담사",
+                    "role": "other",
+                    "text": "근로계약서는 작성하셨나요? 하루 몇 시간 일하세요?",
+                    "avatar": "👩‍⚖️",
+                    "translation": "Did you sign a labor contract? How many hours do you work a day?"
+                },
+                {
+                    "speaker": "근로자 (나)",
+                    "role": "user",
+                    "text": "네, 작성했습니다. 하루 8시간, 주 5일 근무합니다.",
+                    "avatar": "👤",
+                    "translation": "Yes, I did. I work 8 hours a day, 5 days a week."
+                },
+                {
+                    "speaker": "상담사",
+                    "role": "other",
+                    "text": "그럼 주휴수당도 받으셔야 합니다. 만약 최저임금보다 적으면 고용노동부에 신고할 수 있습니다.",
+                    "avatar": "👩‍⚖️",
+                    "translation": "Then you should also receive weekly holiday allowance. If it's less than the minimum wage, you can report it to the Ministry of Employment and Labor."
+                }
+            ],
+            "vocabulary": [
+                "최저임금",
+                "근로계약서",
+                "월급",
+                "주휴수당",
+                "고용노동부",
+                "신고"
+            ],
+            "grammar": [
+                "~는지 확인하다",
+                "~(으)면 되다",
+                "만약 ~라면"
+            ],
+            "cultureTip": "한국의 모든 근로자는 근로기준법의 보호를 받습니다. 외국인 근로자도 내국인과 동일하게 최저임금을 적용받습니다."
+        },
+        {
+            "id": 43,
+            "level": 5,
+            "title": "복지 제도 신청",
+            "category": "복지",
+            "icon": "🏥",
+            "description": "긴급 복지 지원 문의",
+            "dialogue": [
+                {
+                    "speaker": "공무원",
+                    "role": "other",
+                    "text": "어떻게 오셨습니까?",
+                    "avatar": "👨‍💼",
+                    "translation": "What brings you here?"
+                },
+                {
+                    "speaker": "민원인 (나)",
+                    "role": "user",
+                    "text": "갑자기 실직을 해서 생계가 막막합니다. 지원받을 수 있는 제도가 있나요?",
+                    "avatar": "👤",
+                    "translation": "I suddenly lost my job and my livelihood is bleak. Are there any support systems available?"
+                },
+                {
+                    "speaker": "공무원",
+                    "role": "other",
+                    "text": "긴급복지지원 제도가 있습니다. 소득과 재산 기준을 심사해야 합니다.",
+                    "avatar": "👨‍💼",
+                    "translation": "There is an Emergency Welfare Support System. We need to review your income and property criteria."
+                },
+                {
+                    "speaker": "민원인 (나)",
+                    "role": "user",
+                    "text": "어떤 서류가 필요합니까?",
+                    "avatar": "👤",
+                    "translation": "What documents are needed?"
+                },
+                {
+                    "speaker": "공무원",
+                    "role": "other",
+                    "text": "신분증, 통장 사본, 그리고 실직을 증명할 수 있는 서류를 제출해 주세요.",
+                    "avatar": "👨‍💼",
+                    "translation": "Please submit your ID, copy of bankbook, and documents proving unemployment."
+                }
+            ],
+            "vocabulary": [
+                "복지",
+                "실직",
+                "생계",
+                "지원",
+                "소득",
+                "재산",
+                "증명"
+            ],
+            "grammar": [
+                "~아서/어서 막막하다",
+                "~(으)ㄹ 수 있다",
+                "~아/어/여야 하다"
+            ],
+            "cultureTip": "한국은 사회 안전망을 위해 다양한 복지 제도를 운영하고 있습니다. 보건복지상담센터 129번으로 문의할 수 있습니다."
+        },
+        {
+            "id": 44,
+            "level": 5,
+            "title": "진로와 꿈",
+            "category": "생활",
+            "icon": "🌟",
+            "description": "장래 희망 이야기하기",
+            "dialogue": [
+                {
+                    "speaker": "친구",
+                    "role": "other",
+                    "text": "투이 씨는 한국에서 이루고 싶은 꿈이 있어요?",
+                    "avatar": "👩",
+                    "translation": "Thuy, do you have a dream you want to achieve in Korea?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "네, 저는 나중에 무역 회사를 차리고 싶어요. 한국과 베트남을 연결하는 일을 하고 싶거든요.",
+                    "avatar": "👤",
+                    "translation": "Yes, I want to set up a trading company later. I want to do work that connects Korea and Vietnam."
+                },
+                {
+                    "speaker": "친구",
+                    "role": "other",
+                    "text": "정말 멋진 꿈이네요. 그러려면 한국어 실력뿐만 아니라 경영 지식도 필요하겠어요.",
+                    "avatar": "👩",
+                    "translation": "That's a really cool dream. To do that, you'll need not only Korean skills but also management knowledge."
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "맞아요. 그래서 지금 대학원에서 경영학을 공부하려고 준비 중이에요.",
+                    "avatar": "👤",
+                    "translation": "That's right. So I'm preparing to study business administration in graduate school now."
+                },
+                {
+                    "speaker": "친구",
+                    "role": "other",
+                    "text": "꼭 꿈을 이루시길 응원할게요.",
+                    "avatar": "👩",
+                    "translation": "I'll root for you to achieve your dream."
+                }
+            ],
+            "vocabulary": [
+                "진로",
+                "꿈",
+                "무역 회사",
+                "차리다",
+                "연결하다",
+                "경영학"
+            ],
+            "grammar": [
+                "~고 싶다",
+                "~(으)려면",
+                "~뿐만 아니라"
+            ],
+            "cultureTip": "한국 사회에서는 개인의 자아실현과 진로 개발을 중요하게 생각합니다. 평생교육 프로그램도 많습니다."
+        },
+        {
+            "id": 45,
+            "level": 3,
+            "title": "부동산에서 방 구하기",
+            "category": "생활",
+            "icon": "🏠",
+            "description": "원룸 구하기",
+            "dialogue": [
+                {
+                    "speaker": "중개인",
+                    "role": "other",
+                    "text": "어떤 방을 찾으세요?",
+                    "avatar": "🤵",
+                    "translation": "What kind of room are you looking for?"
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "월세 원룸을 찾고 있어요. 보증금은 500만 원 정도 생각해요.",
+                    "avatar": "👤",
+                    "translation": "I'm looking for a monthly rental studio. I'm thinking of a deposit around 5 million won."
+                },
+                {
+                    "speaker": "중개인",
+                    "role": "other",
+                    "text": "이 근처에 깨끗한 신축 원룸이 있어요. 월세는 40만 원이에요.",
+                    "avatar": "🤵",
+                    "translation": "There is a clean, newly built studio nearby. The monthly rent is 400,000 won."
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "관리비는 포함인가요?",
+                    "avatar": "👤",
+                    "translation": "Is the maintenance fee included?"
+                },
+                {
+                    "speaker": "중개인",
+                    "role": "other",
+                    "text": "관리비 5만 원은 별도입니다. 인터넷과 수도요금이 포함되어 있어요.",
+                    "avatar": "🤵",
+                    "translation": "The 50,000 won maintenance fee is separate. Internet and water bills are included."
+                },
+                {
+                    "speaker": "손님 (나)",
+                    "role": "user",
+                    "text": "방을 한번 볼 수 있을까요?",
+                    "avatar": "👤",
+                    "translation": "Can I see the room?"
+                }
+            ],
+            "vocabulary": [
+                "부동산",
+                "원룸",
+                "월세",
+                "보증금",
+                "신축",
+                "관리비"
+            ],
+            "grammar": [
+                "~는 편이다",
+                "~(으)ㄹ까요?",
+                "~어/아 있다"
+            ],
+            "cultureTip": "한국에서 집을 구할 때는 보통 '직방'이나 '다방' 같은 앱을 많이 이용하거나 공인중개사사무소를 방문합니다."
+        },
+        {
+            "id": 46,
+            "level": 3,
+            "title": "은행 계좌 개설",
+            "category": "금융",
+            "icon": "🏦",
+            "description": "입출금 통장 만들기",
+            "dialogue": [
+                {
+                    "speaker": "은행원",
+                    "role": "other",
+                    "text": "어떤 업무 때문에 오셨나요?",
+                    "avatar": "👩‍💼",
+                    "translation": "What business did you come for?"
+                },
+                {
+                    "speaker": "고객 (나)",
+                    "role": "user",
+                    "text": "월급 통장을 만들고 싶어요.",
+                    "avatar": "👤",
+                    "translation": "I want to open a salary account."
+                },
+                {
+                    "speaker": "은행원",
+                    "role": "other",
+                    "text": "외국인등록증과 여권 가지고 오셨나요?",
+                    "avatar": "👩‍💼",
+                    "translation": "Did you bring your alien registration card and passport?"
+                },
+                {
+                    "speaker": "고객 (나)",
+                    "role": "user",
+                    "text": "네, 여기 다 가져왔습니다. 체크카드도 만들 수 있나요?",
+                    "avatar": "👤",
+                    "translation": "Yes, I brought everything here. Can I make a check card too?"
+                },
+                {
+                    "speaker": "은행원",
+                    "role": "other",
+                    "text": "네, 가능합니다. 여기에 서명해 주세요. 인터넷 뱅킹도 신청하시겠어요?",
+                    "avatar": "👩‍💼",
+                    "translation": "Yes, it is possible. Please sign here. Would you like to apply for internet banking as well?"
+                },
+                {
+                    "speaker": "고객 (나)",
+                    "role": "user",
+                    "text": "네, 같이 해 주세요.",
+                    "avatar": "👤",
+                    "translation": "Yes, please do that too."
+                }
+            ],
+            "vocabulary": [
+                "계좌",
+                "개설",
+                "월급 통장",
+                "여권",
+                "체크카드",
+                "서명"
+            ],
+            "grammar": [
+                "~(으)려고 하다",
+                "~(으)ㄹ 수 있다",
+                "~아/어/여 주세요"
+            ],
+            "cultureTip": "외국인이 통장을 만들 때는 재직증명서나 거주지 입증 서류가 필요할 수 있습니다. 은행 업무 시간은 보통 9시부터 4시까지입니다."
+        },
+        {
+            "id": 47,
+            "level": 3,
+            "title": "병원 진료",
+            "category": "건강",
+            "icon": "🩺",
+            "description": "증상 설명하고 진료받기",
+            "dialogue": [
+                {
+                    "speaker": "의사",
+                    "role": "other",
+                    "text": "어디가 불편해서 오셨나요?",
+                    "avatar": "👨‍⚕️",
+                    "translation": "Where are you feeling uncomfortable?"
+                },
+                {
+                    "speaker": "환자 (나)",
+                    "role": "user",
+                    "text": "어제부터 열이 나고 목이 너무 아파요.",
+                    "avatar": "👤",
+                    "translation": "I've had a fever since yesterday and my throat hurts a lot."
+                },
+                {
+                    "speaker": "의사",
+                    "role": "other",
+                    "text": "기침이나 콧물도 있나요?",
+                    "avatar": "👨‍⚕️",
+                    "translation": "Do you have a cough or runny nose too?"
+                },
+                {
+                    "speaker": "환자 (나)",
+                    "role": "user",
+                    "text": "기침은 조금 하는데 콧물은 안 나요. 몸살 기운이 있어요.",
+                    "avatar": "👤",
+                    "translation": "I cough a little, but I don't have a runny nose. I feel body aches."
+                },
+                {
+                    "speaker": "의사",
+                    "role": "other",
+                    "text": "목이 많이 부었네요. 편도염입니다. 주사 맞고 약 처방해 드릴게요.",
+                    "avatar": "👨‍⚕️",
+                    "translation": "Your throat is very swollen. It's tonsillitis. I'll give you an injection and prescribe medicine."
+                },
+                {
+                    "speaker": "환자 (나)",
+                    "role": "user",
+                    "text": "네, 감사합니다. 며칠 동안 약을 먹어야 해요?",
+                    "avatar": "👤",
+                    "translation": "Yes, thank you. How many days do I have to take the medicine?"
+                },
+                {
+                    "speaker": "의사",
+                    "role": "other",
+                    "text": "3일분 처방해 드리겠습니다. 물 많이 드시고 푹 쉬세요.",
+                    "avatar": "👨‍⚕️",
+                    "translation": "I will prescribe it for 3 days. Drink plenty of water and rest well."
+                }
+            ],
+            "vocabulary": [
+                "진료",
+                "열",
+                "기침",
+                "콧물",
+                "몸살",
+                "처방"
+            ],
+            "grammar": [
+                "~아/어서",
+                "~(으)ㄴ/는데",
+                "~아야/어야 하다"
+            ],
+            "cultureTip": "한국 병원은 의원(작은 병원)과 종합병원(큰 병원)이 있습니다. 가벼운 감기는 의원에 먼저 가는 것이 좋습니다."
         }
     ]
 }
