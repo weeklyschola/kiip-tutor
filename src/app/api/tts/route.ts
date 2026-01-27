@@ -1,6 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { GoogleAuth } from "google-auth-library";
-import path from "path";
 import { getSpeakerVoice } from "@/lib/voiceMapping";
 
 export async function POST(req: NextRequest) {
@@ -16,31 +14,23 @@ export async function POST(req: NextRequest) {
 
         console.log(`[TTS] Text: "${text.substring(0, 20)}...", Speaker: ${speaker}, Voice: ${voice}`);
 
-        // Service Account 인증
-        const keyFilePath = path.join(process.cwd(), "service-account.json");
-        const auth = new GoogleAuth({
-            keyFile: keyFilePath,
-            scopes: ["https://www.googleapis.com/auth/cloud-platform"],
-        });
+        // API Key 방식 (Vercel 배포 호환) - Service Account 대신 API Key 사용
+        const apiKey = process.env.GOOGLE_MAPPED_API_KEY || process.env.NEXT_PUBLIC_TTS_API_KEY;
 
-        const client = await auth.getClient();
-        const accessToken = await client.getAccessToken();
-
-        if (!accessToken.token) {
-            console.error("Failed to get access token");
+        if (!apiKey) {
+            console.error("[TTS] API Key Missing. Please set GOOGLE_MAPPED_API_KEY in Vercel.");
             return NextResponse.json(
-                { error: "Authentication failed", useBrowserTTS: true },
+                { error: "Server Configuration Error: TTS Key missing", useBrowserTTS: true },
                 { status: 500 }
             );
         }
 
-        // Cloud Text-to-Speech API 호출
-        const url = "https://texttospeech.googleapis.com/v1/text:synthesize";
+        // Cloud Text-to-Speech API 호출 (API Key via Query Param)
+        const url = `https://texttospeech.googleapis.com/v1/text:synthesize?key=${apiKey}`;
 
         const response = await fetch(url, {
             method: "POST",
             headers: {
-                Authorization: `Bearer ${accessToken.token}`,
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
