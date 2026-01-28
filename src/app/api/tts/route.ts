@@ -15,8 +15,8 @@ export async function POST(req: NextRequest) {
         console.log(`[TTS] Text: "${text.substring(0, 20)}...", Speaker: ${speaker}, Voice: ${voice}`);
 
         // API Key 방식 (Vercel 배포 호환) - Service Account 대신 API Key 사용
-        // [임시] AQ 키는 API Key 형식이 아니어서 401 에러 발생. AIza 표준 키로 변경.
-        const apiKey = "AIzaSyDAie5lIzsHY6aIr2kcFiaV4zz9YYBzoso";
+        // [임시] 사용자 제공 새 API Key 적용 (AIzaSyD5xFK0Q...)
+        const apiKey = "AIzaSyD5xFK0Q-0X4OT3VLxzz2J4_vC176-_7e4";
 
         if (!apiKey) {
             console.error("[TTS] API Key Missing. Please set GOOGLE_MAPPED_API_KEY in Vercel.");
