@@ -149,7 +149,13 @@ export const useTTS = (options: UseTTSOptions = {}) => {
 
             clearTimeout(timeoutId);
 
-            if (!response.ok) return false;
+            if (!response.ok) {
+                const errorData = await response.json();
+                console.error("TTS API Failed:", errorData);
+                // [Debug] 사용자에게 에러 원인 알림 (베타 테스트용)
+                alert(`TTS Error: ${errorData.error || response.statusText}`);
+                return false;
+            }
 
             const arrayBuffer = await response.arrayBuffer();
             const audioBuffer = await ctx.decodeAudioData(arrayBuffer);
