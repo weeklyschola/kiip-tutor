@@ -174,16 +174,13 @@ function VocabularyContent() {
                     </p>
 
                     <button
-                        onClick={handleRestart}
-                        className="w-full py-4 bg-blue-600 text-white rounded-2xl font-bold text-lg shadow-lg hover:bg-blue-700 hover:scale-[1.02] transition-all mb-3"
+                        onClick={() => {
+                            setShowCompletion(false);
+                            setViewMode("select");
+                        }}
+                        className="w-full py-4 bg-blue-600 text-white rounded-2xl font-bold text-lg shadow-lg hover:bg-blue-700 hover:scale-[1.02] transition-all"
                     >
-                        🔄 처음부터 다시 하기
-                    </button>
-                    <button
-                        onClick={() => setViewMode("select")}
-                        className="w-full py-4 bg-white text-slate-600 rounded-2xl font-bold text-lg border-2 border-slate-200 hover:bg-slate-50 transition-all"
-                    >
-                        📂 단어장 목록으로
+                        확인
                     </button>
                 </div>
             </main>
