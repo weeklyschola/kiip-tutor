@@ -22,7 +22,7 @@ export const useTTS = (options: UseTTSOptions = {}) => {
             if (AudioContextClass) {
                 const ctx = new AudioContextClass();
                 const gain = ctx.createGain();
-                gain.gain.value = 2.5; // 볼륨 2.5배 증폭
+                gain.gain.value = 5.0; // 볼륨 5.0배 증폭 (User Req: Volume Up)
                 gain.connect(ctx.destination);
 
                 audioContextRef.current = ctx;
@@ -163,6 +163,8 @@ export const useTTS = (options: UseTTSOptions = {}) => {
 
     // 말하기 실행
     const speak = useCallback(async (text: string, speaker?: string, onComplete?: () => void) => {
+        console.log(`[useTTS] Speak requested. Text: "${text.substring(0, 10)}...", Speaker: ${speaker}, Premium: ${isPremium}`);
+
         // 재생 중이면 멈춤 (토글)
         if (isPlaying) {
             stopPrevious();
@@ -180,7 +182,7 @@ export const useTTS = (options: UseTTSOptions = {}) => {
             if (AudioContextClass) {
                 const ctx = new AudioContextClass();
                 const gain = ctx.createGain();
-                gain.gain.value = 2.5;
+                gain.gain.value = 5.0;
                 gain.connect(ctx.destination);
                 audioContextRef.current = ctx;
                 gainNodeRef.current = gain;

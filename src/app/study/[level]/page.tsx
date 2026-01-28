@@ -34,7 +34,7 @@ const topicIcons: Record<string, string> = {
 const ClickableText = ({ text, onPlay, className = "" }: { text: string, onPlay: (t: string) => void, className?: string }) => {
     if (!text) return null;
     return (
-        <span className={className}>
+        <span className={`${className} select-none`}>
             {text.split(" ").map((word, i) => (
                 <span key={i} onClick={(e) => { e.stopPropagation(); onPlay(word); }} className="inline-block cursor-pointer hover:bg-blue-100 rounded px-0.5 mx-0.5 transition-colors">
                     {word}
@@ -47,7 +47,7 @@ const ClickableText = ({ text, onPlay, className = "" }: { text: string, onPlay:
 const HangulCard = ({ item, onPlay }: { item: HangulItem, onPlay: (t: string) => void }) => {
     if (!item) return null;
     return (
-        <div className="bg-white/80 backdrop-blur-sm p-5 rounded-2xl shadow-lg border border-white/50 hover:shadow-xl transition-all group">
+        <div className="bg-white/80 backdrop-blur-sm p-5 rounded-2xl shadow-lg border border-white/50 hover:shadow-xl transition-all group select-none">
             <div className="flex items-center gap-4">
                 <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-5xl font-bold text-white shadow-lg cursor-pointer hover:scale-105 transition-transform" onClick={() => onPlay(item.name)}>
                     {item.character}
