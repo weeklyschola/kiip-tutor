@@ -81,7 +81,9 @@ function LevelContent() {
     const { canAccessLevel, updateLevelProgress, hasAiTutorAccess, progress, updateProblemResult, updateLastStudied } = useProgress();
     // AI Tutor Access 여부와 상관없이 베타 테스트/개발 중에는 항상 Premium(Google Cloud TTS)을 시도하도록 변경
     // Fallback이 있으므로 키가 없거나 실패해도 안전함.
-    const { speak } = useTTS({ isPremium: true });
+    // AI Tutor Access 여부와 상관없이 베타 테스트/개발 중에는 항상 Premium(Google Cloud TTS)을 시도하도록 변경
+    // Fallback이 있으므로 키가 없거나 실패해도 안전함.
+    const { speak, stop } = useTTS({ isPremium: true });
 
     // 초기 모드를 'learning'으로 변경하여 인트로 없이 바로 시작
     const [mode, setMode] = useState<"intro" | "learning" | "quiz" | "result">("learning");
@@ -134,6 +136,14 @@ function LevelContent() {
     // 공통 오디오 재생 함수
     const playAudio = (text: string, speaker?: string, onComplete?: () => void) => {
         if (!text) return;
+
+        // 사용자가 직접 클릭해서 재생하는 경우, 진행 중인 자동 재생이 있으면 즉시 중단
+        // (중단하지 않으면 기존 오디오가 멈추면서 onComplete가 트리거되어 다음 문장으로 넘어가는 현상 발생)
+        if (autoPlayDialogue) {
+            autoPlayRef.current = false; // 즉시 Ref 업데이트 (useEffect보다 빠름)
+            setAutoPlayDialogue(false);
+        }
+
         speak(text, speaker, onComplete);
     };
 
@@ -635,8 +645,16 @@ function LevelContent() {
                                         <button
                                             onClick={() => {
                                                 const newState = !autoPlayDialogue;
-                                                if (newState) lineIndexRef.current = 0;
-                                                setAutoPlayDialogue(newState);
+                                                // 즉시 Ref 업데이트 및 동작 처리
+                                                autoPlayRef.current = newState;
+
+                                                if (newState) {
+                                                    lineIndexRef.current = 0;
+                                                    setAutoPlayDialogue(true);
+                                                } else {
+                                                    setAutoPlayDialogue(false);
+                                                    stop(); // 즉시 오디오 정지
+                                                }
                                             }}
                                             className={`px-5 py-3 rounded-full text-sm font-bold transition-all shadow-sm active:scale-95 flex items-center gap-2 ${autoPlayDialogue ? 'bg-green-500 text-white shadow-green-200' : 'bg-white border-2 border-slate-200 text-slate-600 hover:bg-slate-50'}`}
                                         >

@@ -226,5 +226,5 @@ export const useTTS = (options: UseTTSOptions = {}) => {
         };
     }, [stopPrevious]);
 
-    return { speak, voicesReady, isPlaying, isPremium };
+    return { speak, stop: stopPrevious, voicesReady, isPlaying, isPremium };
 };
