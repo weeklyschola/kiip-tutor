@@ -79,7 +79,9 @@ function LevelContent() {
 
     const { isAuthenticated, isLoading: authLoading } = useAuth();
     const { canAccessLevel, updateLevelProgress, hasAiTutorAccess, progress, updateProblemResult, updateLastStudied } = useProgress();
-    const { speak } = useTTS({ isPremium: hasAiTutorAccess() });
+    // AI Tutor Access 여부와 상관없이 베타 테스트/개발 중에는 항상 Premium(Google Cloud TTS)을 시도하도록 변경
+    // Fallback이 있으므로 키가 없거나 실패해도 안전함.
+    const { speak } = useTTS({ isPremium: true });
 
     // 초기 모드를 'learning'으로 변경하여 인트로 없이 바로 시작
     const [mode, setMode] = useState<"intro" | "learning" | "quiz" | "result">("learning");

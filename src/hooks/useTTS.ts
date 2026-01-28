@@ -22,7 +22,7 @@ export const useTTS = (options: UseTTSOptions = {}) => {
             if (AudioContextClass) {
                 const ctx = new AudioContextClass();
                 const gain = ctx.createGain();
-                gain.gain.value = 5.0; // 볼륨 5.0배 증폭 (User Req: Volume Up)
+                gain.gain.value = 8.0; // 볼륨 8.0배 증폭 (User Req: MAX VOLUME)
                 gain.connect(ctx.destination);
 
                 audioContextRef.current = ctx;
@@ -78,7 +78,7 @@ export const useTTS = (options: UseTTSOptions = {}) => {
     }, []);
 
     // 브라우저 기본 TTS (무료/Fallback)
-    const speakWithWebSpeech = useCallback((text: string, onComplete?: () => void) => {
+    const speakWithWebSpeech = useCallback((text: string, speaker?: string, onComplete?: () => void) => {
         if (typeof window === 'undefined' || !window.speechSynthesis) {
             onComplete?.();
             return;
@@ -100,6 +100,25 @@ export const useTTS = (options: UseTTSOptions = {}) => {
 
         if (koreanVoice) {
             utterance.voice = koreanVoice;
+
+            // 화자 성별에 따른 기본 목소리 변경 시도 (가능한 경우)
+            // Note: 브라우저마다 제공하는 보이스가 다르므로 완벽하지 않음
+            if (speaker) {
+                const voices = window.speechSynthesis.getVoices().filter(v => v.lang.includes('ko'));
+                // "투이" 등 여성 화자
+                const isFemale = ["투이", "민지", "수지", "지은"].some(n => speaker.includes(n));
+                const isMale = ["민수", "철수", "영수", "준호"].some(n => speaker.includes(n));
+
+                // 목록에서 대안 목소리 찾기 (기본 보이스와 다른 것)
+                if (voices.length > 1) {
+                    if (isMale) {
+                        // 남성용: 보통 목록의 뒤쪽이나 특정 이름(Google)이 아닐 수 있음. 
+                        // 단순 로직: 짝수/홀수 인덱스 혹은 다른 보이스 선택
+                        const altVoice = voices.find(v => v !== koreanVoice) || koreanVoice;
+                        utterance.voice = altVoice;
+                    }
+                }
+            }
         }
 
         setIsPlaying(true);
@@ -182,7 +201,7 @@ export const useTTS = (options: UseTTSOptions = {}) => {
             if (AudioContextClass) {
                 const ctx = new AudioContextClass();
                 const gain = ctx.createGain();
-                gain.gain.value = 5.0;
+                gain.gain.value = 8.0;
                 gain.connect(ctx.destination);
                 audioContextRef.current = ctx;
                 gainNodeRef.current = gain;
@@ -196,7 +215,8 @@ export const useTTS = (options: UseTTSOptions = {}) => {
         }
 
         // 실패하거나 프리미엄 아니면 Web Speech Fallback
-        speakWithWebSpeech(text, onComplete);
+        console.warn("[useTTS] Falling back to Web Speech API");
+        speakWithWebSpeech(text, speaker, onComplete);
     }, [isPlaying, isPremium, speakWithGemini, speakWithWebSpeech, stopPrevious]);
 
     useEffect(() => {
