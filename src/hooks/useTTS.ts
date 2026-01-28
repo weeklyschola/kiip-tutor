@@ -22,7 +22,7 @@ export const useTTS = (options: UseTTSOptions = {}) => {
             if (AudioContextClass) {
                 const ctx = new AudioContextClass();
                 const gain = ctx.createGain();
-                gain.gain.value = 8.0; // 볼륨 8.0배 증폭 (User Req: MAX VOLUME)
+                gain.gain.value = 3.0; // 볼륨 3.0배 (8.0배는 왜곡 발생하여 조정)
                 gain.connect(ctx.destination);
 
                 audioContextRef.current = ctx;
@@ -152,8 +152,8 @@ export const useTTS = (options: UseTTSOptions = {}) => {
             if (!response.ok) {
                 const errorData = await response.json();
                 console.error("TTS API Failed:", errorData);
-                // [Debug] 사용자에게 에러 원인 알림 (베타 테스트용)
-                alert(`TTS Error: ${errorData.error || response.statusText}`);
+                // [Debug] 사용자에게 에러 원인 알림 (베타 테스트용 - 배포 시 주석 처리)
+                // alert(`TTS Error: ${errorData.error || response.statusText}`);
                 return false;
             }
 
@@ -207,7 +207,7 @@ export const useTTS = (options: UseTTSOptions = {}) => {
             if (AudioContextClass) {
                 const ctx = new AudioContextClass();
                 const gain = ctx.createGain();
-                gain.gain.value = 8.0;
+                gain.gain.value = 3.0;
                 gain.connect(ctx.destination);
                 audioContextRef.current = ctx;
                 gainNodeRef.current = gain;
