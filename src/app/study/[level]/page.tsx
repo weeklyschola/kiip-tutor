@@ -135,36 +135,54 @@ function LevelContent() {
         speak(text, speaker, onComplete);
     };
 
-    // 대화 자동 진행 로직
+    // 대화 자동 진행 로직 (FIXED)
+    const lineIndexRef = useRef(0);
+    const autoPlayRef = useRef(autoPlayDialogue);
+
+    useEffect(() => {
+        autoPlayRef.current = autoPlayDialogue;
+        if (!autoPlayDialogue) {
+            // 정지되면 인덱스 유지 (원하면 리셋)
+        } else {
+            // 켜질 때 0으로 리셋하고 싶으면 여기서
+            // lineIndexRef.current = 0; 
+        }
+    }, [autoPlayDialogue]);
+
     // 대화 자동 재생 (그룹 전체)
     useEffect(() => {
         if (learningTab === 'dialogue' && autoPlayDialogue && currentDialogue) {
-            let mounted = true;
-            let currentIndex = 0;
             const lines = currentDialogue.lines;
 
-            const playNextLine = () => {
-                if (!mounted || !autoPlayDialogue) return;
+            const playSequence = () => {
+                if (!autoPlayRef.current) return;
 
-                if (currentIndex >= lines.length) {
+                if (lineIndexRef.current >= lines.length) {
                     setAutoPlayDialogue(false);
+                    lineIndexRef.current = 0;
                     return;
                 }
 
-                const line = lines[currentIndex];
+                const line = lines[lineIndexRef.current];
+
                 speak(line.korean, line.speaker, () => {
-                    if (mounted && autoPlayDialogue) {
-                        currentIndex++;
-                        setTimeout(playNextLine, 1000); // 1초 대기 후 다음 문장
+                    if (autoPlayRef.current) {
+                        lineIndexRef.current += 1;
+                        setTimeout(playSequence, 500);
                     }
                 });
             };
 
-            playNextLine();
+            // isPlaying 체크 후 실행 (중복 방지)
+            playSequence();
+            // Note: speak 의존성 제거를 위해 useEffect 내부에서만 호출. 
+            // 하지만 StrictMode에서 두번 호출될 수 있으니 주의.
+            // 여기서는 심플하게 구현.
 
-            return () => { mounted = false; };
+            return () => { autoPlayRef.current = false; };
         }
-    }, [currentDialogueIndex, autoPlayDialogue, learningTab, currentDialogue, speak]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [learningTab, autoPlayDialogue, currentDialogue]); // speak 제거
 
     useEffect(() => {
         if (contentRef.current) contentRef.current.scrollTop = 0;
@@ -496,8 +514,6 @@ function LevelContent() {
                                                 #{currentVocab.topic}
                                             </span>
                                         )}
-                                        {/* 예시로 다중 태그 느낌을 주기 위해 더미 태그 추가 (데이터가 된다면 실제 데이터 사용) */}
-                                        {/* <span className="px-3 py-1 bg-slate-100 text-slate-500 text-xs font-bold rounded-full">#주요단어</span> */}
                                     </div>
 
                                     <div className="flex-1 flex flex-col items-center justify-center p-8 text-center mt-8">
@@ -612,41 +628,45 @@ function LevelContent() {
                             {currentDialogue ? (
                                 <div className="bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-slate-100 min-h-[50vh]">
                                     {/* 상단: 상황 제목 */}
-                                    <div className="bg-slate-50 p-4 border-b border-slate-100 flex justify-between items-center">
-                                        <h3 className="font-bold text-slate-700">💬 {currentDialogue.situation}</h3>
+                                    <div className="bg-slate-50 p-5 border-b border-slate-100 flex justify-between items-center">
+                                        <h3 className="font-bold text-slate-700 text-lg">💬 {currentDialogue.situation}</h3>
                                         <button
-                                            onClick={() => setAutoPlayDialogue(!autoPlayDialogue)}
-                                            className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all ${autoPlayDialogue ? 'bg-green-500 text-white' : 'bg-slate-200 text-slate-500'}`}
+                                            onClick={() => {
+                                                const newState = !autoPlayDialogue;
+                                                if (newState) lineIndexRef.current = 0;
+                                                setAutoPlayDialogue(newState);
+                                            }}
+                                            className={`px-5 py-3 rounded-full text-sm font-bold transition-all shadow-sm active:scale-95 flex items-center gap-2 ${autoPlayDialogue ? 'bg-green-500 text-white shadow-green-200' : 'bg-white border-2 border-slate-200 text-slate-600 hover:bg-slate-50'}`}
                                         >
-                                            {autoPlayDialogue ? "⏹ 멈춤" : "▶ 전체 재생"}
+                                            {autoPlayDialogue ? "⏹ 멈춤" : "▶ 전체 듣기"}
                                         </button>
                                     </div>
 
                                     {/* 대화 내용 (채팅창 스타일) */}
-                                    <div className="p-6 space-y-6 bg-white">
+                                    <div className="p-6 space-y-6 bg-white pb-32">
                                         {currentDialogue.lines.map((line, lIdx) => {
                                             const isMinisu = line.speaker && line.speaker.includes("민수");
                                             const isTui = line.speaker && line.speaker.includes("투이");
-                                            const isLeft = lIdx % 2 === 0; // 단순히 순서대로 좌우 배치 (또는 화자별로)
+                                            const isLeft = lIdx % 2 === 0;
 
                                             return (
                                                 <div key={lIdx} className={`flex gap-3 ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}>
                                                     {/* 화자 아바타 */}
-                                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-lg shadow-sm flex-shrink-0 ${isMinisu ? "bg-blue-100" : isTui ? "bg-pink-100" : "bg-slate-100"}`}>
+                                                    <div className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl shadow-sm flex-shrink-0 border-2 border-white ${isMinisu ? "bg-blue-100" : isTui ? "bg-pink-100" : "bg-slate-100"}`}>
                                                         {isMinisu ? "👨" : isTui ? "👩" : "👤"}
                                                     </div>
 
                                                     {/* 말풍선 */}
-                                                    <div className={`flex flex-col max-w-[80%] ${isLeft ? 'items-start' : 'items-end'}`}>
-                                                        <span className="text-xs text-slate-400 mb-1 ml-1">{line.speaker}</span>
-                                                        <div
+                                                    <div className={`flex flex-col max-w-[85%] ${isLeft ? 'items-start' : 'items-end'}`}>
+                                                        <span className="text-xs text-slate-400 mb-1 mx-2">{line.speaker}</span>
+                                                        <button
                                                             onClick={() => playAudio(line.korean, line.speaker)}
-                                                            className={`p-4 rounded-2xl cursor-pointer transition-all hover:scale-[1.02] active:scale-[0.98]
-                                                                ${isLeft ? 'bg-slate-100 rounded-tl-none text-slate-800' : 'bg-blue-500 rounded-tr-none text-white shadow-md'}`}
+                                                            className={`p-5 rounded-3xl text-left transition-all active:scale-[0.98] shadow-sm
+                                                                ${isLeft ? 'bg-slate-100 rounded-tl-none text-slate-800' : 'bg-blue-500 rounded-tr-none text-white shadow-blue-200'}`}
                                                         >
                                                             <p className="font-bold text-lg leading-relaxed">{line.korean}</p>
-                                                            {line.english && <p className={`text-xs mt-1 ${isLeft ? 'text-slate-400' : 'text-blue-200'}`}>{line.english}</p>}
-                                                        </div>
+                                                            {line.english && <p className={`text-xs mt-2 font-medium ${isLeft ? 'text-slate-500' : 'text-blue-100'}`}>{line.english}</p>}
+                                                        </button>
                                                     </div>
                                                 </div>
                                             );

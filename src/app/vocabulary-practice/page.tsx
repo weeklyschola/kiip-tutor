@@ -548,7 +548,7 @@ export default function VocabularyPracticePage() {
     // 레벨 선택 화면
     if (viewMode === "select") {
         return (
-            <main className="min-h-screen bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600">
+            <main className="min-h-[100dvh] bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600">
                 <header className="bg-white/10 backdrop-blur-sm sticky top-0 z-10">
                     <div className="max-w-lg mx-auto px-4 py-4 flex items-center justify-between">
                         <Link href="/" className="text-white hover:text-white/80">
@@ -699,7 +699,7 @@ export default function VocabularyPracticePage() {
         const isPerfect = hearts === 5 && correctCount === totalQuestions;
 
         return (
-            <main className="min-h-screen bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 flex items-center justify-center p-4">
+            <main className="min-h-[100dvh] bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 flex items-center justify-center p-4">
                 <div className="bg-white rounded-3xl shadow-xl p-8 max-w-md w-full text-center">
                     <div className={`w-24 h-24 mx-auto mb-6 rounded-full flex items-center justify-center ${isPerfect ? "bg-gradient-to-br from-yellow-400 to-orange-500" :
                         accuracy >= 70 ? "bg-gradient-to-br from-green-400 to-emerald-500" :
@@ -764,7 +764,7 @@ export default function VocabularyPracticePage() {
 
     // 연습 화면
     return (
-        <main className="min-h-screen bg-gray-50 flex flex-col">
+        <main className="min-h-[100dvh] bg-gray-50 flex flex-col">
             {/* 상단 상태바 */}
             <header className="bg-white border-b border-gray-100 sticky top-0 z-10">
                 <div className="max-w-lg mx-auto px-4 py-3">

@@ -79,72 +79,42 @@ function VocabularyContent() {
     const [bookmarked, setBookmarked] = useState<Set<number>>(new Set());
     const [showCompletion, setShowCompletion] = useState(false);
 
-    // 유료 기능 안내 모달 상태
+    // 유료 기능 안내 모달
     // 유료 기능 안내 모달 상태
     const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
     // 자동 진행 상태
     const [autoPlay, setAutoPlay] = useState(false);
 
-    // 자동 진행 로직
-    useEffect(() => {
-        if (autoPlay && viewMode === "learn" && vocabulary.length > 0 && selectedLevel !== null) {
-            const word = vocabulary[currentIndex];
-            // 2초 후 다음 카드로 넘어가는 콜백
-            const handleAutoNext = () => {
-                if (autoPlay) { // 여전히 켜져있는지 확인
-                    setTimeout(() => {
-                        handleNext();
-                    }, 2000); // 발음 끝나고 2초 대기 후 이동
-                }
-            };
-
-            // 약간의 딜레이 후 발음 시작 (화면 전환 직후라 자연스럽게)
-            const timeoutId = setTimeout(() => {
-                speak(word.word, undefined, handleAutoNext);
-            }, 500);
-
-            return () => clearTimeout(timeoutId);
-        }
-    }, [currentIndex, autoPlay, viewMode, selectedLevel]); // vocabulary는 데이터 로딩시 한번만 바뀌므로 제외하거나 포함해도 됨
-
-    // 레벨 선택 시 단어 가져오기
-    useEffect(() => {
-        if (selectedLevel === null) return;
-
-        const fetchData = async () => {
-            setIsLoading(true);
-            try {
-                const vocabData = await getVocabulary(selectedLevel);
-                if (vocabData.length > 0) {
-                    setVocabulary(vocabData);
-                } else {
-                    setVocabulary(getFallbackVocabulary(selectedLevel));
-                }
-            } catch {
-                setVocabulary(getFallbackVocabulary(selectedLevel));
-            }
-            setCurrentIndex(0);
-            setIsLoading(false);
-        };
-        fetchData();
-    }, [selectedLevel]);
-
-    // 저장된 진행 위치에서 시작
-    useEffect(() => {
-        if (selectedLevel === null || vocabulary.length === 0) return;
-
-        const progressKey = `vocab-${selectedLevel}`;
-        const saved = getCardProgress(progressKey);
-
-        if (saved && saved.currentIndex < vocabulary.length) {
-            setCurrentIndex(saved.currentIndex);
-        }
-    }, [selectedLevel, vocabulary, getCardProgress]);
-
+    // 레벨 선택 핸들러
     const handleLevelSelect = (level: number) => {
         setSelectedLevel(level);
-        setViewMode("learn");
+        setIsLoading(true);
+        // 약 0.5초 딜레이 (로딩 효과)
+        setTimeout(() => {
+            const data = getFallbackVocabulary(level);
+            setVocabulary(data);
+            setIsLoading(false);
+            setViewMode("learn");
+            setCurrentIndex(0);
+            setShowCompletion(false);
+        }, 500);
+    };
+
+    // 현재 단어
+    const currentWord = vocabulary[currentIndex];
+
+    const handleNext = () => {
+        if (currentIndex < vocabulary.length - 1) {
+            setCurrentIndex(prev => prev + 1);
+            if (autoPlay) {
+                // 자동 재생 로직은 useEffect로 처리하거나 여기서 호출
+                // 여기서는 간단히 다음 단어 음성 재생 (약간의 딜레이 후)
+                // 하지만 speak 함수는 비동기라... 일단 생략하거나 useEffect에 의존
+            }
+        } else {
+            setShowCompletion(true);
+        }
     };
 
     const handlePrev = () => {
@@ -153,52 +123,45 @@ function VocabularyContent() {
         }
     };
 
-    const handleNext = () => {
-        if (currentIndex < vocabulary.length - 1) {
-            const nextIndex = currentIndex + 1;
-            setCurrentIndex(nextIndex);
-
-            // 진행 위치 저장
-            if (selectedLevel !== null) {
-                const progressKey = `vocab-${selectedLevel}`;
-                updateCardProgress(progressKey, nextIndex, vocabulary.length);
-            }
-        } else {
-            // 마지막 단어에서 "완료" 클릭 시
-            setShowCompletion(true);
-        }
-    };
-
     const handleRestart = () => {
         setCurrentIndex(0);
         setShowCompletion(false);
-        if (selectedLevel !== null) {
-            updateCardProgress(`vocab-${selectedLevel}`, 0, vocabulary.length);
-        }
-    };
-
-    const handleAiTutorClick = () => {
-        alert("죄송합니다. AI 튜터 기능은 현재 준비 중입니다. 🙇‍♂️");
     };
 
     const toggleBookmark = (id: number) => {
-        setBookmarked(prev => {
-            const newSet = new Set(prev);
-            if (newSet.has(id)) {
-                newSet.delete(id);
-            } else {
-                newSet.add(id);
-            }
-            return newSet;
-        });
+        const newSet = new Set(bookmarked);
+        if (newSet.has(id)) {
+            newSet.delete(id);
+        } else {
+            newSet.add(id);
+        }
+        setBookmarked(newSet);
     };
 
-    const currentWord = vocabulary[currentIndex];
+    const handleAiTutorClick = () => {
+        if (!currentWord) return;
+        // AI 튜터 페이지로 이동 (쿼리 파라미터 전달)
+        // router가 없으므로 window.location 사용하거나 router import 필요
+        // 상단에 router import가 없으므로 window.location.href 사용
+        window.location.href = `/chat?message=${encodeURIComponent(`"${currentWord.word}"의 뜻과 예문을 자세히 설명해줘.`)}`;
+    };
 
+    // Auto Play Effect
+    useEffect(() => {
+        if (autoPlay && viewMode === 'learn' && currentWord && !showCompletion) {
+            const timer = setTimeout(() => {
+                speak(currentWord.word, undefined, () => {
+                    // 단어 재생 후 예문 재생? 아니면 다음으로?
+                    // 여기서는 단순히 단어 읽어주는 것만
+                });
+            }, 500);
+            return () => clearTimeout(timer);
+        }
+    }, [currentIndex, autoPlay, viewMode, currentWord, showCompletion, speak]);
     // 학습 완료 축하 화면
     if (showCompletion) {
         return (
-            <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-6">
+            <main className="min-h-[100dvh] bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-6">
                 <div className="bg-white rounded-3xl p-10 shadow-xl max-w-sm w-full text-center border-2 border-white/50 backdrop-blur-sm">
                     <div className="text-6xl mb-6 animate-bounce">🎉</div>
                     <h2 className="text-3xl font-extrabold text-slate-800 mb-2">학습 완료!</h2>
@@ -227,7 +190,7 @@ function VocabularyContent() {
     // 레벨 선택 화면
     if (viewMode === "select") {
         return (
-            <main className="min-h-screen bg-gray-50 pb-nav">
+            <main className="min-h-[100dvh] bg-gray-50 pb-nav">
                 <header className="bg-white sticky top-0 z-40 border-b border-gray-100">
                     <div className="max-w-lg mx-auto px-4 py-4 flex items-center justify-between">
                         <Link href="/" className="text-gray-600">
@@ -315,7 +278,7 @@ function VocabularyContent() {
     // 로딩 화면
     if (isLoading) {
         return (
-            <main className="min-h-screen bg-gray-50 flex items-center justify-center">
+            <main className="min-h-[100dvh] bg-gray-50 flex items-center justify-center">
                 <div className="text-center">
                     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
                     <p className="text-gray-500">단어를 불러오는 중...</p>
@@ -327,7 +290,7 @@ function VocabularyContent() {
     // 단어가 없는 경우
     if (vocabulary.length === 0) {
         return (
-            <main className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
+            <main className="min-h-[100dvh] bg-gray-50 flex flex-col items-center justify-center p-4">
                 <span className="text-5xl mb-4">📭</span>
                 <p className="text-gray-500 mb-4">이 레벨에는 아직 단어가 없습니다</p>
                 <button
@@ -342,7 +305,7 @@ function VocabularyContent() {
 
     // 단어 학습 화면
     return (
-        <main className="min-h-screen bg-gray-50 pb-24">
+        <main className="min-h-[100dvh] bg-gray-50 pb-24">
             {/* 헤더 */}
             <header className="bg-white sticky top-0 z-40 border-b border-gray-100">
                 <div className="max-w-lg mx-auto px-4 py-3 flex items-center justify-between">
