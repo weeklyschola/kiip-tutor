@@ -53,8 +53,20 @@ export async function POST(req: NextRequest) {
             console.error("Status:", response.status);
             console.error("Response:", errorText);
             console.error("======================");
+
+            // Try to parse JSON error if possible
+            let detailedError = errorText;
+            try {
+                const jsonError = JSON.parse(errorText);
+                if (jsonError.error && jsonError.error.message) {
+                    detailedError = jsonError.error.message;
+                }
+            } catch (e) {
+                // Not JSON, keep text
+            }
+
             return NextResponse.json(
-                { error: "TTS generation failed", useBrowserTTS: true },
+                { error: `Cloud TTS Error (${response.status}): ${detailedError}`, useBrowserTTS: true },
                 { status: 500 }
             );
         }
