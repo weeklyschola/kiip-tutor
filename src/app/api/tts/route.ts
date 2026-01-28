@@ -15,7 +15,8 @@ export async function POST(req: NextRequest) {
         console.log(`[TTS] Text: "${text.substring(0, 20)}...", Speaker: ${speaker}, Voice: ${voice}`);
 
         // API Key 방식 (Vercel 배포 호환) - Service Account 대신 API Key 사용
-        const apiKey = process.env.GOOGLE_MAPPED_API_KEY || process.env.NEXT_PUBLIC_TTS_API_KEY;
+        // Gemini API Key도 Cloud TTS API가 활성화되어 있다면 사용 가능하므로 Fallback 리스트에 추가
+        const apiKey = process.env.GOOGLE_MAPPED_API_KEY || process.env.GEMINI_API_KEY || process.env.NEXT_PUBLIC_TTS_API_KEY;
 
         if (!apiKey) {
             console.error("[TTS] API Key Missing. Please set GOOGLE_MAPPED_API_KEY in Vercel.");
