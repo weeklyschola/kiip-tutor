@@ -139,11 +139,14 @@ function VocabularyContent() {
     };
 
     const handleAiTutorClick = () => {
-        if (!currentWord) return;
+        // if (!currentWord) return;
         // AI 튜터 페이지로 이동 (쿼리 파라미터 전달)
         // router가 없으므로 window.location 사용하거나 router import 필요
         // 상단에 router import가 없으므로 window.location.href 사용
-        window.location.href = `/chat?message=${encodeURIComponent(`"${currentWord.word}"의 뜻과 예문을 자세히 설명해줘.`)}`;
+        // window.location.href = `/chat?message=${encodeURIComponent(`"${currentWord.word}"의 뜻과 예문을 자세히 설명해줘.`)}`;
+
+        // [User Request]: 단어장에서 튜터에게 물어보기를 누르면 구독 안내가 아니라 준비중입니다.로 변경
+        alert("준비중입니다.");
     };
 
     // Auto Play Effect
