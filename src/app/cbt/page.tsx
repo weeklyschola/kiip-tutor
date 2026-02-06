@@ -193,7 +193,7 @@ export default function CbtPage() {
                 });
             });
         }
-    }, [isFinished, answers, questions, timer, saveSession]);
+    }, [isFinished, answers, questions, timer, saveSession, isAuthenticated, user]);
 
     const handleOpenAiTutor = (question: typeof sampleQuestions[0], answer: Answer) => {
         if (!hasAiTutor) {

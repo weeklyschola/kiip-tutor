@@ -171,8 +171,8 @@ export default function ScenarioManager({ isOpen, onClose, adminKey }: ScenarioM
                                                 key={lv === null ? "all" : lv}
                                                 onClick={() => setFilterLevel(lv)}
                                                 className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${filterLevel === lv
-                                                        ? "bg-amber-600 text-white"
-                                                        : "bg-gray-700 text-gray-400 hover:bg-gray-600"
+                                                    ? "bg-amber-600 text-white"
+                                                    : "bg-gray-700 text-gray-400 hover:bg-gray-600"
                                                     }`}
                                             >
                                                 {lv === null ? "전체" : `Lv.${lv}`}
@@ -388,7 +388,7 @@ export default function ScenarioManager({ isOpen, onClose, adminKey }: ScenarioM
                                     ))}
                                     {(!currentScenario?.dialogue || currentScenario.dialogue.length === 0) && (
                                         <div className="text-center py-8 border-2 border-dashed border-gray-700 rounded-xl text-gray-500 text-xs">
-                                            대화 내용이 없습니다. '줄 추가' 버튼으로 대화를 구성하세요.
+                                            대화 내용이 없습니다. &apos;줄 추가&apos; 버튼으로 대화를 구성하세요.
                                         </div>
                                     )}
                                 </div>
