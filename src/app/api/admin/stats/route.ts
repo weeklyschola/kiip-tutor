@@ -180,6 +180,42 @@ export async function GET(req: NextRequest) {
         const premiumUsers = premiumData?.length || 0;
         const conversionRate = totalUsers > 0 ? Math.round((premiumUsers / totalUsers) * 100) : 0;
 
+        // 10. 사용자 통계 (Demographics)
+        const { data: profilesData } = await supabase
+            .from("profiles")
+            .select("nationality, gender, birth_date");
+
+        const nationalityStats: Record<string, number> = {};
+        const genderStats: Record<string, number> = { "남성": 0, "여성": 0, "기타": 0 };
+        const ageStats: Record<string, number> = { "10대": 0, "20대": 0, "30대": 0, "40대": 0, "50대+": 0 };
+
+        profilesData?.forEach(p => {
+            // 국적
+            const nat = p.nationality || "미지정";
+            nationalityStats[nat] = (nationalityStats[nat] || 0) + 1;
+
+            // 성별
+            if (p.gender === "male") genderStats["남성"]++;
+            else if (p.gender === "female") genderStats["여성"]++;
+            else genderStats["기타"]++;
+
+            // 연령대
+            if (p.birth_date) {
+                const age = new Date().getFullYear() - new Date(p.birth_date).getFullYear();
+                if (age < 20) ageStats["10대"]++;
+                else if (age < 30) ageStats["20대"]++;
+                else if (age < 40) ageStats["30대"]++;
+                else if (age < 50) ageStats["40대"]++;
+                else ageStats["50대+"]++;
+            }
+        });
+
+        const demographics = {
+            nationality: Object.entries(nationalityStats).map(([name, value]) => ({ name, value })).sort((a, b) => b.value - a.value).slice(0, 5),
+            gender: Object.entries(genderStats).map(([name, value]) => ({ name, value })),
+            age: Object.entries(ageStats).map(([name, value]) => ({ name, value })),
+        };
+
         return NextResponse.json({
             overview: {
                 totalUsers,
@@ -194,6 +230,7 @@ export async function GET(req: NextRequest) {
             dailyTrend,
             levelBreakdown,
             categoryBreakdown,
+            demographics,
             generatedAt: new Date().toISOString(),
         });
 

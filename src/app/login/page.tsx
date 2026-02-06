@@ -72,40 +72,6 @@ function LoginContent() {
                         </svg>
                         Google로 계속하기
                     </button>
-
-                    <button
-                        onClick={() => handleLogin('kakao')}
-                        disabled={isLoading}
-                        className="w-full flex items-center justify-center gap-3 py-3 rounded-xl hover:opacity-90 transition-opacity bg-[#FEE500] text-[#000000] font-medium"
-                    >
-                        {/* Kakao Icon (Simple Placeholder) */}
-                        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 3C5.9 3 1 6.9 1 11.8c0 3.2 2.1 6 5.3 7.6-.2.8-1 3.1-1.1 3.6 0 .1 0 .2.2.2.1 0 .3-.1.4-.2 2.6-1.8 4.3-3 4.5-3.1.6.1 1.2.1 1.7.1 6.1 0 11-3.9 11-8.8S18.1 3 12 3z" />
-                        </svg>
-                        카카오로 계속하기
-                    </button>
-
-                    <button
-                        onClick={() => handleLogin('naver')}
-                        disabled={isLoading}
-                        className="w-full flex items-center justify-center gap-3 py-3 rounded-xl hover:opacity-90 transition-opacity bg-[#03C75A] text-white font-medium"
-                    >
-                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M16.273 12.845L7.376 0H0v24h7.726V11.156L16.624 24H24V0h-7.727v12.845z" />
-                        </svg>
-                        네이버로 계속하기
-                    </button>
-
-                    <button
-                        onClick={() => handleLogin('apple')}
-                        disabled={isLoading}
-                        className="w-full flex items-center justify-center gap-3 py-3 rounded-xl hover:opacity-90 transition-opacity bg-black text-white font-medium"
-                    >
-                        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.74 1.18 0 2.45-1.03 3.49-1.03 1.58.05 2.76 1.05 3.36 2.02-3.07 1.89-2.53 6.08.34 7.28-.24.73-.55 1.54-.95 2.21-.69 1.14-1.37 2.05-2.32 1.75zM12.03 7.25c-.25-2.28 1.4-4.8 3.84-5.25.43 2.54-2.19 4.93-3.84 5.25z" />
-                        </svg>
-                        Apple로 계속하기
-                    </button>
                 </div>
 
                 <div className="text-center mt-6">

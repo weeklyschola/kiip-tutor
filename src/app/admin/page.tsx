@@ -34,11 +34,19 @@ interface AdminStats {
         attempts: number;
         wrongRate: number;
     }>;
+    demographics?: {
+        nationality: { name: string; value: number }[];
+        gender: { name: string; value: number }[];
+        age: { name: string; value: number }[];
+    };
     generatedAt: string;
     isSampleData?: boolean;
 }
 
 import UserManagementModal from "@/components/admin/UserManagementModal";
+import NoticeManager from "@/components/admin/NoticeManager";
+import QuestionManager from "@/components/admin/QuestionManager";
+import ScenarioManager from "@/components/admin/ScenarioManager";
 
 export default function AdminDashboard() {
     const [stats, setStats] = useState<AdminStats | null>(null);
@@ -48,6 +56,9 @@ export default function AdminDashboard() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [initialized, setInitialized] = useState(false);
     const [showUserModal, setShowUserModal] = useState(false);
+    const [showNoticeModal, setShowNoticeModal] = useState(false);
+    const [showQuestionModal, setShowQuestionModal] = useState(false);
+    const [showScenarioModal, setShowScenarioModal] = useState(false);
 
     const fetchStats = async (key: string) => {
         if (!key) return;
@@ -208,6 +219,24 @@ export default function AdminDashboard() {
                             <span>👥</span> 회원 관리
                         </button>
                         <button
+                            onClick={() => setShowNoticeModal(true)}
+                            className="px-4 py-2 bg-amber-600 rounded-lg hover:bg-amber-700 transition-colors text-sm font-medium flex items-center gap-2"
+                        >
+                            <span>📢</span> 공지 관리
+                        </button>
+                        <button
+                            onClick={() => setShowQuestionModal(true)}
+                            className="px-4 py-2 bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors text-sm font-medium flex items-center gap-2"
+                        >
+                            <span>📝</span> 문제 관리
+                        </button>
+                        <button
+                            onClick={() => setShowScenarioModal(true)}
+                            className="px-4 py-2 bg-amber-600 rounded-lg hover:bg-amber-700 transition-colors text-sm font-medium flex items-center gap-2"
+                        >
+                            <span>💬</span> 시나리오 관리
+                        </button>
+                        <button
                             onClick={handleRefresh}
                             className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors text-sm"
                         >
@@ -227,6 +256,27 @@ export default function AdminDashboard() {
             <UserManagementModal
                 isOpen={showUserModal}
                 onClose={() => setShowUserModal(false)}
+                adminKey={adminKey}
+            />
+
+            {/* 공지사항 관리 모달 */}
+            <NoticeManager
+                isOpen={showNoticeModal}
+                onClose={() => setShowNoticeModal(false)}
+                adminKey={adminKey}
+            />
+
+            {/* 문제 관리 모달 */}
+            <QuestionManager
+                isOpen={showQuestionModal}
+                onClose={() => setShowQuestionModal(false)}
+                adminKey={adminKey}
+            />
+
+            {/* 시나리오 관리 모달 */}
+            <ScenarioManager
+                isOpen={showScenarioModal}
+                onClose={() => setShowScenarioModal(false)}
                 adminKey={adminKey}
             />
 
@@ -301,6 +351,79 @@ export default function AdminDashboard() {
                         </div>
                     </div>
                 </section>
+
+                {/* 사용자 분류 통계 (Demographics) */}
+                {stats.demographics && (
+                    <section className="mb-8">
+                        <h2 className="text-lg font-bold text-gray-400 mb-4 flex items-center gap-2">
+                            <span>📊</span> 사용자 분석 (인구통계)
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {/* 국적별 TOP 5 */}
+                            <div className="bg-gray-800 rounded-2xl p-6 border border-gray-700 shadow-lg">
+                                <h3 className="text-gray-400 text-xs font-bold mb-4 uppercase tracking-wider">🌍 국적별 분포 (TOP 5)</h3>
+                                <div className="space-y-4">
+                                    {stats.demographics.nationality.map((item, idx) => (
+                                        <div key={idx}>
+                                            <div className="flex justify-between text-xs mb-1.5">
+                                                <span className="text-gray-300 font-medium">{item.name}</span>
+                                                <span className="text-blue-400 font-bold">{item.value}명</span>
+                                            </div>
+                                            <div className="w-full bg-gray-700/50 rounded-full h-1.5 overflow-hidden">
+                                                <div
+                                                    className="bg-gradient-to-r from-blue-600 to-blue-400 h-full rounded-full transition-all duration-1000 ease-out"
+                                                    style={{ width: `${(item.value / stats.overview.totalUsers) * 100}%` }}
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* 연령대별 */}
+                            <div className="bg-gray-800 rounded-2xl p-6 border border-gray-700 shadow-lg">
+                                <h3 className="text-gray-400 text-xs font-bold mb-4 uppercase tracking-wider">🎂 연령대별 분포</h3>
+                                <div className="space-y-4">
+                                    {stats.demographics.age.map((item, idx) => (
+                                        <div key={idx}>
+                                            <div className="flex justify-between text-xs mb-1.5">
+                                                <span className="text-gray-300 font-medium">{item.name}</span>
+                                                <span className="text-indigo-400 font-bold">{item.value}명</span>
+                                            </div>
+                                            <div className="w-full bg-gray-700/50 rounded-full h-1.5 overflow-hidden">
+                                                <div
+                                                    className="bg-gradient-to-r from-indigo-600 to-indigo-400 h-full rounded-full transition-all duration-1000 ease-out"
+                                                    style={{ width: `${(item.value / (stats.demographics?.age.reduce((a, b) => a + b.value, 0) || 1)) * 100}%` }}
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* 성별 */}
+                            <div className="bg-gray-800 rounded-2xl p-6 border border-gray-700 shadow-lg">
+                                <h3 className="text-gray-400 text-xs font-bold mb-4 uppercase tracking-wider">🚻 성별 분포</h3>
+                                <div className="space-y-4">
+                                    {stats.demographics.gender.map((item, idx) => (
+                                        <div key={idx}>
+                                            <div className="flex justify-between text-xs mb-1.5">
+                                                <span className="text-gray-300 font-medium">{item.name}</span>
+                                                <span className="text-green-400 font-bold">{item.value}명</span>
+                                            </div>
+                                            <div className="w-full bg-gray-700/50 rounded-full h-1.5 overflow-hidden">
+                                                <div
+                                                    className="bg-gradient-to-r from-green-600 to-green-400 h-full rounded-full transition-all duration-1000 ease-out"
+                                                    style={{ width: `${(item.value / (stats.demographics?.gender.reduce((a, b) => a + b.value, 0) || 1)) * 100}%` }}
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                )}
 
                 <div className="grid md:grid-cols-2 gap-8 mb-8">
                     {/* 자주 틀리는 문제 TOP 10 */}
