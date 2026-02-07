@@ -153,7 +153,7 @@ function VocabularyContent() {
     useEffect(() => {
         if (autoPlay && viewMode === 'learn' && currentWord && !showCompletion) {
             const timer = setTimeout(() => {
-                speak(currentWord.word, undefined, () => {
+                speak(currentWord.word, undefined, undefined, () => {
                     // 단어 재생 후 예문 재생? 아니면 다음으로?
                     // 여기서는 단순히 단어 읽어주는 것만
                 });

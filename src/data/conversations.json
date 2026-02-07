@@ -277,9 +277,9 @@
                 {
                     "speaker": "접수직원",
                     "role": "other",
-                    "text": "안녕하세요, ○○병원입니다.",
+                    "text": "안녕하세요, 세종병원입니다.",
                     "avatar": "👩‍⚕️",
-                    "translation": "Hello, this is ○○ Hospital."
+                    "translation": "Hello, this is Sejong Hospital."
                 },
                 {
                     "speaker": "환자 (나)",
@@ -298,9 +298,9 @@
                 {
                     "speaker": "환자 (나)",
                     "role": "user",
-                    "text": "3일 전부터 머리가 아프고 열이 있어요.",
+                    "text": "3일 전부터 머리가 아프고 열이 있어요. 여기 행복약국 옆이에요.",
                     "avatar": "👤",
-                    "translation": "I've had a headache and fever since 3 days ago."
+                    "translation": "I've had a headache and fever since 3 days ago. It's next to the Haengbok Pharmacy."
                 },
                 {
                     "speaker": "접수직원",

@@ -527,13 +527,12 @@ export default function VocabularyPracticePage() {
         }
     };
 
-    // 듣기 문제 TTS 재생
-    const playAudio = () => {
+    const playAudio = useCallback(() => {
         const currentQuestion = questions[currentIndex];
         if (currentQuestion?.audioText) {
             speak(currentQuestion.audioText);
         }
-    };
+    }, [currentIndex, questions, speak]);
 
     // 자동 재생 (듣기 문제)
     useEffect(() => {

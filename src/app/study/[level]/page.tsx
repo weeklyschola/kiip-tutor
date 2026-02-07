@@ -134,17 +134,16 @@ function LevelContent() {
     const currentDialogue = dialogues[currentDialogueIndex] || null;
 
     // 공통 오디오 재생 함수
-    const playAudio = (text: string, speaker?: string, onComplete?: () => void) => {
+    const playAudio = (text: string, speaker?: string, gender?: "male" | "female", onComplete?: () => void) => {
         if (!text) return;
 
         // 사용자가 직접 클릭해서 재생하는 경우, 진행 중인 자동 재생이 있으면 즉시 중단
-        // (중단하지 않으면 기존 오디오가 멈추면서 onComplete가 트리거되어 다음 문장으로 넘어가는 현상 발생)
         if (autoPlayDialogue) {
-            autoPlayRef.current = false; // 즉시 Ref 업데이트 (useEffect보다 빠름)
+            autoPlayRef.current = false; // 즉시 Ref 업데이트
             setAutoPlayDialogue(false);
         }
 
-        speak(text, speaker, onComplete);
+        speak(text, speaker, gender, onComplete);
     };
 
     // 대화 자동 진행 로직 (FIXED)
@@ -177,7 +176,7 @@ function LevelContent() {
 
                 const line = lines[lineIndexRef.current];
 
-                speak(line.korean, line.speaker, () => {
+                speak(line.korean, line.speaker, (line as any).gender, () => {
                     if (autoPlayRef.current) {
                         lineIndexRef.current += 1;
                         setTimeout(playSequence, 500);
@@ -680,7 +679,7 @@ function LevelContent() {
                                                     <div className={`flex flex-col max-w-[85%] ${isLeft ? 'items-start' : 'items-end'}`}>
                                                         <span className="text-xs text-slate-400 mb-1 mx-2">{line.speaker}</span>
                                                         <button
-                                                            onClick={() => playAudio(line.korean, line.speaker)}
+                                                            onClick={() => playAudio(line.korean, line.speaker, (line as any).gender)}
                                                             className={`p-5 rounded-3xl text-left transition-all active:scale-[0.98] shadow-sm
                                                                 ${isLeft ? 'bg-slate-100 rounded-tl-none text-slate-800' : 'bg-blue-500 rounded-tr-none text-white shadow-blue-200'}`}
                                                         >

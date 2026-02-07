@@ -3,16 +3,19 @@ import { getSpeakerVoice } from "@/lib/voiceMapping";
 
 export async function POST(req: NextRequest) {
     try {
-        const { text, speaker } = await req.json();
+        let { text, speaker, gender } = await req.json();
 
         if (!text) {
             return NextResponse.json({ error: "Text is required" }, { status: 400 });
         }
 
-        // 화자에 따른 음성 선택
-        const voice = speaker ? getSpeakerVoice(speaker) : "ko-KR-Neural2-A";
+        // 밑줄(_) 및 불필요한 기호 제거 (발음 방지)
+        text = text.replace(/_{2,}/g, " ").replace(/_+/g, " ");
 
-        console.log(`[TTS] Text: "${text.substring(0, 20)}...", Speaker: ${speaker}, Voice: ${voice}`);
+        // 화자에 따른 음성 선택
+        const voice = speaker ? getSpeakerVoice(speaker, gender) : "ko-KR-Neural2-A";
+
+        console.log(`[TTS] Text: "${text.substring(0, 20)}...", Speaker: ${speaker}, Gender: ${gender}, Voice: ${voice}`);
 
         // API Key 방식 (Vercel 배포 호환) - Service Account 대신 API Key 사용
         // [임시] 사용자 제공 새 API Key 적용 (AIzaSyD5xFK0Q...)

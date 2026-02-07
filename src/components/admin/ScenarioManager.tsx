@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 interface DialogueLine {
     speaker: string;
     role: "user" | "other";
+    gender?: "male" | "female";
     text: string;
     avatar: string;
     translation: string;
@@ -358,6 +359,21 @@ export default function ScenarioManager({ isOpen, onClose, adminKey }: ScenarioM
                                                         className="w-full bg-gray-800 border-none rounded-lg px-2 py-1 text-[10px] text-white text-center outline-none"
                                                         placeholder="아바타(Emoji)"
                                                     />
+                                                </div>
+                                                <div className="md:col-span-1">
+                                                    <select
+                                                        value={line.gender || ""}
+                                                        onChange={(e) => {
+                                                            const newD = [...(currentScenario.dialogue || [])];
+                                                            newD[idx].gender = (e.target.value || undefined) as "male" | "female" | undefined;
+                                                            setCurrentScenario({ ...currentScenario, dialogue: newD });
+                                                        }}
+                                                        className="w-full bg-gray-800 border-none rounded-lg px-2 py-1 text-[10px] text-white outline-none"
+                                                    >
+                                                        <option value="">자동 성별</option>
+                                                        <option value="male">남성 Voice</option>
+                                                        <option value="female">여성 Voice</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">

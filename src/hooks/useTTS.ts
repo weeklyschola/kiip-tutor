@@ -78,7 +78,7 @@ export const useTTS = (options: UseTTSOptions = {}) => {
     }, []);
 
     // 브라우저 기본 TTS (무료/Fallback)
-    const speakWithWebSpeech = useCallback((text: string, speaker?: string, onComplete?: () => void) => {
+    const speakWithWebSpeech = useCallback((text: string, speaker?: string, gender?: "male" | "female", onComplete?: () => void) => {
         if (typeof window === 'undefined' || !window.speechSynthesis) {
             onComplete?.();
             return;
@@ -86,7 +86,9 @@ export const useTTS = (options: UseTTSOptions = {}) => {
 
         window.speechSynthesis.cancel();
 
-        const utterance = new SpeechSynthesisUtterance(text);
+        // 밑줄 제거 (발음 방지)
+        const cleanText = text.replace(/_{2,}/g, " ").replace(/_+/g, " ");
+        const utterance = new SpeechSynthesisUtterance(cleanText);
         utterance.lang = 'ko-KR';
         utterance.rate = 1.0; // 속도 약간 올림
 
@@ -101,22 +103,19 @@ export const useTTS = (options: UseTTSOptions = {}) => {
         if (koreanVoice) {
             utterance.voice = koreanVoice;
 
-            // 화자 성별에 따른 기본 목소리 변경 시도 (가능한 경우)
-            // Note: 브라우저마다 제공하는 보이스가 다르므로 완벽하지 않음
-            if (speaker) {
-                const voices = window.speechSynthesis.getVoices().filter(v => v.lang.includes('ko'));
-                // "투이" 등 여성 화자
-                const isFemale = ["투이", "민지", "수지", "지은"].some(n => speaker.includes(n));
-                const isMale = ["민수", "철수", "영수", "준호"].some(n => speaker.includes(n));
+            // 명시적 성별 또는 화자 이름에 따른 목소리 선택
+            const koVoices = voices.filter(v => v.lang.includes('ko'));
+            if (koVoices.length > 1) {
+                const isFemale = gender === "female" || (speaker && ["투이", "민지", "수지", "지은", "선생님", "직원"].some(n => speaker.includes(n)));
+                const isMale = gender === "male" || (speaker && ["민수", "철수", "영수", "준호", "팀장"].some(n => speaker.includes(n)));
 
-                // 목록에서 대안 목소리 찾기 (기본 보이스와 다른 것)
-                if (voices.length > 1) {
-                    if (isMale) {
-                        // 남성용: 보통 목록의 뒤쪽이나 특정 이름(Google)이 아닐 수 있음. 
-                        // 단순 로직: 짝수/홀수 인덱스 혹은 다른 보이스 선택
-                        const altVoice = voices.find(v => v !== koreanVoice) || koreanVoice;
-                        utterance.voice = altVoice;
-                    }
+                if (isMale) {
+                    // 남성: 보통 목록에서 다른 보이스 시도
+                    const maleVoice = koVoices.find(v => v.name.includes('Neural2-C')) || koVoices.find(v => v !== koreanVoice);
+                    if (maleVoice) utterance.voice = maleVoice;
+                } else if (isFemale) {
+                    const femaleVoice = koVoices.find(v => v.name.includes('Neural2-A')) || koreanVoice;
+                    if (femaleVoice) utterance.voice = femaleVoice;
                 }
             }
         }
@@ -126,7 +125,7 @@ export const useTTS = (options: UseTTSOptions = {}) => {
     }, []);
 
     // Gemini TTS (프리미엄 - Web Audio API 사용)
-    const speakWithGemini = useCallback(async (text: string, speaker?: string, onComplete?: () => void): Promise<boolean> => {
+    const speakWithGemini = useCallback(async (text: string, speaker?: string, gender?: "male" | "female", onComplete?: () => void): Promise<boolean> => {
         if (!audioContextRef.current || !gainNodeRef.current) return false;
 
         try {
@@ -143,7 +142,7 @@ export const useTTS = (options: UseTTSOptions = {}) => {
             const response = await fetch('/api/tts', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ text, premium: true, speaker }),
+                body: JSON.stringify({ text, premium: true, speaker, gender }),
                 signal: abortControllerRef.current.signal,
             });
 
@@ -187,8 +186,8 @@ export const useTTS = (options: UseTTSOptions = {}) => {
     }, []);
 
     // 말하기 실행
-    const speak = useCallback(async (text: string, speaker?: string, onComplete?: () => void) => {
-        console.log(`[useTTS] Speak requested. Text: "${text.substring(0, 10)}...", Speaker: ${speaker}, Premium: ${isPremium}`);
+    const speak = useCallback(async (text: string, speaker?: string, gender?: "male" | "female", onComplete?: () => void) => {
+        console.log(`[useTTS] Speak requested. Text: "${text.substring(0, 10)}...", Speaker: ${speaker}, Gender: ${gender}, Premium: ${isPremium}`);
 
         // 재생 중이면 멈춤 (토글)
         if (isPlaying) {
@@ -216,13 +215,13 @@ export const useTTS = (options: UseTTSOptions = {}) => {
 
         // 프리미엄이고 컨텍스트 살아있으면 Gemini 시도
         if (isPremium && audioContextRef.current) {
-            const success = await speakWithGemini(text, speaker, onComplete);
+            const success = await speakWithGemini(text, speaker, gender, onComplete);
             if (success) return;
         }
 
         // 실패하거나 프리미엄 아니면 Web Speech Fallback
         console.warn("[useTTS] Falling back to Web Speech API");
-        speakWithWebSpeech(text, speaker, onComplete);
+        speakWithWebSpeech(text, speaker, gender, onComplete);
     }, [isPlaying, isPremium, speakWithGemini, speakWithWebSpeech, stopPrevious]);
 
     useEffect(() => {
