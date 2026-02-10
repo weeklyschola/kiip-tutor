@@ -3560,6 +3560,528 @@
                 "~아야/어야 하다"
             ],
             "cultureTip": "한국 병원은 의원(작은 병원)과 종합병원(큰 병원)이 있습니다. 가벼운 감기는 의원에 먼저 가는 것이 좋습니다."
+        },
+        {
+            "id": 48,
+            "level": 0,
+            "title": "가족 소개",
+            "category": "가족",
+            "icon": "👨‍👩‍👧‍👦",
+            "description": "가족 구성원 소개하기",
+            "dialogue": [
+                {
+                    "speaker": "지민",
+                    "role": "other",
+                    "text": "투이 씨, 가족이 몇 명이에요?",
+                    "avatar": "🙋‍♀️",
+                    "translation": "Thuy, how many people are in your family?"
+                },
+                {
+                    "speaker": "투이 (나)",
+                    "role": "user",
+                    "text": "우리 가족은 네 명이에요. 아버지, 어머니, 남동생, 그리고 저예요.",
+                    "avatar": "👤",
+                    "translation": "There are four people in our family. Father, mother, younger brother, and me."
+                },
+                {
+                    "speaker": "지민",
+                    "role": "other",
+                    "text": "남동생은 학생이에요?",
+                    "avatar": "🙋‍♀️",
+                    "translation": "Is your younger brother a student?"
+                },
+                {
+                    "speaker": "투이 (나)",
+                    "role": "user",
+                    "text": "네, 남동생은 대학생이에요. 베트남에 있어요.",
+                    "avatar": "👤",
+                    "translation": "Yes, my younger brother is a college student. He is in Vietnam."
+                }
+            ],
+            "vocabulary": [
+                "가족",
+                "명",
+                "아버지",
+                "어머니",
+                "남동생",
+                "대학생"
+            ],
+            "grammar": [
+                "~이/가 몇 명이에요?",
+                "~하고",
+                "~에 있어요"
+            ],
+            "cultureTip": "한국에서는 가족을 소개할 때 '나의 가족'보다 '우리 가족'이라는 표현을 더 자주 사용합니다."
+        },
+        {
+            "id": 49,
+            "level": 0,
+            "title": "우리 집",
+            "category": "장소",
+            "icon": "🏠",
+            "description": "집 구조 설명하기",
+            "dialogue": [
+                {
+                    "speaker": "친구",
+                    "role": "other",
+                    "text": "집이 어디예요?",
+                    "avatar": "🧒",
+                    "translation": "Where is your house?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "학교 앞에 있어요. 방이 두 개예요.",
+                    "avatar": "👤",
+                    "translation": "It's in front of the school. There are two rooms."
+                },
+                {
+                    "speaker": "친구",
+                    "role": "other",
+                    "text": "거실도 넓어요?",
+                    "avatar": "🧒",
+                    "translation": "Is the living room spacious too?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "아니요, 거실은 작아요. 하지만 깨끗해요.",
+                    "avatar": "👤",
+                    "translation": "No, the living room is small. But it's clean."
+                }
+            ],
+            "vocabulary": [
+                "집",
+                "앞",
+                "방",
+                "개",
+                "거실",
+                "넓다",
+                "작다"
+            ],
+            "grammar": [
+                "~이/가 어디예요?",
+                "~이/가 있어요",
+                "~지만"
+            ],
+            "cultureTip": "한국의 집은 신발을 벗고 들어가는 문화가 있습니다. 거실은 가족이 함께 모이는 중요한 공간입니다."
+        },
+        {
+            "id": 50,
+            "level": 0,
+            "title": "날씨와 기분",
+            "category": "일반",
+            "icon": "☀️",
+            "description": "오늘의 날씨와 기분 이야기하기",
+            "dialogue": [
+                {
+                    "speaker": "민수",
+                    "role": "other",
+                    "text": "오늘 날씨가 어때요?",
+                    "avatar": "👨",
+                    "translation": "How is the weather today?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "날씨가 아주 맑아요. 그리고 따뜻해요.",
+                    "avatar": "👤",
+                    "translation": "The weather is very clear. And it's warm."
+                },
+                {
+                    "speaker": "민수",
+                    "role": "other",
+                    "text": "기분은 어때요?",
+                    "avatar": "👨",
+                    "translation": "How is your mood?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "날씨가 좋아서 기분이 정말 좋아요.",
+                    "avatar": "👤",
+                    "translation": "I feel really good because the weather is nice."
+                }
+            ],
+            "vocabulary": [
+                "날씨",
+                "맑다",
+                "따뜻하다",
+                "기분",
+                "좋다"
+            ],
+            "grammar": [
+                "~가 어때요?",
+                "~아서/어서 (reason)",
+                "정말"
+            ],
+            "cultureTip": "한국은 사계절(봄, 여름, 가을, 겨울)이 뚜렷하며 날씨에 따라 인사말을 건네는 경우가 많습니다."
+        },
+        {
+            "id": 51,
+            "level": 0,
+            "title": "식당에서 주문하기",
+            "category": "음식",
+            "icon": "🍱",
+            "description": "식당에서 음식 주문하기",
+            "dialogue": [
+                {
+                    "speaker": "종업원",
+                    "role": "other",
+                    "text": "어서 오세요. 무엇을 드릴까요?",
+                    "avatar": "👨‍🍳",
+                    "translation": "Welcome. What would you like?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "비빔밥 하나 주세요. 그리고 물 좀 주세요.",
+                    "avatar": "👤",
+                    "translation": "Please give me one bibimbap. And some water, please."
+                },
+                {
+                    "speaker": "종업원",
+                    "role": "other",
+                    "text": "네, 알겠습니다. 더 필요한 것 있으세요?",
+                    "avatar": "👨‍🍳",
+                    "translation": "Okay, I understand. Do you need anything else?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "아니요, 없어요. 감사합니다.",
+                    "avatar": "👤",
+                    "translation": "No, that's it. Thank you."
+                }
+            ],
+            "vocabulary": [
+                "식당",
+                "주문",
+                "비빔밥",
+                "물",
+                "종업원",
+                "필요하다"
+            ],
+            "grammar": [
+                "~을/를 드릴까요?",
+                "~ 주세요",
+                "더"
+            ],
+            "cultureTip": "한국 식당에서는 물과 기본 반찬이 보통 무료로 제공됩니다. 필요한 것이 있으면 '저기요'라고 불러보세요."
+        },
+        {
+            "id": 52,
+            "level": 0,
+            "title": "편의점에서",
+            "category": "쇼핑",
+            "icon": "🏪",
+            "description": "편의점에서 물건 사고 계산하기",
+            "dialogue": [
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "이 우유 얼마예요?",
+                    "avatar": "👤",
+                    "translation": "How much is this milk?"
+                },
+                {
+                    "speaker": "점원",
+                    "role": "other",
+                    "text": "이천 원이에요. 봉투 필요하세요?",
+                    "avatar": "🧑‍💼",
+                    "translation": "It's 2,000 won. Do you need a bag?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "네, 봉투 한 개 주세요. 카드로 계산할게요.",
+                    "avatar": "👤",
+                    "translation": "Yes, please give me one bag. I'll pay by card."
+                },
+                {
+                    "speaker": "점원",
+                    "role": "other",
+                    "text": "네, 여기 영수증 있습니다. 안녕히 가세요.",
+                    "avatar": "🧑‍💼",
+                    "translation": "Yes, here is the receipt. Goodbye."
+                }
+            ],
+            "vocabulary": [
+                "편의점",
+                "우유",
+                "얼마",
+                "봉투",
+                "카드",
+                "계산",
+                "영수증"
+            ],
+            "grammar": [
+                "~은/는 얼마예요?",
+                "~(으)ㄹ게요",
+                "~ 한 개"
+            ],
+            "cultureTip": "한국의 편의점은 24시간 운영되는 곳이 많으며, 도시락과 같은 간편식이 매우 다양합니다."
+        },
+        {
+            "id": 53,
+            "level": 0,
+            "title": "위치 찾기",
+            "category": "장소",
+            "icon": "🗺️",
+            "description": "길 묻고 위치 찾기",
+            "dialogue": [
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "실례합니다. 은행이 어디에 있어요?",
+                    "avatar": "👤",
+                    "translation": "Excuse me. Where is the bank?"
+                },
+                {
+                    "speaker": "행인",
+                    "role": "other",
+                    "text": "저기 약국 옆에 있어요. 오른쪽으로 가세요.",
+                    "avatar": "🚶",
+                    "translation": "It's next to that pharmacy over there. Go to the right."
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "멀어요?",
+                    "avatar": "👤",
+                    "translation": "Is it far?"
+                },
+                {
+                    "speaker": "행인",
+                    "role": "other",
+                    "text": "아니요, 가까워요. 5분 정도 걸려요.",
+                    "avatar": "🚶",
+                    "translation": "No, it's close. It takes about 5 minutes."
+                }
+            ],
+            "vocabulary": [
+                "은행",
+                "약국",
+                "옆",
+                "오른쪽",
+                "멀다",
+                "가깝다",
+                "분"
+            ],
+            "grammar": [
+                "~이/가 어디에 있어요?",
+                "~(으)로 가세요",
+                "~ 정도 걸려요"
+            ],
+            "cultureTip": "모르는 사람에게 길을 물을 때는 '실례합니다' 또는 '저기요'라고 말을 시작하는 것이 예의입니다."
+        },
+        {
+            "id": 54,
+            "level": 0,
+            "title": "버스 타기",
+            "category": "교통",
+            "icon": "🚌",
+            "description": "버스 이용하기",
+            "dialogue": [
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "이 버스 서울역에 가요?",
+                    "avatar": "👤",
+                    "translation": "Does this bus go to Seoul Station?"
+                },
+                {
+                    "speaker": "기사님",
+                    "role": "other",
+                    "text": "네, 갑니다. 타세요.",
+                    "avatar": "👨‍✈️",
+                    "translation": "Yes, it goes. Please get on."
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "서울역까지 몇 분 걸려요?",
+                    "avatar": "👤",
+                    "translation": "How many minutes does it take to Seoul Station?"
+                },
+                {
+                    "speaker": "기사님",
+                    "role": "other",
+                    "text": "이십 분 정도 걸려요.",
+                    "avatar": "👨‍✈️",
+                    "translation": "It takes about twenty minutes."
+                }
+            ],
+            "vocabulary": [
+                "버스",
+                "서울역",
+                "가다",
+                "타다",
+                "기사님",
+                "이십 분"
+            ],
+            "grammar": [
+                "~에 가요?",
+                "~까지",
+                "몇 분 걸려요?"
+            ],
+            "cultureTip": "한국 버스에서는 하차할 때 벨을 눌러야 합니다. 교통카드를 사용하면 요금이 할인되고 환승 혜택도 있습니다."
+        },
+        {
+            "id": 55,
+            "level": 0,
+            "title": "나의 취미",
+            "category": "취미",
+            "icon": "⚽",
+            "description": "취미 활동에 대해 묻고 답하기",
+            "dialogue": [
+                {
+                    "speaker": "영수",
+                    "role": "other",
+                    "text": "투이 씨, 취미가 뭐예요?",
+                    "avatar": "👦",
+                    "translation": "Thuy, what is your hobby?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "제 취미는 영화 보기예요. 영수 씨는요?",
+                    "avatar": "👤",
+                    "translation": "My hobby is watching movies. How about you, Yeongsu?"
+                },
+                {
+                    "speaker": "영수",
+                    "role": "other",
+                    "text": "저는 운동을 좋아해요. 주말에 축구를 해요.",
+                    "avatar": "👦",
+                    "translation": "I like exercising. I play soccer on weekends."
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "와, 멋있어요!",
+                    "avatar": "👤",
+                    "translation": "Wow, that's cool!"
+                }
+            ],
+            "vocabulary": [
+                "취미",
+                "영화 보기",
+                "운동",
+                "좋아하다",
+                "축구",
+                "멋있다"
+            ],
+            "grammar": [
+                "~기 (nominalization)",
+                "~은/는요? (How about...)",
+                "을/를 좋아하다"
+            ],
+            "cultureTip": "한국인들은 등산, 영화 감상, 운동 등 다양한 취미를 즐기며 동호회 활동도 활발하게 합니다."
+        },
+        {
+            "id": 56,
+            "level": 0,
+            "title": "하루 일과",
+            "category": "일반",
+            "icon": "⏰",
+            "description": "일상적인 하루 일과 말하기",
+            "dialogue": [
+                {
+                    "speaker": "선생님",
+                    "role": "other",
+                    "text": "투이 씨, 보통 몇 시에 일어나요?",
+                    "avatar": "👩‍🏫",
+                    "translation": "Thuy, what time do you usually wake up?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "아침 일곱 시에 일어나요. 그리고 아홉 시에 학교에 가요.",
+                    "avatar": "👤",
+                    "translation": "I wake up at seven in the morning. And I go to school at nine."
+                },
+                {
+                    "speaker": "선생님",
+                    "role": "other",
+                    "text": "점심은 언제 먹어요?",
+                    "avatar": "👩‍🏫",
+                    "translation": "When do you eat lunch?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "열두 시 삼십 분에 친구하고 식당에서 먹어요.",
+                    "avatar": "👤",
+                    "translation": "I eat with a friend at the restaurant at twelve thirty."
+                }
+            ],
+            "vocabulary": [
+                "보통",
+                "몇 시",
+                "일어나다",
+                "아침",
+                "점심",
+                "열두 시 삼십 분"
+            ],
+            "grammar": [
+                "~ 에 (time particle)",
+                "몇 시에 ~아요/어요?",
+                "~하고 (with)"
+            ],
+            "cultureTip": "한국의 직장이나 학교는 보통 오전 9시에 시작합니다. 점심시간은 보통 12시부터 1시 사이입니다."
+        },
+        {
+            "id": 57,
+            "level": 0,
+            "title": "주말 활동",
+            "category": "일반",
+            "icon": "🌳",
+            "description": "지난 주말에 한 일 이야기하기",
+            "dialogue": [
+                {
+                    "speaker": "지민",
+                    "role": "other",
+                    "text": "주말에 뭐 했어요?",
+                    "avatar": "🙋‍♀️",
+                    "translation": "What did you do over the weekend?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "백화점에서 쇼핑을 했어요. 친구 생일 선물을 샀어요.",
+                    "avatar": "👤",
+                    "translation": "I went shopping at the department store. I bought a birthday present for a friend."
+                },
+                {
+                    "speaker": "지민",
+                    "role": "other",
+                    "text": "재미있었어요?",
+                    "avatar": "🙋‍♀️",
+                    "translation": "Was it fun?"
+                },
+                {
+                    "speaker": "나",
+                    "role": "user",
+                    "text": "네, 사람이 많았지만 아주 재미있었어요.",
+                    "avatar": "👤",
+                    "translation": "Yes, there were many people, but it was very fun."
+                }
+            ],
+            "vocabulary": [
+                "주말",
+                "백화점",
+                "쇼핑",
+                "생일",
+                "선물",
+                "재미있다"
+            ],
+            "grammar": [
+                "~았/었/였어요 (past tense)",
+                "~지만 (but)",
+                "사람이 많다"
+            ],
+            "cultureTip": "한국의 주말에는 백화점이나 대형 마트에 사람이 많습니다. 친구의 생일에는 보통 케이크나 선물을 주고받습니다."
         }
     ]
 }
